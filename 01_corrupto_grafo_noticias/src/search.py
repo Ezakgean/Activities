@@ -1,71 +1,92 @@
 from __future__ import annotations
 
-"""Google Custom Search client."""
+"""Vertex AI Search (Discovery Engine) client."""
 
 import logging
-import os
 from typing import List
 
-import requests
-
-
-GOOGLE_CSE_URL = "https://www.googleapis.com/customsearch/v1"
-RESULTS_PER_PAGE = 10
-MAX_PAGES = 10
-REQUEST_TIMEOUT_S = 30
+import google.auth
+from google.api_core.client_options import ClientOptions
+from google.cloud import discoveryengine_v1 as discoveryengine
+from google.protobuf.json_format import MessageToDict
 
 logger = logging.getLogger(__name__)
+
+RESULTS_PER_PAGE = 10
+MAX_PAGES = 10
+DEFAULT_SERVING_CONFIG = "default_config"
 
 
 def fetch_titles(
     query: str,
-    pages: int = 1,
-    api_key: str | None = None,
-    cx: str | None = None,
+    pages: int,
+    project_id: str,
+    location: str,
+    engine_id: str,
+    credentials_path: str | None = None,
 ) -> List[str]:
-    """Fetch result titles from Google Custom Search."""
-    api_key = api_key or os.getenv("GOOGLE_API_KEY")
-    cx = cx or os.getenv("GOOGLE_CSE_ID")
-    if not api_key or not cx:
-        raise ValueError("API key e CX sao obrigatorios. Defina GOOGLE_API_KEY e GOOGLE_CSE_ID.")
+    """Fetch result titles from Vertex AI Search."""
+    credentials = None
+    if credentials_path:
+        credentials, _ = google.auth.load_credentials_from_file(credentials_path)
+
+    client_options = (
+        ClientOptions(api_endpoint=f"{location}-discoveryengine.googleapis.com")
+        if location != "global"
+        else None
+    )
+    client = discoveryengine.SearchServiceClient(credentials=credentials, client_options=client_options)
+    serving_config = (
+        f"projects/{project_id}/locations/{location}/collections/default_collection/"
+        f"engines/{engine_id}/servingConfigs/{DEFAULT_SERVING_CONFIG}"
+    )
 
     titles: List[str] = []
     seen = set()
 
-    session = requests.Session()
-    try:
-        safe_pages = int(pages)
-    except (TypeError, ValueError):
-        safe_pages = 1
-    safe_pages = max(1, min(safe_pages, MAX_PAGES))
-    if safe_pages != pages:
-        logger.debug("Ajustando pages de %s para %s", pages, safe_pages)
-    for page_idx in range(safe_pages):
-        start = page_idx * RESULTS_PER_PAGE + 1
-        params = {
-            "key": api_key,
-            "cx": cx,
-            "q": query,
-            "hl": "pt",
-            "gl": "br",
-            "lr": "lang_pt",
-            "num": RESULTS_PER_PAGE,
-            "start": start,
-            "safe": "active",
-        }
-        resp = session.get(GOOGLE_CSE_URL, params=params, timeout=REQUEST_TIMEOUT_S)
-        if resp.status_code == 403:
-            raise ValueError(
-                "403 Forbidden. Verifique se a Custom Search API esta habilitada, "
-                "se o billing esta ativo e se a chave nao tem restricao de referrer."
-            )
-        resp.raise_for_status()
-        data = resp.json()
-        items = data.get("items", [])
-        for item in items:
-            title = (item.get("title") or "").strip()
+    safe_pages = _clamp_pages(pages)
+    page_token = ""
+    for _ in range(safe_pages):
+        request = discoveryengine.SearchRequest(
+            serving_config=serving_config,
+            query=query,
+            page_size=RESULTS_PER_PAGE,
+            page_token=page_token,
+        )
+        response = client.search(request=request)
+        for result in response.results:
+            title = _extract_title(result)
             if title and title not in seen:
                 titles.append(title)
                 seen.add(title)
+        page_token = response.next_page_token
+        if not page_token:
+            break
 
     return titles
+
+
+def _clamp_pages(pages: int | str | None) -> int:
+    try:
+        value = int(pages)
+    except (TypeError, ValueError):
+        value = 1
+    return max(1, min(value, MAX_PAGES))
+
+
+def _extract_title(result: discoveryengine.SearchResponse.SearchResult) -> str:
+    doc = result.document
+    if not doc:
+        return ""
+    if getattr(doc, "title", ""):
+        return str(doc.title).strip()
+
+    for struct in (doc.derived_struct_data, doc.struct_data):
+        if struct:
+            data = MessageToDict(struct)
+            for key in ("title", "name", "documentTitle"):
+                value = data.get(key)
+                if isinstance(value, str) and value.strip():
+                    return value.strip()
+
+    return ""

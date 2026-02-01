@@ -10,8 +10,10 @@ from dataclasses import dataclass
 class Settings:
     """Validated settings for the pipeline."""
 
-    api_key: str
-    cx: str
+    project_id: str
+    location: str
+    engine_id: str
+    credentials_path: str | None = None
     query: str = "corrupcao"
     pages: int = 1
     top: int = 30
@@ -26,28 +28,36 @@ def _get_required_env(name: str) -> str:
 
 
 def normalize_settings(
-    api_key: str | None,
-    cx: str | None,
+    project_id: str | None,
+    location: str | None,
+    engine_id: str | None,
+    credentials_path: str | None,
     query: str | None,
     pages: int | str | None,
     top: int | str | None,
 ) -> Settings:
     """Normalize and validate user input from CLI or UI."""
-    api_key_value = (api_key or os.getenv("GOOGLE_API_KEY", "")).strip()
-    cx_value = (cx or os.getenv("GOOGLE_CSE_ID", "")).strip()
+    project_value = (project_id or os.getenv("GOOGLE_CLOUD_PROJECT", "")).strip()
+    location_value = (location or os.getenv("VERTEX_SEARCH_LOCATION", "")).strip()
+    engine_value = (engine_id or os.getenv("VERTEX_SEARCH_ENGINE_ID", "")).strip()
+    creds_value = (credentials_path or os.getenv("GOOGLE_APPLICATION_CREDENTIALS", "")).strip()
 
-    if not api_key_value:
-        api_key_value = _get_required_env("GOOGLE_API_KEY")
-    if not cx_value:
-        cx_value = _get_required_env("GOOGLE_CSE_ID")
+    if not project_value:
+        project_value = _get_required_env("GOOGLE_CLOUD_PROJECT")
+    if not location_value:
+        location_value = "global"
+    if not engine_value:
+        engine_value = _get_required_env("VERTEX_SEARCH_ENGINE_ID")
 
     query_value = (query or "corrupcao").strip() or "corrupcao"
     pages_value = _parse_int(pages, default=1, min_value=1, max_value=10, name="pages")
     top_value = _parse_int(top, default=30, min_value=5, max_value=200, name="top")
 
     return Settings(
-        api_key=api_key_value,
-        cx=cx_value,
+        project_id=project_value,
+        location=location_value,
+        engine_id=engine_value,
+        credentials_path=creds_value or None,
         query=query_value,
         pages=pages_value,
         top=top_value,

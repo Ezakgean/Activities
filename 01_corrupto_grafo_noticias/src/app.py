@@ -11,6 +11,7 @@ import customtkinter as ctk
 
 from .config import normalize_settings
 from .main import run_pipeline
+from .search import fetch_titles
 
 logger = logging.getLogger(__name__)
 
@@ -22,8 +23,10 @@ def _run_task(state, update_output):
             state["query"],
             int(state["pages"]),
             int(state["top"]),
-            state["api_key"],
-            state["cx"],
+            state["project_id"],
+            state["location"],
+            state["engine_id"],
+            state["credentials_path"],
         )
     except Exception as exc:
         logger.exception("Erro ao executar pipeline")
@@ -71,13 +74,13 @@ def main() -> None:
     header.pack(fill=tk.X, pady=(0, 18))
     ctk.CTkLabel(
         header,
-        text="Google Custom Search",
+        text="Vertex AI Search",
         font=("Segoe UI", 22, "bold"),
         text_color="#f7f7f7",
     ).pack(anchor="w")
     ctk.CTkLabel(
         header,
-        text="Insira as credenciais e gere a rede de palavras com base nos titulos.",
+        text="Informe o projeto e o engine para gerar a rede de palavras.",
         font=("Segoe UI", 12),
         text_color="#9aa0a6",
     ).pack(anchor="w", pady=(4, 0))
@@ -106,51 +109,78 @@ def main() -> None:
         entry.grid(row=row_idx, column=col + 1, sticky="ew", pady=10)
         return entry
 
-    api_key_entry = row("API Key", show=True, row_idx=0)
-    cx_entry = row("CSE ID (cx)", show=True, row_idx=1)
-    query_entry = row("Consulta", "corrupcao", row_idx=2)
-    pages_entry = row("Paginas", "2", row_idx=3, width=120)
+    project_entry = row("Project ID", row_idx=0)
+    location_entry = row("Location", "global", row_idx=1, width=120)
+    engine_entry = row("Engine ID", row_idx=2)
+    credentials_entry = row("Credenciais JSON (opcional)", row_idx=3, width=300)
+    query_entry = row("Consulta", "corrupcao", row_idx=4)
+    pages_entry = row("Paginas", "2", row_idx=5, width=120)
     ctk.CTkLabel(form_grid, text="Top palavras", text_color="#eaeaea").grid(
-        row=3, column=2, sticky="e", padx=(12, 8), pady=10
+        row=5, column=2, sticky="e", padx=(12, 8), pady=10
     )
-    top_entry = row("", "30", row_idx=3, col=2, width=120)
+    top_entry = row("", "30", row_idx=5, col=2, width=120)
 
     actions = ctk.CTkFrame(container, fg_color="transparent")
     actions.pack(fill=tk.X, pady=(0, 14))
 
-    def toggle_keys_visibility() -> None:
-        show = "•" if hide_keys_var.get() else ""
-        api_key_entry.configure(show=show)
-        cx_entry.configure(show=show)
-
-    hide_keys_var = tk.BooleanVar(value=True)
-    switch = ctk.CTkSwitch(
-        actions,
-        text="Ocultar chaves",
-        variable=hide_keys_var,
-        onvalue=True,
-        offvalue=False,
-        text_color="#9aa0a6",
-        command=toggle_keys_visibility,
-    )
-    switch.pack(side=tk.LEFT)
-    toggle_keys_visibility()
-
     status_var = tk.StringVar(value="Pronto para executar.")
-    ctk.CTkLabel(actions, textvariable=status_var, text_color="#9aa0a6").pack(
-        side=tk.LEFT, padx=(16, 0)
-    )
+    ctk.CTkLabel(actions, textvariable=status_var, text_color="#9aa0a6").pack(side=tk.LEFT)
 
-    def on_run() -> None:
-        api_key = api_key_entry.get().strip()
-        cx = cx_entry.get().strip()
-        if not api_key or not cx:
-            messagebox.showerror("Erro", "API Key e CSE ID sao obrigatorios.")
+    def on_test_connection() -> None:
+        project_id = project_entry.get().strip()
+        engine_id = engine_entry.get().strip()
+        if not project_id or not engine_id:
+            messagebox.showerror("Erro", "Project ID e Engine ID sao obrigatorios.")
             return
         try:
             settings = normalize_settings(
-                api_key,
-                cx,
+                project_id,
+                location_entry.get().strip(),
+                engine_id,
+                credentials_entry.get().strip(),
+                query_entry.get().strip(),
+                1,
+                5,
+            )
+        except ValueError as exc:
+            messagebox.showerror("Erro", str(exc))
+            return
+
+        status_var.set("Testando conexao... aguarde.")
+
+        def run_in_thread():
+            def update_status(text: str) -> None:
+                status_var.set(text)
+
+            try:
+                titles = fetch_titles(
+                    settings.query,
+                    pages=1,
+                    project_id=settings.project_id,
+                    location=settings.location,
+                    engine_id=settings.engine_id,
+                    credentials_path=settings.credentials_path,
+                )
+            except Exception as exc:
+                root.after(0, update_status, f"Falha na conexao: {exc}")
+                return
+            msg = f"Conexao OK. Titulos retornados: {len(titles)}"
+            root.after(0, update_status, msg)
+
+        threading.Thread(target=run_in_thread, daemon=True).start()
+
+    def on_run() -> None:
+        project_id = project_entry.get().strip()
+        engine_id = engine_entry.get().strip()
+        if not project_id or not engine_id:
+            messagebox.showerror("Erro", "Project ID e Engine ID sao obrigatorios.")
+            return
+        try:
+            settings = normalize_settings(
+                project_id,
+                location_entry.get().strip(),
+                engine_id,
+                credentials_entry.get().strip(),
                 query_entry.get().strip(),
                 pages_entry.get().strip(),
                 top_entry.get().strip(),
@@ -159,8 +189,10 @@ def main() -> None:
             messagebox.showerror("Erro", str(exc))
             return
         state = {
-            "api_key": settings.api_key,
-            "cx": settings.cx,
+            "project_id": settings.project_id,
+            "location": settings.location,
+            "engine_id": settings.engine_id,
+            "credentials_path": settings.credentials_path,
             "query": settings.query,
             "pages": settings.pages,
             "top": settings.top,
@@ -179,6 +211,16 @@ def main() -> None:
             _run_task(state, lambda t: root.after(0, update_output, t))
 
         threading.Thread(target=run_in_thread, daemon=True).start()
+
+    ctk.CTkButton(
+        actions,
+        text="Testar conexao",
+        fg_color="#2a2b2e",
+        text_color="#e6e6e6",
+        hover_color="#33353a",
+        corner_radius=10,
+        command=on_test_connection,
+    ).pack(side=tk.RIGHT, padx=(0, 10))
 
     ctk.CTkButton(
         actions,

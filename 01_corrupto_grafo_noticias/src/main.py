@@ -28,11 +28,26 @@ def save_word_counts(counts: Counter, output_path: Path) -> None:
     output_path.write_text("\n".join(lines), encoding="utf-8")
 
 
-def run_pipeline(query: str, pages: int, top: int, api_key: str | None, cx: str | None) -> dict:
+def run_pipeline(
+    query: str,
+    pages: int,
+    top: int,
+    project_id: str | None,
+    location: str | None,
+    engine_id: str | None,
+    credentials_path: str | None,
+) -> dict:
     """Run the end-to-end pipeline and return a result dict."""
-    settings = normalize_settings(api_key, cx, query, pages, top)
+    settings = normalize_settings(project_id, location, engine_id, credentials_path, query, pages, top)
     logger.info("Buscando titulos para query='%s' (pages=%s)", settings.query, settings.pages)
-    titles = fetch_titles(settings.query, pages=settings.pages, api_key=settings.api_key, cx=settings.cx)
+    titles = fetch_titles(
+        settings.query,
+        pages=settings.pages,
+        project_id=settings.project_id,
+        location=settings.location,
+        engine_id=settings.engine_id,
+        credentials_path=settings.credentials_path,
+    )
     if not titles:
         return {"titles": [], "counts": Counter(), "output_dir": None, "message": "Nenhum titulo encontrado."}
 
@@ -67,12 +82,14 @@ def run_pipeline(query: str, pages: int, top: int, api_key: str | None, cx: str 
 
 def main() -> None:
     """CLI wrapper around the pipeline."""
-    parser = argparse.ArgumentParser(description="Gera rede de palavras a partir de titulos do Google.")
+    parser = argparse.ArgumentParser(description="Gera rede de palavras a partir do Vertex AI Search.")
     parser.add_argument("--query", default="corrupcao", help="Termo de busca")
     parser.add_argument("--pages", type=int, default=1, help="Numero de paginas de resultado")
     parser.add_argument("--top", type=int, default=30, help="Numero de palavras no grafo")
-    parser.add_argument("--api-key", default=None, help="Google API Key (ou GOOGLE_API_KEY)")
-    parser.add_argument("--cx", default=None, help="Google CSE ID (ou GOOGLE_CSE_ID)")
+    parser.add_argument("--project-id", default=None, help="Google Cloud Project ID")
+    parser.add_argument("--location", default="global", help="Vertex AI Search location (ex: global)")
+    parser.add_argument("--engine-id", default=None, help="Vertex AI Search engine ID")
+    parser.add_argument("--credentials", default=None, help="Caminho para JSON da service account")
     args = parser.parse_args()
 
     logging.basicConfig(
@@ -80,7 +97,15 @@ def main() -> None:
         format="%(asctime)s - %(levelname)s - %(message)s",
     )
 
-    result = run_pipeline(args.query, args.pages, args.top, args.api_key, args.cx)
+    result = run_pipeline(
+        args.query,
+        args.pages,
+        args.top,
+        args.project_id,
+        args.location,
+        args.engine_id,
+        args.credentials,
+    )
     titles = result["titles"]
     counts = result["counts"]
     output_dir = result["output_dir"]

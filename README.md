@@ -7,4 +7,4 @@ Este repositorio e onde publico meus projetos e atividades envolvendo tecnologia
 - Uso prefixo numerico para manter a ordem (ex.: `01_...`, `02_...`).
 
 ## Projetos
-- `01_corrupto_grafo_noticias`: Google Custom Search em Python com geracao de rede de palavras.
+- `01_corrupto_grafo_noticias`: Vertex AI Search em Python com geracao de rede de palavras.
