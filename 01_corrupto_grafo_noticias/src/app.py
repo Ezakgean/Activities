@@ -5,6 +5,7 @@ from __future__ import annotations
 import logging
 import threading
 import tkinter as tk
+from pathlib import Path
 from tkinter import messagebox
 
 import customtkinter as ctk
@@ -14,6 +15,32 @@ from .main import run_pipeline
 from .search import fetch_titles
 
 logger = logging.getLogger(__name__)
+TEXT_MUTED = "#9aa0a6"
+
+
+def _load_logo_image() -> tk.PhotoImage | None:
+    logo_path = Path(__file__).resolve().parents[2] / "src" / "logo2.png"
+    if not logo_path.exists():
+        return None
+    try:
+        return tk.PhotoImage(file=str(logo_path))
+    except Exception:
+        logger.warning("Nao foi possivel carregar o logo: %s", logo_path)
+        return None
+
+
+def _bind_responsive_logo(root: ctk.CTk, logo_label: ctk.CTkLabel, logo_image: tk.PhotoImage) -> None:
+    def on_resize(event: tk.Event | None = None) -> None:
+        width = root.winfo_width() or 900
+        target_height = max(24, min(48, int(width * 0.06)))
+        original_height = max(1, logo_image.height())
+        scale = max(1, int(original_height / target_height))
+        scaled = logo_image.subsample(scale, scale)
+        logo_label.configure(image=scaled)
+        logo_label.image = scaled
+
+    root.bind("<Configure>", on_resize)
+    on_resize()
 
 
 def _run_task(state, update_output):
@@ -72,12 +99,31 @@ def main() -> None:
 
     header = ctk.CTkFrame(container, fg_color="transparent")
     header.pack(fill=tk.X, pady=(0, 18))
+    header_top = ctk.CTkFrame(header, fg_color="transparent")
+    header_top.pack(fill=tk.X)
+
+    logo_block = ctk.CTkFrame(header_top, fg_color="transparent")
+    logo_block.pack(side=tk.RIGHT)
+
+    logo_image = _load_logo_image()
+    if logo_image is not None:
+        logo_label = ctk.CTkLabel(logo_block, text="", image=logo_image)
+        logo_label.pack(side=tk.LEFT, padx=(0, 8))
+        _bind_responsive_logo(root, logo_label, logo_image)
+
     ctk.CTkLabel(
-        header,
+        logo_block,
+        text="ezequielgean.com.br",
+        font=("Segoe UI", 12),
+        text_color=TEXT_MUTED,
+    ).pack(side=tk.LEFT, padx=(0, 8))
+
+    ctk.CTkLabel(
+        header_top,
         text="Vertex AI Search",
         font=("Segoe UI", 22, "bold"),
         text_color="#f7f7f7",
-    ).pack(anchor="w")
+    ).pack(side=tk.LEFT, anchor="w")
     ctk.CTkLabel(
         header,
         text="Informe o projeto e o engine para gerar a rede de palavras.",
