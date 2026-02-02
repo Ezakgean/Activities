@@ -33,6 +33,7 @@ Fluxo completo executado por `app/scraping/sre_consulta.py`:
 - Normaliza o numero do registro (remove espacos extras e normaliza barras).
 - Gera 1 linha de saida por especie (um registro pode virar varias linhas).
 - Faz merge com JSON existente usando chave unica `(ano, registro_link, registro_numero, especie_tipo, especie_classe)` para evitar duplicatas.
+- Mantem tambem os dados do run atual na GUI para copia sem merge.
 - Opcionalmente gera CSV com as mesmas colunas do JSON.
 
 ### Campos gerados
@@ -81,8 +82,13 @@ Preencha:
 - **Anos** (ex.: `2005,2008-2010`)
 - **JSON out** (pode usar `{ano}` no caminho)
 - **CSV out** (opcional, pode usar `{ano}`)
+- **Pasta JSON / Pasta CSV**: botao para selecionar a pasta de saida mantendo o nome do arquivo
 
 Observacao: no Linux, o Tkinter pode exigir o pacote `python3-tk`.
+
+#### Copiar JSON na GUI
+- **Copiar JSON (merge)**: copia o JSON consolidado (apos merge em disco).
+- **Copiar JSON (sem merge)**: copia apenas os dados coletados no run atual.
 
 ### Uso (CLI)
 ```bash
@@ -138,6 +144,7 @@ Full flow executed by `app/scraping/sre_consulta.py`:
 - Normalizes the registration number (trim spaces and normalize slashes).
 - Produces 1 output row per species (a single record can become multiple rows).
 - Merges into existing JSON using unique key `(ano, registro_link, registro_numero, especie_tipo, especie_classe)` to avoid duplicates.
+- Keeps current run data in the GUI to allow copy without merge.
 - Optionally exports CSV with the same columns as JSON.
 
 ### Output fields
@@ -186,8 +193,13 @@ Fill in:
 - **Anos** (e.g., `2005,2008-2010`)
 - **JSON out** (you can use `{ano}` in the path)
 - **CSV out** (optional, can use `{ano}`)
+- **JSON Folder / CSV Folder**: button to pick the output folder while keeping the filename
 
 Note: on Linux, Tkinter may require the `python3-tk` package.
+
+#### Copy JSON in the GUI
+- **Copy JSON (merge)**: copies the consolidated JSON (after merge on disk).
+- **Copy JSON (no merge)**: copies only the current run data.
 
 ### CLI usage
 ```bash
