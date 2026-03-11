@@ -1,0 +1,23 @@
+[
+  {
+    "ano": 2014,
+    "registro_link": "https://sistemas.cvm.gov.br/asp/cvmwww/registro/ofertasreg2/RedirEmisCons.asp?Tipo_Emis=REM&sg_uf=RJ&Nr_Ano=2014&Nr_Proc=8766&dt_REG=20/10/2014 18:36:19&tpemis2=",
+    "registro_texto": "OFERTA REGISTRADA OURO FINO SAÚDE ANIMAL PARTICIPAÇÕES S.A.",
+    "emissora": "OURO FINO SAÚDE ANIMAL PARTICIPAÇÕES S.A.",
+    "numero_processo": "RJ-2014-08766",
+    "data_protocolo": "22/08/2014",
+    "analista": "",
+    "ipo": "SIM",
+    "lider": "BANCO J.P. MORGAN S.A.",
+    "enc_distribuicao": "20/04/2015 18:36:19",
+    "especie_tipo": "AO",
+    "especie_classe": "",
+    "especie_quantidade": "11.538.462",
+    "especie_preco": "27",
+    "especie_volume": "311.538.474,00",
+    "especie_garantidos": "0",
+    "especie_sobras": "0",
+    "registro_data": "20/10/2014 18:36:19",
+    "registro_numero": "CVM/SRE/REM/2014/002"
+  }
+]

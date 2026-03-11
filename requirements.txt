@@ -1,0 +1,8 @@
+customtkinter==5.2.2
+google-cloud-discoveryengine==0.16.0
+matplotlib
+networkx==3.3
+pandas
+playwright
+pyvis==0.3.2
+statsmodels

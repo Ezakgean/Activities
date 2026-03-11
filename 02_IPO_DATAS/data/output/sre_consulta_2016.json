@@ -1,0 +1,23 @@
+[
+  {
+    "ano": 2016,
+    "registro_link": "https://sistemas.cvm.gov.br/asp/cvmwww/registro/ofertasreg2/RedirEmisCons.asp?Tipo_Emis=REM&sg_uf=RJ&Nr_Ano=2016&Nr_Proc=7206&dt_REG=27/10/2016&tpemis2=",
+    "registro_texto": "OFERTA REGISTRADA CENTRO DE IMAGEM DIAGNÓSTICOS S.A.",
+    "emissora": "CENTRO DE IMAGEM DIAGNÓSTICOS S.A.",
+    "numero_processo": "RJ-2016-07206",
+    "data_protocolo": "29/08/2016",
+    "analista": "",
+    "ipo": "SIM",
+    "lider": "BANCO ITAU BBA S.A.",
+    "enc_distribuicao": "27/04/2017",
+    "especie_tipo": "AO",
+    "especie_classe": "",
+    "especie_quantidade": "24.364.832",
+    "especie_preco": "20",
+    "especie_volume": "487.296.640,00",
+    "especie_garantidos": "0",
+    "especie_sobras": "0",
+    "registro_data": "27/10/2016",
+    "registro_numero": "CVM/SRE/REM/2016/002"
+  }
+]
