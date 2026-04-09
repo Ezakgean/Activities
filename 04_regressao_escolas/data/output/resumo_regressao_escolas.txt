@@ -1,0 +1,136 @@
+Resumo da regressao escolar
+===========================
+Arquivo analisado: /home/ezequieldev/Documentos/Activities/04_regressao_escolas/data/input/EXE 2.xlsx
+
+Estatisticas descritivas de nota por grupo tratado
+--------------------------------------------------
+          media     dp  mediana
+tratado                        
+0       83.8480 3.7565  86.1500
+1       83.0857 3.8300  85.1000
+
+Teste t de diferenca de medias para nota
+----------------------------------------
+estatistica t: -2.5683
+p-valor: 0.010525
+graus de liberdade aproximados: 476.4815
+
+Regressao simples: nota ~ tratado
+---------------------------------
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                   nota   R-squared:                       0.009
+Model:                            OLS   Adj. R-squared:                  0.008
+Method:                 Least Squares   F-statistic:                     6.684
+Date:                Thu, 09 Apr 2026   Prob (F-statistic):            0.00992
+Time:                        09:39:54   Log-Likelihood:                -2046.9
+No. Observations:                 745   AIC:                             4098.
+Df Residuals:                     743   BIC:                             4107.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     83.8480      0.169    495.898      0.000      83.516      84.180
+tratado       -0.7623      0.295     -2.585      0.010      -1.341      -0.183
+==============================================================================
+Omnibus:                      192.204   Durbin-Watson:                   0.123
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               92.794
+Skew:                          -0.713   Prob(JB):                     7.08e-21
+Kurtosis:                       2.021   Cond. No.                         2.41
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Estatisticas descritivas de estudo_mae por grupo tratado
+--------------------------------------------------------
+         media     dp  mediana
+tratado                       
+0       5.1700 2.3943   5.0000
+1       3.8980 1.5843   4.0000
+
+Teste t de diferenca de medias para estudo_mae
+----------------------------------------------
+estatistica t: -8.6332
+p-valor: 0.000000
+graus de liberdade aproximados: 679.5507
+
+Regressao simples: nota ~ estudo_mae
+------------------------------------
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                   nota   R-squared:                       0.675
+Model:                            OLS   Adj. R-squared:                  0.675
+Method:                 Least Squares   F-statistic:                     1545.
+Date:                Thu, 09 Apr 2026   Prob (F-statistic):          1.28e-183
+Time:                        09:39:54   Log-Likelihood:                -1631.3
+No. Observations:                 745   AIC:                             3267.
+Df Residuals:                     743   BIC:                             3276.
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     76.9871      0.186    414.040      0.000      76.622      77.352
+estudo_mae     1.3911      0.035     39.303      0.000       1.322       1.461
+==============================================================================
+Omnibus:                       61.982   Durbin-Watson:                   0.744
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              132.942
+Skew:                          -0.495   Prob(JB):                     1.36e-29
+Kurtosis:                       4.817   Cond. No.                         12.7
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+
+Interpretacao do modelo nota ~ estudo_mae
+----------------------------------------
+Se a mae tem escolaridade zero, a nota esperada do aluno e 76.99.
+Para cada ano adicional de escolaridade da mae, a nota esperada aumenta em 1.39 pontos.
+Com base no modelo, a media esperada para um aluno cuja mae tem 4 anos de escolaridade e 82.55.
+
+Estatisticas descritivas de mulher por grupo tratado
+----------------------------------------------------
+         media     dp  mediana
+tratado                       
+0       0.4600 0.4989   0.0000
+1       0.4694 0.5001   0.0000
+
+Estatisticas descritivas de cor por grupo tratado
+-------------------------------------------------
+         media     dp  mediana
+tratado                       
+0       0.5000 0.5005   0.5000
+1       0.5510 0.4984   1.0000
+
+Regressao linear multipla: nota ~ tratado + mulher + cor + estudo_mae
+---------------------------------------------------------------------
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                   nota   R-squared:                       0.693
+Model:                            OLS   Adj. R-squared:                  0.692
+Method:                 Least Squares   F-statistic:                     418.2
+Date:                Thu, 09 Apr 2026   Prob (F-statistic):          3.20e-188
+Time:                        09:39:54   Log-Likelihood:                -1610.0
+No. Observations:                 745   AIC:                             3230.
+Df Residuals:                     740   BIC:                             3253.
+Df Model:                           4                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     76.3222      0.246    310.836      0.000      75.840      76.804
+tratado        1.0758      0.171      6.306      0.000       0.741       1.411
+mulher        -0.1763      0.156     -1.132      0.258      -0.482       0.129
+cor            0.2019      0.155      1.299      0.194      -0.103       0.507
+estudo_mae     1.4518      0.036     40.288      0.000       1.381       1.523
+==============================================================================
+Omnibus:                       77.277   Durbin-Watson:                   0.842
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):              180.634
+Skew:                          -0.579   Prob(JB):                     5.97e-40
+Kurtosis:                       5.116   Cond. No.                         19.2
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.

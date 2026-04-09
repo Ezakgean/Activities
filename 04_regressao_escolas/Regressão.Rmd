@@ -1,0 +1,93 @@
+#####EXEMPLO################
+
+#O programa fictício visa melhorar o desempenho escolar dos alunos do ensino fundamental. Esse programa foi desenvolvido com 245 alunos de uma Escola Estadual. A escola possui ao todo 745 alunos. 
+
+#O desenho do programa não abrangia a sua avaliação de impacto que foi implementada após um ano de seu funcionamento. Dessa forma, só foi possível obter informações em um momento no tempo – depois do programa implementado. 
+
+#O banco de dados apresenta informações sobre a nota no exame de proficiência, a participação no programa, o sexo (mulher=1 e zero caso contrário), a cor (branco=1 e zero caso contrário) e os anos de estudos da mãe do aluno.
+
+#Instalar o pacotes, caso ainda ainda não espeja instalado 
+#install.packages("readxl")
+#install.packages("dplyr")
+
+#carregando os pacotes
+library(readxl)
+library(dplyr)
+
+#Importa a tabela do Excel
+dados <- read_excel("D:/.../EXE 2.xlsx")
+#lembre-se do colocar o caminho onde está o arquivo no seu computador
+
+#Comando para visualizar a Tabela 
+View(dados)
+
+#####Analisar as estatísticas descritivas das notas dos alunos tratados e controle
+#tabela usando o pacote dplyr
+ tabela <- dados 
+ tabela <- dados %>% group_by(tratado) %>% 
+     summarise(média = mean(nota, na.rm=TRUE),
+               DP = sd(nota, na.rm=TRUE),
+               mediana = median(nota, na.rm=TRUE))
+tabela
+
+#teste t para a diferença de médias das notas
+ t.test (nota ~ tratado, data=dados)
+
+#Diferença na média de notas entre os dois grupos de 0.7623
+
+#Regressão simples
+reg1<-lm(nota ~ tratado, data = dados)
+summary(reg1)
+
+#####Analisar as estatísticas descritivas da escolaridade das mães dos alunos tratados e controle
+
+tabela <- dados %>% group_by(tratado) %>% 
+     summarise(média = mean(estudo_mae, na.rm=TRUE),
+               DP = sd(estudo_mae, na.rm=TRUE),
+               mediana = median(estudo_mae, na.rm=TRUE))
+tabela
+
+#teste t para a diferença de médias das notas
+ t.test (estudo_mae ~ tratado, data=dados)
+
+#####Analisar a influência da educação da mãe na nota
+#Regressão simples
+reg2<-lm(nota ~ estudo_mae, data = dados)
+summary(reg2)
+
+#podemos fazer um gráfico
+plot(y = dados$nota, 
+     x = dados$estudo_mae, 
+     ylab = "Nota do aluno",
+     xlab = "Estudo da mãe",
+     main="Regressão")
+
+#Para inserir uma linha de tendência
+reg2 
+abline(a =  76.987  , b=  1.391 )
+
+####Interpretação
+# Se a mãe tem escolaridade zero, a nota esperada do aluno 76.99
+# Para cada ano de escolaridade da mãe, a nota do aluno tem um incremento de 1.39
+# Com base no modelo, a média de nota de uma criança cuja mãe tem 4 anos de escolaridade é de 76.98 + 1.39(4) = 83.6
+
+#####Analisar as as estatísticas descritivas das demais variáveis. 
+
+tabela <- dados %>% group_by(tratado) %>% 
+     summarise(média = mean(mulher, na.rm=TRUE),
+               DP = sd(mulher, na.rm=TRUE),
+               mediana = median(mulher, na.rm=TRUE))
+tabela
+
+tabela <- dados %>% group_by(tratado) %>% 
+     summarise(média = mean(cor, na.rm=TRUE),
+               DP = sd(cor, na.rm=TRUE),
+               mediana = median(cor, na.rm=TRUE))
+tabela
+
+# REGRESSÃO LINEAR MÚLTIPLA
+reg3<-lm(nota ~ tratado + mulher + cor + estudo_mae, data = dados)
+summary(reg3)
+
+
+

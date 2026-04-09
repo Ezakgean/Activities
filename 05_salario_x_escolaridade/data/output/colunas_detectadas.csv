@@ -1,0 +1,4 @@
+coluna,tipo,linhas_total,nao_nulos,nulos,percentual_nulos,valores_unicos
+id,int64,6,6,0,0.0,6
+escolaridade_anos,int64,6,6,0,0.0,6
+salario_mensal,int64,6,6,0,0.0,6

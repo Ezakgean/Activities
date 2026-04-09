@@ -1,0 +1,27 @@
+Resumo inicial do modulo 05 - salario x escolaridade
+=====================================================
+Arquivo analisado: 05_salario_x_escolaridade/data/input/exemplo_salario_escolaridade.csv
+Linhas: 6
+Colunas: 3
+Colunas detectadas: id, escolaridade_anos, salario_mensal
+
+Amostra inicial (5 primeiras linhas)
+------------------------------------
+ id  escolaridade_anos  salario_mensal
+  1                  8            1500
+  2                 11            2200
+  3                 12            2600
+  4                 16            4200
+  5                  9            1800
+
+Colunas numericas detectadas: id, escolaridade_anos, salario_mensal
+
+Este modulo ja esta pronto para evoluir a logica especifica do novo programa
+mantendo a mesma organizacao de pastas usada nos demais projetos.
+
+Resumo numerico
+---------------
+           coluna  contagem     media  desvio_padrao    minimo        q1   mediana        q3    maximo
+               id    6.0000    3.5000         1.8708    1.0000    2.2500    3.5000    4.7500    6.0000
+escolaridade_anos    6.0000   11.6667         3.0111    8.0000    9.5000   11.5000   13.5000   16.0000
+   salario_mensal    6.0000 2633.3333      1036.6613 1500.0000 1900.0000 2400.0000 3275.0000 4200.0000

@@ -5,4 +5,5 @@ networkx==3.3
 pandas
 playwright
 pyvis==0.3.2
+scipy
 statsmodels

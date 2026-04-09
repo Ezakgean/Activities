@@ -16,6 +16,7 @@ Este repositório é onde publico meus projetos e atividades envolvendo tecnolog
 - `01_corrupto_grafo_noticias`: Vertex AI Search em Python com geração de rede de palavras.
 - `02_IPO_DATAS`: Scraper da CVM (SRE) para coletar registros de ofertas e filtrar IPOs, com exportação JSON/CSV.
 - `03_regressão_linear`: Regressao linear simples com GUI, grafico e relatorio em PDF.
+- `04_regressao_escolas`: Regressao escolar com GUI, exportacao de tabelas, grafico e PDF opcional.
 
 ---
 
@@ -31,3 +32,4 @@ This repository is where I publish my projects and activities involving technolo
 - `01_corrupto_grafo_noticias`: Vertex AI Search in Python with word-network generation.
 - `02_IPO_DATAS`: CVM (SRE) scraper to collect offering records and filter IPOs, with JSON/CSV exports.
 - `03_regressão_linear`: Simple linear regression with GUI, plot, and PDF report.
+- `04_regressao_escolas`: School regression analysis with GUI, table exports, plot, and optional PDF.
