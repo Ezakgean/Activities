@@ -6,22 +6,36 @@
 
 ## PT-BR
 
-Template inicial em Python para um novo programa seguindo a mesma estrutura dos demais modulos do repositorio. Esta base ja vem com GUI, execucao por linha de comando, pasta de entrada, pasta de saida e um pipeline inicial de inspecao de dados tabulares.
+Aplicacao em Python para analisar a relacao entre salario e escolaridade a partir da base `profissoes_15_estados_salarios_estimados.json`, ajustando uma regressao linear por estado e gerando um dashboard final com o mesmo branding visual dos modulos anteriores.
 
-### Objetivo desta base
-- padronizar a estrutura do modulo `05_...`
-- facilitar a criacao de um novo programa sem recomecar do zero
-- deixar um ponto unico para evoluir a logica principal depois
+### Contexto da base
+O JSON contem 200 profissoes em 15 estados brasileiros, com salarios medios estimados por UF. A base inclui:
+- nome da profissao
+- grupo ocupacional
+- indicacao se a profissao exige ensino superior (`requires_higher_education`)
+- salario medio estimado por estado
+
+### Importante sobre a variavel de escolaridade
+A base nao traz anos de estudo. Por isso, a escolaridade foi modelada como uma proxy binaria:
+- `1`: profissao com exigencia de ensino superior
+- `0`: profissao sem exigencia de ensino superior
+
+Assim, a regressao em cada estado segue a forma:
+```text
+salario = beta0 + beta1 * ensino_superior
+```
+
+Nessa leitura:
+- `beta0`: salario medio estimado para profissoes sem exigencia de ensino superior
+- `beta1`: premio salarial associado a profissoes com exigencia de ensino superior
 
 ### Como funciona
-1. Carrega um arquivo tabular (`.csv`, `.xlsx` ou `.xls`).
-2. Faz uma leitura inicial do esquema e do volume de dados.
-3. Gera um resumo textual da execucao.
-4. Exporta inventario de colunas, amostra dos dados e estatisticas numericas.
-5. Opcionalmente gera um PDF simples com o resumo.
-
-### Arquivo de exemplo
-- `data/input/exemplo_salario_escolaridade.csv`
+1. Carrega o JSON com metadata e profissoes.
+2. Achata a base para o nivel `profissao x estado`.
+3. Construi a variavel binaria de escolaridade a partir de `requires_higher_education`.
+4. Ajusta uma regressao OLS por UF.
+5. Exporta tabelas consolidadas com base analitica, medias e coeficientes.
+6. Gera um dashboard em PNG e um PDF opcional.
 
 ### Requisitos
 - Python 3.10+
@@ -41,56 +55,78 @@ python -m app
 ```
 
 Na GUI:
-- escolha o arquivo de entrada
-- escolha a pasta de saida
-- clique em **Executar**
+- use `Execucao` no menu superior para selecionar o arquivo JSON, definir a pasta de saida e rodar a analise
+- navegue pelo menu superior entre `Execucao`, `Dashboard`, `Resumo`, `Regressoes`, `Medias` e `Arquivos`
 - opcionalmente clique em **Gerar PDF**
 
 ### Uso em linha de comando
 ```bash
 cd 05_salario_x_escolaridade
-python salario_escolaridade.py --arquivo data/input/exemplo_salario_escolaridade.csv --saida data/output --pdf
+python salario_escolaridade.py --arquivo data/input/profissoes_15_estados_salarios_estimados.json --saida data/output --pdf
 ```
 
 ### Saidas
-- `data/output/resumo_salario_escolaridade.txt`
-- `data/output/colunas_detectadas.csv`
-- `data/output/amostra_dados.csv`
-- `data/output/estatisticas_numericas.csv`
+- `data/output/resumo_regressao_salario_escolaridade.txt`
+- `data/output/base_profissoes_estado.csv`
+- `data/output/medias_salariais_estado_escolaridade.csv`
+- `data/output/regressoes_por_estado.csv`
+- `data/output/dashboard_salario_escolaridade.png`
 - `data/output/relatorio_salario_escolaridade.pdf` (opcional)
 
 ### Estrutura de pastas relevante
-- `app/gui.py`: interface grafica.
-- `app/analise.py`: pipeline inicial do modulo.
-- `data/input/`: arquivos de entrada.
+- `app/gui.py`: interface grafica com dashboard.
+- `app/analise.py`: pipeline da leitura do JSON, regressao por UF e exportacao.
+- `data/input/profissoes_15_estados_salarios_estimados.json`: base padrao da atividade.
 - `data/output/`: destino padrao das saidas.
 - `salario_escolaridade.py`: ponto de entrada em CLI.
 
 ### Observacoes
-- O modulo esta pronto para servir como base de um novo programa na mesma estrutura dos anteriores.
-- A logica principal pode ser evoluida centralmente em `app/analise.py`.
+- O dashboard segue o padrao visual dos modulos `03_` e `04_`.
+- A interface agora usa um shell visual com menu superior, inspirado em dashboard executivo, e a etapa de execucao virou uma tela propria.
+- Como a escolaridade foi representada por um dummy binario, o coeficiente da regressao equivale a uma diferenca de medias entre os dois grupos.
 - No Linux, o Tkinter pode exigir o pacote `python3-tk`.
+
+### Conclusoes
+- A base aponta uma associacao positiva e consistente entre exigencia de ensino superior e salarios estimados mais altos em todos os 15 estados.
+- No agregado da base, a media salarial estimada das profissoes sem exigencia de ensino superior fica em torno de `R$ 2,2 mil`, enquanto a das profissoes com exigencia de ensino superior fica em torno de `R$ 6,2 mil`.
+- O premio salarial aparece em todas as UFs e cresce em termos absolutos nos estados com maior nivel geral de renda, como `SP`, `RS`, `SC`, `RJ` e `PR`.
+- Como os salarios do JSON sao estimados e a escolaridade foi modelada por um dummy binario, a leitura correta e associativa, nao causal.
+- O uso mais defensavel do resultado e comparar o tamanho do premio salarial e o nivel previsto de salarios entre estados.
 
 ---
 
 ## EN
 
-Initial Python template for a new program following the same structure as the other modules in this repository. This base already includes a GUI, CLI entry point, input/output folders, and a starter pipeline for tabular data inspection.
+Python app to analyze the relationship between salary and schooling using `profissoes_15_estados_salarios_estimados.json`, fitting one linear regression per state and generating a final dashboard with the same visual branding used in the previous modules.
 
-### Purpose of this base
-- standardize the `05_...` module structure
-- make it easier to start a new program without rebuilding everything
-- keep a single place to evolve the core logic later
+### Dataset context
+The JSON contains 200 professions across 15 Brazilian states, with estimated average salaries by state. The dataset includes:
+- profession name
+- occupational group
+- whether the profession requires higher education (`requires_higher_education`)
+- estimated average salary by state
+
+### Important note about the schooling variable
+The dataset does not include years of schooling. Because of that, schooling is modeled as a binary proxy:
+- `1`: profession requires higher education
+- `0`: profession does not require higher education
+
+Each state-level regression follows:
+```text
+salary = beta0 + beta1 * higher_education
+```
+
+Interpretation:
+- `beta0`: estimated average salary for professions without a higher-education requirement
+- `beta1`: salary premium associated with professions that require higher education
 
 ### How it works
-1. Loads a tabular file (`.csv`, `.xlsx`, or `.xls`).
-2. Performs an initial read of the schema and data volume.
-3. Generates a text summary of the execution.
-4. Exports a column inventory, data sample, and numeric statistics.
-5. Optionally generates a simple PDF report.
-
-### Example input file
-- `data/input/exemplo_salario_escolaridade.csv`
+1. Loads the JSON with metadata and professions.
+2. Flattens the dataset to the `profession x state` level.
+3. Builds the binary schooling variable from `requires_higher_education`.
+4. Fits one OLS regression per state.
+5. Exports consolidated analytical data, averages, and regression coefficients.
+6. Generates a PNG dashboard and an optional PDF report.
 
 ### Requirements
 - Python 3.10+
@@ -109,22 +145,32 @@ cd 05_salario_x_escolaridade
 python -m app
 ```
 
+Inside the GUI, use `Execution` to run the analysis and the top menu to switch between `Execution`, `Dashboard`, `Summary`, `Regressions`, `Means`, and `Files`.
+
 ### CLI usage
 ```bash
 cd 05_salario_x_escolaridade
-python salario_escolaridade.py --arquivo data/input/exemplo_salario_escolaridade.csv --saida data/output --pdf
+python salario_escolaridade.py --arquivo data/input/profissoes_15_estados_salarios_estimados.json --saida data/output --pdf
 ```
 
 ### Outputs
-- `data/output/resumo_salario_escolaridade.txt`
-- `data/output/colunas_detectadas.csv`
-- `data/output/amostra_dados.csv`
-- `data/output/estatisticas_numericas.csv`
+- `data/output/resumo_regressao_salario_escolaridade.txt`
+- `data/output/base_profissoes_estado.csv`
+- `data/output/medias_salariais_estado_escolaridade.csv`
+- `data/output/regressoes_por_estado.csv`
+- `data/output/dashboard_salario_escolaridade.png`
 - `data/output/relatorio_salario_escolaridade.pdf` (optional)
 
 ### Relevant folder structure
-- `app/gui.py`: GUI layer.
-- `app/analise.py`: starter pipeline for the module.
-- `data/input/`: input files.
+- `app/gui.py`: GUI with dashboard output.
+- `app/analise.py`: JSON-loading, state-regression, and export pipeline.
+- `data/input/profissoes_15_estados_salarios_estimados.json`: default dataset.
 - `data/output/`: default output directory.
 - `salario_escolaridade.py`: CLI entry point.
+
+### Conclusions
+- The dataset indicates a positive and consistent association between higher-education requirements and higher estimated salaries across all 15 states.
+- In the pooled data, estimated average salary is around `R$ 2.2k` for professions without a higher-education requirement and around `R$ 6.2k` for professions with that requirement.
+- The salary premium appears in every state and is larger in absolute BRL terms in higher-income states such as `SP`, `RS`, `SC`, `RJ`, and `PR`.
+- Because the salaries are estimated and schooling is represented by a binary proxy, the correct interpretation is associative rather than causal.
+- The most defensible use of the results is to compare the size of the salary premium and the predicted salary levels across states.

@@ -1,0 +1,88 @@
+Resumo da regressao salario ~ ensino_superior por estado
+========================================================
+Arquivo analisado: /home/ezequieldev/Documentos/Activities/05_salario_x_escolaridade/data/input/profissoes_15_estados_salarios_estimados.json
+Observacoes consolidadas: 3000
+Profissoes na base: 200
+Estados na base: 15
+Data de geracao informada no metadata: 2026-04-09
+
+Nota metodologica
+-----------------
+A base nao traz anos de estudo por profissao. A escolaridade foi modelada como uma proxy binaria: 1 para profissao com exigencia de ensino superior e 0 caso contrario.
+Com isso, a regressao por UF assume a forma salario = beta0 + beta1 * ensino_superior. O intercepto beta0 representa o salario medio estimado para profissoes sem exigencia de ensino superior e beta1 representa o premio salarial associado a ocupacoes com exigencia de ensino superior.
+
+Principais achados
+------------------
+Media pooled sem superior: R$ 2.191,73
+Media pooled com superior: R$ 6.191,85
+Premio pooled associado a ensino superior: R$ 4.000,12
+Premio medio entre os estados: R$ 4.000,12
+Premio relativo medio: 182,5%
+R2 medio dos modelos estaduais: 0.9535
+Maior premio estimado: São Paulo (SP) = R$ 5.478,30
+Menor premio estimado: Maranhão (MA) = R$ 2.259,15
+
+Medias salariais por estado e grupo
+-----------------------------------
+UF            Estado        Grupo   N Salario medio
+BA             Bahia Nao superior 100   R$ 1.487,62
+BA             Bahia     Superior 100   R$ 4.202,67
+CE             Ceará Nao superior 100   R$ 1.411,46
+CE             Ceará     Superior 100   R$ 3.987,52
+GO             Goiás Nao superior 100   R$ 2.444,17
+GO             Goiás     Superior 100   R$ 6.905,02
+MA          Maranhão Nao superior 100   R$ 1.237,82
+MA          Maranhão     Superior 100   R$ 3.496,97
+MG      Minas Gerais Nao superior 100   R$ 2.389,33
+MG      Minas Gerais     Superior 100   R$ 6.750,10
+MT       Mato Grosso Nao superior 100   R$ 2.371,05
+MT       Mato Grosso     Superior 100   R$ 6.698,47
+PA              Pará Nao superior 100   R$ 1.441,93
+PA              Pará     Superior 100   R$ 4.073,58
+PE        Pernambuco Nao superior 100   R$ 1.624,71
+PE        Pernambuco     Superior 100   R$ 4.589,96
+PR            Paraná Nao superior 100   R$ 2.804,65
+PR            Paraná     Superior 100   R$ 7.923,41
+RJ    Rio de Janeiro Nao superior 100   R$ 2.837,14
+RJ    Rio de Janeiro     Superior 100   R$ 8.015,21
+RO          Rondônia Nao superior 100   R$ 2.021,74
+RO          Rondônia     Superior 100   R$ 5.711,63
+RS Rio Grande do Sul Nao superior 100   R$ 2.882,84
+RS Rio Grande do Sul     Superior 100   R$ 8.144,30
+SC    Santa Catarina Nao superior 100   R$ 2.852,37
+SC    Santa Catarina     Superior 100   R$ 8.058,24
+SP         São Paulo Nao superior 100   R$ 3.001,64
+SP         São Paulo     Superior 100   R$ 8.479,94
+TO         Tocantins Nao superior 100   R$ 2.067,43
+TO         Tocantins     Superior 100   R$ 5.840,72
+
+Coeficientes das regressoes por estado
+--------------------------------------
+UF            Estado Base sem superior Premio superior Previsto com superior     R2  p-valor
+SP         São Paulo       R$ 3.001,64     R$ 5.478,30           R$ 8.479,94 0.9535 < 0,0001
+RS Rio Grande do Sul       R$ 2.882,84     R$ 5.261,47           R$ 8.144,30 0.9535 < 0,0001
+SC    Santa Catarina       R$ 2.852,37     R$ 5.205,87           R$ 8.058,24 0.9535 < 0,0001
+RJ    Rio de Janeiro       R$ 2.837,14     R$ 5.178,07           R$ 8.015,21 0.9535 < 0,0001
+PR            Paraná       R$ 2.804,65     R$ 5.118,77           R$ 7.923,41 0.9535 < 0,0001
+GO             Goiás       R$ 2.444,17     R$ 4.460,85           R$ 6.905,02 0.9535 < 0,0001
+MG      Minas Gerais       R$ 2.389,33     R$ 4.360,77           R$ 6.750,10 0.9535 < 0,0001
+MT       Mato Grosso       R$ 2.371,05     R$ 4.327,41           R$ 6.698,47 0.9535 < 0,0001
+TO         Tocantins       R$ 2.067,43     R$ 3.773,28           R$ 5.840,72 0.9535 < 0,0001
+RO          Rondônia       R$ 2.021,74     R$ 3.689,89           R$ 5.711,63 0.9535 < 0,0001
+PE        Pernambuco       R$ 1.624,71     R$ 2.965,25           R$ 4.589,96 0.9535 < 0,0001
+BA             Bahia       R$ 1.487,62     R$ 2.715,05           R$ 4.202,67 0.9535 < 0,0001
+PA              Pará       R$ 1.441,93     R$ 2.631,66           R$ 4.073,58 0.9535 < 0,0001
+CE             Ceará       R$ 1.411,46     R$ 2.576,06           R$ 3.987,52 0.9535 < 0,0001
+MA          Maranhão       R$ 1.237,82     R$ 2.259,15           R$ 3.496,97 0.9535 < 0,0001
+
+Conclusoes
+----------
+As regressoes por estado apontam uma associacao positiva e sistematica entre a exigencia de ensino superior e salarios estimados mais altos em todas as UFs da base.
+No agregado, a media estimada passa de R$ 2.191,73 para R$ 6.191,85, um diferencial de R$ 4.000,12.
+Esse premio aparece em todos os estados, mas cresce em termos absolutos nas UFs com maior nivel geral de renda, como Sao Paulo, Rio Grande do Sul, Santa Catarina, Rio de Janeiro e Parana.
+Como a base foi estimada a partir de medias nacionais ajustadas por um indice estadual, a leitura mais segura nao e causal: o modelo descreve uma associacao entre grupos ocupacionais com e sem exigencia de ensino superior, e nao o efeito de anos adicionais de estudo sobre salario.
+Por isso, a principal utilidade economica da analise esta em comparar o tamanho do premio salarial e a faixa prevista de rendimentos entre estados, e nao em inferir impacto causal de escolaridade individual.
+
+Leitura economica
+-----------------
+Como os salarios do JSON foram estimados a partir de medias nacionais por grupo ocupacional ajustadas por um indice estadual, os modelos produzem um R2 alto e bastante homogeneo entre os estados. A comparacao mais util aqui e o tamanho absoluto do premio salarial e a faixa prevista de salarios por UF.
