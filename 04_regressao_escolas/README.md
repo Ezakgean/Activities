@@ -1,116 +1,116 @@
 # 04_regressao_escolas
 
-**Idioma / Language:** [Portugues](#pt-br) | [English](#en)
+**Idioma / Language:** [Português](#pt-br) | [English](#en)
 
 ---
 
 ## PT-BR
 
-Aplicacao em Python para analisar o exercicio de regressao escolar da atividade 04, com interface grafica, regressao linear simples e multipla, exportacao de tabelas e geracao de PDF.
+Aplicação em Python para analisar a atividade 04 de regressão escolar, combinando estatísticas descritivas, testes t, regressão linear simples, regressão múltipla, interface gráfica e exportação de relatórios.
 
-### Contexto do exercicio
-O programa ficticio visa melhorar o desempenho escolar dos alunos do ensino fundamental. Ele foi desenvolvido com 245 alunos de uma Escola Estadual, que possui 745 alunos ao todo.
+### Contexto do exercício
+O exercício trabalha com um programa fictício voltado à melhora do desempenho escolar no ensino fundamental. A base disponível foi observada apenas após a implementação do programa, então a análise é observacional e não corresponde a um desenho experimental clássico.
 
-O desenho original do programa nao contemplava uma avaliacao de impacto. Essa avaliacao foi implementada apenas apos um ano de funcionamento do programa, de modo que so foi possivel observar os dados em um unico momento no tempo, depois da implementacao.
-
-O banco de dados apresenta informacoes sobre a nota no exame de proficiencia, a participacao no programa, o sexo do aluno (`mulher = 1`, `0` caso contrario), a cor (`branco = 1`, `0` caso contrario) e os anos de estudo da mae.
+A planilha contém:
+- `nota`: desempenho no teste de proficiência
+- `tratado`: participação no programa
+- `mulher`: indicador binário para sexo feminino
+- `cor`: indicador binário para aluno branco
+- `estudo_mae`: anos de estudo da mãe
 
 ### Como funciona
-1. Carrega a planilha Excel com os dados da atividade.
-2. Valida as colunas obrigatorias.
-3. Calcula estatisticas descritivas por grupo tratado.
+1. Carrega a planilha Excel.
+2. Valida as colunas obrigatórias.
+3. Calcula estatísticas descritivas por grupo tratado.
 4. Executa testes t para `nota` e `estudo_mae`.
-5. Ajusta tres modelos de regressao:
+5. Ajusta três modelos:
    - `nota ~ tratado`
    - `nota ~ estudo_mae`
    - `nota ~ tratado + mulher + cor + estudo_mae`
-6. Gera grafico, arquivos CSV, resumo em texto e PDF opcional.
-
-### Colunas obrigatorias no Excel
-- `nota`
-- `tratado`: participacao no programa
-- `mulher`: indicador binario para sexo feminino
-- `cor`: indicador binario para aluno branco
-- `estudo_mae`: anos de estudo da mae
+6. Gera resumo em texto, tabelas CSV, gráfico e PDF opcional.
 
 ### Requisitos
 - Python 3.10+
-- Dependencias instaladas a partir do `requirements.txt` da raiz do repositorio
+- Dependências instaladas a partir do `requirements.txt` da raiz do repositório
 
-### Instalacao
+### Instalação
 ```bash
+cd 04_regressao_escolas
 python -m venv .venv
 source .venv/bin/activate
 pip install -r ../requirements.txt
 ```
 
-### Interface grafica (recomendado)
+### Interface gráfica
 ```bash
 cd 04_regressao_escolas
 python -m app
 ```
 
 Na GUI:
-- escolha a planilha Excel
-- escolha a pasta de saida
+- selecione a planilha Excel
+- escolha a pasta de saída
 - clique em **Executar**
-- opcionalmente clique em **Gerar PDF**
+- gere o PDF depois da análise, se necessário
 
-### Uso em linha de comando
+### Linha de comando
 ```bash
 cd 04_regressao_escolas
 python regressao_escolas.py --arquivo data/input/"EXE 2.xlsx" --saida data/output --pdf
 ```
 
-### Saidas
+### Saídas
 - `data/output/resumo_regressao_escolas.txt`
 - `data/output/estatisticas_descritivas.csv`
 - `data/output/testes_t.csv`
 - `data/output/coeficientes_regressoes.csv`
 - `data/output/grafico_estudo_mae.png`
-- `data/output/relatorio_regressao_escolas.pdf` (opcional)
+- `data/output/relatorio_regressao_escolas.pdf`
 
-### Estrutura de pastas relevante
-- `app/gui.py`: interface grafica.
-- `app/regressao.py`: pipeline da analise e exportacao de arquivos.
-- `data/input/EXE 2.xlsx`: planilha padrao da atividade.
-- `data/output/`: destino padrao das saidas.
-- `Regressão.Rmd`: referencia original em R.
+### Estrutura relevante
+- `app/gui.py`: interface gráfica
+- `app/regressao.py`: pipeline estatístico e exportação
+- `data/input/EXE 2.xlsx`: base padrão da atividade
+- `data/output/`: diretório padrão de saída
+- `regressao_escolas.py`: ponto de entrada em CLI
+- `Regressão.Rmd`: referência original em R
 
-### Observacoes
-- O carregamento do `.xlsx` tem fallback interno e continua funcionando mesmo sem `openpyxl`.
-- No Linux, o Tkinter pode exigir o pacote `python3-tk`.
+### Observações
+- O carregamento do `.xlsx` possui fallback interno e segue funcionando mesmo sem `openpyxl`.
+- A leitura correta dos resultados é associativa, especialmente no modelo múltiplo.
+- No Linux, o Tkinter pode exigir `python3-tk`.
+
+### Troubleshooting
+- **Erro ao ler Excel**: confirme o caminho do arquivo e o formato da planilha.
+- **PDF não gerado**: execute a análise antes de clicar em **Gerar PDF**.
+- **Colunas ausentes**: valide os nomes exatos esperados pela atividade.
 
 ---
 
 ## EN
 
-Python app for the school-regression exercise in activity 04, with GUI, simple and multiple linear regression, table exports, and optional PDF output.
+Python app for activity 04 school-regression analysis, combining descriptive statistics, t-tests, simple and multiple linear regression, GUI, and report export.
 
 ### Exercise context
-The fictional program aims to improve the school performance of elementary school students. It was developed with 245 students from a state school that has 745 students in total.
+The exercise uses a fictional program aimed at improving elementary-school performance. The available dataset was observed only after the program was implemented, so the analysis is observational rather than a classic experimental design.
 
-The original program design did not include an impact evaluation. That evaluation was implemented only after one year of operation, so the available data were collected at a single point in time after the program had already been implemented.
-
-The dataset includes information on proficiency test scores, program participation, sex (`mulher = 1`, `0` otherwise), race/color (`branco = 1`, `0` otherwise), and the mother's years of schooling.
-
-### How it works
-1. Loads the Excel spreadsheet for the exercise.
-2. Validates required columns.
-3. Computes descriptive statistics by treatment group.
-4. Runs t-tests for `nota` and `estudo_mae`.
-5. Fits three regression models:
-   - `nota ~ tratado`
-   - `nota ~ estudo_mae`
-   - `nota ~ tratado + mulher + cor + estudo_mae`
-6. Generates a plot, CSV outputs, text summary, and optional PDF.
-
-### Required Excel columns
-- `nota`
+The spreadsheet includes:
+- `nota`: proficiency-test score
 - `tratado`: program participation
 - `mulher`: binary indicator for female student
 - `cor`: binary indicator for white student
 - `estudo_mae`: mother's years of schooling
+
+### How it works
+1. Loads the Excel spreadsheet.
+2. Validates required columns.
+3. Computes descriptive statistics by treatment group.
+4. Runs t-tests for `nota` and `estudo_mae`.
+5. Fits three models:
+   - `nota ~ tratado`
+   - `nota ~ estudo_mae`
+   - `nota ~ tratado + mulher + cor + estudo_mae`
+6. Generates a text summary, CSV tables, chart, and optional PDF.
 
 ### Requirements
 - Python 3.10+
@@ -118,16 +118,23 @@ The dataset includes information on proficiency test scores, program participati
 
 ### Installation
 ```bash
+cd 04_regressao_escolas
 python -m venv .venv
 source .venv/bin/activate
 pip install -r ../requirements.txt
 ```
 
-### GUI (recommended)
+### GUI
 ```bash
 cd 04_regressao_escolas
 python -m app
 ```
+
+Inside the GUI:
+- select the Excel file
+- choose the output folder
+- click **Executar**
+- generate the PDF after the analysis if needed
 
 ### CLI usage
 ```bash
@@ -141,11 +148,22 @@ python regressao_escolas.py --arquivo data/input/"EXE 2.xlsx" --saida data/outpu
 - `data/output/testes_t.csv`
 - `data/output/coeficientes_regressoes.csv`
 - `data/output/grafico_estudo_mae.png`
-- `data/output/relatorio_regressao_escolas.pdf` (optional)
+- `data/output/relatorio_regressao_escolas.pdf`
 
-### Relevant folder structure
-- `app/gui.py`: GUI layer.
-- `app/regressao.py`: analysis pipeline and file export logic.
-- `data/input/EXE 2.xlsx`: default input spreadsheet.
-- `data/output/`: default output directory.
-- `Regressão.Rmd`: original R reference.
+### Relevant structure
+- `app/gui.py`: GUI
+- `app/regressao.py`: statistical pipeline and export logic
+- `data/input/EXE 2.xlsx`: default dataset
+- `data/output/`: default output directory
+- `regressao_escolas.py`: CLI entry point
+- `Regressão.Rmd`: original R reference
+
+### Notes
+- `.xlsx` loading has an internal fallback and continues to work even without `openpyxl`.
+- The safest interpretation of results is associative, especially for the multiple-regression model.
+- On Linux, Tkinter may require `python3-tk`.
+
+### Troubleshooting
+- **Excel read error**: confirm the file path and spreadsheet format.
+- **PDF not generated**: run the analysis before clicking **Gerar PDF**.
+- **Missing columns**: validate the exact column names expected by the activity.

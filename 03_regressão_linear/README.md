@@ -1,4 +1,4 @@
-# 03_regressao_linear
+# 03_regressão_linear
 
 **Idioma / Language:** [Português](#pt-br) | [English](#en)
 
@@ -6,108 +6,154 @@
 
 ## PT-BR
 
-Aplicacao em Python para **regressao linear simples** (OLS) entre renda e despesas com alimentacao, com interface grafica, grafico e relatorio em PDF.
+Aplicação em Python para **regressão linear simples** entre renda e despesas com alimentação, com interface gráfica, gráfico de dispersão com linha ajustada e relatório em PDF.
 
 ### Como funciona
-1. Carrega o CSV e valida as colunas obrigatorias.
-2. Converte valores com virgula decimal para float.
-3. Remove linhas invalidas.
-4. Ajusta regressao linear (OLS) com `statsmodels`.
-5. Gera resultados, grafico, CSV de saida e PDF.
+1. Lê o CSV de entrada.
+2. Valida as colunas obrigatórias.
+3. Converte números com vírgula decimal para `float`.
+4. Remove linhas inválidas.
+5. Ajusta o modelo OLS com `statsmodels`.
+6. Gera resumo estatístico, CSV com resíduos, PNG e PDF.
 
-### Colunas obrigatorias no CSV
+### Colunas obrigatórias
 - `observações`
 - `x - renda`
 - `y - despesas com alimentação`
 
 ### Requisitos
 - Python 3.10+
-- Dependencias em `requirements.txt`
+- Dependências instaladas a partir do `requirements.txt` da raiz
 
-### Instalacao
+### Instalação
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+pip install -r ../requirements.txt
 ```
 
-### Interface grafica (recomendado)
+### Interface gráfica
 ```bash
 cd 03_regressão_linear
 python -m app
 ```
-Selecione o CSV e clique em **Executar**. Depois, use **Gerar PDF** para criar o relatorio.
 
-### Saidas
-- `resultado_exe1_regressao.csv`: dados com `y_estimado` e `residuo`.
-- `grafico_exe1_regressao.png`: grafico com pontos e linha de regressao.
-- `relatorio_exe1_regressao.pdf`: formulas, resumo estatistico e grafico.
+Fluxo da GUI:
+- selecione o CSV
+- clique em **Executar**
+- revise o resumo e o gráfico
+- use **Gerar PDF** se quiser exportar o relatório
 
-### Estrutura de pastas relevante
-- `app/gui.py`: interface grafica.
-- `app/regressao.py`: pipeline de regressao e geracao de arquivos.
-- `dados.csv`: exemplo de entrada.
+### Saídas
+Os arquivos são salvos na mesma pasta do CSV selecionado:
+- `resultado_exe1_regressao.csv`
+- `grafico_exe1_regressao.png`
+- `relatorio_exe1_regressao.pdf`
 
-### Observacoes
-- Valores com virgula decimal sao convertidos automaticamente.
-- Linhas invalidas sao removidas antes do ajuste.
-- No Linux, o Tkinter pode exigir o pacote `python3-tk`.
+O CSV de saída contém:
+- observação original
+- `x`
+- `y`
+- `y_estimado`
+- `residuo`
+
+### Uso programático
+Não há um wrapper CLI dedicado. Para automação, use `app/regressao.py` via Python:
+```python
+from pathlib import Path
+from app.regressao import run_pipeline
+
+stats_text, df_out, fig, csv_path, png_path = run_pipeline(Path("dados.csv"))
+```
+
+### Estrutura relevante
+- `app/gui.py`: GUI
+- `app/regressao.py`: pipeline de limpeza, ajuste e exportação
+- `dados.csv`: exemplo de entrada
+
+### Observações
+- Valores com vírgula decimal são convertidos automaticamente.
+- Linhas inválidas são removidas antes do ajuste.
+- No Linux, o Tkinter pode exigir `python3-tk`.
 
 ### Troubleshooting
-- **Erro de colunas ausentes**: confirme os nomes exatos das colunas.
-- **PDF nao gerado**: execute a regressao antes de clicar em **Gerar PDF**.
+- **Erro de colunas ausentes**: confirme os nomes exatos no CSV.
+- **PDF não gerado**: execute a regressão antes de clicar em **Gerar PDF**.
 
 ---
 
 ## EN
 
-Python app for **simple linear regression** (OLS) between income and food expenses, with GUI, plot, and PDF report.
+Python app for **simple linear regression** between income and food expenses, with GUI, scatter plot plus fitted line, and PDF report.
 
 ### How it works
-1. Loads the CSV and validates required columns.
-2. Converts comma-decimal values to float.
-3. Drops invalid rows.
-4. Fits linear regression (OLS) with `statsmodels`.
-5. Generates results, plot, output CSV, and PDF.
+1. Reads the input CSV.
+2. Validates required columns.
+3. Converts comma-decimal numbers to `float`.
+4. Drops invalid rows.
+5. Fits an OLS model with `statsmodels`.
+6. Generates the statistical summary, residual CSV, PNG, and PDF.
 
-### Required CSV columns
+### Required columns
 - `observações`
 - `x - renda`
 - `y - despesas com alimentação`
 
 ### Requirements
 - Python 3.10+
-- Dependencies in `requirements.txt`
+- Dependencies installed from the repository root `requirements.txt`
 
 ### Installation
 ```bash
 python -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+pip install -r ../requirements.txt
 ```
 
-### GUI (recommended)
+### GUI
 ```bash
 cd 03_regressão_linear
 python -m app
 ```
-Select the CSV and click **Executar**. Then use **Gerar PDF** to create the report.
+
+GUI flow:
+- select the CSV
+- click **Executar**
+- review the summary and chart
+- use **Gerar PDF** if you want the report export
 
 ### Outputs
-- `resultado_exe1_regressao.csv`: data with `y_estimado` and `residuo`.
-- `grafico_exe1_regressao.png`: plot with points and regression line.
-- `relatorio_exe1_regressao.pdf`: formulas, statistical summary, and plot.
+Files are saved next to the selected CSV:
+- `resultado_exe1_regressao.csv`
+- `grafico_exe1_regressao.png`
+- `relatorio_exe1_regressao.pdf`
 
-### Relevant folder structure
-- `app/gui.py`: GUI.
-- `app/regressao.py`: regression pipeline and file outputs.
-- `dados.csv`: sample input.
+The output CSV includes:
+- original observation
+- `x`
+- `y`
+- `y_estimado`
+- `residuo`
+
+### Programmatic usage
+There is no dedicated CLI wrapper. For automation, call `app/regressao.py` from Python:
+```python
+from pathlib import Path
+from app.regressao import run_pipeline
+
+stats_text, df_out, fig, csv_path, png_path = run_pipeline(Path("dados.csv"))
+```
+
+### Relevant structure
+- `app/gui.py`: GUI
+- `app/regressao.py`: cleanup, fitting, and export pipeline
+- `dados.csv`: sample input
 
 ### Notes
 - Comma-decimal values are converted automatically.
-- Invalid rows are removed before fitting.
-- On Linux, Tkinter may require the `python3-tk` package.
+- Invalid rows are dropped before fitting.
+- On Linux, Tkinter may require `python3-tk`.
 
 ### Troubleshooting
-- **Missing columns**: confirm exact column names.
+- **Missing columns**: confirm the exact CSV column names.
 - **PDF not generated**: run the regression before clicking **Gerar PDF**.

@@ -6,220 +6,210 @@
 
 ## PT-BR
 
-Scraping da pagina da CVM (SRE) para coletar registros de ofertas e filtrar apenas IPOs, extraindo detalhes do registro e a tabela de especies.
+Scraper em Python para a consulta pública da CVM (SRE), focado em ofertas do tipo `ACOES`, com filtro de IPO, extração dos detalhes do registro e exportação estruturada em JSON e CSV.
+
+### Objetivo
+- navegar na consulta pública da CVM
+- coletar todos os registros de um ano e tipo de emissão
+- manter apenas registros com `IPO = SIM`
+- extrair a tabela de espécies e consolidar os dados
 
 ### Como funciona
-1. Abre a pagina de consulta da CVM (SRE).
-2. Seleciona tipo (ex.: ACOES) e ano.
-3. Percorre os resultados com paginacao.
-4. Abre cada registro e extrai os detalhes do BODY.
-5. Mantem somente IPO = "SIM".
-6. Extrai a tabela "ESPECIES".
-7. Salva em JSON (merge por chave unica) e opcionalmente CSV.
+1. Abre a consulta da CVM e localiza o frame correto.
+2. Seleciona `TipoEmis` e `Ano`.
+3. Percorre todas as páginas de resultado.
+4. Abre cada registro em nova aba.
+5. Extrai campos do cabeçalho, a primeira linha da tabela `REGISTROS` e as linhas válidas de `ESPÉCIES`.
+6. Mantém apenas IPOs e normaliza o número do registro.
+7. Faz merge no JSON final e opcionalmente gera CSV.
 
-### O que exatamente o script faz (detalhado)
-Fluxo completo executado por `app/scraping/sre_consulta.py`:
-- Abre `https://sistemas.cvm.gov.br/port/redir.asp?subpage=consulta` e procura o frame correto contendo os selects de consulta.
-- Seleciona `TipoEmis` (ex.: ACOES) e `Ano`, clicando em “Procura” para carregar os resultados.
-- Localiza a tabela de resultados e coleta todos os links de registro, percorrendo pagina por pagina ate nao existir o link “Proxima/Próxima/>>”.
-- Para cada link de registro, abre uma nova aba e extrai:
-  - Campos do cabecalho via labels (ex.: Numero do Processo, Data Protocolo, Analista, Emissora, IPO, Lider, Encerramento Distribuicao).
-  - Primeira linha da tabela “REGISTROS” (Data e Numero do Registro).
-  - Todas as linhas validas da tabela “ESPÉCIES”.
-- Filtra registros que nao sao IPO (mantem apenas IPO = "SIM"; se o campo nao existir, aceita).
-- Filtra linhas espurias da tabela “ESPÉCIES” (rodapes/observacoes) e valida especies com heuristicas:
-  - Tipo valido (ex.: ON, PN, UNIT, etc.) ou 1–5 letras maiusculas.
-  - Pelo menos um valor numerico em quantidade/preco/volume.
-- Normaliza o numero do registro (remove espacos extras e normaliza barras).
-- Gera 1 linha de saida por especie (um registro pode virar varias linhas).
-- Faz merge com JSON existente usando chave unica `(ano, registro_link, registro_numero, especie_tipo, especie_classe)` para evitar duplicatas.
-- Mantem tambem os dados do run atual na GUI para copia sem merge.
-- Opcionalmente gera CSV com as mesmas colunas do JSON.
-
-### Campos gerados
-Cada linha final contem:
+### Campos extraídos
+Cada linha final pode conter:
 - `ano`, `registro_link`, `registro_texto`
 - `emissora`, `numero_processo`, `data_protocolo`, `analista`, `ipo`, `lider`, `enc_distribuicao`
 - `registro_data`, `registro_numero`
 - `especie_tipo`, `especie_classe`, `especie_quantidade`, `especie_preco`, `especie_volume`, `especie_garantidos`, `especie_sobras`
 
-### Estrutura de pastas relevante
-- `app/scraping/sre_consulta.py`: script principal de scraping e exportacao.
-- `data/output/`: destino padrao do JSON/CSV (criado automaticamente).
-- `requirements.txt`: dependencias Python.
-- `scripts/setup.sh`: atalho para instalar dependencias e o Chromium do Playwright.
-
 ### Requisitos
 - Python 3.10+
-- Dependencias em `requirements.txt`
-- Playwright com navegadores instalados
+- Dependências em `requirements.txt`
+- Playwright com Chromium instalado
 
-### Instalacao
+### Instalação
 ```bash
+cd 02_IPO_DATAS
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python -m playwright install chromium
 ```
 
-Opcional (Linux): se faltar dependencias do sistema para o Playwright, rode:
+Se o sistema exigir dependências adicionais do navegador:
 ```bash
 python -m playwright install-deps
 ```
 
-Atalho (faz pip + browsers):
+Atalho:
 ```bash
+cd 02_IPO_DATAS
 ./scripts/setup.sh
 ```
 
-### Interface grafica (recomendado)
+### Interface gráfica
 ```bash
+cd 02_IPO_DATAS
 python -m app
 ```
 
-Preencha:
-- **TipoEmis** (ex.: `ACOES`)
-- **Anos** (ex.: `2005,2008-2010`)
-- **JSON out** (pode usar `{ano}` no caminho)
-- **CSV out** (opcional, pode usar `{ano}`)
-- **Pasta JSON / Pasta CSV**: botao para selecionar a pasta de saida mantendo o nome do arquivo
+Na GUI, é possível:
+- definir `TipoEmis`
+- informar anos únicos ou intervalos como `2008-2010`
+- escolher caminhos de saída para JSON e CSV
+- usar `{ano}` no nome do arquivo para gerar uma saída por ano
+- copiar o JSON consolidado ou apenas os dados do run atual
 
-Observacao: no Linux, o Tkinter pode exigir o pacote `python3-tk`.
-
-#### Copiar JSON na GUI
-- **Copiar JSON (merge)**: copia o JSON consolidado (apos merge em disco).
-- **Copiar JSON (sem merge)**: copia apenas os dados coletados no run atual.
-
-### Uso (CLI)
+### Uso em linha de comando
 ```bash
-# Com navegador visivel
+cd 02_IPO_DATAS
+
+# navegador visível
 python -m app.scraping.sre_consulta --ano 2005 --tipo ACOES --headed
 
-# Sem navegador visivel
-python -m app.scraping.sre_consulta --ano 2005 --tipo ACOES
+# headless com JSON e CSV explícitos
+python -m app.scraping.sre_consulta \
+  --ano 2005 \
+  --tipo ACOES \
+  --json-out data/output/sre_consulta_2005.json \
+  --csv-out data/output/sre_consulta_2005.csv
 ```
 
-### Saidas
-- JSON default em `data/output/sre_consulta.json`
-- CSV opcional quando informado `--csv-out`
+Opções úteis:
+- `--max-registros`: limita a coleta para depuração
+- `--headed`: abre o Chromium visível
 
-### Boas praticas do projeto
-- Respeite termos de uso do site e limites de requisicao.
-- Rode em horarios de menor carga.
-- Guarde os arquivos de saida fora do controle de versao se forem grandes.
+### Saídas
+- JSON consolidado em `data/output/`
+- CSV opcional quando `--csv-out` é informado
+- no repositório há exemplos como `data/output/sre_consulta_2005.json`
+
+### Estrutura relevante
+- `app/gui.py`: GUI para rodar consultas por ano e copiar resultados
+- `app/scraping/sre_consulta.py`: scraper principal e fluxo de exportação
+- `scripts/setup.sh`: instalação rápida do ambiente
+- `data/output/`: pasta de saída dos arquivos gerados
+
+### Observações
+- O merge usa chave única por registro e espécie para evitar duplicatas.
+- O scraper mantém os dados do run atual em memória para a opção de cópia sem merge.
+- Respeite limites e disponibilidade do site da CVM.
 
 ### Troubleshooting
-- **Erro do Playwright**: rode `python -m playwright install`.
-- **Timeout**: tente novamente ou use `--headed` para ver a navegacao.
-- **Nenhum resultado**: verifique ano/tipo e a pagina da CVM.
+- **Erro do Playwright**: rode `python -m playwright install chromium`.
+- **Timeout**: tente novamente ou use `--headed`.
+- **Nenhum resultado**: confirme ano, tipo e disponibilidade da página da CVM.
 
 ---
 
 ## EN
 
-Scraper for CVM (SRE) public page to collect offering records and keep only IPOs, extracting record details and the species table.
+Python scraper for the CVM (SRE) public search page, focused on `ACOES` offerings, with IPO filtering, record-detail extraction, and structured JSON/CSV export.
+
+### Goal
+- navigate the CVM public search
+- collect all records for a given year and issuance type
+- keep only records with `IPO = SIM`
+- extract the species table and consolidate the data
 
 ### How it works
-1. Opens the CVM (SRE) search page.
-2. Selects type (e.g., ACOES) and year.
-3. Walks all results with pagination.
-4. Opens each record and extracts BODY details.
-5. Keeps only IPO = "SIM".
-6. Extracts the "ESPECIES" table.
-7. Saves JSON (merge by unique key) and optional CSV.
+1. Opens the CVM search page and finds the correct frame.
+2. Selects `TipoEmis` and `Ano`.
+3. Walks through all result pages.
+4. Opens each record in a new tab.
+5. Extracts header fields, the first `REGISTROS` row, and valid `ESPÉCIES` rows.
+6. Keeps only IPO records and normalizes the registration number.
+7. Merges into the target JSON and optionally exports CSV.
 
-### What the script actually does (detailed)
-Full flow executed by `app/scraping/sre_consulta.py`:
-- Opens `https://sistemas.cvm.gov.br/port/redir.asp?subpage=consulta` and finds the correct frame with the search selects.
-- Selects `TipoEmis` (e.g., ACOES) and `Ano`, clicks “Procura” to load results.
-- Locates the results table and collects all record links, paginating until no “Proxima/Próxima/>>” link exists.
-- For each record link, opens a new tab and extracts:
-  - Header fields via labels (e.g., Process Number, Protocol Date, Analyst, Issuer, IPO, Lead, Distribution End).
-  - First row of the “REGISTROS” table (Date and Registration Number).
-  - All valid rows of the “ESPÉCIES” table.
-- Filters out non-IPO records (keeps only IPO = "SIM"; if field is missing, it accepts the record).
-- Filters spurious “ESPÉCIES” rows (footers/notes) and validates species with heuristics:
-  - Valid type (e.g., ON, PN, UNIT, etc.) or 1–5 uppercase letters.
-  - At least one numeric value in quantity/price/volume.
-- Normalizes the registration number (trim spaces and normalize slashes).
-- Produces 1 output row per species (a single record can become multiple rows).
-- Merges into existing JSON using unique key `(ano, registro_link, registro_numero, especie_tipo, especie_classe)` to avoid duplicates.
-- Keeps current run data in the GUI to allow copy without merge.
-- Optionally exports CSV with the same columns as JSON.
-
-### Output fields
-Each final row includes:
+### Extracted fields
+Each final row may include:
 - `ano`, `registro_link`, `registro_texto`
 - `emissora`, `numero_processo`, `data_protocolo`, `analista`, `ipo`, `lider`, `enc_distribuicao`
 - `registro_data`, `registro_numero`
 - `especie_tipo`, `especie_classe`, `especie_quantidade`, `especie_preco`, `especie_volume`, `especie_garantidos`, `especie_sobras`
 
-### Relevant folder structure
-- `app/scraping/sre_consulta.py`: main scraping/export script.
-- `data/output/`: default JSON/CSV output target (auto-created).
-- `requirements.txt`: Python dependencies.
-- `scripts/setup.sh`: shortcut to install dependencies and Playwright Chromium.
-
 ### Requirements
 - Python 3.10+
 - Dependencies in `requirements.txt`
-- Playwright with browsers installed
+- Playwright with Chromium installed
 
 ### Installation
 ```bash
+cd 02_IPO_DATAS
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 python -m playwright install chromium
 ```
 
-Optional (Linux): if Playwright system deps are missing, run:
+If your system needs extra browser dependencies:
 ```bash
 python -m playwright install-deps
 ```
 
-Shortcut (pip + browsers):
+Shortcut:
 ```bash
+cd 02_IPO_DATAS
 ./scripts/setup.sh
 ```
 
-### GUI (recommended)
+### GUI
 ```bash
+cd 02_IPO_DATAS
 python -m app
 ```
 
-Fill in:
-- **TipoEmis** (e.g., `ACOES`)
-- **Anos** (e.g., `2005,2008-2010`)
-- **JSON out** (you can use `{ano}` in the path)
-- **CSV out** (optional, can use `{ano}`)
-- **JSON Folder / CSV Folder**: button to pick the output folder while keeping the filename
-
-Note: on Linux, Tkinter may require the `python3-tk` package.
-
-#### Copy JSON in the GUI
-- **Copy JSON (merge)**: copies the consolidated JSON (after merge on disk).
-- **Copy JSON (no merge)**: copies only the current run data.
+Inside the GUI you can:
+- set `TipoEmis`
+- provide single years or ranges such as `2008-2010`
+- choose JSON and CSV output paths
+- use `{ano}` in filenames to generate one file per year
+- copy the merged JSON or only the current-run data
 
 ### CLI usage
 ```bash
-# With visible browser
+cd 02_IPO_DATAS
+
+# visible browser
 python -m app.scraping.sre_consulta --ano 2005 --tipo ACOES --headed
 
-# Headless
-python -m app.scraping.sre_consulta --ano 2005 --tipo ACOES
+# headless with explicit JSON and CSV outputs
+python -m app.scraping.sre_consulta \
+  --ano 2005 \
+  --tipo ACOES \
+  --json-out data/output/sre_consulta_2005.json \
+  --csv-out data/output/sre_consulta_2005.csv
 ```
 
-### Outputs
-- Default JSON at `data/output/sre_consulta.json`
-- Optional CSV when `--csv-out` is provided
+Useful options:
+- `--max-registros`: limits collection for debugging
+- `--headed`: opens visible Chromium
 
-### Project best practices
-- Respect site terms and request limits.
-- Run during off-peak hours.
-- Keep large outputs out of version control.
+### Outputs
+- consolidated JSON in `data/output/`
+- optional CSV when `--csv-out` is provided
+- the repository already includes examples such as `data/output/sre_consulta_2005.json`
+
+### Relevant structure
+- `app/gui.py`: GUI to run yearly queries and copy results
+- `app/scraping/sre_consulta.py`: main scraper and export flow
+- `scripts/setup.sh`: quick environment setup
+- `data/output/`: generated output folder
+
+### Notes
+- Merge uses a unique key by record and species to avoid duplicates.
+- The scraper keeps current-run data in memory for copy-without-merge.
+- Respect CVM site limits and availability.
 
 ### Troubleshooting
-- **Playwright error**: run `python -m playwright install`.
-- **Timeout**: retry or use `--headed` to observe navigation.
-- **No results**: verify year/type and CVM page availability.
+- **Playwright error**: run `python -m playwright install chromium`.
+- **Timeout**: retry or use `--headed`.
+- **No results**: confirm year, type, and CVM page availability.

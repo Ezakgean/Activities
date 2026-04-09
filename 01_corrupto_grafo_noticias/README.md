@@ -6,51 +6,62 @@
 
 ## PT-BR
 
-Aplicacao em Python que usa **Vertex AI Search (Discovery Engine)** para buscar noticias, coletar titulos e gerar uma rede de palavras relacionadas. O foco e portugues (pt-BR).
+Aplicação em Python que usa **Vertex AI Search (Discovery Engine)** para buscar notícias, coletar títulos e gerar uma rede de palavras relacionadas em português.
+
+### Objetivo
+- consultar um Search App/Engine no Vertex AI Search
+- extrair títulos dos resultados
+- normalizar o texto e remover stopwords em português
+- gerar uma rede com a palavra central e os termos mais frequentes
 
 ### Como funciona
-1. Consulta o Vertex AI Search (Search Service).
-2. Extrai titulos dos resultados.
-3. Normaliza o texto e remove stopwords em portugues.
-4. Gera um grafo com a palavra central e as palavras mais frequentes.
+1. Envia a consulta ao Vertex AI Search.
+2. Coleta os títulos retornados.
+3. Limpa, tokeniza e normaliza o texto.
+4. Conta frequências e monta a estrutura do grafo.
+5. Exporta títulos, frequências e a visualização interativa.
 
 ### Requisitos
 - Python 3.10+
-- Dependencias em `requirements.txt`
-- Projeto no Google Cloud com a **Discovery Engine API** habilitada
-- Um **Search App/Engine** com dados ingestados
-- Credenciais via service account **ou** Application Default Credentials (ADC)
+- Dependências em `requirements.txt`
+- Projeto no Google Cloud com **Discovery Engine API** habilitada
+- Um **Search App/Engine** com dados indexados
+- Credenciais via service account ou Application Default Credentials (ADC)
 
-### Instalacao
+### Instalação
 ```bash
+cd 01_corrupto_grafo_noticias
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Interface grafica (recomendado)
+### Interface gráfica
 ```bash
+cd 01_corrupto_grafo_noticias
 python -m src.app
 ```
 Ou:
 ```bash
+cd 01_corrupto_grafo_noticias
 python -m src
 ```
 
-Preencha:
-- **Project ID**
-- **Location** (ex.: `global`)
-- **Engine ID**
-- **Credenciais JSON (opcional)**: caminho do JSON da service account
+Preencha na GUI:
+- `Project ID`
+- `Location` como `global`, quando aplicável
+- `Engine ID`
+- `Credenciais JSON`, se quiser apontar diretamente para a service account
 
-Use **Testar conexao** para validar antes de rodar.
+Use **Testar conexão** antes de executar a busca.
 
-### Uso (CLI)
+### Uso em linha de comando
 ```bash
+cd 01_corrupto_grafo_noticias
+
 export GOOGLE_CLOUD_PROJECT="SEU_PROJECT_ID"
 export VERTEX_SEARCH_LOCATION="global"
 export VERTEX_SEARCH_ENGINE_ID="SEU_ENGINE_ID"
-# Opcional: caminho do JSON da service account
 export GOOGLE_APPLICATION_CREDENTIALS="/caminho/para/sa.json"
 
 python -m src.main --query "corrupcao" --pages 2 --top 30 \
@@ -60,84 +71,89 @@ python -m src.main --query "corrupcao" --pages 2 --top 30 \
   --credentials "$GOOGLE_APPLICATION_CREDENTIALS"
 ```
 
-### Configuracao do Vertex AI Search (resumo)
-1. Habilite a **Discovery Engine API** no projeto.
-2. Crie um **Search App/Engine** no Vertex AI Search.
-3. Conecte um data store e conclua a ingestao/indexacao.
-4. Pegue o **Engine ID** do app.
-5. Configure credenciais (ADC ou service account).
-
-### Saidas
-- `reports/titles.txt`: titulos coletados
-- `reports/words.csv`: palavras e frequencias
+### Saídas
+- `reports/titles.txt`: títulos coletados
+- `reports/words.csv`: palavras e frequências
 - `reports/graph.html`: rede interativa
 
-### Boas praticas do projeto
-- Validacao de parametros (pages/top) com limites seguros.
-- Pipeline reutilizado entre CLI e GUI.
-- Funcoes pequenas e separadas por responsabilidade.
-- Logs basicos para facilitar depuracao.
-- Nao versionar credenciais sensiveis.
+### Estrutura relevante
+- `src/app.py`: GUI para configurar consulta e credenciais
+- `src/main.py`: ponto de entrada em CLI
+- `src/search.py`: integração com Vertex AI Search
+- `src/text.py`: limpeza e normalização do texto
+- `src/graph.py`: geração da rede de palavras
+- `reports/`: saída dos artefatos gerados
 
-### Observacoes
-- No Linux, o Tkinter pode exigir instalacao do pacote `python3-tk`.
-- Custos e cotas dependem da configuracao do Vertex AI Search.
-- Use com responsabilidade e respeite os termos do Google.
+### Observações
+- No Linux, o Tkinter pode exigir `python3-tk`.
+- Custos, cotas e latência dependem da configuração do Vertex AI Search.
+- Não versionar credenciais sensíveis.
 
 ### Troubleshooting
-- **Erro de autenticacao**: verifique `GOOGLE_APPLICATION_CREDENTIALS` ou execute o login ADC.
-- **Erro de permissao**: confirme IAM no projeto e acesso ao Discovery Engine.
-- **Nenhum titulo**: revise se o Engine tem dados e se o data store foi indexado.
+- **Erro de autenticação**: valide `GOOGLE_APPLICATION_CREDENTIALS` ou faça login por ADC.
+- **Erro de permissão**: confirme IAM e acesso ao Discovery Engine.
+- **Nenhum resultado**: verifique se o Engine possui dados indexados.
 
 ---
 
 ## EN
 
-Python app that uses **Vertex AI Search (Discovery Engine)** to search news, collect titles, and build a related-words network. Focus: Portuguese (pt-BR).
+Python app that uses **Vertex AI Search (Discovery Engine)** to search news, collect titles, and generate a related-word network in Portuguese.
+
+### Goal
+- query a Vertex AI Search App/Engine
+- collect returned titles
+- normalize text and remove Portuguese stopwords
+- build a network centered on the query and its most frequent related terms
 
 ### How it works
-1. Calls Vertex AI Search (Search Service).
-2. Extracts titles from results.
-3. Normalizes text and removes Portuguese stopwords.
-4. Builds a graph with the central word and most frequent related words.
+1. Sends a query to Vertex AI Search.
+2. Collects result titles.
+3. Cleans, tokenizes, and normalizes the text.
+4. Counts frequencies and builds the graph structure.
+5. Exports titles, frequencies, and the interactive visualization.
 
 ### Requirements
 - Python 3.10+
 - Dependencies in `requirements.txt`
 - Google Cloud project with **Discovery Engine API** enabled
-- A **Search App/Engine** with ingested data
-- Credentials via service account **or** Application Default Credentials (ADC)
+- A **Search App/Engine** with indexed data
+- Credentials via service account or Application Default Credentials (ADC)
 
 ### Installation
 ```bash
+cd 01_corrupto_grafo_noticias
 python -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### GUI (recommended)
+### GUI
 ```bash
+cd 01_corrupto_grafo_noticias
 python -m src.app
 ```
 Or:
 ```bash
+cd 01_corrupto_grafo_noticias
 python -m src
 ```
 
 Fill in:
-- **Project ID**
-- **Location** (e.g., `global`)
-- **Engine ID**
-- **Credentials JSON (optional)**: service account JSON path
+- `Project ID`
+- `Location`, such as `global`
+- `Engine ID`
+- `Credentials JSON`, if you want to point directly to a service-account file
 
-Use **Test connection** before running.
+Use **Test connection** before running the query.
 
 ### CLI usage
 ```bash
+cd 01_corrupto_grafo_noticias
+
 export GOOGLE_CLOUD_PROJECT="YOUR_PROJECT_ID"
 export VERTEX_SEARCH_LOCATION="global"
 export VERTEX_SEARCH_ENGINE_ID="YOUR_ENGINE_ID"
-# Optional: service account JSON path
 export GOOGLE_APPLICATION_CREDENTIALS="/path/to/sa.json"
 
 python -m src.main --query "corrupcao" --pages 2 --top 30 \
@@ -147,31 +163,25 @@ python -m src.main --query "corrupcao" --pages 2 --top 30 \
   --credentials "$GOOGLE_APPLICATION_CREDENTIALS"
 ```
 
-### Vertex AI Search setup (summary)
-1. Enable the **Discovery Engine API** in your project.
-2. Create a **Search App/Engine** in Vertex AI Search.
-3. Connect a data store and finish ingestion/indexing.
-4. Copy the **Engine ID**.
-5. Configure credentials (ADC or service account).
-
 ### Outputs
 - `reports/titles.txt`: collected titles
 - `reports/words.csv`: words and frequencies
 - `reports/graph.html`: interactive network
 
-### Project best practices
-- Validate parameters (pages/top) with safe limits.
-- Reuse the pipeline across CLI and GUI.
-- Keep functions small and single-purpose.
-- Basic logs for easier debugging.
-- Never commit sensitive credentials.
+### Relevant structure
+- `src/app.py`: GUI for query and credential setup
+- `src/main.py`: CLI entry point
+- `src/search.py`: Vertex AI Search integration
+- `src/text.py`: text cleanup and normalization
+- `src/graph.py`: word-network generation
+- `reports/`: generated artifacts
 
 ### Notes
-- On Linux, Tkinter may require the `python3-tk` package.
-- Costs and quotas depend on your Vertex AI Search setup.
-- Use responsibly and follow Google terms.
+- On Linux, Tkinter may require `python3-tk`.
+- Costs, quotas, and latency depend on your Vertex AI Search setup.
+- Do not commit sensitive credentials.
 
 ### Troubleshooting
-- **Auth error**: check `GOOGLE_APPLICATION_CREDENTIALS` or login with ADC.
-- **Permission error**: verify IAM permissions for Discovery Engine.
-- **No titles**: confirm the Engine has data and the data store is indexed.
+- **Authentication error**: validate `GOOGLE_APPLICATION_CREDENTIALS` or use ADC login.
+- **Permission error**: confirm IAM access to Discovery Engine.
+- **No results**: verify that the Engine contains indexed data.
