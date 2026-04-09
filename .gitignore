@@ -1,3 +1,44 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
 .venv/
+venv/
+
+# Tool caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Editors and OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local documents
+Comprovante_*.pdf
+
+# Activity 01 generated files
 01_corrupto_grafo_noticias/data/
 01_corrupto_grafo_noticias/reports/
+
+# Activity 02 generated files
+02_IPO_DATAS/data/output/
+
+# Activity 03 generated files
+03_regressão_linear/resultado_exe1_regressao.csv
+03_regressão_linear/grafico_exe1_regressao.png
+03_regressão_linear/relatorio_exe1_regressao.pdf
+
+# Activity 04 generated files
+04_regressao_escolas/data/output/
+
+# Activity 05 generated files
+05_salario_x_escolaridade/data/output/*
+!05_salario_x_escolaridade/data/output/.gitkeep
