@@ -1,0 +1,9 @@
+frase,tokens_normalizados,emocao_prevista,confianca,emocao_secundaria,confianca_secundaria
+estou muito feliz com essa aprovacao,"feliz, aprova",desgosto,0.38094536197444984,medo,0.3688315224474235
+esse filme me deixou enjoado,"filme, deixou, enjo",tristeza,0.424750285660894,desgosto,0.2984536130656561
+tenho medo do que pode acontecer amanha,"medo, pode, acontecer, amanha",medo,0.9091113956317868,tristeza,0.05003095139827595
+me sinto sozinho e abatido hoje,"sinto, sozinho, abat, hoje",tristeza,0.5832446921991463,desgosto,0.25988116568039826
+que noticia maravilhosa para a equipe,"noticia, maravilh, equipe",desgosto,0.38013451231059153,medo,0.3525497643880852
+nao quero entrar naquele lugar estranho,"quero, entrar, naquele, lugar, estranho",medo,0.7388472904319401,tristeza,0.18232556311029818
+essa atitude foi repulsiva,"atitude, repuls",desgosto,0.7136022425964315,medo,0.1550241518772804
+estou contente com o resultado do projeto,"contente, result, projeto",medo,0.5060332787018472,desgosto,0.28180741510973256

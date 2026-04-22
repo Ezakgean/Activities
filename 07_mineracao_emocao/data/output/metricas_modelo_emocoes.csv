@@ -1,0 +1,2 @@
+acuracia_teste,baseline_majoritaria,frases_treinamento,frases_teste,frases_arquivo,tamanho_vocabulario,classes_modeladas
+0.5309734513274337,0.3185840707964602,278,113,8,542,"alegria, desgosto, medo, tristeza"

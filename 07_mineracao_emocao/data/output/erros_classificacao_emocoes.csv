@@ -1,0 +1,54 @@
+frase,tokens_normalizados,emocao_prevista,confianca,emocao_secundaria,confianca_secundaria,emocao_esperada
+nunca vou me casar sou muito feia,"nunca, casar, sou, feia",tristeza,0.5670149377252754,desgosto,0.304786652867753,desgosto
+o mais irritante no amor e que se trata de um crime que precisa de um cúmplice,"irrit, amor, trata, crime, precisa, cumplice",tristeza,0.5285036871496099,desgosto,0.24462381224995844,desgosto
+simplesmente não quero amolação da policia,"simples, quero, amola, policia",tristeza,0.4290848984945456,medo,0.3723083818158637,desgosto
+o peso e a dor da vida,"peso, dor, vida",tristeza,0.5299279629350385,desgosto,0.41118298886347393,desgosto
+muito lixo no rio o deixa malcheiroso,"lixo, rio, deixa, malcheir",medo,0.4952154930288667,desgosto,0.36784111933159874,desgosto
+foi de repente estou machucado e me sentindo enjoado,"repente, machuc, sentindo, enjo",tristeza,0.4465484086544636,desgosto,0.29308206349910326,desgosto
+daqui alguns meses vou embora deste pais que já estou nauseado,"daqui, mes, embora, deste, pai, nause",medo,0.4946731568079049,desgosto,0.31387171542736525,desgosto
+isso tudo e um erro,"tudo, erro",desgosto,0.6376420524906151,tristeza,0.21938911607635123,tristeza
+tenho muito dó do cachorro,cachorro,desgosto,0.5535981945380741,medo,0.25389194020890327,tristeza
+essa tragedia vai nos abalar para sempre,"tragedia, abalar, sempre",desgosto,0.3801345123105869,medo,0.3525497643881097,tristeza
+você e um chorão,chorao,desgosto,0.38094536197444984,medo,0.3688315224474235,tristeza
+me sinto deslocado em sala de aula,"sinto, desloc, sala, aula",desgosto,0.426399996584563,tristeza,0.3803554081338011,tristeza
+foi uma passagem fúnebre,"passagem, funebre",desgosto,0.5535981945380681,medo,0.2538919402089416,tristeza
+vivo te desanimando,"vivo, desanimando",desgosto,0.38094536197444984,medo,0.3688315224474235,tristeza
+"imperador sanguinário, depravado e temeroso","imper, sanguinario, deprav, temer",desgosto,0.38094536197444984,medo,0.3688315224474235,tristeza
+este atrito entre nos tem que acabar,"atrito, entre, acabar",desgosto,0.38094536197444984,medo,0.3688315224474235,tristeza
+a escuridão desola meu ser,"escuridao, desola",desgosto,0.38094536197444984,medo,0.3688315224474235,tristeza
+sua falsidade me entristece,"fals, entristece",desgosto,0.38094536197444984,medo,0.3688315224474235,tristeza
+a torcida esta descontente com a demissão do tecnico,"torc, descontente, demissao, tecn",desgosto,0.38094536197444984,medo,0.3688315224474235,tristeza
+me sinto solitário e entediado,"sinto, solitario, entedi",desgosto,0.426399996584563,tristeza,0.3803554081338011,tristeza
+estou me desencorajando a viver,"desencorajando, viver",medo,0.5239514402217612,desgosto,0.27950022589216394,tristeza
+ele desencoraja minhas vontades,"desencoraja, vontad",desgosto,0.38094536197444984,medo,0.3688315224474235,tristeza
+isso vai deprimindo por dentro,"deprimindo, dentro",desgosto,0.38094536197444984,medo,0.3688315224474235,tristeza
+acho que isso e defeituoso,"acho, defeitu",medo,0.4520276445246627,desgosto,0.3216242858119356,tristeza
+os remedios me derrubam na cama,"remedio, derrubam, cama",medo,0.5239514402217609,desgosto,0.27950022589216417,tristeza
+suas desculpas são falsas,"desculpa, sao, falsa",desgosto,0.38094536197444984,medo,0.3688315224474235,tristeza
+não magoe as pessoas,"magoe, pessoa",desgosto,0.5725646819249065,tristeza,0.2990578009792721,tristeza
+que abominável esse montro!,"abominavel, montro",desgosto,0.7172456161980938,medo,0.16081713431188688,medo
+ele esta me ameaçando a dias,"ameacando, dia",tristeza,0.4604067051412346,medo,0.4230390597663015,medo
+quanta angustia,"quanta, angustia",desgosto,0.38094536197444984,medo,0.3688315224474235,medo
+estou angustiada,angusti,desgosto,0.38094536197444984,medo,0.3688315224474235,medo
+você esta me apavorando,apavorando,desgosto,0.38094536197444984,medo,0.3688315224474235,medo
+estou desconfiada de você,desconfi,desgosto,0.38094536197444984,medo,0.3688315224474235,medo
+assustou a população e provocou mortes,"assustou, popula, provocou, mort",desgosto,0.38094536197444984,medo,0.3688315224474235,medo
+os policiais se assustaram quando o carro capotou,"polici, assustaram, quando, carro, capotou",desgosto,0.378585392899646,medo,0.3361720768055149,medo
+o trabalhador e assombrado pelo temor do desemprego,"trabalh, assombr, temor, desemprego",desgosto,0.38094536197444984,medo,0.3688315224474235,medo
+estou assombrado pela crise financeira,"assombr, crise, financeira",desgosto,0.38094536197444984,medo,0.3688315224474235,medo
+mesmo aterrorizado lembro de você,"aterroriz, lembro",desgosto,0.38094536197444984,medo,0.3688315224474235,medo
+aterrorizado e suando frio,"aterroriz, suando, frio",desgosto,0.38094536197444984,medo,0.3688315224474235,medo
+um grupo de elefantes selvagens tem aterrorizado vilas,"grupo, elef, selvage, aterroriz, vila",desgosto,0.38094536197444984,medo,0.3688315224474235,medo
+me sinto intimidada pela sua presença,"sinto, intimid, presenca",desgosto,0.5927972819093976,tristeza,0.2799446646569686,medo
+estou correndo o risco de ser advertido,"correndo, risco, advert",desgosto,0.38094536197444984,medo,0.3688315224474235,medo
+estou correndo riscos de saúde,"correndo, risco, saude",desgosto,0.38094536197444984,medo,0.3688315224474235,medo
+os riscos são reais,"risco, sao, reai",desgosto,0.38094536197444984,medo,0.3688315224474235,medo
+estou angustiada com meus filhos na rua,"angusti, filho, rua",tristeza,0.4247502856608737,desgosto,0.29845361306565665,medo
+e abominável o que fazem com os animais,"abominavel, fazem, anim",desgosto,0.6187634986135029,medo,0.26861646975497994,medo
+foi terrível o tigre quase o matou,"terrivel, tigre, quase, matou",desgosto,0.6187634986134787,medo,0.26861646975502573,medo
+me advertiram sobre isso,"advertiram, sobre",desgosto,0.38094536197444984,medo,0.3688315224474235,medo
+estou feliz com essa conquista,"feliz, conqu",desgosto,0.38094536197444984,medo,0.3688315224474235,alegria
+que noticia maravilhosa para todos,"noticia, maravilh",desgosto,0.38013451231059153,medo,0.3525497643880852,alegria
+hoje acordei muito animado,"hoje, acordei, anim",desgosto,0.4424272786206275,medo,0.392861689538935,alegria
+esse resultado me deixou contente,"result, deixou, contente",medo,0.3953039167222116,tristeza,0.3748766930077316,alegria
+nosso encontro foi cheio de amor,"encontro, cheio, amor",tristeza,0.5285036871496099,desgosto,0.24462381224995844,alegria

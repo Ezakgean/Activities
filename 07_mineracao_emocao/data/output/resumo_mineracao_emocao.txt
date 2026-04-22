@@ -1,0 +1,33 @@
+ATIVIDADE 07 - MINERACAO DE EMOCAO
+
+Visao geral
+- Frases de treinamento: 278
+- Frases de teste: 113
+- Frases classificadas na rodada: 8
+- Classes modeladas: alegria, desgosto, medo, tristeza
+- Tamanho do vocabulario: 542
+- Acuracia no conjunto de teste: 53,1%
+- Baseline majoritaria: 31,9%
+
+Distribuicao prevista para o arquivo de entrada
+- alegria: 0 frases
+- desgosto: 3 frases
+- medo: 3 frases
+- tristeza: 2 frases
+
+Principais sinais por classe
+- alegria: dia, amor, teste, sou, sinto
+- desgosto: tao, crianca, tudo, terrivel, sinto
+- medo: perig, socorro, cuid, medo, lugar
+- tristeza: mim, vida, sinto, nada, dia
+
+Rodada atual
+- Maior confianca: 90,9% | medo | tenho medo do que pode acontecer amanha
+- Menor confianca: 38,0% | desgosto | que noticia maravilhosa para a equipe
+
+Matriz de confusao (linhas = esperado, colunas = previsto)
+          alegria  desgosto  medo  tristeza
+alegria         0         3     1         1
+desgosto        0        29     2         5
+medo            0        19    15         2
+tristeza        0        17     3        16
