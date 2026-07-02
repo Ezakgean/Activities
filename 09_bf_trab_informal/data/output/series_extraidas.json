@@ -3162,5 +3162,2111 @@
         "pessoas_informais_mil_indice_base_100": 108.56947374422714
       }
     ]
+  },
+  "econometria": {
+    "biblioteca": "statsmodels",
+    "observacao_metodologica": "Modelos estimados via OLS com erros-padrao HAC (Newey-West, maxlags=1) para reduzir sensibilidade a autocorrelacao e heterocedasticidade.",
+    "base_trimestral": [
+      {
+        "trimestre": "2015T4",
+        "pessoas_beneficiarias_pbf_media_tri": 47336236.0,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 35078.0,
+        "pessoas_ocupadas_mil": 91585.0,
+        "taxa_desocupacao": 9.1,
+        "trimestre_ordinal": 8063,
+        "periodo": "2015-12-31",
+        "ano": 2015,
+        "trimestre_num": 4,
+        "pos_2023": 0,
+        "tendencia": 1,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 1,
+        "ln_informal": 10.465329432318082,
+        "ln_bf": 17.67278664896085,
+        "ln_ocupados": 11.425022781794317,
+        "d_ln_informal": NaN,
+        "d_ln_bf": NaN,
+        "d_ln_bf_lag1": NaN,
+        "d_ln_ocupados": NaN,
+        "d_taxa_desocupacao": NaN,
+        "gap_trimestres": NaN,
+        "gap_trimestres_lag1": NaN
+      },
+      {
+        "trimestre": "2016T1",
+        "pessoas_beneficiarias_pbf_media_tri": 47006491.333333336,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 34457.0,
+        "pessoas_ocupadas_mil": 89909.0,
+        "taxa_desocupacao": 11.0,
+        "trimestre_ordinal": 8064,
+        "periodo": "2016-03-31",
+        "ano": 2016,
+        "trimestre_num": 1,
+        "pos_2023": 0,
+        "tendencia": 2,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.447467448834278,
+        "ln_bf": 17.665796263612723,
+        "ln_ocupados": 11.406553326683621,
+        "d_ln_informal": -0.017861983483804522,
+        "d_ln_bf": -0.006990385348128569,
+        "d_ln_bf_lag1": NaN,
+        "d_ln_ocupados": -0.01846945511069542,
+        "d_taxa_desocupacao": 1.9000000000000004,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": NaN
+      },
+      {
+        "trimestre": "2016T2",
+        "pessoas_beneficiarias_pbf_media_tri": 46624742.0,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 34727.0,
+        "pessoas_ocupadas_mil": 89827.0,
+        "taxa_desocupacao": 11.4,
+        "trimestre_ordinal": 8065,
+        "periodo": "2016-06-30",
+        "ano": 2016,
+        "trimestre_num": 2,
+        "pos_2023": 0,
+        "tendencia": 3,
+        "d_trimestre_2": 1,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.455272761356362,
+        "ln_bf": 17.65764190240088,
+        "ln_ocupados": 11.405640877250129,
+        "d_ln_informal": 0.007805312522084051,
+        "d_ln_bf": -0.008154361211843764,
+        "d_ln_bf_lag1": -0.006990385348128569,
+        "d_ln_ocupados": -0.000912449433492668,
+        "d_taxa_desocupacao": 0.40000000000000036,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2016T3",
+        "pessoas_beneficiarias_pbf_media_tri": 46836359.333333336,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 34194.0,
+        "pessoas_ocupadas_mil": 88939.0,
+        "taxa_desocupacao": 11.9,
+        "trimestre_ordinal": 8066,
+        "periodo": "2016-09-30",
+        "ano": 2016,
+        "trimestre_num": 3,
+        "pos_2023": 0,
+        "tendencia": 4,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 1,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.439805469063055,
+        "ln_bf": 17.662170368082336,
+        "ln_ocupados": 11.39570602046651,
+        "d_ln_informal": -0.015467292293307011,
+        "d_ln_bf": 0.004528465681456595,
+        "d_ln_bf_lag1": -0.008154361211843764,
+        "d_ln_ocupados": -0.009934856783617718,
+        "d_taxa_desocupacao": 0.5,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2016T4",
+        "pessoas_beneficiarias_pbf_media_tri": 46338826.333333336,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 34872.0,
+        "pessoas_ocupadas_mil": 89239.0,
+        "taxa_desocupacao": 12.1,
+        "trimestre_ordinal": 8067,
+        "periodo": "2016-12-31",
+        "ano": 2016,
+        "trimestre_num": 4,
+        "pos_2023": 0,
+        "tendencia": 5,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 1,
+        "ln_informal": 10.459439493918229,
+        "ln_bf": 17.651490749356725,
+        "ln_ocupados": 11.399073442746346,
+        "d_ln_informal": 0.01963402485517385,
+        "d_ln_bf": -0.010679618725610851,
+        "d_ln_bf_lag1": 0.004528465681456595,
+        "d_ln_ocupados": 0.0033674222798349973,
+        "d_taxa_desocupacao": 0.1999999999999993,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2017T1",
+        "pessoas_beneficiarias_pbf_media_tri": 45445589.0,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 34536.0,
+        "pessoas_ocupadas_mil": 87880.0,
+        "taxa_desocupacao": 13.9,
+        "trimestre_ordinal": 8068,
+        "periodo": "2017-03-31",
+        "ano": 2017,
+        "trimestre_num": 1,
+        "pos_2023": 0,
+        "tendencia": 6,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.449757537235314,
+        "ln_bf": 17.63202632217277,
+        "ln_ocupados": 11.383727526498546,
+        "d_ln_informal": -0.009681956682914716,
+        "d_ln_bf": -0.019464427183955024,
+        "d_ln_bf_lag1": -0.010679618725610851,
+        "d_ln_ocupados": -0.015345916247799352,
+        "d_taxa_desocupacao": 1.8000000000000007,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2017T2",
+        "pessoas_beneficiarias_pbf_media_tri": 44565746.333333336,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 35484.0,
+        "pessoas_ocupadas_mil": 89163.0,
+        "taxa_desocupacao": 13.1,
+        "trimestre_ordinal": 8069,
+        "periodo": "2017-06-30",
+        "ano": 2017,
+        "trimestre_num": 2,
+        "pos_2023": 0,
+        "tendencia": 7,
+        "d_trimestre_2": 1,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.476837169640477,
+        "ln_bf": 17.612476102480286,
+        "ln_ocupados": 11.39822143430925,
+        "d_ln_informal": 0.027079632405163423,
+        "d_ln_bf": -0.019550219692483495,
+        "d_ln_bf_lag1": -0.019464427183955024,
+        "d_ln_ocupados": 0.014493907810702922,
+        "d_taxa_desocupacao": -0.8000000000000007,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2017T3",
+        "pessoas_beneficiarias_pbf_media_tri": 43236893.333333336,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 36279.0,
+        "pessoas_ocupadas_mil": 90176.0,
+        "taxa_desocupacao": 12.5,
+        "trimestre_ordinal": 8070,
+        "periodo": "2017-09-30",
+        "ano": 2017,
+        "trimestre_num": 3,
+        "pos_2023": 0,
+        "tendencia": 8,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 1,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.498994340453384,
+        "ln_bf": 17.582204701098963,
+        "ln_ocupados": 11.409518595258351,
+        "d_ln_informal": 0.022157170812906912,
+        "d_ln_bf": -0.03027140138132367,
+        "d_ln_bf_lag1": -0.019550219692483495,
+        "d_ln_ocupados": 0.011297160949101936,
+        "d_taxa_desocupacao": -0.5999999999999996,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2017T4",
+        "pessoas_beneficiarias_pbf_media_tri": 44140248.0,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 36699.0,
+        "pessoas_ocupadas_mil": 91066.0,
+        "taxa_desocupacao": 11.9,
+        "trimestre_ordinal": 8071,
+        "periodo": "2017-12-31",
+        "ano": 2017,
+        "trimestre_num": 4,
+        "pos_2023": 0,
+        "tendencia": 9,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 1,
+        "ln_informal": 10.510504785715026,
+        "ln_bf": 17.602882577263713,
+        "ln_ocupados": 11.41933979733965,
+        "d_ln_informal": 0.011510445261642133,
+        "d_ln_bf": 0.020677876164750586,
+        "d_ln_bf_lag1": -0.03027140138132367,
+        "d_ln_ocupados": 0.009821202081297997,
+        "d_taxa_desocupacao": -0.5999999999999996,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2018T1",
+        "pessoas_beneficiarias_pbf_media_tri": 45112919.666666664,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 36088.0,
+        "pessoas_ocupadas_mil": 89691.0,
+        "taxa_desocupacao": 13.2,
+        "trimestre_ordinal": 8072,
+        "periodo": "2018-03-31",
+        "ano": 2018,
+        "trimestre_num": 1,
+        "pos_2023": 0,
+        "tendencia": 10,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.493715679088233,
+        "ln_bf": 17.624679230559163,
+        "ln_ocupados": 11.404125708564889,
+        "d_ln_informal": -0.01678910662679378,
+        "d_ln_bf": 0.021796653295449886,
+        "d_ln_bf_lag1": 0.020677876164750586,
+        "d_ln_ocupados": -0.01521408877476027,
+        "d_taxa_desocupacao": 1.299999999999999,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2018T2",
+        "pessoas_beneficiarias_pbf_media_tri": 43833499.666666664,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 36336.0,
+        "pessoas_ocupadas_mil": 90212.0,
+        "taxa_desocupacao": 12.6,
+        "trimestre_ordinal": 8073,
+        "periodo": "2018-06-30",
+        "ano": 2018,
+        "trimestre_num": 2,
+        "pos_2023": 0,
+        "tendencia": 11,
+        "d_trimestre_2": 1,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.50056426434534,
+        "ln_bf": 17.59590891558359,
+        "ln_ocupados": 11.409917734895998,
+        "d_ln_informal": 0.006848585257106521,
+        "d_ln_bf": -0.02877031497557425,
+        "d_ln_bf_lag1": 0.021796653295449886,
+        "d_ln_ocupados": 0.005792026331109312,
+        "d_taxa_desocupacao": -0.5999999999999996,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2018T3",
+        "pessoas_beneficiarias_pbf_media_tri": 43600762.666666664,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 37253.0,
+        "pessoas_ocupadas_mil": 91607.0,
+        "taxa_desocupacao": 12.0,
+        "trimestre_ordinal": 8074,
+        "periodo": "2018-09-30",
+        "ano": 2018,
+        "trimestre_num": 3,
+        "pos_2023": 0,
+        "tendencia": 12,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 1,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.525487757477535,
+        "ln_bf": 17.590585200521012,
+        "ln_ocupados": 11.425262966956396,
+        "d_ln_informal": 0.024923493132195773,
+        "d_ln_bf": -0.005323715062576895,
+        "d_ln_bf_lag1": -0.02877031497557425,
+        "d_ln_ocupados": 0.015345232060397507,
+        "d_taxa_desocupacao": -0.5999999999999996,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2018T4",
+        "pessoas_beneficiarias_pbf_media_tri": 43912708.333333336,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 37557.0,
+        "pessoas_ocupadas_mil": 92152.0,
+        "taxa_desocupacao": 11.7,
+        "trimestre_ordinal": 8075,
+        "periodo": "2018-12-31",
+        "ano": 2018,
+        "trimestre_num": 4,
+        "pos_2023": 0,
+        "tendencia": 13,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 1,
+        "ln_informal": 10.533615057927772,
+        "ln_bf": 17.597714319828103,
+        "ln_ocupados": 11.431194666606343,
+        "d_ln_informal": 0.00812730045023713,
+        "d_ln_bf": 0.007129119307091258,
+        "d_ln_bf_lag1": -0.005323715062576895,
+        "d_ln_ocupados": 0.00593169964994722,
+        "d_taxa_desocupacao": -0.3000000000000007,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2019T1",
+        "pessoas_beneficiarias_pbf_media_tri": 43140961.0,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 36898.0,
+        "pessoas_ocupadas_mil": 91203.0,
+        "taxa_desocupacao": 12.8,
+        "trimestre_ordinal": 8076,
+        "periodo": "2019-03-31",
+        "ano": 2019,
+        "trimestre_num": 1,
+        "pos_2023": 0,
+        "tendencia": 14,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.51591262801771,
+        "ln_bf": 17.57998347498686,
+        "ln_ocupados": 11.420843070258245,
+        "d_ln_informal": -0.017702429910061213,
+        "d_ln_bf": -0.017730844841242543,
+        "d_ln_bf_lag1": 0.007129119307091258,
+        "d_ln_ocupados": -0.010351596348098013,
+        "d_taxa_desocupacao": 1.1000000000000014,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2019T2",
+        "pessoas_beneficiarias_pbf_media_tri": 43657603.666666664,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 37876.0,
+        "pessoas_ocupadas_mil": 92662.0,
+        "taxa_desocupacao": 12.1,
+        "trimestre_ordinal": 8077,
+        "periodo": "2019-06-30",
+        "ano": 2019,
+        "trimestre_num": 2,
+        "pos_2023": 0,
+        "tendencia": 15,
+        "d_trimestre_2": 1,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.54207294510339,
+        "ln_bf": 17.591888021337592,
+        "ln_ocupados": 11.436713743024342,
+        "d_ln_informal": 0.026160317085679452,
+        "d_ln_bf": 0.011904546350731238,
+        "d_ln_bf_lag1": -0.017730844841242543,
+        "d_ln_ocupados": 0.01587067276609666,
+        "d_taxa_desocupacao": -0.7000000000000011,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2019T3",
+        "pessoas_beneficiarias_pbf_media_tri": 42404660.666666664,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 38225.0,
+        "pessoas_ocupadas_mil": 93191.0,
+        "taxa_desocupacao": 11.9,
+        "trimestre_ordinal": 8078,
+        "periodo": "2019-09-30",
+        "ano": 2019,
+        "trimestre_num": 3,
+        "pos_2023": 0,
+        "tendencia": 16,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 1,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.551245030797263,
+        "ln_bf": 17.562768835544922,
+        "ln_ocupados": 11.44240642948723,
+        "d_ln_informal": 0.009172085693872845,
+        "d_ln_bf": -0.02911918579266981,
+        "d_ln_bf_lag1": 0.011904546350731238,
+        "d_ln_ocupados": 0.005692686462888119,
+        "d_taxa_desocupacao": -0.1999999999999993,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2019T4",
+        "pessoas_beneficiarias_pbf_media_tri": 41122820.666666664,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 38192.0,
+        "pessoas_ocupadas_mil": 93920.0,
+        "taxa_desocupacao": 11.1,
+        "trimestre_ordinal": 8079,
+        "periodo": "2019-12-31",
+        "ano": 2019,
+        "trimestre_num": 4,
+        "pos_2023": 0,
+        "tendencia": 17,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 1,
+        "ln_informal": 10.550381348578611,
+        "ln_bf": 17.532073772737835,
+        "ln_ocupados": 11.450198635061923,
+        "d_ln_informal": -0.0008636822186520732,
+        "d_ln_bf": -0.030695062807087226,
+        "d_ln_bf_lag1": -0.02911918579266981,
+        "d_ln_ocupados": 0.0077922055746935115,
+        "d_taxa_desocupacao": -0.8000000000000007,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2020T1",
+        "pessoas_beneficiarias_pbf_media_tri": 40929788.333333336,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 36235.0,
+        "pessoas_ocupadas_mil": 91523.0,
+        "taxa_desocupacao": 12.4,
+        "trimestre_ordinal": 8080,
+        "periodo": "2020-03-31",
+        "ano": 2020,
+        "trimestre_num": 1,
+        "pos_2023": 0,
+        "tendencia": 18,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.497780781543382,
+        "ln_bf": 17.527368677024317,
+        "ln_ocupados": 11.424345585796662,
+        "d_ln_informal": -0.05260056703522942,
+        "d_ln_bf": -0.0047050957135184035,
+        "d_ln_bf_lag1": -0.030695062807087226,
+        "d_ln_ocupados": -0.025853049265261774,
+        "d_taxa_desocupacao": 1.3000000000000007,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2020T2",
+        "pessoas_beneficiarias_pbf_media_tri": 43711104.0,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 30253.0,
+        "pessoas_ocupadas_mil": 82610.0,
+        "taxa_desocupacao": 13.6,
+        "trimestre_ordinal": 8081,
+        "periodo": "2020-06-30",
+        "ano": 2020,
+        "trimestre_num": 2,
+        "pos_2023": 0,
+        "tendencia": 19,
+        "d_trimestre_2": 1,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.317350632095335,
+        "ln_bf": 17.59311272389871,
+        "ln_ocupados": 11.321886017556551,
+        "d_ln_informal": -0.18043014944804625,
+        "d_ln_bf": 0.06574404687439284,
+        "d_ln_bf_lag1": -0.0047050957135184035,
+        "d_ln_ocupados": -0.1024595682401106,
+        "d_taxa_desocupacao": 1.1999999999999993,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2020T3",
+        "pessoas_beneficiarias_pbf_media_tri": 43995562.333333336,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 31207.0,
+        "pessoas_ocupadas_mil": 81954.0,
+        "taxa_desocupacao": 14.9,
+        "trimestre_ordinal": 8082,
+        "periodo": "2020-09-30",
+        "ano": 2020,
+        "trimestre_num": 3,
+        "pos_2023": 0,
+        "tendencia": 20,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 1,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.348397707607221,
+        "ln_bf": 17.599599330735614,
+        "ln_ocupados": 11.313913393230946,
+        "d_ln_informal": 0.03104707551188568,
+        "d_ln_bf": 0.00648660683690494,
+        "d_ln_bf_lag1": 0.06574404687439284,
+        "d_ln_ocupados": -0.007972624325605082,
+        "d_taxa_desocupacao": 1.3000000000000007,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2020T4",
+        "pessoas_beneficiarias_pbf_media_tri": 43591330.666666664,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 33525.0,
+        "pessoas_ocupadas_mil": 85669.0,
+        "taxa_desocupacao": 14.2,
+        "trimestre_ordinal": 8083,
+        "periodo": "2020-12-31",
+        "ano": 2020,
+        "trimestre_num": 4,
+        "pos_2023": 0,
+        "tendencia": 21,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 1,
+        "ln_informal": 10.42004670814988,
+        "ln_bf": 17.590368850627893,
+        "ln_ocupados": 11.358246312192403,
+        "d_ln_informal": 0.07164900054265821,
+        "d_ln_bf": -0.009230480107721206,
+        "d_ln_bf_lag1": 0.00648660683690494,
+        "d_ln_ocupados": 0.04433291896145697,
+        "d_taxa_desocupacao": -0.7000000000000011,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2021T1",
+        "pessoas_beneficiarias_pbf_media_tri": 43510658.333333336,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 33511.0,
+        "pessoas_ocupadas_mil": 85497.0,
+        "taxa_desocupacao": 14.9,
+        "trimestre_ordinal": 8084,
+        "periodo": "2021-03-31",
+        "ano": 2021,
+        "trimestre_num": 1,
+        "pos_2023": 0,
+        "tendencia": 22,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.419629022124354,
+        "ln_bf": 17.58851648520371,
+        "ln_ocupados": 11.356236566589965,
+        "d_ln_informal": -0.0004176860255249437,
+        "d_ln_bf": -0.0018523654241846543,
+        "d_ln_bf_lag1": -0.009230480107721206,
+        "d_ln_ocupados": -0.002009745602437718,
+        "d_taxa_desocupacao": 0.7000000000000011,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2021T2",
+        "pessoas_beneficiarias_pbf_media_tri": 44147822.0,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 35183.0,
+        "pessoas_ocupadas_mil": 87743.0,
+        "taxa_desocupacao": 14.2,
+        "trimestre_ordinal": 8085,
+        "periodo": "2021-06-30",
+        "ano": 2021,
+        "trimestre_num": 2,
+        "pos_2023": 0,
+        "tendencia": 23,
+        "d_trimestre_2": 1,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.468318290380624,
+        "ln_bf": 17.60305415197406,
+        "ln_ocupados": 11.382167366066378,
+        "d_ln_informal": 0.04868926825627007,
+        "d_ln_bf": 0.01453766677035162,
+        "d_ln_bf_lag1": -0.0018523654241846543,
+        "d_ln_ocupados": 0.025930799476412858,
+        "d_taxa_desocupacao": -0.7000000000000011,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2021T3",
+        "pessoas_beneficiarias_pbf_media_tri": 44184426.666666664,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 37107.0,
+        "pessoas_ocupadas_mil": 91265.0,
+        "taxa_desocupacao": 12.7,
+        "trimestre_ordinal": 8086,
+        "periodo": "2021-09-30",
+        "ano": 2021,
+        "trimestre_num": 3,
+        "pos_2023": 0,
+        "tendencia": 24,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 1,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.521560910043119,
+        "ln_bf": 17.60388294710414,
+        "ln_ocupados": 11.421522641496885,
+        "d_ln_informal": 0.05324261966249466,
+        "d_ln_bf": 0.000828795130079385,
+        "d_ln_bf_lag1": 0.01453766677035162,
+        "d_ln_ocupados": 0.03935527543050732,
+        "d_taxa_desocupacao": -1.5,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2023T2",
+        "pessoas_beneficiarias_pbf_media_tri": 54520424.0,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 38051.0,
+        "pessoas_ocupadas_mil": 97038.0,
+        "taxa_desocupacao": 8.0,
+        "trimestre_ordinal": 8093,
+        "periodo": "2023-06-30",
+        "ano": 2023,
+        "trimestre_num": 2,
+        "pos_2023": 1,
+        "tendencia": 25,
+        "d_trimestre_2": 1,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.546682644153423,
+        "ln_bf": 17.814085941724947,
+        "ln_ocupados": 11.482857933347834,
+        "d_ln_informal": NaN,
+        "d_ln_bf": NaN,
+        "d_ln_bf_lag1": NaN,
+        "d_ln_ocupados": NaN,
+        "d_taxa_desocupacao": NaN,
+        "gap_trimestres": 7.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2023T3",
+        "pessoas_beneficiarias_pbf_media_tri": 55027099.666666664,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 38339.0,
+        "pessoas_ocupadas_mil": 97938.0,
+        "taxa_desocupacao": 7.7,
+        "trimestre_ordinal": 8094,
+        "periodo": "2023-09-30",
+        "ano": 2023,
+        "trimestre_num": 3,
+        "pos_2023": 1,
+        "tendencia": 26,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 1,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.554222933839034,
+        "ln_bf": 17.82333634306163,
+        "ln_ocupados": 11.49208990438209,
+        "d_ln_informal": 0.007540289685611157,
+        "d_ln_bf": 0.009250401336682756,
+        "d_ln_bf_lag1": NaN,
+        "d_ln_ocupados": 0.009231971034255437,
+        "d_taxa_desocupacao": -0.2999999999999998,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 7.0
+      },
+      {
+        "trimestre": "2023T4",
+        "pessoas_beneficiarias_pbf_media_tri": 55961557.333333336,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 38826.0,
+        "pessoas_ocupadas_mil": 99062.0,
+        "taxa_desocupacao": 7.4,
+        "trimestre_ordinal": 8095,
+        "periodo": "2023-12-31",
+        "ano": 2023,
+        "trimestre_num": 4,
+        "pos_2023": 1,
+        "tendencia": 27,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 1,
+        "ln_informal": 10.56684540428532,
+        "ln_bf": 17.84017553677628,
+        "ln_ocupados": 11.503501195722388,
+        "d_ln_informal": 0.012622470446286727,
+        "d_ln_bf": 0.016839193714648815,
+        "d_ln_bf_lag1": 0.009250401336682756,
+        "d_ln_ocupados": 0.01141129134029839,
+        "d_taxa_desocupacao": -0.2999999999999998,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2024T1",
+        "pessoas_beneficiarias_pbf_media_tri": 55338530.666666664,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 38242.0,
+        "pessoas_ocupadas_mil": 98290.0,
+        "taxa_desocupacao": 7.9,
+        "trimestre_ordinal": 8096,
+        "periodo": "2024-03-31",
+        "ano": 2024,
+        "trimestre_num": 1,
+        "pos_2023": 1,
+        "tendencia": 28,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.551689667052905,
+        "ln_bf": 17.82897998095262,
+        "ln_ocupados": 11.495677571560675,
+        "d_ln_informal": -0.01515573723241559,
+        "d_ln_bf": -0.011195555823658054,
+        "d_ln_bf_lag1": 0.016839193714648815,
+        "d_ln_ocupados": -0.007823624161712672,
+        "d_taxa_desocupacao": 0.5,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2024T2",
+        "pessoas_beneficiarias_pbf_media_tri": 55037695.333333336,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 38619.0,
+        "pessoas_ocupadas_mil": 99883.0,
+        "taxa_desocupacao": 6.9,
+        "trimestre_ordinal": 8097,
+        "periodo": "2024-06-30",
+        "ano": 2024,
+        "trimestre_num": 2,
+        "pos_2023": 1,
+        "tendencia": 29,
+        "d_trimestre_2": 1,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.561499662327744,
+        "ln_bf": 17.82352887813516,
+        "ln_ocupados": 11.511754779985889,
+        "d_ln_informal": 0.009809995274839167,
+        "d_ln_bf": -0.005451102817460196,
+        "d_ln_bf_lag1": -0.011195555823658054,
+        "d_ln_ocupados": 0.016077208425214096,
+        "d_taxa_desocupacao": -1.0,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2024T3",
+        "pessoas_beneficiarias_pbf_media_tri": 54548896.666666664,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 39240.0,
+        "pessoas_ocupadas_mil": 101058.0,
+        "taxa_desocupacao": 6.4,
+        "trimestre_ordinal": 8098,
+        "periodo": "2024-09-30",
+        "ano": 2024,
+        "trimestre_num": 3,
+        "pos_2023": 1,
+        "tendencia": 30,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 1,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.5774519136793,
+        "ln_bf": 17.814608043946535,
+        "ln_ocupados": 11.523449888426441,
+        "d_ln_informal": 0.01595225135155509,
+        "d_ln_bf": -0.008920834188625548,
+        "d_ln_bf_lag1": -0.005451102817460196,
+        "d_ln_ocupados": 0.011695108440552104,
+        "d_taxa_desocupacao": -0.5,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2024T4",
+        "pessoas_beneficiarias_pbf_media_tri": 54355761.333333336,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 39307.0,
+        "pessoas_ocupadas_mil": 101832.0,
+        "taxa_desocupacao": 6.2,
+        "trimestre_ordinal": 8099,
+        "periodo": "2024-12-31",
+        "ano": 2024,
+        "trimestre_num": 4,
+        "pos_2023": 1,
+        "tendencia": 31,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 1,
+        "ln_informal": 10.579157899044741,
+        "ln_bf": 17.811061170206596,
+        "ln_ocupados": 11.53107967555027,
+        "d_ln_informal": 0.0017059853654419754,
+        "d_ln_bf": -0.003546873739939116,
+        "d_ln_bf_lag1": -0.008920834188625548,
+        "d_ln_ocupados": 0.007629787123828891,
+        "d_taxa_desocupacao": -0.20000000000000018,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2025T1",
+        "pessoas_beneficiarias_pbf_media_tri": 53860990.0,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 38189.0,
+        "pessoas_ocupadas_mil": 100511.0,
+        "taxa_desocupacao": 7.0,
+        "trimestre_ordinal": 8100,
+        "periodo": "2025-03-31",
+        "ano": 2025,
+        "trimestre_num": 1,
+        "pos_2023": 1,
+        "tendencia": 32,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.550302795011584,
+        "ln_bf": 17.801917026166546,
+        "ln_ocupados": 11.518022453228072,
+        "d_ln_informal": -0.028855104033157275,
+        "d_ln_bf": -0.00914414404005015,
+        "d_ln_bf_lag1": -0.003546873739939116,
+        "d_ln_ocupados": -0.013057222322197859,
+        "d_taxa_desocupacao": 0.7999999999999998,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2025T2",
+        "pessoas_beneficiarias_pbf_media_tri": 53759265.333333336,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 38718.0,
+        "pessoas_ocupadas_mil": 102316.0,
+        "taxa_desocupacao": 5.8,
+        "trimestre_ordinal": 8101,
+        "periodo": "2025-06-30",
+        "ano": 2025,
+        "trimestre_num": 2,
+        "pos_2023": 1,
+        "tendencia": 33,
+        "d_trimestre_2": 1,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.564059887163895,
+        "ln_bf": 17.80002658841119,
+        "ln_ocupados": 11.535821342447132,
+        "d_ln_informal": 0.01375709215231069,
+        "d_ln_bf": -0.0018904377553567997,
+        "d_ln_bf_lag1": -0.00914414404005015,
+        "d_ln_ocupados": 0.017798889219060143,
+        "d_taxa_desocupacao": -1.2000000000000002,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2025T3",
+        "pessoas_beneficiarias_pbf_media_tri": 50338114.333333336,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 38748.0,
+        "pessoas_ocupadas_mil": 102433.0,
+        "taxa_desocupacao": 5.6,
+        "trimestre_ordinal": 8102,
+        "periodo": "2025-09-30",
+        "ano": 2025,
+        "trimestre_num": 3,
+        "pos_2023": 1,
+        "tendencia": 34,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 1,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.564834420546276,
+        "ln_bf": 17.7342730883551,
+        "ln_ocupados": 11.536964205296131,
+        "d_ln_informal": 0.000774533382381648,
+        "d_ln_bf": -0.06575350005608982,
+        "d_ln_bf_lag1": -0.0018904377553567997,
+        "d_ln_ocupados": 0.0011428628489991155,
+        "d_taxa_desocupacao": -0.20000000000000018,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2025T4",
+        "pessoas_beneficiarias_pbf_media_tri": 48975116.666666664,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 38707.0,
+        "pessoas_ocupadas_mil": 102998.0,
+        "taxa_desocupacao": 5.1,
+        "trimestre_ordinal": 8103,
+        "periodo": "2025-12-31",
+        "ano": 2025,
+        "trimestre_num": 4,
+        "pos_2023": 1,
+        "tendencia": 35,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 1,
+        "ln_informal": 10.563775741214291,
+        "ln_bf": 17.706822903959814,
+        "ln_ocupados": 11.542464849547523,
+        "d_ln_informal": -0.0010586793319848908,
+        "d_ln_bf": -0.027450184395284793,
+        "d_ln_bf_lag1": -0.06575350005608982,
+        "d_ln_ocupados": 0.005500644251391407,
+        "d_taxa_desocupacao": -0.5,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      },
+      {
+        "trimestre": "2026T1",
+        "pessoas_beneficiarias_pbf_media_tri": 49133190.333333336,
+        "meses_observados_bf": 3,
+        "trimestre_completo_bf": true,
+        "pessoas_informais_mil": 38084.0,
+        "pessoas_ocupadas_mil": 101976.0,
+        "taxa_desocupacao": 6.1,
+        "trimestre_ordinal": 8104,
+        "periodo": "2026-03-31",
+        "ano": 2026,
+        "trimestre_num": 1,
+        "pos_2023": 1,
+        "tendencia": 36,
+        "d_trimestre_2": 0,
+        "d_trimestre_3": 0,
+        "d_trimestre_4": 0,
+        "ln_informal": 10.547549525405582,
+        "ln_bf": 17.710045338599404,
+        "ln_ocupados": 11.532492770462758,
+        "d_ln_informal": -0.0162262158087092,
+        "d_ln_bf": 0.0032224346395892667,
+        "d_ln_bf_lag1": -0.027450184395284793,
+        "d_ln_ocupados": -0.009972079084764829,
+        "d_taxa_desocupacao": 1.0,
+        "gap_trimestres": 1.0,
+        "gap_trimestres_lag1": 1.0
+      }
+    ],
+    "modelo_principal_variacoes_logaritmicas": {
+      "nome_modelo": "modelo_principal_variacoes_logaritmicas",
+      "variavel_dependente": "d_ln_informal",
+      "n_observacoes": 32,
+      "r2": 0.9840138611642116,
+      "r2_ajustado": 0.9784534650474157,
+      "estatistica_f": 1454.245229940653,
+      "p_valor_f": 3.1785693465149784e-29,
+      "parametros": [
+        {
+          "variavel": "const",
+          "coeficiente": -0.013696863981935162,
+          "erro_padrao": 0.003633884656450142,
+          "estatistica_t": -3.7692071369473,
+          "p_valor": 0.00016376693958996955
+        },
+        {
+          "variavel": "d_ln_bf",
+          "coeficiente": -0.012553376597233878,
+          "erro_padrao": 0.03901363929055025,
+          "estatistica_t": -0.3217689204471246,
+          "p_valor": 0.7476277610105271
+        },
+        {
+          "variavel": "d_ln_bf_lag1",
+          "coeficiente": 0.08798853969268662,
+          "erro_padrao": 0.05995267474384461,
+          "estatistica_t": 1.4676332635471028,
+          "p_valor": 0.14220386745147554
+        },
+        {
+          "variavel": "d_ln_ocupados",
+          "coeficiente": 2.0465861707696416,
+          "erro_padrao": 0.058708930039348586,
+          "estatistica_t": 34.85987854655083,
+          "p_valor": 3.0165671254172858e-266
+        },
+        {
+          "variavel": "d_taxa_desocupacao",
+          "coeficiente": 0.02002743365443442,
+          "erro_padrao": 0.003126408587412237,
+          "estatistica_t": 6.405891326895103,
+          "p_valor": 1.4949342121296077e-10
+        },
+        {
+          "variavel": "pos_2023",
+          "coeficiente": -0.0038099912574658125,
+          "erro_padrao": 0.0018353449573760155,
+          "estatistica_t": -2.075899270136629,
+          "p_valor": 0.03790326824378702
+        },
+        {
+          "variavel": "d_trimestre_2",
+          "coeficiente": 0.02060789233050432,
+          "erro_padrao": 0.005076742380528291,
+          "estatistica_t": 4.059274784071246,
+          "p_valor": 4.922535953879116e-05
+        },
+        {
+          "variavel": "d_trimestre_3",
+          "coeficiente": 0.019325446888629527,
+          "erro_padrao": 0.005140224897898127,
+          "estatistica_t": 3.75965006833297,
+          "p_valor": 0.00017015118785580486
+        },
+        {
+          "variavel": "d_trimestre_4",
+          "coeficiente": 0.015300048600364826,
+          "erro_padrao": 0.004111812074309051,
+          "estatistica_t": 3.720998996029225,
+          "p_valor": 0.00019843622739054207
+        }
+      ],
+      "valores_ajustados": [
+        {
+          "trimestre": "2016T2",
+          "real": 0.007805312522084051,
+          "ajustado": 0.012541886386761413,
+          "residuo": -0.004736573864677362
+        },
+        {
+          "trimestre": "2016T3",
+          "real": -0.015467292293307011,
+          "ajustado": -0.0054645786382811964,
+          "residuo": -0.010002713655025815
+        },
+        {
+          "trimestre": "2016T4",
+          "real": 0.01963402485517385,
+          "ajustado": 0.013032909576505696,
+          "residuo": 0.006601115278668152
+        },
+        {
+          "trimestre": "2017T1",
+          "real": -0.009681956682914716,
+          "ajustado": -0.009749563145940034,
+          "residuo": 6.760646302531731e-05
+        },
+        {
+          "trimestre": "2017T2",
+          "real": 0.027079632405163423,
+          "ajustado": 0.01908488745730387,
+          "residuo": 0.007994744947859553
+        },
+        {
+          "trimestre": "2017T3",
+          "real": 0.022157170812906912,
+          "ajustado": 0.015392549101677535,
+          "residuo": 0.006764621711229378
+        },
+        {
+          "trimestre": "2017T4",
+          "real": 0.011510445261642133,
+          "ajustado": 0.006763547216966596,
+          "residuo": 0.004746898044675537
+        },
+        {
+          "trimestre": "2018T1",
+          "real": -0.01678910662679378,
+          "ajustado": -0.017252349388150946,
+          "residuo": 0.00046324276135716394
+        },
+        {
+          "trimestre": "2018T2",
+          "real": 0.006848585257106521,
+          "ajustado": 0.0090274694382543,
+          "residuo": -0.00217888418114778
+        },
+        {
+          "trimestre": "2018T3",
+          "real": 0.024923493132195773,
+          "ajustado": 0.02255283503497167,
+          "residuo": 0.0023706580972241015
+        },
+        {
+          "trimestre": "2018T4",
+          "real": 0.00812730045023713,
+          "ajustado": 0.0071767685612757984,
+          "residuo": 0.0009505318889613309
+        },
+        {
+          "trimestre": "2019T1",
+          "real": -0.017702429910061213,
+          "ajustado": -0.012002258123659054,
+          "residuo": -0.005700171786402159
+        },
+        {
+          "trimestre": "2019T2",
+          "real": 0.026160317085679452,
+          "ajustado": 0.02366297079571035,
+          "residuo": 0.002497346289969102
+        },
+        {
+          "trimestre": "2019T3",
+          "real": 0.009172085693872845,
+          "ajustado": 0.014686677319846814,
+          "residuo": -0.00551459162597397
+        },
+        {
+          "trimestre": "2019T4",
+          "real": -0.0008636822186520732,
+          "ajustado": -0.0006481700879999702,
+          "residuo": -0.00021551213065210302
+        },
+        {
+          "trimestre": "2020T1",
+          "real": -0.05260056703522942,
+          "ajustado": -0.04321344224343447,
+          "residuo": -0.009387124791794946
+        },
+        {
+          "trimestre": "2020T2",
+          "real": -0.18043014944804625,
+          "ajustado": -0.17998769096973555,
+          "residuo": -0.0004424584783107033
+        },
+        {
+          "trimestre": "2020T3",
+          "real": 0.03104707551188568,
+          "ajustado": 0.021050877827437624,
+          "residuo": 0.009996197684448056
+        },
+        {
+          "trimestre": "2020T4",
+          "real": 0.07164900054265821,
+          "ajustado": 0.07900174067279997,
+          "residuo": -0.007352740130141755
+        },
+        {
+          "trimestre": "2021T1",
+          "real": -0.0004176860255249437,
+          "ajustado": -0.004579701005120479,
+          "residuo": 0.004162014979595535
+        },
+        {
+          "trimestre": "2021T2",
+          "real": 0.04868926825627007,
+          "ajustado": 0.04561595666142772,
+          "residuo": 0.003073311594842351
+        },
+        {
+          "trimestre": "2021T3",
+          "real": 0.05324261966249466,
+          "ajustado": 0.05740013876022156,
+          "residuo": -0.004157519097726901
+        },
+        {
+          "trimestre": "2023T4",
+          "real": 0.012622470446286727,
+          "ajustado": 0.015741694877203814,
+          "residuo": -0.003119224430917087
+        },
+        {
+          "trimestre": "2024T1",
+          "real": -0.01515573723241559,
+          "ajustado": -0.0218826613338202,
+          "residuo": 0.006726924101404609
+        },
+        {
+          "trimestre": "2024T2",
+          "real": 0.009809995274839167,
+          "ajustado": 0.015060345002859457,
+          "residuo": -0.0052503497280202895
+        },
+        {
+          "trimestre": "2024T3",
+          "real": 0.01595225135155509,
+          "ajustado": 0.015372274036604872,
+          "residuo": 0.0005799773149502193
+        },
+        {
+          "trimestre": "2024T4",
+          "real": 0.0017059853654419754,
+          "ajustado": 0.008662317512323991,
+          "residuo": -0.006956332146882016
+        },
+        {
+          "trimestre": "2025T1",
+          "real": -0.028855104033157275,
+          "ajustado": -0.028404933306185723,
+          "residuo": -0.00045017072697155214
+        },
+        {
+          "trimestre": "2025T2",
+          "real": 0.01375709215231069,
+          "ajustado": 0.01471422873282442,
+          "residuo": -0.0009571365805137299
+        },
+        {
+          "trimestre": "2025T3",
+          "real": 0.000774533382381648,
+          "ajustado": 0.0008111638115062183,
+          "residuo": -3.663042912457025e-05
+        },
+        {
+          "trimestre": "2025T4",
+          "real": -0.0010586793319848908,
+          "ajustado": -0.006403942958272986,
+          "residuo": 0.0053452636262880954
+        },
+        {
+          "trimestre": "2026T1",
+          "real": -0.0162262158087092,
+          "ajustado": -0.020343894808494252,
+          "residuo": 0.004117678999785053
+        }
+      ],
+      "formula_descricao": "d_ln_informal ~ d_ln_bf + d_ln_bf_lag1 + d_ln_ocupados + d_taxa_desocupacao + pos_2023 + d_trimestre_2 + d_trimestre_3 + d_trimestre_4",
+      "teste_f_beta_bf_contemporaneo_e_defasado": {
+        "hipotese_nula": "d_ln_bf = 0 e d_ln_bf_lag1 = 0",
+        "estatistica_f": 1.0808109441616636,
+        "p_valor": 0.35593922352256674
+      }
+    },
+    "modelo_principal_variacoes_logaritmicas_sem_dummies": {
+      "nome_modelo": "modelo_principal_variacoes_logaritmicas_sem_dummies",
+      "variavel_dependente": "d_ln_informal",
+      "n_observacoes": 32,
+      "r2": 0.9701793348506552,
+      "r2_ajustado": 0.9644445915527043,
+      "estatistica_f": 1158.6126212338816,
+      "p_valor_f": 1.1370361580199278e-29,
+      "parametros": [
+        {
+          "variavel": "const",
+          "coeficiente": 0.0019032035156266612,
+          "erro_padrao": 0.0016417165031179272,
+          "estatistica_t": 1.1592765937432687,
+          "p_valor": 0.24634345932097346
+        },
+        {
+          "variavel": "d_ln_bf",
+          "coeficiente": -0.0301761752208472,
+          "erro_padrao": 0.050273386477353126,
+          "estatistica_t": -0.6002415459806113,
+          "p_valor": 0.548345269039296
+        },
+        {
+          "variavel": "d_ln_bf_lag1",
+          "coeficiente": 0.18359058474963355,
+          "erro_padrao": 0.10363836789908307,
+          "estatistica_t": 1.7714538396475255,
+          "p_valor": 0.07648526228439921
+        },
+        {
+          "variavel": "d_ln_ocupados",
+          "coeficiente": 1.8613889434500375,
+          "erro_padrao": 0.043740805358377946,
+          "estatistica_t": 42.55497648475542,
+          "p_valor": 0.0
+        },
+        {
+          "variavel": "d_taxa_desocupacao",
+          "coeficiente": 0.008995993877066122,
+          "erro_padrao": 0.0018405025104586564,
+          "estatistica_t": 4.887792233885247,
+          "p_valor": 1.0197306195365468e-06
+        },
+        {
+          "variavel": "pos_2023",
+          "coeficiente": -0.0070243506968937774,
+          "erro_padrao": 0.0023118735630115626,
+          "estatistica_t": -3.0383801299857875,
+          "p_valor": 0.0023785371145048227
+        }
+      ],
+      "valores_ajustados": [
+        {
+          "trimestre": "2016T2",
+          "real": 0.007805312522084051,
+          "ajustado": 0.002765876278547093,
+          "residuo": 0.005039436243536958
+        },
+        {
+          "trimestre": "2016T3",
+          "real": -0.015467292293307011,
+          "ajustado": -0.013725147834653253,
+          "residuo": -0.0017421444586537584
+        },
+        {
+          "trimestre": "2016T4",
+          "real": 0.01963402485517385,
+          "ajustado": 0.0111241385990852,
+          "residuo": 0.008509886256088648
+        },
+        {
+          "trimestre": "2017T1",
+          "real": -0.009681956682914716,
+          "ajustado": -0.011842041817879897,
+          "residuo": 0.0021600851349651805
+        },
+        {
+          "trimestre": "2017T2",
+          "real": 0.027079632405163423,
+          "ajustado": 0.01870167344672779,
+          "residuo": 0.008377958958435634
+        },
+        {
+          "trimestre": "2017T3",
+          "real": 0.022157170812906912,
+          "ajustado": 0.014858256519357441,
+          "residuo": 0.007298914293549471
+        },
+        {
+          "trimestre": "2017T4",
+          "real": 0.011510445261642133,
+          "ajustado": 0.00860516065977301,
+          "residuo": 0.0029052846018691233
+        },
+        {
+          "trimestre": "2018T1",
+          "real": -0.01678910662679378,
+          "ajustado": -0.011582817326797964,
+          "residuo": -0.0052062892999958175
+        },
+        {
+          "trimestre": "2018T2",
+          "real": 0.006848585257106521,
+          "ajustado": 0.012156659352243917,
+          "residuo": -0.005308074095137396
+        },
+        {
+          "trimestre": "2018T3",
+          "real": 0.024923493132195773,
+          "ajustado": 0.019947742890043314,
+          "residuo": 0.004975750242152459
+        },
+        {
+          "trimestre": "2018T4",
+          "real": 0.00812730045023713,
+          "ajustado": 0.009053091982024997,
+          "residuo": -0.0009257915317878677
+        },
+        {
+          "trimestre": "2019T1",
+          "real": -0.017702429910061213,
+          "ajustado": -0.005625661945926244,
+          "residuo": -0.012076767964134968
+        },
+        {
+          "trimestre": "2019T2",
+          "real": 0.026160317085679452,
+          "ajustado": 0.02153305276449321,
+          "residuo": 0.004627264321186243
+        },
+        {
+          "trimestre": "2019T3",
+          "real": 0.009172085693872845,
+          "ajustado": 0.013764576659238963,
+          "residuo": -0.004592490965366118
+        },
+        {
+          "trimestre": "2019T4",
+          "real": -0.0008636822186520732,
+          "ajustado": 0.004790984962370107,
+          "residuo": -0.00565466718102218
+        },
+        {
+          "trimestre": "2020T1",
+          "real": -0.05260056703522942,
+          "ajustado": -0.04001792723801263,
+          "residuo": -0.012582639797216785
+        },
+        {
+          "trimestre": "2020T2",
+          "real": -0.18043014944804625,
+          "ajustado": -0.18086642645625758,
+          "residuo": 0.0004362770082113332
+        },
+        {
+          "trimestre": "2020T3",
+          "real": 0.03104707551188568,
+          "ajustado": 0.010632087810828425,
+          "residuo": 0.020414987701057256
+        },
+        {
+          "trimestre": "2020T4",
+          "real": 0.07164900054265821,
+          "ajustado": 0.07959623351473438,
+          "residuo": -0.007947232972076168
+        },
+        {
+          "trimestre": "2021T1",
+          "real": -0.0004176860255249437,
+          "ajustado": 0.0028207490491648913,
+          "residuo": -0.003238435074689835
+        },
+        {
+          "trimestre": "2021T2",
+          "real": 0.04868926825627007,
+          "ajustado": 0.0430945432107348,
+          "residuo": 0.005594725045535272
+        },
+        {
+          "trimestre": "2021T3",
+          "real": 0.05324261966249466,
+          "ajustado": 0.06430865612900143,
+          "residuo": -0.011066036466506765
+        },
+        {
+          "trimestre": "2023T4",
+          "real": 0.012622470446286727,
+          "ajustado": 0.014611050317390979,
+          "residuo": -0.001988579871104252
+        },
+        {
+          "trimestre": "2024T1",
+          "real": -0.01515573723241559,
+          "ajustado": -0.011756601280040378,
+          "residuo": -0.003399135952375211
+        },
+        {
+          "trimestre": "2024T2",
+          "real": 0.009809995274839167,
+          "ajustado": 0.013917891739406055,
+          "residuo": -0.004107896464566888
+        },
+        {
+          "trimestre": "2024T3",
+          "real": 0.01595225135155509,
+          "ajustado": 0.011418426925696917,
+          "residuo": 0.004533824425858174
+        },
+        {
+          "trimestre": "2024T4",
+          "real": 0.0017059853654419754,
+          "ajustado": 0.005750905354810555,
+          "residuo": -0.004044919989368579
+        },
+        {
+          "trimestre": "2025T1",
+          "real": -0.028855104033157275,
+          "ajustado": -0.02260415867347366,
+          "residuo": -0.0062509453596836136
+        },
+        {
+          "trimestre": "2025T2",
+          "real": 0.01375709215231069,
+          "ajustado": 0.015592583193906218,
+          "residuo": -0.0018354910415955272
+        },
+        {
+          "trimestre": "2025T3",
+          "real": 0.000774533382381648,
+          "ajustado": -0.003155911119535764,
+          "residuo": 0.003930444501917412
+        },
+        {
+          "trimestre": "2025T4",
+          "real": -0.0010586793319848908,
+          "ajustado": -0.010623687678884117,
+          "residuo": 0.009565008346899226
+        },
+        {
+          "trimestre": "2026T1",
+          "real": -0.0162262158087092,
+          "ajustado": -0.01982390721272919,
+          "residuo": 0.003597691404019991
+        }
+      ],
+      "formula_descricao": "d_ln_informal ~ d_ln_bf + d_ln_bf_lag1 + d_ln_ocupados + d_taxa_desocupacao + pos_2023",
+      "teste_f_beta_bf_contemporaneo_e_defasado": {
+        "hipotese_nula": "d_ln_bf = 0 e d_ln_bf_lag1 = 0",
+        "estatistica_f": 1.941879465423238,
+        "p_valor": 0.16367999652955542
+      }
+    },
+    "modelo_secundario_nivel_logaritmico": {
+      "nome_modelo": "modelo_secundario_nivel_logaritmico",
+      "variavel_dependente": "ln_informal",
+      "n_observacoes": 36,
+      "r2": 0.9798206943021102,
+      "r2_ajustado": 0.9738416407619946,
+      "estatistica_f": 820.3507477529541,
+      "p_valor_f": 3.586602503839169e-30,
+      "parametros": [
+        {
+          "variavel": "const",
+          "coeficiente": -17.441031182142908,
+          "erro_padrao": 1.1249150383526119,
+          "estatistica_t": -15.504309736746452,
+          "p_valor": 3.243840003961627e-54
+        },
+        {
+          "variavel": "ln_bf",
+          "coeficiente": 0.08664398343640123,
+          "erro_padrao": 0.05816337969149847,
+          "estatistica_t": 1.4896655575374975,
+          "p_valor": 0.1363121950967198
+        },
+        {
+          "variavel": "ln_ocupados",
+          "coeficiente": 2.2819949433032516,
+          "erro_padrao": 0.06783485922944202,
+          "estatistica_t": 33.64044636084111,
+          "p_valor": 4.301162044474013e-248
+        },
+        {
+          "variavel": "taxa_desocupacao",
+          "coeficiente": 0.029360780288730876,
+          "erro_padrao": 0.0032842842653539503,
+          "estatistica_t": 8.939780456417537,
+          "p_valor": 3.8994429417721623e-19
+        },
+        {
+          "variavel": "tendencia",
+          "coeficiente": -0.0007882667337360018,
+          "erro_padrao": 0.0005332300566482719,
+          "estatistica_t": -1.4782863867254892,
+          "p_valor": 0.13933113985591955
+        },
+        {
+          "variavel": "pos_2023",
+          "coeficiente": -0.00770749305395757,
+          "erro_padrao": 0.032198637286495385,
+          "estatistica_t": -0.2393732686690506,
+          "p_valor": 0.8108161560692848
+        },
+        {
+          "variavel": "d_trimestre_2",
+          "coeficiente": 0.01324773485036701,
+          "erro_padrao": 0.004185154461809505,
+          "estatistica_t": 3.1654112103282284,
+          "p_valor": 0.0015486391854377995
+        },
+        {
+          "variavel": "d_trimestre_3",
+          "coeficiente": 0.019386403578379785,
+          "erro_padrao": 0.004078350860998025,
+          "estatistica_t": 4.753490869011618,
+          "p_valor": 1.99934138027701e-06
+        },
+        {
+          "variavel": "d_trimestre_4",
+          "coeficiente": 0.02222901204376626,
+          "erro_padrao": 0.0033750957739685544,
+          "estatistica_t": 6.586187039554323,
+          "p_valor": 4.5126528427619576e-11
+        }
+      ],
+      "valores_ajustados": [
+        {
+          "trimestre": "2015T4",
+          "real": 10.465329432318082,
+          "ajustado": 10.450677512661269,
+          "residuo": 0.014651919656813561
+        },
+        {
+          "trimestre": "2016T1",
+          "real": 10.447467448834278,
+          "ajustado": 10.440692838431865,
+          "residuo": 0.006774610402413117
+        },
+        {
+          "trimestre": "2016T2",
+          "real": 10.455272761356362,
+          "ajustado": 10.462107887332964,
+          "residuo": -0.0068351259766021855
+        },
+        {
+          "trimestre": "2016T3",
+          "real": 10.439805469063055,
+          "ajustado": 10.459859750834447,
+          "residuo": -0.020054281771392013
+        },
+        {
+          "trimestre": "2016T4",
+          "real": 10.459439493918229,
+          "ajustado": 10.474545364530425,
+          "residuo": -0.015105870612195815
+        },
+        {
+          "trimestre": "2017T1",
+          "real": 10.449757537235314,
+          "ajustado": 10.46767171148828,
+          "residuo": -0.017914174252965154
+        },
+        {
+          "trimestre": "2017T2",
+          "real": 10.476837169640477,
+          "ajustado": 10.488023670795437,
+          "residuo": -0.011186501154959672
+        },
+        {
+          "trimestre": "2017T3",
+          "real": 10.498994340453384,
+          "ajustado": 10.49891483397613,
+          "residuo": 7.95064772542986e-05
+        },
+        {
+          "trimestre": "2017T4",
+          "real": 10.510504785715026,
+          "ajustado": 10.507556254581143,
+          "residuo": 0.002948531133883492
+        },
+        {
+          "trimestre": "2018T1",
+          "real": 10.493715679088233,
+          "ajustado": 10.48987806539512,
+          "residuo": 0.0038376136931130844
+        },
+        {
+          "trimestre": "2018T2",
+          "real": 10.50056426434534,
+          "ajustado": 10.495445665443379,
+          "residuo": 0.005118598901960425
+        },
+        {
+          "trimestre": "2018T3",
+          "real": 10.525487757477535,
+          "ajustado": 10.517736073350358,
+          "residuo": 0.007751684127176972
+        },
+        {
+          "trimestre": "2018T4",
+          "real": 10.533615057927772,
+          "ajustado": 10.525135984896924,
+          "residuo": 0.008479073030848383
+        },
+        {
+          "trimestre": "2019T1",
+          "real": 10.51591262801771,
+          "ajustado": 10.509257002888809,
+          "residuo": 0.006655625128901832
+        },
+        {
+          "trimestre": "2019T2",
+          "real": 10.54207294510339,
+          "ajustado": 10.538412177119213,
+          "residuo": 0.003660767984177582
+        },
+        {
+          "trimestre": "2019T3",
+          "real": 10.551245030797263,
+          "ajustado": 10.548358102526365,
+          "residuo": 0.0028869282708985367
+        },
+        {
+          "trimestre": "2019T4",
+          "real": 10.550381348578611,
+          "ajustado": 10.542046051232225,
+          "residuo": 0.008335297346386383
+        },
+        {
+          "trimestre": "2020T1",
+          "real": 10.497780781543382,
+          "ajustado": 10.497793590902704,
+          "residuo": -1.280935932257421e-05
+        },
+        {
+          "trimestre": "2020T2",
+          "real": 10.317350632095335,
+          "ajustado": 10.317370104857273,
+          "residuo": -1.9472761938033045e-05
+        },
+        {
+          "trimestre": "2020T3",
+          "real": 10.348397707607221,
+          "ajustado": 10.343258058286349,
+          "residuo": 0.005139649320872408
+        },
+        {
+          "trimestre": "2020T4",
+          "real": 10.42004670814988,
+          "ajustado": 10.425127585142242,
+          "residuo": -0.005080876992362704
+        },
+        {
+          "trimestre": "2021T1",
+          "real": 10.419629022124354,
+          "ajustado": 10.417916126945629,
+          "residuo": 0.0017128951787253044
+        },
+        {
+          "trimestre": "2021T2",
+          "real": 10.468318290380624,
+          "ajustado": 10.470256603499989,
+          "residuo": -0.00193831311936421
+        },
+        {
+          "trimestre": "2021T3",
+          "real": 10.521560910043119,
+          "ajustado": 10.521446184697417,
+          "residuo": 0.0001147253457016717
+        },
+        {
+          "trimestre": "2023T2",
+          "real": 10.546682644153423,
+          "ajustado": 10.526995739458776,
+          "residuo": 0.0196869046946464
+        },
+        {
+          "trimestre": "2023T3",
+          "real": 10.554222933839034,
+          "ajustado": 10.545406710203522,
+          "residuo": 0.008816223635511378
+        },
+        {
+          "trimestre": "2023T4",
+          "real": 10.56684540428532,
+          "ajustado": 10.56615234180497,
+          "residuo": 0.0006930624803498375
+        },
+        {
+          "trimestre": "2024T1",
+          "real": 10.551689667052905,
+          "ajustado": 10.538991954843151,
+          "residuo": 0.012697712209753576
+        },
+        {
+          "trimestre": "2024T2",
+          "real": 10.561499662327744,
+          "ajustado": 10.558306445737596,
+          "residuo": 0.0031932165901480403
+        },
+        {
+          "trimestre": "2024T3",
+          "real": 10.5774519136793,
+          "ajustado": 10.574891699300554,
+          "residuo": 0.002560214378744874
+        },
+        {
+          "trimestre": "2024T4",
+          "real": 10.579157899044741,
+          "ajustado": 10.588177705339941,
+          "residuo": -0.009019806295199828
+        },
+        {
+          "trimestre": "2025T1",
+          "real": 10.550302795011584,
+          "ajustado": 10.558060250415835,
+          "residuo": -0.00775745540425099
+        },
+        {
+          "trimestre": "2025T2",
+          "real": 10.564059887163895,
+          "ajustado": 10.575739962322737,
+          "residuo": -0.01168007515884284
+        },
+        {
+          "trimestre": "2025T3",
+          "real": 10.564834420546276,
+          "ajustado": 10.572129070331828,
+          "residuo": -0.007294649785551499
+        },
+        {
+          "trimestre": "2025T4",
+          "real": 10.563775741214291,
+          "ajustado": 10.569677070963627,
+          "residuo": -0.005901329749335105
+        },
+        {
+          "trimestre": "2026T1",
+          "real": 10.547549525405582,
+          "ajustado": 10.55354354300274,
+          "residuo": -0.005994017597156898
+        }
+      ],
+      "formula_descricao": "ln_informal ~ ln_bf + ln_ocupados + taxa_desocupacao + tendencia + pos_2023 + d_trimestre_2 + d_trimestre_3 + d_trimestre_4"
+    },
+    "modelo_secundario_nivel_logaritmico_sem_dummies": {
+      "nome_modelo": "modelo_secundario_nivel_logaritmico_sem_dummies",
+      "variavel_dependente": "ln_informal",
+      "n_observacoes": 36,
+      "r2": 0.9637287775944483,
+      "r2_ajustado": 0.9576835738601897,
+      "estatistica_f": 293.31518007518974,
+      "p_valor_f": 1.6236567751919617e-24,
+      "parametros": [
+        {
+          "variavel": "const",
+          "coeficiente": -17.336579872445526,
+          "erro_padrao": 1.6939478282018279,
+          "estatistica_t": -10.234423743055169,
+          "p_valor": 1.3902032529450236e-24
+        },
+        {
+          "variavel": "ln_bf",
+          "coeficiente": 0.12993837920908646,
+          "erro_padrao": 0.07341576653707362,
+          "estatistica_t": 1.7698974666902096,
+          "p_valor": 0.07674422292783704
+        },
+        {
+          "variavel": "ln_ocupados",
+          "coeficiente": 2.21157233653382,
+          "erro_padrao": 0.0776880699264995,
+          "estatistica_t": 28.467335314497877,
+          "p_valor": 2.973613126584532e-178
+        },
+        {
+          "variavel": "taxa_desocupacao",
+          "coeficiente": 0.024917318804201116,
+          "erro_padrao": 0.003112048227009232,
+          "estatistica_t": 8.006726434361006,
+          "p_valor": 1.1780214188684549e-15
+        },
+        {
+          "variavel": "tendencia",
+          "coeficiente": -0.0003266157022578098,
+          "erro_padrao": 0.0006334986761930976,
+          "estatistica_t": -0.5155744037549552,
+          "p_valor": 0.6061516913244837
+        },
+        {
+          "variavel": "pos_2023",
+          "coeficiente": -0.042104757559169315,
+          "erro_padrao": 0.037007925624702516,
+          "estatistica_t": -1.137722713403442,
+          "p_valor": 0.25523628597896064
+        }
+      ],
+      "valores_ajustados": [
+        {
+          "trimestre": "2015T4",
+          "real": 10.465329432318082,
+          "ajustado": 10.45347869472938,
+          "residuo": 0.011850737588702032
+        },
+        {
+          "trimestre": "2016T1",
+          "real": 10.447467448834278,
+          "ajustado": 10.458740129419256,
+          "residuo": -0.011272680584978545
+        },
+        {
+          "trimestre": "2016T2",
+          "real": 10.455272761356362,
+          "ajustado": 10.465302928833726,
+          "residuo": -0.01003016747736396
+        },
+        {
+          "trimestre": "2016T3",
+          "real": 10.439805469063055,
+          "ajustado": 10.456051739594447,
+          "residuo": -0.016246270531391716
+        },
+        {
+          "trimestre": "2016T4",
+          "real": 10.459439493918229,
+          "ajustado": 10.466768193264762,
+          "residuo": -0.007328699346533796
+        },
+        {
+          "trimestre": "2017T1",
+          "real": 10.449757537235314,
+          "ajustado": 10.474824971437153,
+          "residuo": -0.02506743420183888
+        },
+        {
+          "trimestre": "2017T2",
+          "real": 10.476837169640477,
+          "ajustado": 10.484078502393933,
+          "residuo": -0.007241332753455509
+        },
+        {
+          "trimestre": "2017T3",
+          "real": 10.498994340453384,
+          "ajustado": 10.489852567213681,
+          "residuo": 0.009141773239703
+        },
+        {
+          "trimestre": "2017T4",
+          "real": 10.510504785715026,
+          "ajustado": 10.498982708777746,
+          "residuo": 0.0115220769372808
+        },
+        {
+          "trimestre": "2018T1",
+          "real": 10.493715679088233,
+          "ajustado": 10.500233771462513,
+          "residuo": -0.006518092374280471
+        },
+        {
+          "trimestre": "2018T2",
+          "real": 10.50056426434534,
+          "ajustado": 10.49402788158683,
+          "residuo": 0.006536382758509873
+        },
+        {
+          "trimestre": "2018T3",
+          "real": 10.525487757477535,
+          "ajustado": 10.511996210417918,
+          "residuo": 0.013491547059617304
+        },
+        {
+          "trimestre": "2018T4",
+          "real": 10.533615057927772,
+          "ajustado": 10.5182391281368,
+          "residuo": 0.01537592979097191
+        },
+        {
+          "trimestre": "2019T1",
+          "real": 10.51591262801771,
+          "ajustado": 10.520124341756066,
+          "residuo": -0.004211713738355272
+        },
+        {
+          "trimestre": "2019T2",
+          "real": 10.54207294510339,
+          "ajustado": 10.539001601200582,
+          "residuo": 0.003071343902808721
+        },
+        {
+          "trimestre": "2019T3",
+          "real": 10.551245030797263,
+          "ajustado": 10.54249760983358,
+          "residuo": 0.008747420963683084
+        },
+        {
+          "trimestre": "2019T4",
+          "real": 10.550381348578611,
+          "ajustado": 10.535481698666663,
+          "residuo": 0.014899649911948032
+        },
+        {
+          "trimestre": "2020T1",
+          "real": 10.497780781543382,
+          "ajustado": 10.50976033632873,
+          "residuo": -0.011979554785348512
+        },
+        {
+          "trimestre": "2020T2",
+          "real": 10.317350632095335,
+          "ajustado": 10.321280431351992,
+          "residuo": -0.0039297992566567075
+        },
+        {
+          "trimestre": "2020T3",
+          "real": 10.348397707607221,
+          "ajustado": 10.336557153866064,
+          "residuo": 0.011840553741157223
+        },
+        {
+          "trimestre": "2020T4",
+          "real": 10.42004670814988,
+          "ajustado": 10.415634478549299,
+          "residuo": 0.0044122296005806305
+        },
+        {
+          "trimestre": "2021T1",
+          "real": 10.419629022124354,
+          "ajustado": 10.428064594871241,
+          "residuo": -0.008435572746886777
+        },
+        {
+          "trimestre": "2021T2",
+          "real": 10.468318290380624,
+          "ajustado": 10.469532695649903,
+          "residuo": -0.001214405269278629
+        },
+        {
+          "trimestre": "2021T3",
+          "real": 10.521560910043119,
+          "ajustado": 10.51897483247602,
+          "residuo": 0.0025860775670984992
+        },
+        {
+          "trimestre": "2023T2",
+          "real": 10.546682644153423,
+          "ajustado": 10.522392931971558,
+          "residuo": 0.024289712181865042
+        },
+        {
+          "trimestre": "2023T3",
+          "real": 10.554222933839034,
+          "ajustado": 10.536210274535804,
+          "residuo": 0.018012659303229483
+        },
+        {
+          "trimestre": "2023T4",
+          "real": 10.56684540428532,
+          "ajustado": 10.555833416983086,
+          "residuo": 0.011011987302234516
+        },
+        {
+          "trimestre": "2024T1",
+          "real": 10.551689667052905,
+          "ajustado": 10.549208217537377,
+          "residuo": 0.002481449515528311
+        },
+        {
+          "trimestre": "2024T2",
+          "real": 10.561499662327744,
+          "ajustado": 10.558811884967806,
+          "residuo": 0.0026877773599380816
+        },
+        {
+          "trimestre": "2024T3",
+          "real": 10.5774519136793,
+          "ajustado": 10.570732029427672,
+          "residuo": 0.006719884251626951
+        },
+        {
+          "trimestre": "2024T4",
+          "real": 10.579157899044741,
+          "ajustado": 10.58183490107625,
+          "residuo": -0.0026770020315094456
+        },
+        {
+          "trimestre": "2025T1",
+          "real": 10.550302795011584,
+          "ajustado": 10.57137697348179,
+          "residuo": -0.021074178470206206
+        },
+        {
+          "trimestre": "2025T2",
+          "real": 10.564059887163895,
+          "ajustado": 10.580267465814469,
+          "residuo": -0.016207578650574206
+        },
+        {
+          "trimestre": "2025T3",
+          "real": 10.564834420546276,
+          "ajustado": 10.568941006988057,
+          "residuo": -0.004106586441780635
+        },
+        {
+          "trimestre": "2025T4",
+          "real": 10.563775741214291,
+          "ajustado": 10.564753972073875,
+          "residuo": -0.0009782308595838174
+        },
+        {
+          "trimestre": "2026T1",
+          "real": 10.547549525405582,
+          "ajustado": 10.5677094188684,
+          "residuo": -0.02015989346281799
+        }
+      ],
+      "formula_descricao": "ln_informal ~ ln_bf + ln_ocupados + taxa_desocupacao + tendencia + pos_2023"
+    }
   }
 }

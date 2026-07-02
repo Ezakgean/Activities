@@ -13,6 +13,7 @@ from matplotlib import pyplot as plt
 from matplotlib.ticker import FuncFormatter
 import numpy as np
 import pandas as pd
+import statsmodels.api as sm
 
 
 BASE_DIR = Path(__file__).resolve().parents[1]
@@ -22,6 +23,7 @@ OUTPUT_FILENAME = "series_extraidas.json"
 CHARTS_DIRNAME = "graficos_series"
 CORRELATION_CHARTS_DIRNAME = "graficos_correlacoes"
 COMOVEMENT_CHARTS_DIRNAME = "graficos_comovimento"
+ECONOMETRICS_CHARTS_DIRNAME = "graficos_econometria"
 CORRELATION_TARGETS = (
     "taxa_informalidade",
     "pessoas_informais_mil",
@@ -262,6 +264,22 @@ def agregar_bolsa_familia_trimestral(payload: dict[str, object]) -> pd.DataFrame
     return trimestral
 
 
+def agregar_bolsa_familia_trimestral_completude(payload: dict[str, object]) -> pd.DataFrame:
+    serie_bf = payload["series"]["bolsa_familia"]
+    dados, _, _ = montar_dataframe_serie("bolsa_familia", serie_bf)
+    trimestral = (
+        dados.assign(trimestre=dados["periodo"].dt.to_period("Q"))
+        .groupby("trimestre", as_index=False)
+        .agg(
+            pessoas_beneficiarias_pbf_media_tri=("valor", "mean"),
+            meses_observados_bf=("valor", "count"),
+        )
+    )
+    trimestral["trimestre"] = trimestral["trimestre"].astype(str).str.replace("Q", "T", regex=False)
+    trimestral["trimestre_completo_bf"] = trimestral["meses_observados_bf"] == 3
+    return trimestral
+
+
 def agregar_serie_por_trimestre_unico(
     chave: str,
     serie: dict[str, object],
@@ -294,6 +312,233 @@ def construir_base_pareada_trimestre_unico(
         .reset_index(drop=True)
     )
     return base
+
+
+def construir_base_econometrica(payload: dict[str, object]) -> pd.DataFrame:
+    bf = agregar_bolsa_familia_trimestral_completude(payload)
+    informais = agregar_serie_por_trimestre_unico("pessoas_informais_mil", payload["series"]["pessoas_informais_mil"])
+    ocupados = agregar_serie_por_trimestre_unico("pessoas_ocupadas_mil", payload["series"]["pessoas_ocupadas_mil"])
+    desocupacao = agregar_serie_por_trimestre_unico("taxa_desocupacao", payload["series"]["taxa_desocupacao"])
+
+    base = (
+        bf.merge(informais, on="trimestre", how="inner")
+        .merge(ocupados, on="trimestre", how="inner")
+        .merge(desocupacao, on="trimestre", how="inner")
+        .dropna(
+            subset=[
+                "pessoas_beneficiarias_pbf_media_tri",
+                "pessoas_informais_mil",
+                "pessoas_ocupadas_mil",
+                "taxa_desocupacao",
+            ]
+        )
+        .sort_values("trimestre")
+        .reset_index(drop=True)
+    )
+
+    base = base.loc[base["trimestre_completo_bf"]].copy()
+    base["trimestre_ordinal"] = base["trimestre"].apply(trimestre_para_ordinal)
+    base["periodo"] = base["trimestre"].apply(trimestre_para_timestamp)
+    base["ano"] = base["trimestre"].str[:4].astype(int)
+    base["trimestre_num"] = base["trimestre"].str[-1].astype(int)
+    base["pos_2023"] = (base["trimestre_ordinal"] >= trimestre_para_ordinal("2023T2")).astype(int)
+    base["tendencia"] = np.arange(1, len(base) + 1)
+
+    for trimestre_num in (2, 3, 4):
+        base[f"d_trimestre_{trimestre_num}"] = (base["trimestre_num"] == trimestre_num).astype(int)
+
+    base["ln_informal"] = np.log(base["pessoas_informais_mil"])
+    base["ln_bf"] = np.log(base["pessoas_beneficiarias_pbf_media_tri"])
+    base["ln_ocupados"] = np.log(base["pessoas_ocupadas_mil"])
+
+    base["d_ln_informal"] = base["ln_informal"].diff()
+    base["d_ln_bf"] = base["ln_bf"].diff()
+    base["d_ln_bf_lag1"] = base["d_ln_bf"].shift(1)
+    base["d_ln_ocupados"] = base["ln_ocupados"].diff()
+    base["d_taxa_desocupacao"] = base["taxa_desocupacao"].diff()
+    base["gap_trimestres"] = base["trimestre_ordinal"].diff()
+
+    # Only keep quarter-to-quarter changes when both endpoints are consecutive and the lag also comes from a consecutive step.
+    invalid_current = base["gap_trimestres"] != 1
+    base.loc[invalid_current, ["d_ln_informal", "d_ln_bf", "d_ln_ocupados", "d_taxa_desocupacao"]] = np.nan
+    base["gap_trimestres_lag1"] = base["gap_trimestres"].shift(1)
+    invalid_lag = (base["gap_trimestres"] != 1) | (base["gap_trimestres_lag1"] != 1)
+    base.loc[invalid_lag, "d_ln_bf_lag1"] = np.nan
+
+    return base
+
+
+def resumir_resultado_modelo(
+    nome_modelo: str,
+    resultado: sm.regression.linear_model.RegressionResultsWrapper,
+    dados_modelo: pd.DataFrame,
+    variavel_dependente: str,
+) -> dict[str, object]:
+    parametros = []
+    for nome in resultado.params.index:
+        parametros.append(
+            {
+                "variavel": nome,
+                "coeficiente": float(resultado.params[nome]),
+                "erro_padrao": float(resultado.bse[nome]),
+                "estatistica_t": float(resultado.tvalues[nome]),
+                "p_valor": float(resultado.pvalues[nome]),
+            }
+        )
+
+    return {
+        "nome_modelo": nome_modelo,
+        "variavel_dependente": variavel_dependente,
+        "n_observacoes": int(resultado.nobs),
+        "r2": float(resultado.rsquared),
+        "r2_ajustado": float(resultado.rsquared_adj),
+        "estatistica_f": float(resultado.fvalue) if resultado.fvalue is not None else None,
+        "p_valor_f": float(resultado.f_pvalue) if resultado.f_pvalue is not None else None,
+        "parametros": parametros,
+        "valores_ajustados": [
+            {
+                "trimestre": linha["trimestre"],
+                "real": float(linha[variavel_dependente]),
+                "ajustado": float(resultado.fittedvalues.loc[idx]),
+                "residuo": float(resultado.resid.loc[idx]),
+            }
+            for idx, linha in dados_modelo.iterrows()
+        ],
+    }
+
+
+def rodar_econometria(payload: dict[str, object]) -> dict[str, object]:
+    base = construir_base_econometrica(payload)
+
+    colunas_modelo_principal = [
+        "d_ln_bf",
+        "d_ln_bf_lag1",
+        "d_ln_ocupados",
+        "d_taxa_desocupacao",
+        "pos_2023",
+        "d_trimestre_2",
+        "d_trimestre_3",
+        "d_trimestre_4",
+    ]
+    dados_principal = base.dropna(subset=["d_ln_informal", *colunas_modelo_principal]).copy()
+    x_principal = sm.add_constant(dados_principal[colunas_modelo_principal])
+    y_principal = dados_principal["d_ln_informal"]
+    modelo_principal = sm.OLS(y_principal, x_principal).fit(cov_type="HAC", cov_kwds={"maxlags": 1})
+    teste_f = modelo_principal.f_test("d_ln_bf = 0, d_ln_bf_lag1 = 0")
+
+    colunas_modelo_principal_sem_dummies = [
+        "d_ln_bf",
+        "d_ln_bf_lag1",
+        "d_ln_ocupados",
+        "d_taxa_desocupacao",
+        "pos_2023",
+    ]
+    dados_principal_sem_dummies = base.dropna(
+        subset=["d_ln_informal", *colunas_modelo_principal_sem_dummies]
+    ).copy()
+    x_principal_sem_dummies = sm.add_constant(dados_principal_sem_dummies[colunas_modelo_principal_sem_dummies])
+    y_principal_sem_dummies = dados_principal_sem_dummies["d_ln_informal"]
+    modelo_principal_sem_dummies = sm.OLS(y_principal_sem_dummies, x_principal_sem_dummies).fit(
+        cov_type="HAC", cov_kwds={"maxlags": 1}
+    )
+    teste_f_sem_dummies = modelo_principal_sem_dummies.f_test("d_ln_bf = 0, d_ln_bf_lag1 = 0")
+
+    colunas_modelo_nivel = [
+        "ln_bf",
+        "ln_ocupados",
+        "taxa_desocupacao",
+        "tendencia",
+        "pos_2023",
+        "d_trimestre_2",
+        "d_trimestre_3",
+        "d_trimestre_4",
+    ]
+    dados_nivel = base.dropna(subset=["ln_informal", *colunas_modelo_nivel]).copy()
+    x_nivel = sm.add_constant(dados_nivel[colunas_modelo_nivel])
+    y_nivel = dados_nivel["ln_informal"]
+    modelo_nivel = sm.OLS(y_nivel, x_nivel).fit(cov_type="HAC", cov_kwds={"maxlags": 1})
+
+    colunas_modelo_nivel_sem_dummies = [
+        "ln_bf",
+        "ln_ocupados",
+        "taxa_desocupacao",
+        "tendencia",
+        "pos_2023",
+    ]
+    dados_nivel_sem_dummies = base.dropna(
+        subset=["ln_informal", *colunas_modelo_nivel_sem_dummies]
+    ).copy()
+    x_nivel_sem_dummies = sm.add_constant(dados_nivel_sem_dummies[colunas_modelo_nivel_sem_dummies])
+    y_nivel_sem_dummies = dados_nivel_sem_dummies["ln_informal"]
+    modelo_nivel_sem_dummies = sm.OLS(y_nivel_sem_dummies, x_nivel_sem_dummies).fit(
+        cov_type="HAC", cov_kwds={"maxlags": 1}
+    )
+
+    return {
+        "biblioteca": "statsmodels",
+        "observacao_metodologica": (
+            "Modelos estimados via OLS com erros-padrao HAC (Newey-West, maxlags=1) "
+            "para reduzir sensibilidade a autocorrelacao e heterocedasticidade."
+        ),
+        "base_trimestral": base.to_dict(orient="records"),
+        "modelo_principal_variacoes_logaritmicas": {
+            **resumir_resultado_modelo(
+                "modelo_principal_variacoes_logaritmicas",
+                modelo_principal,
+                dados_principal,
+                "d_ln_informal",
+            ),
+            "formula_descricao": (
+                "d_ln_informal ~ d_ln_bf + d_ln_bf_lag1 + d_ln_ocupados + "
+                "d_taxa_desocupacao + pos_2023 + d_trimestre_2 + d_trimestre_3 + d_trimestre_4"
+            ),
+            "teste_f_beta_bf_contemporaneo_e_defasado": {
+                "hipotese_nula": "d_ln_bf = 0 e d_ln_bf_lag1 = 0",
+                "estatistica_f": float(teste_f.fvalue),
+                "p_valor": float(teste_f.pvalue),
+            },
+        },
+        "modelo_principal_variacoes_logaritmicas_sem_dummies": {
+            **resumir_resultado_modelo(
+                "modelo_principal_variacoes_logaritmicas_sem_dummies",
+                modelo_principal_sem_dummies,
+                dados_principal_sem_dummies,
+                "d_ln_informal",
+            ),
+            "formula_descricao": (
+                "d_ln_informal ~ d_ln_bf + d_ln_bf_lag1 + d_ln_ocupados + "
+                "d_taxa_desocupacao + pos_2023"
+            ),
+            "teste_f_beta_bf_contemporaneo_e_defasado": {
+                "hipotese_nula": "d_ln_bf = 0 e d_ln_bf_lag1 = 0",
+                "estatistica_f": float(teste_f_sem_dummies.fvalue),
+                "p_valor": float(teste_f_sem_dummies.pvalue),
+            },
+        },
+        "modelo_secundario_nivel_logaritmico": {
+            **resumir_resultado_modelo(
+                "modelo_secundario_nivel_logaritmico",
+                modelo_nivel,
+                dados_nivel,
+                "ln_informal",
+            ),
+            "formula_descricao": (
+                "ln_informal ~ ln_bf + ln_ocupados + taxa_desocupacao + tendencia + "
+                "pos_2023 + d_trimestre_2 + d_trimestre_3 + d_trimestre_4"
+            ),
+        },
+        "modelo_secundario_nivel_logaritmico_sem_dummies": {
+            **resumir_resultado_modelo(
+                "modelo_secundario_nivel_logaritmico_sem_dummies",
+                modelo_nivel_sem_dummies,
+                dados_nivel_sem_dummies,
+                "ln_informal",
+            ),
+            "formula_descricao": (
+                "ln_informal ~ ln_bf + ln_ocupados + taxa_desocupacao + tendencia + pos_2023"
+            ),
+        },
+    }
 
 
 def calcular_correlacoes(payload: dict[str, object]) -> list[dict[str, object]]:
@@ -543,6 +788,35 @@ def adicionar_cabecalho_comovimento(fig: plt.Figure, comovimento: dict[str, obje
     )
 
 
+def adicionar_cabecalho_econometria(fig: plt.Figure, titulo: str, subtitulo: str, resumo: str) -> None:
+    fig.suptitle(titulo, x=0.05, y=0.97, ha="left", va="top", fontsize=22, fontweight="bold")
+    fig.text(0.05, 0.935, subtitulo, ha="left", va="top", fontsize=13, color="#243b53")
+    fig.text(
+        0.05,
+        0.895,
+        resumo,
+        ha="left",
+        va="top",
+        fontsize=11,
+        color="#334e68",
+        bbox={"boxstyle": "round,pad=0.5", "facecolor": "#eef4f7", "edgecolor": "#d9e2ec"},
+    )
+
+
+def formatar_p_valor(p_valor: float | None) -> str:
+    if p_valor is None:
+        return "n/d"
+    if p_valor < 0.0001:
+        return "< 0,0001"
+    return f"{p_valor:.4f}".replace(".", ",")
+
+
+def formatar_numero(valor: float | None, casas: int = 4) -> str:
+    if valor is None:
+        return "n/d"
+    return f"{valor:.{casas}f}".replace(".", ",")
+
+
 def salvar_graficos_correlacao(correlacao: dict[str, object], pasta_graficos: Path) -> list[Path]:
     dados = pd.DataFrame(correlacao["dados_pareados_trimestre_unico"])
     if dados.empty:
@@ -686,6 +960,162 @@ def salvar_graficos_comovimento(comovimento: dict[str, object], pasta_graficos: 
     return arquivos
 
 
+def salvar_graficos_testes_econometricos(econometria: dict[str, object], pasta_graficos: Path) -> list[Path]:
+    arquivos: list[Path] = []
+    modelos_alvo = [
+        "modelo_principal_variacoes_logaritmicas",
+        "modelo_principal_variacoes_logaritmicas_sem_dummies",
+    ]
+
+    for chave_modelo in modelos_alvo:
+        modelo = econometria.get(chave_modelo, {})
+        if not modelo:
+            continue
+
+        parametros = {
+            item["variavel"]: item
+            for item in modelo.get("parametros", [])
+            if item["variavel"] in {"d_ln_bf", "d_ln_bf_lag1"}
+        }
+        teste_f = modelo.get("teste_f_beta_bf_contemporaneo_e_defasado")
+        titulo_base = chave_modelo.replace("_", " ").title()
+        slug = slugify(chave_modelo)
+
+        fig, ax = plt.subplots(figsize=(14, 8), dpi=180)
+        fig.patch.set_facecolor("white")
+        ax.axis("off")
+        adicionar_cabecalho_econometria(
+            fig,
+            f"Teste t: {titulo_base}",
+            "Significância individual dos coeficientes do Bolsa Família",
+            (
+                "Hipóteses nulas:\n"
+                "H0: β1 = 0 para d_ln_bf\n"
+                "H0: β2 = 0 para d_ln_bf_lag1"
+            ),
+        )
+
+        linhas = []
+        for nome, rotulo in (("d_ln_bf", "β1: efeito contemporâneo"), ("d_ln_bf_lag1", "β2: efeito defasado")):
+            p = parametros.get(nome, {})
+            decisao = "Rejeita H0 a 5%" if p.get("p_valor") is not None and p["p_valor"] < 0.05 else "Não rejeita H0 a 5%"
+            linhas.append(
+                f"{rotulo}\n"
+                f"coef = {formatar_numero(p.get('coeficiente'))} | se = {formatar_numero(p.get('erro_padrao'))}\n"
+                f"t = {formatar_numero(p.get('estatistica_t'))} | p = {formatar_p_valor(p.get('p_valor'))}\n"
+                f"decisão: {decisao}"
+            )
+
+        ax.text(
+            0.03,
+            0.72,
+            "\n\n".join(linhas),
+            transform=ax.transAxes,
+            ha="left",
+            va="top",
+            fontsize=14,
+            color="#102a43",
+            bbox={"boxstyle": "round,pad=0.7", "facecolor": "#fbfbfc", "edgecolor": "#d9e2ec"},
+        )
+        fig.subplots_adjust(top=0.78, left=0.04, right=0.98, bottom=0.08)
+        arquivo = pasta_graficos / f"{slug}_teste_t.png"
+        fig.savefig(arquivo, bbox_inches="tight")
+        plt.close(fig)
+        arquivos.append(arquivo)
+
+        if teste_f:
+            fig, ax = plt.subplots(figsize=(14, 8), dpi=180)
+            fig.patch.set_facecolor("white")
+            ax.axis("off")
+            adicionar_cabecalho_econometria(
+                fig,
+                f"Teste F: {titulo_base}",
+                "Significância conjunta dos coeficientes do Bolsa Família",
+                (
+                    "Hipótese nula conjunta:\n"
+                    "H0: β1 = 0 e β2 = 0\n"
+                    "com q = 2 restrições"
+                ),
+            )
+            decisao = (
+                "Rejeita H0 a 5%"
+                if teste_f.get("p_valor") is not None and teste_f["p_valor"] < 0.05
+                else "Não rejeita H0 a 5%"
+            )
+            texto_f = (
+                f"Estatística F = {formatar_numero(teste_f.get('estatistica_f'))}\n"
+                f"p-valor = {formatar_p_valor(teste_f.get('p_valor'))}\n"
+                f"decisão: {decisao}\n\n"
+                "Interpretação:\n"
+                "o teste verifica se as variações contemporânea e defasada do Bolsa Família\n"
+                "ajudam conjuntamente a explicar a variável dependente."
+            )
+            ax.text(
+                0.03,
+                0.72,
+                texto_f,
+                transform=ax.transAxes,
+                ha="left",
+                va="top",
+                fontsize=14,
+                color="#102a43",
+                bbox={"boxstyle": "round,pad=0.7", "facecolor": "#fbfbfc", "edgecolor": "#d9e2ec"},
+            )
+            fig.subplots_adjust(top=0.78, left=0.04, right=0.98, bottom=0.08)
+            arquivo = pasta_graficos / f"{slug}_teste_f.png"
+            fig.savefig(arquivo, bbox_inches="tight")
+            plt.close(fig)
+            arquivos.append(arquivo)
+
+    return arquivos
+
+
+def salvar_graficos_econometria(econometria: dict[str, object], pasta_graficos: Path) -> list[Path]:
+    arquivos: list[Path] = []
+
+    for chave_modelo, titulo in (
+        ("modelo_principal_variacoes_logaritmicas", "Econometria: Modelo Principal"),
+        ("modelo_principal_variacoes_logaritmicas_sem_dummies", "Econometria: Modelo Principal Sem Dummies"),
+        ("modelo_secundario_nivel_logaritmico", "Econometria: Modelo Secundário"),
+        ("modelo_secundario_nivel_logaritmico_sem_dummies", "Econometria: Modelo Secundário Sem Dummies"),
+    ):
+        modelo = econometria.get(chave_modelo, {})
+        dados = pd.DataFrame(modelo.get("valores_ajustados", []))
+        if dados.empty:
+            continue
+
+        dados["periodo"] = dados["trimestre"].apply(trimestre_para_timestamp)
+        resumo = (
+            f"Biblioteca: {econometria['biblioteca']}\n"
+            f"n: {modelo['n_observacoes']}\n"
+            f"R²: {modelo['r2']:.4f}\n"
+            f"R² ajustado: {modelo['r2_ajustado']:.4f}"
+        )
+
+        fig, ax = plt.subplots(figsize=(18, 10), dpi=180)
+        fig.patch.set_facecolor("white")
+        adicionar_cabecalho_econometria(
+            fig,
+            titulo,
+            modelo["formula_descricao"],
+            resumo,
+        )
+        ax.plot(dados["periodo"], dados["real"], color="#0b6e4f", linewidth=2.5, label="Real")
+        ax.plot(dados["periodo"], dados["ajustado"], color="#d64550", linewidth=2.5, linestyle="--", label="Ajustado")
+        ax.set_title("Série observada versus ajustada", loc="left", fontsize=14, fontweight="bold")
+        ax.set_xlabel("Período", fontsize=11, color="#102a43")
+        ax.set_ylabel(modelo["variavel_dependente"], fontsize=11, color="#102a43")
+        ax.legend(frameon=False, fontsize=11, loc="upper right")
+        estilizar_eixos(ax, usar_datas=True)
+        fig.subplots_adjust(top=0.74, left=0.08, right=0.97, bottom=0.12)
+        arquivo = pasta_graficos / f"{slugify(chave_modelo)}_ajuste.png"
+        fig.savefig(arquivo, bbox_inches="tight")
+        plt.close(fig)
+        arquivos.append(arquivo)
+
+    return arquivos
+
+
 def gerar_graficos(payload: dict[str, object], pasta_saida: Path) -> list[Path]:
     pasta_graficos = pasta_saida / CHARTS_DIRNAME
     pasta_graficos.mkdir(parents=True, exist_ok=True)
@@ -714,6 +1144,14 @@ def gerar_graficos_comovimento(payload: dict[str, object], pasta_saida: Path) ->
     pasta_graficos = pasta_saida / COMOVEMENT_CHARTS_DIRNAME
     pasta_graficos.mkdir(parents=True, exist_ok=True)
     return salvar_graficos_comovimento(dict(payload.get("comovimento", {})), pasta_graficos)
+
+
+def gerar_graficos_econometria(payload: dict[str, object], pasta_saida: Path) -> list[Path]:
+    pasta_graficos = pasta_saida / ECONOMETRICS_CHARTS_DIRNAME
+    pasta_graficos.mkdir(parents=True, exist_ok=True)
+    arquivos = salvar_graficos_econometria(dict(payload.get("econometria", {})), pasta_graficos)
+    arquivos.extend(salvar_graficos_testes_econometricos(dict(payload.get("econometria", {})), pasta_graficos))
+    return arquivos
 
 
 def gerar_payload(arquivo_entrada: Path, arquivo_saida: Path) -> dict[str, object]:
@@ -751,6 +1189,7 @@ def gerar_payload(arquivo_entrada: Path, arquivo_saida: Path) -> dict[str, objec
     }
     payload["correlacoes"] = calcular_correlacoes(payload)
     payload["comovimento"] = calcular_comovimento(payload)
+    payload["econometria"] = rodar_econometria(payload)
 
     return sanitizar_json(payload)
 
@@ -772,6 +1211,7 @@ def extrair_series_para_json(
     arquivos_graficos = gerar_graficos(payload, pasta_saida)
     arquivos_graficos.extend(gerar_graficos_correlacoes(payload, pasta_saida))
     arquivos_graficos.extend(gerar_graficos_comovimento(payload, pasta_saida))
+    arquivos_graficos.extend(gerar_graficos_econometria(payload, pasta_saida))
     return arquivo_saida, arquivos_graficos
 
 
