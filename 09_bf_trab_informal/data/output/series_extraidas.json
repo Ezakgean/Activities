@@ -1,0 +1,3166 @@
+{
+  "metadata": {
+    "arquivo_entrada": "/home/ezequieldev/Documentos/Activities/09_bf_trab_informal/data/input/DadosEconometria.xlsx",
+    "arquivo_saida": "/home/ezequieldev/Documentos/Activities/09_bf_trab_informal/data/output/series_extraidas.json"
+  },
+  "series": {
+    "bolsa_familia": {
+      "tema": "Bolsa Família",
+      "aba": "visdata3-download-01-07-2026 17",
+      "intervalo": "A1:C136",
+      "variavel": "Pessoas beneficiárias no PBF",
+      "dados": [
+        {
+          "data": "2013-12-01",
+          "pessoas_beneficiarias_pbf": 50067079.0
+        },
+        {
+          "data": "2014-01-01",
+          "pessoas_beneficiarias_pbf": 49826177.0
+        },
+        {
+          "data": "2014-02-01",
+          "pessoas_beneficiarias_pbf": 49892961.0
+        },
+        {
+          "data": "2014-03-01",
+          "pessoas_beneficiarias_pbf": 49516292.0
+        },
+        {
+          "data": "2014-04-01",
+          "pessoas_beneficiarias_pbf": 49695391.0
+        },
+        {
+          "data": "2014-05-01",
+          "pessoas_beneficiarias_pbf": 48864511.0
+        },
+        {
+          "data": "2014-06-01",
+          "pessoas_beneficiarias_pbf": 49179537.0
+        },
+        {
+          "data": "2014-07-01",
+          "pessoas_beneficiarias_pbf": 49310590.0
+        },
+        {
+          "data": "2014-08-01",
+          "pessoas_beneficiarias_pbf": 48550277.0
+        },
+        {
+          "data": "2014-09-01",
+          "pessoas_beneficiarias_pbf": 48615969.0
+        },
+        {
+          "data": "2014-10-01",
+          "pessoas_beneficiarias_pbf": 48638671.0
+        },
+        {
+          "data": "2014-11-01",
+          "pessoas_beneficiarias_pbf": 48877743.0
+        },
+        {
+          "data": "2014-12-01",
+          "pessoas_beneficiarias_pbf": 48694561.0
+        },
+        {
+          "data": "2015-01-01",
+          "pessoas_beneficiarias_pbf": 48570658.0
+        },
+        {
+          "data": "2015-02-01",
+          "pessoas_beneficiarias_pbf": 48837271.0
+        },
+        {
+          "data": "2015-03-01",
+          "pessoas_beneficiarias_pbf": 48746784.0
+        },
+        {
+          "data": "2015-04-01",
+          "pessoas_beneficiarias_pbf": 47888187.0
+        },
+        {
+          "data": "2015-05-01",
+          "pessoas_beneficiarias_pbf": 47818957.0
+        },
+        {
+          "data": "2015-06-01",
+          "pessoas_beneficiarias_pbf": 47725867.0
+        },
+        {
+          "data": "2015-07-01",
+          "pessoas_beneficiarias_pbf": 48068445.0
+        },
+        {
+          "data": "2015-08-01",
+          "pessoas_beneficiarias_pbf": 47912358.0
+        },
+        {
+          "data": "2015-09-01",
+          "pessoas_beneficiarias_pbf": 47861619.0
+        },
+        {
+          "data": "2015-10-01",
+          "pessoas_beneficiarias_pbf": 47768113.0
+        },
+        {
+          "data": "2015-11-01",
+          "pessoas_beneficiarias_pbf": 46871639.0
+        },
+        {
+          "data": "2015-12-01",
+          "pessoas_beneficiarias_pbf": 47368956.0
+        },
+        {
+          "data": "2016-01-01",
+          "pessoas_beneficiarias_pbf": 47159755.0
+        },
+        {
+          "data": "2016-02-01",
+          "pessoas_beneficiarias_pbf": 47178388.0
+        },
+        {
+          "data": "2016-03-01",
+          "pessoas_beneficiarias_pbf": 46681331.0
+        },
+        {
+          "data": "2016-04-01",
+          "pessoas_beneficiarias_pbf": 46822912.0
+        },
+        {
+          "data": "2016-05-01",
+          "pessoas_beneficiarias_pbf": 46556807.0
+        },
+        {
+          "data": "2016-06-01",
+          "pessoas_beneficiarias_pbf": 46494507.0
+        },
+        {
+          "data": "2016-07-01",
+          "pessoas_beneficiarias_pbf": 46923121.0
+        },
+        {
+          "data": "2016-08-01",
+          "pessoas_beneficiarias_pbf": 46799871.0
+        },
+        {
+          "data": "2016-09-01",
+          "pessoas_beneficiarias_pbf": 46786086.0
+        },
+        {
+          "data": "2016-10-01",
+          "pessoas_beneficiarias_pbf": 47008141.0
+        },
+        {
+          "data": "2016-11-01",
+          "pessoas_beneficiarias_pbf": 46043402.0
+        },
+        {
+          "data": "2016-12-01",
+          "pessoas_beneficiarias_pbf": 45964936.0
+        },
+        {
+          "data": "2017-01-01",
+          "pessoas_beneficiarias_pbf": 45321410.0
+        },
+        {
+          "data": "2017-02-01",
+          "pessoas_beneficiarias_pbf": 45589144.0
+        },
+        {
+          "data": "2017-03-01",
+          "pessoas_beneficiarias_pbf": 45426213.0
+        },
+        {
+          "data": "2017-04-01",
+          "pessoas_beneficiarias_pbf": 44964885.0
+        },
+        {
+          "data": "2017-05-01",
+          "pessoas_beneficiarias_pbf": 44436682.0
+        },
+        {
+          "data": "2017-06-01",
+          "pessoas_beneficiarias_pbf": 44295672.0
+        },
+        {
+          "data": "2017-07-01",
+          "pessoas_beneficiarias_pbf": 42168228.0
+        },
+        {
+          "data": "2017-08-01",
+          "pessoas_beneficiarias_pbf": 44004117.0
+        },
+        {
+          "data": "2017-09-01",
+          "pessoas_beneficiarias_pbf": 43538335.0
+        },
+        {
+          "data": "2017-10-01",
+          "pessoas_beneficiarias_pbf": 43844568.0
+        },
+        {
+          "data": "2017-11-01",
+          "pessoas_beneficiarias_pbf": 44096509.0
+        },
+        {
+          "data": "2017-12-01",
+          "pessoas_beneficiarias_pbf": 44479667.0
+        },
+        {
+          "data": "2018-01-01",
+          "pessoas_beneficiarias_pbf": 44900823.0
+        },
+        {
+          "data": "2018-02-01",
+          "pessoas_beneficiarias_pbf": 45112611.0
+        },
+        {
+          "data": "2018-03-01",
+          "pessoas_beneficiarias_pbf": 45325325.0
+        },
+        {
+          "data": "2018-04-01",
+          "pessoas_beneficiarias_pbf": 43846769.0
+        },
+        {
+          "data": "2018-05-01",
+          "pessoas_beneficiarias_pbf": 44287888.0
+        },
+        {
+          "data": "2018-06-01",
+          "pessoas_beneficiarias_pbf": 43365842.0
+        },
+        {
+          "data": "2018-07-01",
+          "pessoas_beneficiarias_pbf": 43596762.0
+        },
+        {
+          "data": "2018-08-01",
+          "pessoas_beneficiarias_pbf": 44080467.0
+        },
+        {
+          "data": "2018-09-01",
+          "pessoas_beneficiarias_pbf": 43125059.0
+        },
+        {
+          "data": "2018-10-01",
+          "pessoas_beneficiarias_pbf": 43627285.0
+        },
+        {
+          "data": "2018-11-01",
+          "pessoas_beneficiarias_pbf": 44325400.0
+        },
+        {
+          "data": "2018-12-01",
+          "pessoas_beneficiarias_pbf": 43785440.0
+        },
+        {
+          "data": "2019-01-01",
+          "pessoas_beneficiarias_pbf": 42731854.0
+        },
+        {
+          "data": "2019-02-01",
+          "pessoas_beneficiarias_pbf": 43106028.0
+        },
+        {
+          "data": "2019-03-01",
+          "pessoas_beneficiarias_pbf": 43585001.0
+        },
+        {
+          "data": "2019-04-01",
+          "pessoas_beneficiarias_pbf": 43631812.0
+        },
+        {
+          "data": "2019-05-01",
+          "pessoas_beneficiarias_pbf": 44120722.0
+        },
+        {
+          "data": "2019-06-01",
+          "pessoas_beneficiarias_pbf": 43220277.0
+        },
+        {
+          "data": "2019-07-01",
+          "pessoas_beneficiarias_pbf": 42759984.0
+        },
+        {
+          "data": "2019-08-01",
+          "pessoas_beneficiarias_pbf": 42714485.0
+        },
+        {
+          "data": "2019-09-01",
+          "pessoas_beneficiarias_pbf": 41739513.0
+        },
+        {
+          "data": "2019-10-01",
+          "pessoas_beneficiarias_pbf": 41712080.0
+        },
+        {
+          "data": "2019-11-01",
+          "pessoas_beneficiarias_pbf": 40824786.0
+        },
+        {
+          "data": "2019-12-01",
+          "pessoas_beneficiarias_pbf": 40831596.0
+        },
+        {
+          "data": "2020-01-01",
+          "pessoas_beneficiarias_pbf": 41011859.0
+        },
+        {
+          "data": "2020-02-01",
+          "pessoas_beneficiarias_pbf": 41003491.0
+        },
+        {
+          "data": "2020-03-01",
+          "pessoas_beneficiarias_pbf": 40774015.0
+        },
+        {
+          "data": "2020-04-01",
+          "pessoas_beneficiarias_pbf": 43706569.0
+        },
+        {
+          "data": "2020-05-01",
+          "pessoas_beneficiarias_pbf": 43711618.0
+        },
+        {
+          "data": "2020-06-01",
+          "pessoas_beneficiarias_pbf": 43715125.0
+        },
+        {
+          "data": "2020-07-01",
+          "pessoas_beneficiarias_pbf": 43714953.0
+        },
+        {
+          "data": "2020-08-01",
+          "pessoas_beneficiarias_pbf": 44678998.0
+        },
+        {
+          "data": "2020-09-01",
+          "pessoas_beneficiarias_pbf": 43592736.0
+        },
+        {
+          "data": "2020-10-01",
+          "pessoas_beneficiarias_pbf": 43591999.0
+        },
+        {
+          "data": "2020-11-01",
+          "pessoas_beneficiarias_pbf": 43590396.0
+        },
+        {
+          "data": "2020-12-01",
+          "pessoas_beneficiarias_pbf": 43591597.0
+        },
+        {
+          "data": "2021-01-01",
+          "pessoas_beneficiarias_pbf": 43366280.0
+        },
+        {
+          "data": "2021-02-01",
+          "pessoas_beneficiarias_pbf": 43327318.0
+        },
+        {
+          "data": "2021-03-01",
+          "pessoas_beneficiarias_pbf": 43838377.0
+        },
+        {
+          "data": "2021-04-01",
+          "pessoas_beneficiarias_pbf": 43986152.0
+        },
+        {
+          "data": "2021-05-01",
+          "pessoas_beneficiarias_pbf": 44229091.0
+        },
+        {
+          "data": "2021-06-01",
+          "pessoas_beneficiarias_pbf": 44228223.0
+        },
+        {
+          "data": "2021-07-01",
+          "pessoas_beneficiarias_pbf": 44228042.0
+        },
+        {
+          "data": "2021-08-01",
+          "pessoas_beneficiarias_pbf": 44162630.0
+        },
+        {
+          "data": "2021-09-01",
+          "pessoas_beneficiarias_pbf": 44162608.0
+        },
+        {
+          "data": "2021-10-01",
+          "pessoas_beneficiarias_pbf": 44161076.0
+        },
+        {
+          "data": "2023-03-01",
+          "pessoas_beneficiarias_pbf": 54308193.0
+        },
+        {
+          "data": "2023-04-01",
+          "pessoas_beneficiarias_pbf": 54339533.0
+        },
+        {
+          "data": "2023-05-01",
+          "pessoas_beneficiarias_pbf": 54615407.0
+        },
+        {
+          "data": "2023-06-01",
+          "pessoas_beneficiarias_pbf": 54606332.0
+        },
+        {
+          "data": "2023-07-01",
+          "pessoas_beneficiarias_pbf": 54308900.0
+        },
+        {
+          "data": "2023-08-01",
+          "pessoas_beneficiarias_pbf": 54840465.0
+        },
+        {
+          "data": "2023-09-01",
+          "pessoas_beneficiarias_pbf": 55931934.0
+        },
+        {
+          "data": "2023-10-01",
+          "pessoas_beneficiarias_pbf": 56228129.0
+        },
+        {
+          "data": "2023-11-01",
+          "pessoas_beneficiarias_pbf": 55914177.0
+        },
+        {
+          "data": "2023-12-01",
+          "pessoas_beneficiarias_pbf": 55742366.0
+        },
+        {
+          "data": "2024-01-01",
+          "pessoas_beneficiarias_pbf": 55777848.0
+        },
+        {
+          "data": "2024-02-01",
+          "pessoas_beneficiarias_pbf": 55272466.0
+        },
+        {
+          "data": "2024-03-01",
+          "pessoas_beneficiarias_pbf": 54965278.0
+        },
+        {
+          "data": "2024-04-01",
+          "pessoas_beneficiarias_pbf": 55083325.0
+        },
+        {
+          "data": "2024-05-01",
+          "pessoas_beneficiarias_pbf": 54951428.0
+        },
+        {
+          "data": "2024-06-01",
+          "pessoas_beneficiarias_pbf": 55078333.0
+        },
+        {
+          "data": "2024-07-01",
+          "pessoas_beneficiarias_pbf": 54800635.0
+        },
+        {
+          "data": "2024-08-01",
+          "pessoas_beneficiarias_pbf": 54540135.0
+        },
+        {
+          "data": "2024-09-01",
+          "pessoas_beneficiarias_pbf": 54305920.0
+        },
+        {
+          "data": "2024-10-01",
+          "pessoas_beneficiarias_pbf": 54324480.0
+        },
+        {
+          "data": "2024-11-01",
+          "pessoas_beneficiarias_pbf": 54372562.0
+        },
+        {
+          "data": "2024-12-01",
+          "pessoas_beneficiarias_pbf": 54370242.0
+        },
+        {
+          "data": "2025-01-01",
+          "pessoas_beneficiarias_pbf": 53785054.0
+        },
+        {
+          "data": "2025-02-01",
+          "pessoas_beneficiarias_pbf": 53913284.0
+        },
+        {
+          "data": "2025-03-01",
+          "pessoas_beneficiarias_pbf": 53884632.0
+        },
+        {
+          "data": "2025-04-01",
+          "pessoas_beneficiarias_pbf": 53800634.0
+        },
+        {
+          "data": "2025-05-01",
+          "pessoas_beneficiarias_pbf": 53704650.0
+        },
+        {
+          "data": "2025-06-01",
+          "pessoas_beneficiarias_pbf": 53772512.0
+        },
+        {
+          "data": "2025-07-01",
+          "pessoas_beneficiarias_pbf": 51208857.0
+        },
+        {
+          "data": "2025-08-01",
+          "pessoas_beneficiarias_pbf": 50051962.0
+        },
+        {
+          "data": "2025-09-01",
+          "pessoas_beneficiarias_pbf": 49753524.0
+        },
+        {
+          "data": "2025-10-01",
+          "pessoas_beneficiarias_pbf": 49402276.0
+        },
+        {
+          "data": "2025-11-01",
+          "pessoas_beneficiarias_pbf": 48599444.0
+        },
+        {
+          "data": "2025-12-01",
+          "pessoas_beneficiarias_pbf": 48923630.0
+        },
+        {
+          "data": "2026-01-01",
+          "pessoas_beneficiarias_pbf": 49181735.0
+        },
+        {
+          "data": "2026-02-01",
+          "pessoas_beneficiarias_pbf": 49328860.0
+        },
+        {
+          "data": "2026-03-01",
+          "pessoas_beneficiarias_pbf": 48888976.0
+        },
+        {
+          "data": "2026-04-01",
+          "pessoas_beneficiarias_pbf": 49201807.0
+        },
+        {
+          "data": "2026-05-01",
+          "pessoas_beneficiarias_pbf": 49571641.0
+        },
+        {
+          "data": "2026-06-01",
+          "pessoas_beneficiarias_pbf": 50105104.0
+        }
+      ]
+    },
+    "taxa_informalidade": {
+      "tema": "Trabalho informal — taxa",
+      "aba": "Tabela 29",
+      "intervalo": "B4:BF4 e B6:BF6",
+      "variavel": "Taxa de informalidade das pessoas ocupadas (%)",
+      "dados": [
+        {
+          "trimestre": "2012T1",
+          "taxa_informalidade": null
+        },
+        {
+          "trimestre": "2012T2",
+          "taxa_informalidade": null
+        },
+        {
+          "trimestre": "2012T3",
+          "taxa_informalidade": null
+        },
+        {
+          "trimestre": "2012T4",
+          "taxa_informalidade": null
+        },
+        {
+          "trimestre": "2013T1",
+          "taxa_informalidade": null
+        },
+        {
+          "trimestre": "2013T2",
+          "taxa_informalidade": null
+        },
+        {
+          "trimestre": "2013T3",
+          "taxa_informalidade": null
+        },
+        {
+          "trimestre": "2013T4",
+          "taxa_informalidade": null
+        },
+        {
+          "trimestre": "2014T1",
+          "taxa_informalidade": null
+        },
+        {
+          "trimestre": "2014T2",
+          "taxa_informalidade": null
+        },
+        {
+          "trimestre": "2014T3",
+          "taxa_informalidade": null
+        },
+        {
+          "trimestre": "2014T4",
+          "taxa_informalidade": null
+        },
+        {
+          "trimestre": "2015T1",
+          "taxa_informalidade": null
+        },
+        {
+          "trimestre": "2015T2",
+          "taxa_informalidade": null
+        },
+        {
+          "trimestre": "2015T3",
+          "taxa_informalidade": null
+        },
+        {
+          "trimestre": "2015T4",
+          "taxa_informalidade": 38.3
+        },
+        {
+          "trimestre": "2016T1",
+          "taxa_informalidade": 38.3
+        },
+        {
+          "trimestre": "2016T2",
+          "taxa_informalidade": 38.7
+        },
+        {
+          "trimestre": "2016T3",
+          "taxa_informalidade": 38.4
+        },
+        {
+          "trimestre": "2016T4",
+          "taxa_informalidade": 39.1
+        },
+        {
+          "trimestre": "2017T1",
+          "taxa_informalidade": 39.3
+        },
+        {
+          "trimestre": "2017T2",
+          "taxa_informalidade": 39.8
+        },
+        {
+          "trimestre": "2017T3",
+          "taxa_informalidade": 40.2
+        },
+        {
+          "trimestre": "2017T4",
+          "taxa_informalidade": 40.3
+        },
+        {
+          "trimestre": "2018T1",
+          "taxa_informalidade": 40.2
+        },
+        {
+          "trimestre": "2018T2",
+          "taxa_informalidade": 40.3
+        },
+        {
+          "trimestre": "2018T3",
+          "taxa_informalidade": 40.7
+        },
+        {
+          "trimestre": "2018T4",
+          "taxa_informalidade": 40.8
+        },
+        {
+          "trimestre": "2019T1",
+          "taxa_informalidade": 40.5
+        },
+        {
+          "trimestre": "2019T2",
+          "taxa_informalidade": 40.9
+        },
+        {
+          "trimestre": "2019T3",
+          "taxa_informalidade": 41.0
+        },
+        {
+          "trimestre": "2019T4",
+          "taxa_informalidade": 40.7
+        },
+        {
+          "trimestre": "2020T1",
+          "taxa_informalidade": 39.6
+        },
+        {
+          "trimestre": "2020T2",
+          "taxa_informalidade": 36.6
+        },
+        {
+          "trimestre": "2020T3",
+          "taxa_informalidade": 38.1
+        },
+        {
+          "trimestre": "2020T4",
+          "taxa_informalidade": 39.1
+        },
+        {
+          "trimestre": "2021T1",
+          "taxa_informalidade": 39.2
+        },
+        {
+          "trimestre": "2021T2",
+          "taxa_informalidade": 40.1
+        },
+        {
+          "trimestre": "2021T3",
+          "taxa_informalidade": 40.7
+        },
+        {
+          "trimestre": "2021T4",
+          "taxa_informalidade": 40.8
+        },
+        {
+          "trimestre": "2022T1",
+          "taxa_informalidade": 40.2
+        },
+        {
+          "trimestre": "2022T2",
+          "taxa_informalidade": 40.0
+        },
+        {
+          "trimestre": "2022T3",
+          "taxa_informalidade": 39.5
+        },
+        {
+          "trimestre": "2022T4",
+          "taxa_informalidade": 38.9
+        },
+        {
+          "trimestre": "2023T1",
+          "taxa_informalidade": 39.0
+        },
+        {
+          "trimestre": "2023T2",
+          "taxa_informalidade": 39.2
+        },
+        {
+          "trimestre": "2023T3",
+          "taxa_informalidade": 39.1
+        },
+        {
+          "trimestre": "2023T4",
+          "taxa_informalidade": 39.2
+        },
+        {
+          "trimestre": "2024T1",
+          "taxa_informalidade": 38.9
+        },
+        {
+          "trimestre": "2024T2",
+          "taxa_informalidade": 38.7
+        },
+        {
+          "trimestre": "2024T3",
+          "taxa_informalidade": 38.8
+        },
+        {
+          "trimestre": "2024T4",
+          "taxa_informalidade": 38.6
+        },
+        {
+          "trimestre": "2025T1",
+          "taxa_informalidade": 38.0
+        },
+        {
+          "trimestre": "2025T2",
+          "taxa_informalidade": 37.8
+        },
+        {
+          "trimestre": "2025T3",
+          "taxa_informalidade": 37.8
+        },
+        {
+          "trimestre": "2025T4",
+          "taxa_informalidade": 37.6
+        },
+        {
+          "trimestre": "2026T1",
+          "taxa_informalidade": 37.3
+        }
+      ]
+    },
+    "pessoas_informais_mil": {
+      "tema": "Trabalho informal — quantidade",
+      "aba": "Tabela 31",
+      "intervalo": "B4:BF4 e B6:BF6",
+      "variavel": "Pessoas ocupadas em situação de informalidade, em mil pessoas",
+      "dados": [
+        {
+          "trimestre": "2012T1",
+          "pessoas_informais_mil": null
+        },
+        {
+          "trimestre": "2012T2",
+          "pessoas_informais_mil": null
+        },
+        {
+          "trimestre": "2012T3",
+          "pessoas_informais_mil": null
+        },
+        {
+          "trimestre": "2012T4",
+          "pessoas_informais_mil": null
+        },
+        {
+          "trimestre": "2013T1",
+          "pessoas_informais_mil": null
+        },
+        {
+          "trimestre": "2013T2",
+          "pessoas_informais_mil": null
+        },
+        {
+          "trimestre": "2013T3",
+          "pessoas_informais_mil": null
+        },
+        {
+          "trimestre": "2013T4",
+          "pessoas_informais_mil": null
+        },
+        {
+          "trimestre": "2014T1",
+          "pessoas_informais_mil": null
+        },
+        {
+          "trimestre": "2014T2",
+          "pessoas_informais_mil": null
+        },
+        {
+          "trimestre": "2014T3",
+          "pessoas_informais_mil": null
+        },
+        {
+          "trimestre": "2014T4",
+          "pessoas_informais_mil": null
+        },
+        {
+          "trimestre": "2015T1",
+          "pessoas_informais_mil": null
+        },
+        {
+          "trimestre": "2015T2",
+          "pessoas_informais_mil": null
+        },
+        {
+          "trimestre": "2015T3",
+          "pessoas_informais_mil": null
+        },
+        {
+          "trimestre": "2015T4",
+          "pessoas_informais_mil": 35078.0
+        },
+        {
+          "trimestre": "2016T1",
+          "pessoas_informais_mil": 34457.0
+        },
+        {
+          "trimestre": "2016T2",
+          "pessoas_informais_mil": 34727.0
+        },
+        {
+          "trimestre": "2016T3",
+          "pessoas_informais_mil": 34194.0
+        },
+        {
+          "trimestre": "2016T4",
+          "pessoas_informais_mil": 34872.0
+        },
+        {
+          "trimestre": "2017T1",
+          "pessoas_informais_mil": 34536.0
+        },
+        {
+          "trimestre": "2017T2",
+          "pessoas_informais_mil": 35484.0
+        },
+        {
+          "trimestre": "2017T3",
+          "pessoas_informais_mil": 36279.0
+        },
+        {
+          "trimestre": "2017T4",
+          "pessoas_informais_mil": 36699.0
+        },
+        {
+          "trimestre": "2018T1",
+          "pessoas_informais_mil": 36088.0
+        },
+        {
+          "trimestre": "2018T2",
+          "pessoas_informais_mil": 36336.0
+        },
+        {
+          "trimestre": "2018T3",
+          "pessoas_informais_mil": 37253.0
+        },
+        {
+          "trimestre": "2018T4",
+          "pessoas_informais_mil": 37557.0
+        },
+        {
+          "trimestre": "2019T1",
+          "pessoas_informais_mil": 36898.0
+        },
+        {
+          "trimestre": "2019T2",
+          "pessoas_informais_mil": 37876.0
+        },
+        {
+          "trimestre": "2019T3",
+          "pessoas_informais_mil": 38225.0
+        },
+        {
+          "trimestre": "2019T4",
+          "pessoas_informais_mil": 38192.0
+        },
+        {
+          "trimestre": "2020T1",
+          "pessoas_informais_mil": 36235.0
+        },
+        {
+          "trimestre": "2020T2",
+          "pessoas_informais_mil": 30253.0
+        },
+        {
+          "trimestre": "2020T3",
+          "pessoas_informais_mil": 31207.0
+        },
+        {
+          "trimestre": "2020T4",
+          "pessoas_informais_mil": 33525.0
+        },
+        {
+          "trimestre": "2021T1",
+          "pessoas_informais_mil": 33511.0
+        },
+        {
+          "trimestre": "2021T2",
+          "pessoas_informais_mil": 35183.0
+        },
+        {
+          "trimestre": "2021T3",
+          "pessoas_informais_mil": 37107.0
+        },
+        {
+          "trimestre": "2021T4",
+          "pessoas_informais_mil": 38317.0
+        },
+        {
+          "trimestre": "2022T1",
+          "pessoas_informais_mil": 37584.0
+        },
+        {
+          "trimestre": "2022T2",
+          "pessoas_informais_mil": 38619.0
+        },
+        {
+          "trimestre": "2022T3",
+          "pessoas_informais_mil": 38499.0
+        },
+        {
+          "trimestre": "2022T4",
+          "pessoas_informais_mil": 37905.0
+        },
+        {
+          "trimestre": "2023T1",
+          "pessoas_informais_mil": 37457.0
+        },
+        {
+          "trimestre": "2023T2",
+          "pessoas_informais_mil": 38051.0
+        },
+        {
+          "trimestre": "2023T3",
+          "pessoas_informais_mil": 38339.0
+        },
+        {
+          "trimestre": "2023T4",
+          "pessoas_informais_mil": 38826.0
+        },
+        {
+          "trimestre": "2024T1",
+          "pessoas_informais_mil": 38242.0
+        },
+        {
+          "trimestre": "2024T2",
+          "pessoas_informais_mil": 38619.0
+        },
+        {
+          "trimestre": "2024T3",
+          "pessoas_informais_mil": 39240.0
+        },
+        {
+          "trimestre": "2024T4",
+          "pessoas_informais_mil": 39307.0
+        },
+        {
+          "trimestre": "2025T1",
+          "pessoas_informais_mil": 38189.0
+        },
+        {
+          "trimestre": "2025T2",
+          "pessoas_informais_mil": 38718.0
+        },
+        {
+          "trimestre": "2025T3",
+          "pessoas_informais_mil": 38748.0
+        },
+        {
+          "trimestre": "2025T4",
+          "pessoas_informais_mil": 38707.0
+        },
+        {
+          "trimestre": "2026T1",
+          "pessoas_informais_mil": 38084.0
+        }
+      ]
+    },
+    "pessoas_ocupadas_mil": {
+      "tema": "Pessoas ocupadas",
+      "aba": "Tabela 9",
+      "intervalo": "B4:BF4 e B6:BF6",
+      "variavel": "Pessoas ocupadas, em mil pessoas",
+      "dados": [
+        {
+          "trimestre": "2012T1",
+          "pessoas_ocupadas_mil": 87713.0
+        },
+        {
+          "trimestre": "2012T2",
+          "pessoas_ocupadas_mil": 89318.0
+        },
+        {
+          "trimestre": "2012T3",
+          "pessoas_ocupadas_mil": 89958.0
+        },
+        {
+          "trimestre": "2012T4",
+          "pessoas_ocupadas_mil": 90209.0
+        },
+        {
+          "trimestre": "2013T1",
+          "pessoas_ocupadas_mil": 89298.0
+        },
+        {
+          "trimestre": "2013T2",
+          "pessoas_ocupadas_mil": 90419.0
+        },
+        {
+          "trimestre": "2013T3",
+          "pessoas_ocupadas_mil": 90982.0
+        },
+        {
+          "trimestre": "2013T4",
+          "pessoas_ocupadas_mil": 91683.0
+        },
+        {
+          "trimestre": "2014T1",
+          "pessoas_ocupadas_mil": 90947.0
+        },
+        {
+          "trimestre": "2014T2",
+          "pessoas_ocupadas_mil": 91573.0
+        },
+        {
+          "trimestre": "2014T3",
+          "pessoas_ocupadas_mil": 91827.0
+        },
+        {
+          "trimestre": "2014T4",
+          "pessoas_ocupadas_mil": 92340.0
+        },
+        {
+          "trimestre": "2015T1",
+          "pessoas_ocupadas_mil": 91312.0
+        },
+        {
+          "trimestre": "2015T2",
+          "pessoas_ocupadas_mil": 91553.0
+        },
+        {
+          "trimestre": "2015T3",
+          "pessoas_ocupadas_mil": 91466.0
+        },
+        {
+          "trimestre": "2015T4",
+          "pessoas_ocupadas_mil": 91585.0
+        },
+        {
+          "trimestre": "2016T1",
+          "pessoas_ocupadas_mil": 89909.0
+        },
+        {
+          "trimestre": "2016T2",
+          "pessoas_ocupadas_mil": 89827.0
+        },
+        {
+          "trimestre": "2016T3",
+          "pessoas_ocupadas_mil": 88939.0
+        },
+        {
+          "trimestre": "2016T4",
+          "pessoas_ocupadas_mil": 89239.0
+        },
+        {
+          "trimestre": "2017T1",
+          "pessoas_ocupadas_mil": 87880.0
+        },
+        {
+          "trimestre": "2017T2",
+          "pessoas_ocupadas_mil": 89163.0
+        },
+        {
+          "trimestre": "2017T3",
+          "pessoas_ocupadas_mil": 90176.0
+        },
+        {
+          "trimestre": "2017T4",
+          "pessoas_ocupadas_mil": 91066.0
+        },
+        {
+          "trimestre": "2018T1",
+          "pessoas_ocupadas_mil": 89691.0
+        },
+        {
+          "trimestre": "2018T2",
+          "pessoas_ocupadas_mil": 90212.0
+        },
+        {
+          "trimestre": "2018T3",
+          "pessoas_ocupadas_mil": 91607.0
+        },
+        {
+          "trimestre": "2018T4",
+          "pessoas_ocupadas_mil": 92152.0
+        },
+        {
+          "trimestre": "2019T1",
+          "pessoas_ocupadas_mil": 91203.0
+        },
+        {
+          "trimestre": "2019T2",
+          "pessoas_ocupadas_mil": 92662.0
+        },
+        {
+          "trimestre": "2019T3",
+          "pessoas_ocupadas_mil": 93191.0
+        },
+        {
+          "trimestre": "2019T4",
+          "pessoas_ocupadas_mil": 93920.0
+        },
+        {
+          "trimestre": "2020T1",
+          "pessoas_ocupadas_mil": 91523.0
+        },
+        {
+          "trimestre": "2020T2",
+          "pessoas_ocupadas_mil": 82610.0
+        },
+        {
+          "trimestre": "2020T3",
+          "pessoas_ocupadas_mil": 81954.0
+        },
+        {
+          "trimestre": "2020T4",
+          "pessoas_ocupadas_mil": 85669.0
+        },
+        {
+          "trimestre": "2021T1",
+          "pessoas_ocupadas_mil": 85497.0
+        },
+        {
+          "trimestre": "2021T2",
+          "pessoas_ocupadas_mil": 87743.0
+        },
+        {
+          "trimestre": "2021T3",
+          "pessoas_ocupadas_mil": 91265.0
+        },
+        {
+          "trimestre": "2021T4",
+          "pessoas_ocupadas_mil": 93988.0
+        },
+        {
+          "trimestre": "2022T1",
+          "pessoas_ocupadas_mil": 93523.0
+        },
+        {
+          "trimestre": "2022T2",
+          "pessoas_ocupadas_mil": 96445.0
+        },
+        {
+          "trimestre": "2022T3",
+          "pessoas_ocupadas_mil": 97435.0
+        },
+        {
+          "trimestre": "2022T4",
+          "pessoas_ocupadas_mil": 97517.0
+        },
+        {
+          "trimestre": "2023T1",
+          "pessoas_ocupadas_mil": 95978.0
+        },
+        {
+          "trimestre": "2023T2",
+          "pessoas_ocupadas_mil": 97038.0
+        },
+        {
+          "trimestre": "2023T3",
+          "pessoas_ocupadas_mil": 97938.0
+        },
+        {
+          "trimestre": "2023T4",
+          "pessoas_ocupadas_mil": 99062.0
+        },
+        {
+          "trimestre": "2024T1",
+          "pessoas_ocupadas_mil": 98290.0
+        },
+        {
+          "trimestre": "2024T2",
+          "pessoas_ocupadas_mil": 99883.0
+        },
+        {
+          "trimestre": "2024T3",
+          "pessoas_ocupadas_mil": 101058.0
+        },
+        {
+          "trimestre": "2024T4",
+          "pessoas_ocupadas_mil": 101832.0
+        },
+        {
+          "trimestre": "2025T1",
+          "pessoas_ocupadas_mil": 100511.0
+        },
+        {
+          "trimestre": "2025T2",
+          "pessoas_ocupadas_mil": 102316.0
+        },
+        {
+          "trimestre": "2025T3",
+          "pessoas_ocupadas_mil": 102433.0
+        },
+        {
+          "trimestre": "2025T4",
+          "pessoas_ocupadas_mil": 102998.0
+        },
+        {
+          "trimestre": "2026T1",
+          "pessoas_ocupadas_mil": 101976.0
+        }
+      ]
+    },
+    "pessoas_desocupadas_mil": {
+      "tema": "Pessoas desocupadas",
+      "aba": "Tabela 13",
+      "intervalo": "B4:BF4 e B6:BF6",
+      "variavel": "Pessoas desocupadas, em mil pessoas",
+      "dados": [
+        {
+          "trimestre": "2012T1",
+          "pessoas_desocupadas_mil": 7613.0
+        },
+        {
+          "trimestre": "2012T2",
+          "pessoas_desocupadas_mil": 7319.0
+        },
+        {
+          "trimestre": "2012T3",
+          "pessoas_desocupadas_mil": 6897.0
+        },
+        {
+          "trimestre": "2012T4",
+          "pessoas_desocupadas_mil": 6684.0
+        },
+        {
+          "trimestre": "2013T1",
+          "pessoas_desocupadas_mil": 7807.0
+        },
+        {
+          "trimestre": "2013T2",
+          "pessoas_desocupadas_mil": 7338.0
+        },
+        {
+          "trimestre": "2013T3",
+          "pessoas_desocupadas_mil": 6861.0
+        },
+        {
+          "trimestre": "2013T4",
+          "pessoas_desocupadas_mil": 6100.0
+        },
+        {
+          "trimestre": "2014T1",
+          "pessoas_desocupadas_mil": 7081.0
+        },
+        {
+          "trimestre": "2014T2",
+          "pessoas_desocupadas_mil": 6801.0
+        },
+        {
+          "trimestre": "2014T3",
+          "pessoas_desocupadas_mil": 6747.0
+        },
+        {
+          "trimestre": "2014T4",
+          "pessoas_desocupadas_mil": 6488.0
+        },
+        {
+          "trimestre": "2015T1",
+          "pessoas_desocupadas_mil": 7965.0
+        },
+        {
+          "trimestre": "2015T2",
+          "pessoas_desocupadas_mil": 8408.0
+        },
+        {
+          "trimestre": "2015T3",
+          "pessoas_desocupadas_mil": 9048.0
+        },
+        {
+          "trimestre": "2015T4",
+          "pessoas_desocupadas_mil": 9122.0
+        },
+        {
+          "trimestre": "2016T1",
+          "pessoas_desocupadas_mil": 11153.0
+        },
+        {
+          "trimestre": "2016T2",
+          "pessoas_desocupadas_mil": 11583.0
+        },
+        {
+          "trimestre": "2016T3",
+          "pessoas_desocupadas_mil": 12010.0
+        },
+        {
+          "trimestre": "2016T4",
+          "pessoas_desocupadas_mil": 12323.0
+        },
+        {
+          "trimestre": "2017T1",
+          "pessoas_desocupadas_mil": 14130.0
+        },
+        {
+          "trimestre": "2017T2",
+          "pessoas_desocupadas_mil": 13425.0
+        },
+        {
+          "trimestre": "2017T3",
+          "pessoas_desocupadas_mil": 12894.0
+        },
+        {
+          "trimestre": "2017T4",
+          "pessoas_desocupadas_mil": 12279.0
+        },
+        {
+          "trimestre": "2018T1",
+          "pessoas_desocupadas_mil": 13671.0
+        },
+        {
+          "trimestre": "2018T2",
+          "pessoas_desocupadas_mil": 12948.0
+        },
+        {
+          "trimestre": "2018T3",
+          "pessoas_desocupadas_mil": 12495.0
+        },
+        {
+          "trimestre": "2018T4",
+          "pessoas_desocupadas_mil": 12215.0
+        },
+        {
+          "trimestre": "2019T1",
+          "pessoas_desocupadas_mil": 13439.0
+        },
+        {
+          "trimestre": "2019T2",
+          "pessoas_desocupadas_mil": 12797.0
+        },
+        {
+          "trimestre": "2019T3",
+          "pessoas_desocupadas_mil": 12581.0
+        },
+        {
+          "trimestre": "2019T4",
+          "pessoas_desocupadas_mil": 11698.0
+        },
+        {
+          "trimestre": "2020T1",
+          "pessoas_desocupadas_mil": 12925.0
+        },
+        {
+          "trimestre": "2020T2",
+          "pessoas_desocupadas_mil": 12979.0
+        },
+        {
+          "trimestre": "2020T3",
+          "pessoas_desocupadas_mil": 14313.0
+        },
+        {
+          "trimestre": "2020T4",
+          "pessoas_desocupadas_mil": 14135.0
+        },
+        {
+          "trimestre": "2021T1",
+          "pessoas_desocupadas_mil": 14979.0
+        },
+        {
+          "trimestre": "2021T2",
+          "pessoas_desocupadas_mil": 14572.0
+        },
+        {
+          "trimestre": "2021T3",
+          "pessoas_desocupadas_mil": 13218.0
+        },
+        {
+          "trimestre": "2021T4",
+          "pessoas_desocupadas_mil": 11793.0
+        },
+        {
+          "trimestre": "2022T1",
+          "pessoas_desocupadas_mil": 11725.0
+        },
+        {
+          "trimestre": "2022T2",
+          "pessoas_desocupadas_mil": 9895.0
+        },
+        {
+          "trimestre": "2022T3",
+          "pessoas_desocupadas_mil": 9273.0
+        },
+        {
+          "trimestre": "2022T4",
+          "pessoas_desocupadas_mil": 8410.0
+        },
+        {
+          "trimestre": "2023T1",
+          "pessoas_desocupadas_mil": 9247.0
+        },
+        {
+          "trimestre": "2023T2",
+          "pessoas_desocupadas_mil": 8468.0
+        },
+        {
+          "trimestre": "2023T3",
+          "pessoas_desocupadas_mil": 8150.0
+        },
+        {
+          "trimestre": "2023T4",
+          "pessoas_desocupadas_mil": 7926.0
+        },
+        {
+          "trimestre": "2024T1",
+          "pessoas_desocupadas_mil": 8453.0
+        },
+        {
+          "trimestre": "2024T2",
+          "pessoas_desocupadas_mil": 7388.0
+        },
+        {
+          "trimestre": "2024T3",
+          "pessoas_desocupadas_mil": 6854.0
+        },
+        {
+          "trimestre": "2024T4",
+          "pessoas_desocupadas_mil": 6684.0
+        },
+        {
+          "trimestre": "2025T1",
+          "pessoas_desocupadas_mil": 7566.0
+        },
+        {
+          "trimestre": "2025T2",
+          "pessoas_desocupadas_mil": 6253.0
+        },
+        {
+          "trimestre": "2025T3",
+          "pessoas_desocupadas_mil": 6045.0
+        },
+        {
+          "trimestre": "2025T4",
+          "pessoas_desocupadas_mil": 5503.0
+        },
+        {
+          "trimestre": "2026T1",
+          "pessoas_desocupadas_mil": 6579.0
+        }
+      ]
+    },
+    "taxa_desocupacao": {
+      "tema": "Taxa de desocupação",
+      "aba": "Tabela 27",
+      "intervalo": "B4:BF4 e B6:BF6",
+      "variavel": "Taxa de desocupação (%)",
+      "dados": [
+        {
+          "trimestre": "2012T1",
+          "taxa_desocupacao": 8.0
+        },
+        {
+          "trimestre": "2012T2",
+          "taxa_desocupacao": 7.6
+        },
+        {
+          "trimestre": "2012T3",
+          "taxa_desocupacao": 7.1
+        },
+        {
+          "trimestre": "2012T4",
+          "taxa_desocupacao": 6.9
+        },
+        {
+          "trimestre": "2013T1",
+          "taxa_desocupacao": 8.0
+        },
+        {
+          "trimestre": "2013T2",
+          "taxa_desocupacao": 7.5
+        },
+        {
+          "trimestre": "2013T3",
+          "taxa_desocupacao": 7.0
+        },
+        {
+          "trimestre": "2013T4",
+          "taxa_desocupacao": 6.2
+        },
+        {
+          "trimestre": "2014T1",
+          "taxa_desocupacao": 7.2
+        },
+        {
+          "trimestre": "2014T2",
+          "taxa_desocupacao": 6.9
+        },
+        {
+          "trimestre": "2014T3",
+          "taxa_desocupacao": 6.8
+        },
+        {
+          "trimestre": "2014T4",
+          "taxa_desocupacao": 6.6
+        },
+        {
+          "trimestre": "2015T1",
+          "taxa_desocupacao": 8.0
+        },
+        {
+          "trimestre": "2015T2",
+          "taxa_desocupacao": 8.4
+        },
+        {
+          "trimestre": "2015T3",
+          "taxa_desocupacao": 9.0
+        },
+        {
+          "trimestre": "2015T4",
+          "taxa_desocupacao": 9.1
+        },
+        {
+          "trimestre": "2016T1",
+          "taxa_desocupacao": 11.0
+        },
+        {
+          "trimestre": "2016T2",
+          "taxa_desocupacao": 11.4
+        },
+        {
+          "trimestre": "2016T3",
+          "taxa_desocupacao": 11.9
+        },
+        {
+          "trimestre": "2016T4",
+          "taxa_desocupacao": 12.1
+        },
+        {
+          "trimestre": "2017T1",
+          "taxa_desocupacao": 13.9
+        },
+        {
+          "trimestre": "2017T2",
+          "taxa_desocupacao": 13.1
+        },
+        {
+          "trimestre": "2017T3",
+          "taxa_desocupacao": 12.5
+        },
+        {
+          "trimestre": "2017T4",
+          "taxa_desocupacao": 11.9
+        },
+        {
+          "trimestre": "2018T1",
+          "taxa_desocupacao": 13.2
+        },
+        {
+          "trimestre": "2018T2",
+          "taxa_desocupacao": 12.6
+        },
+        {
+          "trimestre": "2018T3",
+          "taxa_desocupacao": 12.0
+        },
+        {
+          "trimestre": "2018T4",
+          "taxa_desocupacao": 11.7
+        },
+        {
+          "trimestre": "2019T1",
+          "taxa_desocupacao": 12.8
+        },
+        {
+          "trimestre": "2019T2",
+          "taxa_desocupacao": 12.1
+        },
+        {
+          "trimestre": "2019T3",
+          "taxa_desocupacao": 11.9
+        },
+        {
+          "trimestre": "2019T4",
+          "taxa_desocupacao": 11.1
+        },
+        {
+          "trimestre": "2020T1",
+          "taxa_desocupacao": 12.4
+        },
+        {
+          "trimestre": "2020T2",
+          "taxa_desocupacao": 13.6
+        },
+        {
+          "trimestre": "2020T3",
+          "taxa_desocupacao": 14.9
+        },
+        {
+          "trimestre": "2020T4",
+          "taxa_desocupacao": 14.2
+        },
+        {
+          "trimestre": "2021T1",
+          "taxa_desocupacao": 14.9
+        },
+        {
+          "trimestre": "2021T2",
+          "taxa_desocupacao": 14.2
+        },
+        {
+          "trimestre": "2021T3",
+          "taxa_desocupacao": 12.7
+        },
+        {
+          "trimestre": "2021T4",
+          "taxa_desocupacao": 11.1
+        },
+        {
+          "trimestre": "2022T1",
+          "taxa_desocupacao": 11.1
+        },
+        {
+          "trimestre": "2022T2",
+          "taxa_desocupacao": 9.3
+        },
+        {
+          "trimestre": "2022T3",
+          "taxa_desocupacao": 8.7
+        },
+        {
+          "trimestre": "2022T4",
+          "taxa_desocupacao": 7.9
+        },
+        {
+          "trimestre": "2023T1",
+          "taxa_desocupacao": 8.8
+        },
+        {
+          "trimestre": "2023T2",
+          "taxa_desocupacao": 8.0
+        },
+        {
+          "trimestre": "2023T3",
+          "taxa_desocupacao": 7.7
+        },
+        {
+          "trimestre": "2023T4",
+          "taxa_desocupacao": 7.4
+        },
+        {
+          "trimestre": "2024T1",
+          "taxa_desocupacao": 7.9
+        },
+        {
+          "trimestre": "2024T2",
+          "taxa_desocupacao": 6.9
+        },
+        {
+          "trimestre": "2024T3",
+          "taxa_desocupacao": 6.4
+        },
+        {
+          "trimestre": "2024T4",
+          "taxa_desocupacao": 6.2
+        },
+        {
+          "trimestre": "2025T1",
+          "taxa_desocupacao": 7.0
+        },
+        {
+          "trimestre": "2025T2",
+          "taxa_desocupacao": 5.8
+        },
+        {
+          "trimestre": "2025T3",
+          "taxa_desocupacao": 5.6
+        },
+        {
+          "trimestre": "2025T4",
+          "taxa_desocupacao": 5.1
+        },
+        {
+          "trimestre": "2026T1",
+          "taxa_desocupacao": 6.1
+        }
+      ]
+    },
+    "forca_trabalho_mil": {
+      "tema": "Força de trabalho",
+      "aba": "Tabela 5",
+      "intervalo": "B4:BF4 e B6:BF6",
+      "variavel": "Pessoas na força de trabalho, em mil pessoas",
+      "dados": [
+        {
+          "trimestre": "2012T1",
+          "forca_trabalho_mil": 95327.0
+        },
+        {
+          "trimestre": "2012T2",
+          "forca_trabalho_mil": 96637.0
+        },
+        {
+          "trimestre": "2012T3",
+          "forca_trabalho_mil": 96855.0
+        },
+        {
+          "trimestre": "2012T4",
+          "forca_trabalho_mil": 96893.0
+        },
+        {
+          "trimestre": "2013T1",
+          "forca_trabalho_mil": 97105.0
+        },
+        {
+          "trimestre": "2013T2",
+          "forca_trabalho_mil": 97756.0
+        },
+        {
+          "trimestre": "2013T3",
+          "forca_trabalho_mil": 97843.0
+        },
+        {
+          "trimestre": "2013T4",
+          "forca_trabalho_mil": 97783.0
+        },
+        {
+          "trimestre": "2014T1",
+          "forca_trabalho_mil": 98028.0
+        },
+        {
+          "trimestre": "2014T2",
+          "forca_trabalho_mil": 98373.0
+        },
+        {
+          "trimestre": "2014T3",
+          "forca_trabalho_mil": 98574.0
+        },
+        {
+          "trimestre": "2014T4",
+          "forca_trabalho_mil": 98828.0
+        },
+        {
+          "trimestre": "2015T1",
+          "forca_trabalho_mil": 99277.0
+        },
+        {
+          "trimestre": "2015T2",
+          "forca_trabalho_mil": 99960.0
+        },
+        {
+          "trimestre": "2015T3",
+          "forca_trabalho_mil": 100515.0
+        },
+        {
+          "trimestre": "2015T4",
+          "forca_trabalho_mil": 100707.0
+        },
+        {
+          "trimestre": "2016T1",
+          "forca_trabalho_mil": 101062.0
+        },
+        {
+          "trimestre": "2016T2",
+          "forca_trabalho_mil": 101409.0
+        },
+        {
+          "trimestre": "2016T3",
+          "forca_trabalho_mil": 100949.0
+        },
+        {
+          "trimestre": "2016T4",
+          "forca_trabalho_mil": 101562.0
+        },
+        {
+          "trimestre": "2017T1",
+          "forca_trabalho_mil": 102010.0
+        },
+        {
+          "trimestre": "2017T2",
+          "forca_trabalho_mil": 102588.0
+        },
+        {
+          "trimestre": "2017T3",
+          "forca_trabalho_mil": 103070.0
+        },
+        {
+          "trimestre": "2017T4",
+          "forca_trabalho_mil": 103345.0
+        },
+        {
+          "trimestre": "2018T1",
+          "forca_trabalho_mil": 103362.0
+        },
+        {
+          "trimestre": "2018T2",
+          "forca_trabalho_mil": 103160.0
+        },
+        {
+          "trimestre": "2018T3",
+          "forca_trabalho_mil": 104102.0
+        },
+        {
+          "trimestre": "2018T4",
+          "forca_trabalho_mil": 104367.0
+        },
+        {
+          "trimestre": "2019T1",
+          "forca_trabalho_mil": 104641.0
+        },
+        {
+          "trimestre": "2019T2",
+          "forca_trabalho_mil": 105460.0
+        },
+        {
+          "trimestre": "2019T3",
+          "forca_trabalho_mil": 105771.0
+        },
+        {
+          "trimestre": "2019T4",
+          "forca_trabalho_mil": 105617.0
+        },
+        {
+          "trimestre": "2020T1",
+          "forca_trabalho_mil": 104448.0
+        },
+        {
+          "trimestre": "2020T2",
+          "forca_trabalho_mil": 95589.0
+        },
+        {
+          "trimestre": "2020T3",
+          "forca_trabalho_mil": 96267.0
+        },
+        {
+          "trimestre": "2020T4",
+          "forca_trabalho_mil": 99804.0
+        },
+        {
+          "trimestre": "2021T1",
+          "forca_trabalho_mil": 100476.0
+        },
+        {
+          "trimestre": "2021T2",
+          "forca_trabalho_mil": 102315.0
+        },
+        {
+          "trimestre": "2021T3",
+          "forca_trabalho_mil": 104483.0
+        },
+        {
+          "trimestre": "2021T4",
+          "forca_trabalho_mil": 105781.0
+        },
+        {
+          "trimestre": "2022T1",
+          "forca_trabalho_mil": 105248.0
+        },
+        {
+          "trimestre": "2022T2",
+          "forca_trabalho_mil": 106340.0
+        },
+        {
+          "trimestre": "2022T3",
+          "forca_trabalho_mil": 106708.0
+        },
+        {
+          "trimestre": "2022T4",
+          "forca_trabalho_mil": 105927.0
+        },
+        {
+          "trimestre": "2023T1",
+          "forca_trabalho_mil": 105225.0
+        },
+        {
+          "trimestre": "2023T2",
+          "forca_trabalho_mil": 105505.0
+        },
+        {
+          "trimestre": "2023T3",
+          "forca_trabalho_mil": 106087.0
+        },
+        {
+          "trimestre": "2023T4",
+          "forca_trabalho_mil": 106988.0
+        },
+        {
+          "trimestre": "2024T1",
+          "forca_trabalho_mil": 106743.0
+        },
+        {
+          "trimestre": "2024T2",
+          "forca_trabalho_mil": 107272.0
+        },
+        {
+          "trimestre": "2024T3",
+          "forca_trabalho_mil": 107912.0
+        },
+        {
+          "trimestre": "2024T4",
+          "forca_trabalho_mil": 108516.0
+        },
+        {
+          "trimestre": "2025T1",
+          "forca_trabalho_mil": 108077.0
+        },
+        {
+          "trimestre": "2025T2",
+          "forca_trabalho_mil": 108569.0
+        },
+        {
+          "trimestre": "2025T3",
+          "forca_trabalho_mil": 108478.0
+        },
+        {
+          "trimestre": "2025T4",
+          "forca_trabalho_mil": 108501.0
+        },
+        {
+          "trimestre": "2026T1",
+          "forca_trabalho_mil": 108555.0
+        }
+      ]
+    },
+    "fora_forca_trabalho_mil": {
+      "tema": "Fora da força de trabalho",
+      "aba": "Tabela 17",
+      "intervalo": "B4:BF4 e B6:BF6",
+      "variavel": "Pessoas fora da força de trabalho, em mil pessoas",
+      "dados": [
+        {
+          "trimestre": "2012T1",
+          "fora_forca_trabalho_mil": 57704.0
+        },
+        {
+          "trimestre": "2012T2",
+          "fora_forca_trabalho_mil": 56926.0
+        },
+        {
+          "trimestre": "2012T3",
+          "fora_forca_trabalho_mil": 57249.0
+        },
+        {
+          "trimestre": "2012T4",
+          "fora_forca_trabalho_mil": 57748.0
+        },
+        {
+          "trimestre": "2013T1",
+          "fora_forca_trabalho_mil": 58069.0
+        },
+        {
+          "trimestre": "2013T2",
+          "fora_forca_trabalho_mil": 57931.0
+        },
+        {
+          "trimestre": "2013T3",
+          "fora_forca_trabalho_mil": 58362.0
+        },
+        {
+          "trimestre": "2013T4",
+          "fora_forca_trabalho_mil": 58928.0
+        },
+        {
+          "trimestre": "2014T1",
+          "fora_forca_trabalho_mil": 59186.0
+        },
+        {
+          "trimestre": "2014T2",
+          "fora_forca_trabalho_mil": 59322.0
+        },
+        {
+          "trimestre": "2014T3",
+          "fora_forca_trabalho_mil": 59601.0
+        },
+        {
+          "trimestre": "2014T4",
+          "fora_forca_trabalho_mil": 59806.0
+        },
+        {
+          "trimestre": "2015T1",
+          "fora_forca_trabalho_mil": 59812.0
+        },
+        {
+          "trimestre": "2015T2",
+          "fora_forca_trabalho_mil": 59567.0
+        },
+        {
+          "trimestre": "2015T3",
+          "fora_forca_trabalho_mil": 59458.0
+        },
+        {
+          "trimestre": "2015T4",
+          "fora_forca_trabalho_mil": 59703.0
+        },
+        {
+          "trimestre": "2016T1",
+          "fora_forca_trabalho_mil": 59783.0
+        },
+        {
+          "trimestre": "2016T2",
+          "fora_forca_trabalho_mil": 59857.0
+        },
+        {
+          "trimestre": "2016T3",
+          "fora_forca_trabalho_mil": 60744.0
+        },
+        {
+          "trimestre": "2016T4",
+          "fora_forca_trabalho_mil": 60551.0
+        },
+        {
+          "trimestre": "2017T1",
+          "fora_forca_trabalho_mil": 60519.0
+        },
+        {
+          "trimestre": "2017T2",
+          "fora_forca_trabalho_mil": 60343.0
+        },
+        {
+          "trimestre": "2017T3",
+          "fora_forca_trabalho_mil": 60260.0
+        },
+        {
+          "trimestre": "2017T4",
+          "fora_forca_trabalho_mil": 60371.0
+        },
+        {
+          "trimestre": "2018T1",
+          "fora_forca_trabalho_mil": 60736.0
+        },
+        {
+          "trimestre": "2018T2",
+          "fora_forca_trabalho_mil": 61306.0
+        },
+        {
+          "trimestre": "2018T3",
+          "fora_forca_trabalho_mil": 60739.0
+        },
+        {
+          "trimestre": "2018T4",
+          "fora_forca_trabalho_mil": 60845.0
+        },
+        {
+          "trimestre": "2019T1",
+          "fora_forca_trabalho_mil": 60939.0
+        },
+        {
+          "trimestre": "2019T2",
+          "fora_forca_trabalho_mil": 60475.0
+        },
+        {
+          "trimestre": "2019T3",
+          "fora_forca_trabalho_mil": 60530.0
+        },
+        {
+          "trimestre": "2019T4",
+          "fora_forca_trabalho_mil": 61053.0
+        },
+        {
+          "trimestre": "2020T1",
+          "fora_forca_trabalho_mil": 62588.0
+        },
+        {
+          "trimestre": "2020T2",
+          "fora_forca_trabalho_mil": 71802.0
+        },
+        {
+          "trimestre": "2020T3",
+          "fora_forca_trabalho_mil": 71476.0
+        },
+        {
+          "trimestre": "2020T4",
+          "fora_forca_trabalho_mil": 68283.0
+        },
+        {
+          "trimestre": "2021T1",
+          "fora_forca_trabalho_mil": 67950.0
+        },
+        {
+          "trimestre": "2021T2",
+          "fora_forca_trabalho_mil": 66436.0
+        },
+        {
+          "trimestre": "2021T3",
+          "fora_forca_trabalho_mil": 64606.0
+        },
+        {
+          "trimestre": "2021T4",
+          "fora_forca_trabalho_mil": 63647.0
+        },
+        {
+          "trimestre": "2022T1",
+          "fora_forca_trabalho_mil": 64516.0
+        },
+        {
+          "trimestre": "2022T2",
+          "fora_forca_trabalho_mil": 63747.0
+        },
+        {
+          "trimestre": "2022T3",
+          "fora_forca_trabalho_mil": 63719.0
+        },
+        {
+          "trimestre": "2022T4",
+          "fora_forca_trabalho_mil": 64845.0
+        },
+        {
+          "trimestre": "2023T1",
+          "fora_forca_trabalho_mil": 65891.0
+        },
+        {
+          "trimestre": "2023T2",
+          "fora_forca_trabalho_mil": 65940.0
+        },
+        {
+          "trimestre": "2023T3",
+          "fora_forca_trabalho_mil": 65694.0
+        },
+        {
+          "trimestre": "2023T4",
+          "fora_forca_trabalho_mil": 65127.0
+        },
+        {
+          "trimestre": "2024T1",
+          "fora_forca_trabalho_mil": 65702.0
+        },
+        {
+          "trimestre": "2024T2",
+          "fora_forca_trabalho_mil": 65493.0
+        },
+        {
+          "trimestre": "2024T3",
+          "fora_forca_trabalho_mil": 65183.0
+        },
+        {
+          "trimestre": "2024T4",
+          "fora_forca_trabalho_mil": 64913.0
+        },
+        {
+          "trimestre": "2025T1",
+          "fora_forca_trabalho_mil": 65684.0
+        },
+        {
+          "trimestre": "2025T2",
+          "fora_forca_trabalho_mil": 65510.0
+        },
+        {
+          "trimestre": "2025T3",
+          "fora_forca_trabalho_mil": 65933.0
+        },
+        {
+          "trimestre": "2025T4",
+          "fora_forca_trabalho_mil": 66246.0
+        },
+        {
+          "trimestre": "2026T1",
+          "fora_forca_trabalho_mil": 66525.0
+        }
+      ]
+    },
+    "pessoas_beneficiarias_pbf_media_tri": {
+      "tema": "Bolsa Família — média trimestral",
+      "aba": "visdata3-download-01-07-2026 17",
+      "intervalo": "A1:C136 agregado por trimestre",
+      "variavel": "Pessoas beneficiárias no PBF, média trimestral",
+      "dados": [
+        {
+          "trimestre": "2013T4",
+          "pessoas_beneficiarias_pbf_media_tri": 50067079.0
+        },
+        {
+          "trimestre": "2014T1",
+          "pessoas_beneficiarias_pbf_media_tri": 49745143.333333336
+        },
+        {
+          "trimestre": "2014T2",
+          "pessoas_beneficiarias_pbf_media_tri": 49246479.666666664
+        },
+        {
+          "trimestre": "2014T3",
+          "pessoas_beneficiarias_pbf_media_tri": 48825612.0
+        },
+        {
+          "trimestre": "2014T4",
+          "pessoas_beneficiarias_pbf_media_tri": 48736991.666666664
+        },
+        {
+          "trimestre": "2015T1",
+          "pessoas_beneficiarias_pbf_media_tri": 48718237.666666664
+        },
+        {
+          "trimestre": "2015T2",
+          "pessoas_beneficiarias_pbf_media_tri": 47811003.666666664
+        },
+        {
+          "trimestre": "2015T3",
+          "pessoas_beneficiarias_pbf_media_tri": 47947474.0
+        },
+        {
+          "trimestre": "2015T4",
+          "pessoas_beneficiarias_pbf_media_tri": 47336236.0
+        },
+        {
+          "trimestre": "2016T1",
+          "pessoas_beneficiarias_pbf_media_tri": 47006491.333333336
+        },
+        {
+          "trimestre": "2016T2",
+          "pessoas_beneficiarias_pbf_media_tri": 46624742.0
+        },
+        {
+          "trimestre": "2016T3",
+          "pessoas_beneficiarias_pbf_media_tri": 46836359.333333336
+        },
+        {
+          "trimestre": "2016T4",
+          "pessoas_beneficiarias_pbf_media_tri": 46338826.333333336
+        },
+        {
+          "trimestre": "2017T1",
+          "pessoas_beneficiarias_pbf_media_tri": 45445589.0
+        },
+        {
+          "trimestre": "2017T2",
+          "pessoas_beneficiarias_pbf_media_tri": 44565746.333333336
+        },
+        {
+          "trimestre": "2017T3",
+          "pessoas_beneficiarias_pbf_media_tri": 43236893.333333336
+        },
+        {
+          "trimestre": "2017T4",
+          "pessoas_beneficiarias_pbf_media_tri": 44140248.0
+        },
+        {
+          "trimestre": "2018T1",
+          "pessoas_beneficiarias_pbf_media_tri": 45112919.666666664
+        },
+        {
+          "trimestre": "2018T2",
+          "pessoas_beneficiarias_pbf_media_tri": 43833499.666666664
+        },
+        {
+          "trimestre": "2018T3",
+          "pessoas_beneficiarias_pbf_media_tri": 43600762.666666664
+        },
+        {
+          "trimestre": "2018T4",
+          "pessoas_beneficiarias_pbf_media_tri": 43912708.333333336
+        },
+        {
+          "trimestre": "2019T1",
+          "pessoas_beneficiarias_pbf_media_tri": 43140961.0
+        },
+        {
+          "trimestre": "2019T2",
+          "pessoas_beneficiarias_pbf_media_tri": 43657603.666666664
+        },
+        {
+          "trimestre": "2019T3",
+          "pessoas_beneficiarias_pbf_media_tri": 42404660.666666664
+        },
+        {
+          "trimestre": "2019T4",
+          "pessoas_beneficiarias_pbf_media_tri": 41122820.666666664
+        },
+        {
+          "trimestre": "2020T1",
+          "pessoas_beneficiarias_pbf_media_tri": 40929788.333333336
+        },
+        {
+          "trimestre": "2020T2",
+          "pessoas_beneficiarias_pbf_media_tri": 43711104.0
+        },
+        {
+          "trimestre": "2020T3",
+          "pessoas_beneficiarias_pbf_media_tri": 43995562.333333336
+        },
+        {
+          "trimestre": "2020T4",
+          "pessoas_beneficiarias_pbf_media_tri": 43591330.666666664
+        },
+        {
+          "trimestre": "2021T1",
+          "pessoas_beneficiarias_pbf_media_tri": 43510658.333333336
+        },
+        {
+          "trimestre": "2021T2",
+          "pessoas_beneficiarias_pbf_media_tri": 44147822.0
+        },
+        {
+          "trimestre": "2021T3",
+          "pessoas_beneficiarias_pbf_media_tri": 44184426.666666664
+        },
+        {
+          "trimestre": "2021T4",
+          "pessoas_beneficiarias_pbf_media_tri": 44161076.0
+        },
+        {
+          "trimestre": "2023T1",
+          "pessoas_beneficiarias_pbf_media_tri": 54308193.0
+        },
+        {
+          "trimestre": "2023T2",
+          "pessoas_beneficiarias_pbf_media_tri": 54520424.0
+        },
+        {
+          "trimestre": "2023T3",
+          "pessoas_beneficiarias_pbf_media_tri": 55027099.666666664
+        },
+        {
+          "trimestre": "2023T4",
+          "pessoas_beneficiarias_pbf_media_tri": 55961557.333333336
+        },
+        {
+          "trimestre": "2024T1",
+          "pessoas_beneficiarias_pbf_media_tri": 55338530.666666664
+        },
+        {
+          "trimestre": "2024T2",
+          "pessoas_beneficiarias_pbf_media_tri": 55037695.333333336
+        },
+        {
+          "trimestre": "2024T3",
+          "pessoas_beneficiarias_pbf_media_tri": 54548896.666666664
+        },
+        {
+          "trimestre": "2024T4",
+          "pessoas_beneficiarias_pbf_media_tri": 54355761.333333336
+        },
+        {
+          "trimestre": "2025T1",
+          "pessoas_beneficiarias_pbf_media_tri": 53860990.0
+        },
+        {
+          "trimestre": "2025T2",
+          "pessoas_beneficiarias_pbf_media_tri": 53759265.333333336
+        },
+        {
+          "trimestre": "2025T3",
+          "pessoas_beneficiarias_pbf_media_tri": 50338114.333333336
+        },
+        {
+          "trimestre": "2025T4",
+          "pessoas_beneficiarias_pbf_media_tri": 48975116.666666664
+        },
+        {
+          "trimestre": "2026T1",
+          "pessoas_beneficiarias_pbf_media_tri": 49133190.333333336
+        },
+        {
+          "trimestre": "2026T2",
+          "pessoas_beneficiarias_pbf_media_tri": 49626184.0
+        }
+      ]
+    }
+  },
+  "correlacoes": [
+    {
+      "metodo": "pareamento por trimestre unico",
+      "variavel_x": "pessoas_beneficiarias_pbf_media_tri",
+      "variavel_y": "taxa_informalidade",
+      "tema_y": "Trabalho informal — taxa",
+      "variavel_descricao_y": "Taxa de informalidade das pessoas ocupadas (%)",
+      "n_observacoes_nivel": 38,
+      "correlacao_nivel": -0.49069555461818765,
+      "n_observacoes_variacao": 36,
+      "correlacao_variacao": -0.3194987283581352,
+      "criterio_variacao": "diferenca apenas entre trimestres consecutivos disponiveis na base",
+      "dados_pareados_trimestre_unico": [
+        {
+          "trimestre": "2015T4",
+          "pessoas_beneficiarias_pbf_media_tri": 47336236.0,
+          "taxa_informalidade": 38.3
+        },
+        {
+          "trimestre": "2016T1",
+          "pessoas_beneficiarias_pbf_media_tri": 47006491.333333336,
+          "taxa_informalidade": 38.3
+        },
+        {
+          "trimestre": "2016T2",
+          "pessoas_beneficiarias_pbf_media_tri": 46624742.0,
+          "taxa_informalidade": 38.7
+        },
+        {
+          "trimestre": "2016T3",
+          "pessoas_beneficiarias_pbf_media_tri": 46836359.333333336,
+          "taxa_informalidade": 38.4
+        },
+        {
+          "trimestre": "2016T4",
+          "pessoas_beneficiarias_pbf_media_tri": 46338826.333333336,
+          "taxa_informalidade": 39.1
+        },
+        {
+          "trimestre": "2017T1",
+          "pessoas_beneficiarias_pbf_media_tri": 45445589.0,
+          "taxa_informalidade": 39.3
+        },
+        {
+          "trimestre": "2017T2",
+          "pessoas_beneficiarias_pbf_media_tri": 44565746.333333336,
+          "taxa_informalidade": 39.8
+        },
+        {
+          "trimestre": "2017T3",
+          "pessoas_beneficiarias_pbf_media_tri": 43236893.333333336,
+          "taxa_informalidade": 40.2
+        },
+        {
+          "trimestre": "2017T4",
+          "pessoas_beneficiarias_pbf_media_tri": 44140248.0,
+          "taxa_informalidade": 40.3
+        },
+        {
+          "trimestre": "2018T1",
+          "pessoas_beneficiarias_pbf_media_tri": 45112919.666666664,
+          "taxa_informalidade": 40.2
+        },
+        {
+          "trimestre": "2018T2",
+          "pessoas_beneficiarias_pbf_media_tri": 43833499.666666664,
+          "taxa_informalidade": 40.3
+        },
+        {
+          "trimestre": "2018T3",
+          "pessoas_beneficiarias_pbf_media_tri": 43600762.666666664,
+          "taxa_informalidade": 40.7
+        },
+        {
+          "trimestre": "2018T4",
+          "pessoas_beneficiarias_pbf_media_tri": 43912708.333333336,
+          "taxa_informalidade": 40.8
+        },
+        {
+          "trimestre": "2019T1",
+          "pessoas_beneficiarias_pbf_media_tri": 43140961.0,
+          "taxa_informalidade": 40.5
+        },
+        {
+          "trimestre": "2019T2",
+          "pessoas_beneficiarias_pbf_media_tri": 43657603.666666664,
+          "taxa_informalidade": 40.9
+        },
+        {
+          "trimestre": "2019T3",
+          "pessoas_beneficiarias_pbf_media_tri": 42404660.666666664,
+          "taxa_informalidade": 41.0
+        },
+        {
+          "trimestre": "2019T4",
+          "pessoas_beneficiarias_pbf_media_tri": 41122820.666666664,
+          "taxa_informalidade": 40.7
+        },
+        {
+          "trimestre": "2020T1",
+          "pessoas_beneficiarias_pbf_media_tri": 40929788.333333336,
+          "taxa_informalidade": 39.6
+        },
+        {
+          "trimestre": "2020T2",
+          "pessoas_beneficiarias_pbf_media_tri": 43711104.0,
+          "taxa_informalidade": 36.6
+        },
+        {
+          "trimestre": "2020T3",
+          "pessoas_beneficiarias_pbf_media_tri": 43995562.333333336,
+          "taxa_informalidade": 38.1
+        },
+        {
+          "trimestre": "2020T4",
+          "pessoas_beneficiarias_pbf_media_tri": 43591330.666666664,
+          "taxa_informalidade": 39.1
+        },
+        {
+          "trimestre": "2021T1",
+          "pessoas_beneficiarias_pbf_media_tri": 43510658.333333336,
+          "taxa_informalidade": 39.2
+        },
+        {
+          "trimestre": "2021T2",
+          "pessoas_beneficiarias_pbf_media_tri": 44147822.0,
+          "taxa_informalidade": 40.1
+        },
+        {
+          "trimestre": "2021T3",
+          "pessoas_beneficiarias_pbf_media_tri": 44184426.666666664,
+          "taxa_informalidade": 40.7
+        },
+        {
+          "trimestre": "2021T4",
+          "pessoas_beneficiarias_pbf_media_tri": 44161076.0,
+          "taxa_informalidade": 40.8
+        },
+        {
+          "trimestre": "2023T1",
+          "pessoas_beneficiarias_pbf_media_tri": 54308193.0,
+          "taxa_informalidade": 39.0
+        },
+        {
+          "trimestre": "2023T2",
+          "pessoas_beneficiarias_pbf_media_tri": 54520424.0,
+          "taxa_informalidade": 39.2
+        },
+        {
+          "trimestre": "2023T3",
+          "pessoas_beneficiarias_pbf_media_tri": 55027099.666666664,
+          "taxa_informalidade": 39.1
+        },
+        {
+          "trimestre": "2023T4",
+          "pessoas_beneficiarias_pbf_media_tri": 55961557.333333336,
+          "taxa_informalidade": 39.2
+        },
+        {
+          "trimestre": "2024T1",
+          "pessoas_beneficiarias_pbf_media_tri": 55338530.666666664,
+          "taxa_informalidade": 38.9
+        },
+        {
+          "trimestre": "2024T2",
+          "pessoas_beneficiarias_pbf_media_tri": 55037695.333333336,
+          "taxa_informalidade": 38.7
+        },
+        {
+          "trimestre": "2024T3",
+          "pessoas_beneficiarias_pbf_media_tri": 54548896.666666664,
+          "taxa_informalidade": 38.8
+        },
+        {
+          "trimestre": "2024T4",
+          "pessoas_beneficiarias_pbf_media_tri": 54355761.333333336,
+          "taxa_informalidade": 38.6
+        },
+        {
+          "trimestre": "2025T1",
+          "pessoas_beneficiarias_pbf_media_tri": 53860990.0,
+          "taxa_informalidade": 38.0
+        },
+        {
+          "trimestre": "2025T2",
+          "pessoas_beneficiarias_pbf_media_tri": 53759265.333333336,
+          "taxa_informalidade": 37.8
+        },
+        {
+          "trimestre": "2025T3",
+          "pessoas_beneficiarias_pbf_media_tri": 50338114.333333336,
+          "taxa_informalidade": 37.8
+        },
+        {
+          "trimestre": "2025T4",
+          "pessoas_beneficiarias_pbf_media_tri": 48975116.666666664,
+          "taxa_informalidade": 37.6
+        },
+        {
+          "trimestre": "2026T1",
+          "pessoas_beneficiarias_pbf_media_tri": 49133190.333333336,
+          "taxa_informalidade": 37.3
+        }
+      ]
+    },
+    {
+      "metodo": "pareamento por trimestre unico",
+      "variavel_x": "pessoas_beneficiarias_pbf_media_tri",
+      "variavel_y": "pessoas_informais_mil",
+      "tema_y": "Trabalho informal — quantidade",
+      "variavel_descricao_y": "Pessoas ocupadas em situação de informalidade, em mil pessoas",
+      "n_observacoes_nivel": 38,
+      "correlacao_nivel": 0.5176262036378978,
+      "n_observacoes_variacao": 36,
+      "correlacao_variacao": -0.344662817654409,
+      "criterio_variacao": "diferenca apenas entre trimestres consecutivos disponiveis na base",
+      "dados_pareados_trimestre_unico": [
+        {
+          "trimestre": "2015T4",
+          "pessoas_beneficiarias_pbf_media_tri": 47336236.0,
+          "pessoas_informais_mil": 35078.0
+        },
+        {
+          "trimestre": "2016T1",
+          "pessoas_beneficiarias_pbf_media_tri": 47006491.333333336,
+          "pessoas_informais_mil": 34457.0
+        },
+        {
+          "trimestre": "2016T2",
+          "pessoas_beneficiarias_pbf_media_tri": 46624742.0,
+          "pessoas_informais_mil": 34727.0
+        },
+        {
+          "trimestre": "2016T3",
+          "pessoas_beneficiarias_pbf_media_tri": 46836359.333333336,
+          "pessoas_informais_mil": 34194.0
+        },
+        {
+          "trimestre": "2016T4",
+          "pessoas_beneficiarias_pbf_media_tri": 46338826.333333336,
+          "pessoas_informais_mil": 34872.0
+        },
+        {
+          "trimestre": "2017T1",
+          "pessoas_beneficiarias_pbf_media_tri": 45445589.0,
+          "pessoas_informais_mil": 34536.0
+        },
+        {
+          "trimestre": "2017T2",
+          "pessoas_beneficiarias_pbf_media_tri": 44565746.333333336,
+          "pessoas_informais_mil": 35484.0
+        },
+        {
+          "trimestre": "2017T3",
+          "pessoas_beneficiarias_pbf_media_tri": 43236893.333333336,
+          "pessoas_informais_mil": 36279.0
+        },
+        {
+          "trimestre": "2017T4",
+          "pessoas_beneficiarias_pbf_media_tri": 44140248.0,
+          "pessoas_informais_mil": 36699.0
+        },
+        {
+          "trimestre": "2018T1",
+          "pessoas_beneficiarias_pbf_media_tri": 45112919.666666664,
+          "pessoas_informais_mil": 36088.0
+        },
+        {
+          "trimestre": "2018T2",
+          "pessoas_beneficiarias_pbf_media_tri": 43833499.666666664,
+          "pessoas_informais_mil": 36336.0
+        },
+        {
+          "trimestre": "2018T3",
+          "pessoas_beneficiarias_pbf_media_tri": 43600762.666666664,
+          "pessoas_informais_mil": 37253.0
+        },
+        {
+          "trimestre": "2018T4",
+          "pessoas_beneficiarias_pbf_media_tri": 43912708.333333336,
+          "pessoas_informais_mil": 37557.0
+        },
+        {
+          "trimestre": "2019T1",
+          "pessoas_beneficiarias_pbf_media_tri": 43140961.0,
+          "pessoas_informais_mil": 36898.0
+        },
+        {
+          "trimestre": "2019T2",
+          "pessoas_beneficiarias_pbf_media_tri": 43657603.666666664,
+          "pessoas_informais_mil": 37876.0
+        },
+        {
+          "trimestre": "2019T3",
+          "pessoas_beneficiarias_pbf_media_tri": 42404660.666666664,
+          "pessoas_informais_mil": 38225.0
+        },
+        {
+          "trimestre": "2019T4",
+          "pessoas_beneficiarias_pbf_media_tri": 41122820.666666664,
+          "pessoas_informais_mil": 38192.0
+        },
+        {
+          "trimestre": "2020T1",
+          "pessoas_beneficiarias_pbf_media_tri": 40929788.333333336,
+          "pessoas_informais_mil": 36235.0
+        },
+        {
+          "trimestre": "2020T2",
+          "pessoas_beneficiarias_pbf_media_tri": 43711104.0,
+          "pessoas_informais_mil": 30253.0
+        },
+        {
+          "trimestre": "2020T3",
+          "pessoas_beneficiarias_pbf_media_tri": 43995562.333333336,
+          "pessoas_informais_mil": 31207.0
+        },
+        {
+          "trimestre": "2020T4",
+          "pessoas_beneficiarias_pbf_media_tri": 43591330.666666664,
+          "pessoas_informais_mil": 33525.0
+        },
+        {
+          "trimestre": "2021T1",
+          "pessoas_beneficiarias_pbf_media_tri": 43510658.333333336,
+          "pessoas_informais_mil": 33511.0
+        },
+        {
+          "trimestre": "2021T2",
+          "pessoas_beneficiarias_pbf_media_tri": 44147822.0,
+          "pessoas_informais_mil": 35183.0
+        },
+        {
+          "trimestre": "2021T3",
+          "pessoas_beneficiarias_pbf_media_tri": 44184426.666666664,
+          "pessoas_informais_mil": 37107.0
+        },
+        {
+          "trimestre": "2021T4",
+          "pessoas_beneficiarias_pbf_media_tri": 44161076.0,
+          "pessoas_informais_mil": 38317.0
+        },
+        {
+          "trimestre": "2023T1",
+          "pessoas_beneficiarias_pbf_media_tri": 54308193.0,
+          "pessoas_informais_mil": 37457.0
+        },
+        {
+          "trimestre": "2023T2",
+          "pessoas_beneficiarias_pbf_media_tri": 54520424.0,
+          "pessoas_informais_mil": 38051.0
+        },
+        {
+          "trimestre": "2023T3",
+          "pessoas_beneficiarias_pbf_media_tri": 55027099.666666664,
+          "pessoas_informais_mil": 38339.0
+        },
+        {
+          "trimestre": "2023T4",
+          "pessoas_beneficiarias_pbf_media_tri": 55961557.333333336,
+          "pessoas_informais_mil": 38826.0
+        },
+        {
+          "trimestre": "2024T1",
+          "pessoas_beneficiarias_pbf_media_tri": 55338530.666666664,
+          "pessoas_informais_mil": 38242.0
+        },
+        {
+          "trimestre": "2024T2",
+          "pessoas_beneficiarias_pbf_media_tri": 55037695.333333336,
+          "pessoas_informais_mil": 38619.0
+        },
+        {
+          "trimestre": "2024T3",
+          "pessoas_beneficiarias_pbf_media_tri": 54548896.666666664,
+          "pessoas_informais_mil": 39240.0
+        },
+        {
+          "trimestre": "2024T4",
+          "pessoas_beneficiarias_pbf_media_tri": 54355761.333333336,
+          "pessoas_informais_mil": 39307.0
+        },
+        {
+          "trimestre": "2025T1",
+          "pessoas_beneficiarias_pbf_media_tri": 53860990.0,
+          "pessoas_informais_mil": 38189.0
+        },
+        {
+          "trimestre": "2025T2",
+          "pessoas_beneficiarias_pbf_media_tri": 53759265.333333336,
+          "pessoas_informais_mil": 38718.0
+        },
+        {
+          "trimestre": "2025T3",
+          "pessoas_beneficiarias_pbf_media_tri": 50338114.333333336,
+          "pessoas_informais_mil": 38748.0
+        },
+        {
+          "trimestre": "2025T4",
+          "pessoas_beneficiarias_pbf_media_tri": 48975116.666666664,
+          "pessoas_informais_mil": 38707.0
+        },
+        {
+          "trimestre": "2026T1",
+          "pessoas_beneficiarias_pbf_media_tri": 49133190.333333336,
+          "pessoas_informais_mil": 38084.0
+        }
+      ]
+    }
+  ],
+  "comovimento": {
+    "metodo": "pareamento por trimestre unico",
+    "variavel_x": "pessoas_beneficiarias_pbf_media_tri",
+    "variavel_y": "pessoas_informais_mil",
+    "tema_y": "Trabalho informal — quantidade",
+    "variavel_descricao_y": "Pessoas ocupadas em situação de informalidade, em mil pessoas",
+    "n_observacoes": 38,
+    "dados_pareados_trimestre_unico": [
+      {
+        "trimestre": "2015T4",
+        "pessoas_beneficiarias_pbf_media_tri": 47336236.0,
+        "pessoas_informais_mil": 35078.0,
+        "bf_tri_zscore": -0.016262011459357895,
+        "pessoas_informais_mil_zscore": -0.7024852287291624,
+        "bf_tri_indice_base_100": 100.0,
+        "pessoas_informais_mil_indice_base_100": 100.0
+      },
+      {
+        "trimestre": "2016T1",
+        "pessoas_beneficiarias_pbf_media_tri": 47006491.333333336,
+        "pessoas_informais_mil": 34457.0,
+        "bf_tri_zscore": -0.08564861229159847,
+        "pessoas_informais_mil_zscore": -0.9900250613030679,
+        "bf_tri_indice_base_100": 99.3033990563452,
+        "pessoas_informais_mil_indice_base_100": 98.22965961571354
+      },
+      {
+        "trimestre": "2016T2",
+        "pessoas_beneficiarias_pbf_media_tri": 46624742.0,
+        "pessoas_informais_mil": 34727.0,
+        "bf_tri_zscore": -0.16597830762144253,
+        "pessoas_informais_mil_zscore": -0.8650077427926742,
+        "bf_tri_indice_base_100": 98.49693583579395,
+        "pessoas_informais_mil_indice_base_100": 98.99937282627288
+      },
+      {
+        "trimestre": "2016T3",
+        "pessoas_beneficiarias_pbf_media_tri": 46836359.333333336,
+        "pessoas_informais_mil": 34194.0,
+        "bf_tri_zscore": -0.12144867933172498,
+        "pessoas_informais_mil_zscore": -1.1118011900743032,
+        "bf_tri_indice_base_100": 98.94398729407496,
+        "pessoas_informais_mil_indice_base_100": 97.4799019328354
+      },
+      {
+        "trimestre": "2016T4",
+        "pessoas_beneficiarias_pbf_media_tri": 46338826.333333336,
+        "pessoas_informais_mil": 34872.0,
+        "bf_tri_zscore": -0.22614218058178537,
+        "pessoas_informais_mil_zscore": -0.7978688124815368,
+        "bf_tri_indice_base_100": 97.89292569297933,
+        "pessoas_informais_mil_indice_base_100": 99.41273732823991
+      },
+      {
+        "trimestre": "2017T1",
+        "pessoas_beneficiarias_pbf_media_tri": 45445589.0,
+        "pessoas_informais_mil": 34536.0,
+        "bf_tri_zscore": -0.41410186139478505,
+        "pessoas_informais_mil_zscore": -0.9534459199611379,
+        "bf_tri_indice_base_100": 96.00592028483211,
+        "pessoas_informais_mil_indice_base_100": 98.45487199954387
+      },
+      {
+        "trimestre": "2017T2",
+        "pessoas_beneficiarias_pbf_media_tri": 44565746.333333336,
+        "pessoas_informais_mil": 35484.0,
+        "bf_tri_zscore": -0.5992429662511923,
+        "pessoas_informais_mil_zscore": -0.5144962238579778,
+        "bf_tri_indice_base_100": 94.14721173295936,
+        "pessoas_informais_mil_indice_base_100": 101.15742060550772
+      },
+      {
+        "trimestre": "2017T3",
+        "pessoas_beneficiarias_pbf_media_tri": 43236893.333333336,
+        "pessoas_informais_mil": 36279.0,
+        "bf_tri_zscore": -0.8788671785479575,
+        "pessoas_informais_mil_zscore": -0.1463896749107075,
+        "bf_tri_indice_base_100": 91.33994796995125,
+        "pessoas_informais_mil_indice_base_100": 103.42379839215464
+      },
+      {
+        "trimestre": "2017T4",
+        "pessoas_beneficiarias_pbf_media_tri": 44140248.0,
+        "pessoas_informais_mil": 36699.0,
+        "bf_tri_zscore": -0.688778555433683,
+        "pessoas_informais_mil_zscore": 0.0480817094387938,
+        "bf_tri_indice_base_100": 93.24832671528847,
+        "pessoas_informais_mil_indice_base_100": 104.62113005302469
+      },
+      {
+        "trimestre": "2018T1",
+        "pessoas_beneficiarias_pbf_media_tri": 45112919.666666664,
+        "pessoas_informais_mil": 36088.0,
+        "bf_tri_zscore": -0.48410388591414427,
+        "pessoas_informais_mil_zscore": -0.23482785207917117,
+        "bf_tri_indice_base_100": 95.3031408468275,
+        "pessoas_informais_mil_indice_base_100": 102.87929756542562
+      },
+      {
+        "trimestre": "2018T2",
+        "pessoas_beneficiarias_pbf_media_tri": 43833499.666666664,
+        "pessoas_informais_mil": 36336.0,
+        "bf_tri_zscore": -0.7533261472904795,
+        "pessoas_informais_mil_zscore": -0.1199971298918466,
+        "bf_tri_indice_base_100": 92.60030659528286,
+        "pessoas_informais_mil_indice_base_100": 103.5862934032727
+      },
+      {
+        "trimestre": "2018T3",
+        "pessoas_beneficiarias_pbf_media_tri": 43600762.666666664,
+        "pessoas_informais_mil": 37253.0,
+        "bf_tri_zscore": -0.8022998865207122,
+        "pessoas_informais_mil_zscore": 0.3045987259378979,
+        "bf_tri_indice_base_100": 92.10863885896349,
+        "pessoas_informais_mil_indice_base_100": 106.20046752950567
+      },
+      {
+        "trimestre": "2018T4",
+        "pessoas_beneficiarias_pbf_media_tri": 43912708.333333336,
+        "pessoas_informais_mil": 37557.0,
+        "bf_tri_zscore": -0.7366586445465756,
+        "pessoas_informais_mil_zscore": 0.4453589660384893,
+        "bf_tri_indice_base_100": 92.76763858734635,
+        "pessoas_informais_mil_indice_base_100": 107.06710758880209
+      },
+      {
+        "trimestre": "2019T1",
+        "pessoas_beneficiarias_pbf_media_tri": 43140961.0,
+        "pessoas_informais_mil": 36898.0,
+        "bf_tri_zscore": -0.8990537628745344,
+        "pessoas_informais_mil_zscore": 0.1402241034520099,
+        "bf_tri_indice_base_100": 91.13728645429265,
+        "pessoas_informais_mil_indice_base_100": 105.1884371971036
+      },
+      {
+        "trimestre": "2019T2",
+        "pessoas_beneficiarias_pbf_media_tri": 43657603.666666664,
+        "pessoas_informais_mil": 37876.0,
+        "bf_tri_zscore": -0.7903391054176402,
+        "pessoas_informais_mil_zscore": 0.5930646127229915,
+        "bf_tri_indice_base_100": 92.22871811494826,
+        "pessoas_informais_mil_indice_base_100": 107.9765094931296
+      },
+      {
+        "trimestre": "2019T3",
+        "pessoas_beneficiarias_pbf_media_tri": 42404660.666666664,
+        "pessoas_informais_mil": 38225.0,
+        "bf_tri_zscore": -1.0539899376976185,
+        "pessoas_informais_mil_zscore": 0.7546610725753152,
+        "bf_tri_indice_base_100": 89.58181775726034,
+        "pessoas_informais_mil_indice_base_100": 108.97143508751925
+      },
+      {
+        "trimestre": "2019T4",
+        "pessoas_beneficiarias_pbf_media_tri": 41122820.666666664,
+        "pessoas_informais_mil": 38192.0,
+        "bf_tri_zscore": -1.3237214281562963,
+        "pessoas_informais_mil_zscore": 0.7393811780907115,
+        "bf_tri_indice_base_100": 86.87387114316961,
+        "pessoas_informais_mil_indice_base_100": 108.87735902845088
+      },
+      {
+        "trimestre": "2020T1",
+        "pessoas_beneficiarias_pbf_media_tri": 40929788.333333336,
+        "pessoas_informais_mil": 36235.0,
+        "bf_tri_zscore": -1.3643403033487658,
+        "pessoas_informais_mil_zscore": -0.16676286755684572,
+        "bf_tri_indice_base_100": 86.46608136171481,
+        "pessoas_informais_mil_indice_base_100": 103.29836364673015
+      },
+      {
+        "trimestre": "2020T2",
+        "pessoas_beneficiarias_pbf_media_tri": 43711104.0,
+        "pessoas_informais_mil": 30253.0,
+        "bf_tri_zscore": -0.7790812849017905,
+        "pessoas_informais_mil_zscore": -2.936591013220457,
+        "bf_tri_indice_base_100": 92.34174005723649,
+        "pessoas_informais_mil_indice_base_100": 86.24493984833799
+      },
+      {
+        "trimestre": "2020T3",
+        "pessoas_beneficiarias_pbf_media_tri": 43995562.333333336,
+        "pessoas_informais_mil": 31207.0,
+        "bf_tri_zscore": -0.7192240716588023,
+        "pessoas_informais_mil_zscore": -2.4948631544837325,
+        "bf_tri_indice_base_100": 92.94267151560875,
+        "pessoas_informais_mil_indice_base_100": 88.96459319231427
+      },
+      {
+        "trimestre": "2020T4",
+        "pessoas_beneficiarias_pbf_media_tri": 43591330.666666664,
+        "pessoas_informais_mil": 33525.0,
+        "bf_tri_zscore": -0.8042846173904044,
+        "pessoas_informais_mil_zscore": -1.421566323716723,
+        "bf_tri_indice_base_100": 92.08871332031272,
+        "pessoas_informais_mil_indice_base_100": 95.57272364444951
+      },
+      {
+        "trimestre": "2021T1",
+        "pessoas_beneficiarias_pbf_media_tri": 43510658.333333336,
+        "pessoas_informais_mil": 33511.0,
+        "bf_tri_zscore": -0.8212601125448526,
+        "pessoas_informais_mil_zscore": -1.42804870319504,
+        "bf_tri_indice_base_100": 91.91828926434569,
+        "pessoas_informais_mil_indice_base_100": 95.53281258908719
+      },
+      {
+        "trimestre": "2021T2",
+        "pessoas_beneficiarias_pbf_media_tri": 44147822.0,
+        "pessoas_informais_mil": 35183.0,
+        "bf_tri_zscore": -0.6871847946610953,
+        "pessoas_informais_mil_zscore": -0.6538673826417871,
+        "bf_tri_indice_base_100": 93.26432714252988,
+        "pessoas_informais_mil_indice_base_100": 100.2993329152175
+      },
+      {
+        "trimestre": "2021T3",
+        "pessoas_beneficiarias_pbf_media_tri": 44184426.666666664,
+        "pessoas_informais_mil": 37107.0,
+        "bf_tri_zscore": -0.6794822488693096,
+        "pessoas_informais_mil_zscore": 0.2369967685211665,
+        "bf_tri_indice_base_100": 93.3416562032238,
+        "pessoas_informais_mil_indice_base_100": 105.7842522378699
+      },
+      {
+        "trimestre": "2021T4",
+        "pessoas_beneficiarias_pbf_media_tri": 44161076.0,
+        "pessoas_informais_mil": 38317.0,
+        "bf_tri_zscore": -0.6843958185216867,
+        "pessoas_informais_mil_zscore": 0.7972595662899679,
+        "bf_tri_indice_base_100": 93.29232683392908,
+        "pessoas_informais_mil_indice_base_100": 109.23370773704315
+      },
+      {
+        "trimestre": "2023T1",
+        "pessoas_beneficiarias_pbf_media_tri": 54308193.0,
+        "pessoas_informais_mil": 37457.0,
+        "bf_tri_zscore": 1.4508137179794274,
+        "pessoas_informais_mil_zscore": 0.39905625547908424,
+        "bf_tri_indice_base_100": 114.72858340489938,
+        "pessoas_informais_mil_indice_base_100": 106.78202862192828
+      },
+      {
+        "trimestre": "2023T2",
+        "pessoas_beneficiarias_pbf_media_tri": 54520424.0,
+        "pessoas_informais_mil": 38051.0,
+        "bf_tri_zscore": 1.4954724772251489,
+        "pessoas_informais_mil_zscore": 0.6740943562019504,
+        "bf_tri_indice_base_100": 115.17693126255328,
+        "pessoas_informais_mil_indice_base_100": 108.4753976851588
+      },
+      {
+        "trimestre": "2023T3",
+        "pessoas_beneficiarias_pbf_media_tri": 55027099.666666664,
+        "pessoas_informais_mil": 38339.0,
+        "bf_tri_zscore": 1.6020898263086099,
+        "pessoas_informais_mil_zscore": 0.8074461626130369,
+        "bf_tri_indice_base_100": 116.24730717217706,
+        "pessoas_informais_mil_indice_base_100": 109.29642510975542
+      },
+      {
+        "trimestre": "2023T4",
+        "pessoas_beneficiarias_pbf_media_tri": 55961557.333333336,
+        "pessoas_informais_mil": 38826.0,
+        "bf_tri_zscore": 1.7987233056824317,
+        "pessoas_informais_mil_zscore": 1.0329403630373397,
+        "bf_tri_indice_base_100": 118.2213924515108,
+        "pessoas_informais_mil_indice_base_100": 110.68475967843092
+      },
+      {
+        "trimestre": "2024T1",
+        "pessoas_beneficiarias_pbf_media_tri": 55338530.666666664,
+        "pessoas_informais_mil": 38242.0,
+        "bf_tri_zscore": 1.6676227694255639,
+        "pessoas_informais_mil_zscore": 0.762532533370414,
+        "bf_tri_indice_base_100": 116.90521964329118,
+        "pessoas_informais_mil_indice_base_100": 109.0198985118878
+      },
+      {
+        "trimestre": "2024T2",
+        "pessoas_beneficiarias_pbf_media_tri": 55037695.333333336,
+        "pessoas_informais_mil": 38619.0,
+        "bf_tri_zscore": 1.6043194220166581,
+        "pessoas_informais_mil_zscore": 0.9370937521793712,
+        "bf_tri_indice_base_100": 116.26969101077943,
+        "pessoas_informais_mil_indice_base_100": 110.09464621700211
+      },
+      {
+        "trimestre": "2024T3",
+        "pessoas_beneficiarias_pbf_media_tri": 54548896.666666664,
+        "pessoas_informais_mil": 39240.0,
+        "bf_tri_zscore": 1.5014638449600708,
+        "pessoas_informais_mil_zscore": 1.2246335847532765,
+        "bf_tri_indice_base_100": 115.2370810950551,
+        "pessoas_informais_mil_indice_base_100": 111.86498660128856
+      },
+      {
+        "trimestre": "2024T4",
+        "pessoas_beneficiarias_pbf_media_tri": 54355761.333333336,
+        "pessoas_informais_mil": 39307.0,
+        "bf_tri_zscore": 1.4608232959678158,
+        "pessoas_informais_mil_zscore": 1.255656400828078,
+        "bf_tri_indice_base_100": 114.82907372131011,
+        "pessoas_informais_mil_indice_base_100": 112.05598950909402
+      },
+      {
+        "trimestre": "2025T1",
+        "pessoas_beneficiarias_pbf_media_tri": 53860990.0,
+        "pessoas_informais_mil": 38189.0,
+        "bf_tri_zscore": 1.3567109190906486,
+        "pessoas_informais_mil_zscore": 0.7379920967739294,
+        "bf_tri_indice_base_100": 113.7838462694837,
+        "pessoas_informais_mil_indice_base_100": 108.86880665944467
+      },
+      {
+        "trimestre": "2025T2",
+        "pessoas_beneficiarias_pbf_media_tri": 53759265.333333336,
+        "pessoas_informais_mil": 38718.0,
+        "bf_tri_zscore": 1.335305481628554,
+        "pessoas_informais_mil_zscore": 0.9829334356331821,
+        "bf_tri_indice_base_100": 113.56894818027638,
+        "pessoas_informais_mil_indice_base_100": 110.3768743942072
+      },
+      {
+        "trimestre": "2025T3",
+        "pessoas_beneficiarias_pbf_media_tri": 50338114.333333336,
+        "pessoas_informais_mil": 38748.0,
+        "bf_tri_zscore": 0.615408959196584,
+        "pessoas_informais_mil_zscore": 0.9968242488010037,
+        "bf_tri_indice_base_100": 106.34160758648687,
+        "pessoas_informais_mil_indice_base_100": 110.46239808426934
+      },
+      {
+        "trimestre": "2025T4",
+        "pessoas_beneficiarias_pbf_media_tri": 48975116.666666664,
+        "pessoas_informais_mil": 38707.0,
+        "bf_tri_zscore": 0.32859984719999974,
+        "pessoas_informais_mil_zscore": 0.9778401374716477,
+        "bf_tri_indice_base_100": 103.46221162719121,
+        "pessoas_informais_mil_indice_base_100": 110.34551570785108
+      },
+      {
+        "trimestre": "2026T1",
+        "pessoas_beneficiarias_pbf_media_tri": 49133190.333333336,
+        "pessoas_informais_mil": 38084.0,
+        "bf_tri_zscore": 0.36186253654677436,
+        "pessoas_informais_mil_zscore": 0.689374250686554,
+        "bf_tri_indice_base_100": 103.79614959950203,
+        "pessoas_informais_mil_indice_base_100": 108.56947374422714
+      }
+    ]
+  }
+}
