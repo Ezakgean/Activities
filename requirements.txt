@@ -1,7 +1,11 @@
 customtkinter==5.2.2
+# GUI note: tkinter is provided by the OS Python package, not by pip.
+# On Debian/Ubuntu, install it with: sudo apt install python3-tk
 google-cloud-discoveryengine==0.16.0
 matplotlib
 networkx==3.3
+numpy
+openpyxl
 pandas
 playwright
 pyvis==0.3.2

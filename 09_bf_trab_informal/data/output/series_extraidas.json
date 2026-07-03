@@ -4176,6 +4176,255 @@
         "gap_trimestres_lag1": 1.0
       }
     ],
+    "modelo_simples_nivel_logaritmico": {
+      "nome_modelo": "modelo_simples_nivel_logaritmico",
+      "variavel_dependente": "ln_informal",
+      "n_observacoes": 36,
+      "r2": 0.26641566398370564,
+      "r2_ajustado": 0.2448396541008735,
+      "estatistica_f": 11.754909759207328,
+      "p_valor_f": 0.0016065575027362925,
+      "parametros": [
+        {
+          "variavel": "const",
+          "coeficiente": 4.659246467952215,
+          "erro_padrao": 1.7135936766373896,
+          "estatistica_t": 2.7189913988799983,
+          "p_valor": 0.006548131080336958
+        },
+        {
+          "variavel": "ln_bf",
+          "coeficiente": 0.33080945759038194,
+          "erro_padrao": 0.0964868809323514,
+          "estatistica_t": 3.4285433873887796,
+          "p_valor": 0.0006068295314528972
+        }
+      ],
+      "valores_ajustados": [
+        {
+          "trimestre": "2015T4",
+          "real": 10.465329432318082,
+          "ajustado": 10.505571433405498,
+          "residuo": -0.0402420010874156
+        },
+        {
+          "trimestre": "2016T1",
+          "real": 10.447467448834278,
+          "ajustado": 10.503258947820136,
+          "residuo": -0.05579149898585811
+        },
+        {
+          "trimestre": "2016T2",
+          "real": 10.455272761356362,
+          "ajustado": 10.50056140801065,
+          "residuo": -0.045288646654288556
+        },
+        {
+          "trimestre": "2016T3",
+          "real": 10.439805469063055,
+          "ajustado": 10.50205946728645,
+          "residuo": -0.06225399822339561
+        },
+        {
+          "trimestre": "2016T4",
+          "real": 10.459439493918229,
+          "ajustado": 10.498526548408558,
+          "residuo": -0.03908705449032901
+        },
+        {
+          "trimestre": "2017T1",
+          "real": 10.449757537235314,
+          "ajustado": 10.492087531809526,
+          "residuo": -0.04232999457421194
+        },
+        {
+          "trimestre": "2017T2",
+          "real": 10.476837169640477,
+          "ajustado": 10.485620134237283,
+          "residuo": -0.008782964596806053
+        },
+        {
+          "trimestre": "2017T3",
+          "real": 10.498994340453384,
+          "ajustado": 10.475606068365828,
+          "residuo": 0.023388272087556672
+        },
+        {
+          "trimestre": "2017T4",
+          "real": 10.510504785715026,
+          "ajustado": 10.48244650536401,
+          "residuo": 0.028058280351016762
+        },
+        {
+          "trimestre": "2018T1",
+          "real": 10.493715679088233,
+          "ajustado": 10.489657044417962,
+          "residuo": 0.004058634670270678
+        },
+        {
+          "trimestre": "2018T2",
+          "real": 10.50056426434534,
+          "ajustado": 10.480139552126188,
+          "residuo": 0.02042471221915143
+        },
+        {
+          "trimestre": "2018T3",
+          "real": 10.525487757477535,
+          "ajustado": 10.478378416833971,
+          "residuo": 0.04710934064356387
+        },
+        {
+          "trimestre": "2018T4",
+          "real": 10.533615057927772,
+          "ajustado": 10.480736796925047,
+          "residuo": 0.05287826100272497
+        },
+        {
+          "trimestre": "2019T1",
+          "real": 10.51591262801771,
+          "ajustado": 10.474871265760497,
+          "residuo": 0.04104136225721433
+        },
+        {
+          "trimestre": "2019T2",
+          "real": 10.54207294510339,
+          "ajustado": 10.478809402281641,
+          "residuo": 0.0632635428217494
+        },
+        {
+          "trimestre": "2019T3",
+          "real": 10.551245030797263,
+          "ajustado": 10.469176500224094,
+          "residuo": 0.08206853057316899
+        },
+        {
+          "trimestre": "2019T4",
+          "real": 10.550381348578611,
+          "ajustado": 10.45902228314618,
+          "residuo": 0.09135906543243166
+        },
+        {
+          "trimestre": "2020T1",
+          "real": 10.497780781543382,
+          "ajustado": 10.45746579298528,
+          "residuo": 0.04031498855810156
+        },
+        {
+          "trimestre": "2020T2",
+          "real": 10.317350632095335,
+          "ajustado": 10.479214545471594,
+          "residuo": -0.1618639133762585
+        },
+        {
+          "trimestre": "2020T3",
+          "real": 10.348397707607221,
+          "ajustado": 10.481360376360913,
+          "residuo": -0.13296266875369156
+        },
+        {
+          "trimestre": "2020T4",
+          "real": 10.42004670814988,
+          "ajustado": 10.478306846243179,
+          "residuo": -0.05826013809329922
+        },
+        {
+          "trimestre": "2021T1",
+          "real": 10.419629022124354,
+          "ajustado": 10.477694066241945,
+          "residuo": -0.0580650441175905
+        },
+        {
+          "trimestre": "2021T2",
+          "real": 10.468318290380624,
+          "ajustado": 10.482503263900874,
+          "residuo": -0.0141849735202495
+        },
+        {
+          "trimestre": "2021T3",
+          "real": 10.521560910043119,
+          "ajustado": 10.48277743716831,
+          "residuo": 0.03878347287480999
+        },
+        {
+          "trimestre": "2023T2",
+          "real": 10.546682644153423,
+          "ajustado": 10.552314575802693,
+          "residuo": -0.005631931649270783
+        },
+        {
+          "trimestre": "2023T3",
+          "real": 10.554222933839034,
+          "ajustado": 10.555374696051373,
+          "residuo": -0.001151762212339591
+        },
+        {
+          "trimestre": "2023T4",
+          "real": 10.56684540428532,
+          "ajustado": 10.560945260590376,
+          "residuo": 0.005900143694944404
+        },
+        {
+          "trimestre": "2024T1",
+          "real": 10.551689667052905,
+          "ajustado": 10.55724166484093,
+          "residuo": -0.005551997788025176
+        },
+        {
+          "trimestre": "2024T2",
+          "real": 10.561499662327744,
+          "ajustado": 10.555438388474617,
+          "residuo": 0.006061273853127602
+        },
+        {
+          "trimestre": "2024T3",
+          "real": 10.5774519136793,
+          "ajustado": 10.552487292155423,
+          "residuo": 0.024964621523876573
+        },
+        {
+          "trimestre": "2024T4",
+          "real": 10.579157899044741,
+          "ajustado": 10.551313952777374,
+          "residuo": 0.027843946267367414
+        },
+        {
+          "trimestre": "2025T1",
+          "real": 10.550302795011584,
+          "ajustado": 10.548288983447355,
+          "residuo": 0.0020138115642289733
+        },
+        {
+          "trimestre": "2025T2",
+          "real": 10.564059887163895,
+          "ajustado": 10.547663608758898,
+          "residuo": 0.016396278404997133
+        },
+        {
+          "trimestre": "2025T3",
+          "real": 10.564834420546276,
+          "ajustado": 10.525911729070673,
+          "residuo": 0.038922691475603344
+        },
+        {
+          "trimestre": "2025T4",
+          "real": 10.563775741214291,
+          "ajustado": 10.516830948460113,
+          "residuo": 0.04694479275417862
+        },
+        {
+          "trimestre": "2026T1",
+          "real": 10.547549525405582,
+          "ajustado": 10.517896960315355,
+          "residuo": 0.029652565090227512
+        }
+      ],
+      "formula_descricao": "ln_informal ~ ln_bf",
+      "teste_f_beta_bf": {
+        "hipotese_nula": "ln_bf = 0",
+        "estatistica_f": 11.754909759207328,
+        "p_valor": 0.0016065575027362925
+      }
+    },
     "modelo_principal_variacoes_logaritmicas": {
       "nome_modelo": "modelo_principal_variacoes_logaritmicas",
       "variavel_dependente": "d_ln_informal",
@@ -4994,7 +5243,12 @@
           "residuo": -0.005994017597156898
         }
       ],
-      "formula_descricao": "ln_informal ~ ln_bf + ln_ocupados + taxa_desocupacao + tendencia + pos_2023 + d_trimestre_2 + d_trimestre_3 + d_trimestre_4"
+      "formula_descricao": "ln_informal ~ ln_bf + ln_ocupados + taxa_desocupacao + tendencia + pos_2023 + d_trimestre_2 + d_trimestre_3 + d_trimestre_4",
+      "teste_f_beta_bf": {
+        "hipotese_nula": "ln_bf = 0",
+        "estatistica_f": 2.2191034733135035,
+        "p_valor": 0.1479019328793919
+      }
     },
     "modelo_secundario_nivel_logaritmico_sem_dummies": {
       "nome_modelo": "modelo_secundario_nivel_logaritmico_sem_dummies",
@@ -5266,7 +5520,12 @@
           "residuo": -0.02015989346281799
         }
       ],
-      "formula_descricao": "ln_informal ~ ln_bf + ln_ocupados + taxa_desocupacao + tendencia + pos_2023"
+      "formula_descricao": "ln_informal ~ ln_bf + ln_ocupados + taxa_desocupacao + tendencia + pos_2023",
+      "teste_f_beta_bf": {
+        "hipotese_nula": "ln_bf = 0",
+        "estatistica_f": 3.1325370425964216,
+        "p_valor": 0.08690849112302305
+      }
     }
   }
 }

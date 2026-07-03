@@ -410,6 +410,15 @@ def resumir_resultado_modelo(
 def rodar_econometria(payload: dict[str, object]) -> dict[str, object]:
     base = construir_base_econometrica(payload)
 
+    colunas_modelo_simples_nivel = ["ln_bf"]
+    dados_simples_nivel = base.dropna(subset=["ln_informal", *colunas_modelo_simples_nivel]).copy()
+    x_simples_nivel = sm.add_constant(dados_simples_nivel[colunas_modelo_simples_nivel])
+    y_simples_nivel = dados_simples_nivel["ln_informal"]
+    modelo_simples_nivel = sm.OLS(y_simples_nivel, x_simples_nivel).fit(
+        cov_type="HAC", cov_kwds={"maxlags": 1}
+    )
+    teste_f_simples_nivel = modelo_simples_nivel.f_test("ln_bf = 0")
+
     colunas_modelo_principal = [
         "d_ln_bf",
         "d_ln_bf_lag1",
@@ -457,6 +466,7 @@ def rodar_econometria(payload: dict[str, object]) -> dict[str, object]:
     x_nivel = sm.add_constant(dados_nivel[colunas_modelo_nivel])
     y_nivel = dados_nivel["ln_informal"]
     modelo_nivel = sm.OLS(y_nivel, x_nivel).fit(cov_type="HAC", cov_kwds={"maxlags": 1})
+    teste_f_nivel = modelo_nivel.f_test("ln_bf = 0")
 
     colunas_modelo_nivel_sem_dummies = [
         "ln_bf",
@@ -473,6 +483,7 @@ def rodar_econometria(payload: dict[str, object]) -> dict[str, object]:
     modelo_nivel_sem_dummies = sm.OLS(y_nivel_sem_dummies, x_nivel_sem_dummies).fit(
         cov_type="HAC", cov_kwds={"maxlags": 1}
     )
+    teste_f_nivel_sem_dummies = modelo_nivel_sem_dummies.f_test("ln_bf = 0")
 
     return {
         "biblioteca": "statsmodels",
@@ -481,6 +492,20 @@ def rodar_econometria(payload: dict[str, object]) -> dict[str, object]:
             "para reduzir sensibilidade a autocorrelacao e heterocedasticidade."
         ),
         "base_trimestral": base.to_dict(orient="records"),
+        "modelo_simples_nivel_logaritmico": {
+            **resumir_resultado_modelo(
+                "modelo_simples_nivel_logaritmico",
+                modelo_simples_nivel,
+                dados_simples_nivel,
+                "ln_informal",
+            ),
+            "formula_descricao": "ln_informal ~ ln_bf",
+            "teste_f_beta_bf": {
+                "hipotese_nula": "ln_bf = 0",
+                "estatistica_f": float(teste_f_simples_nivel.fvalue),
+                "p_valor": float(teste_f_simples_nivel.pvalue),
+            },
+        },
         "modelo_principal_variacoes_logaritmicas": {
             **resumir_resultado_modelo(
                 "modelo_principal_variacoes_logaritmicas",
@@ -526,6 +551,11 @@ def rodar_econometria(payload: dict[str, object]) -> dict[str, object]:
                 "ln_informal ~ ln_bf + ln_ocupados + taxa_desocupacao + tendencia + "
                 "pos_2023 + d_trimestre_2 + d_trimestre_3 + d_trimestre_4"
             ),
+            "teste_f_beta_bf": {
+                "hipotese_nula": "ln_bf = 0",
+                "estatistica_f": float(teste_f_nivel.fvalue),
+                "p_valor": float(teste_f_nivel.pvalue),
+            },
         },
         "modelo_secundario_nivel_logaritmico_sem_dummies": {
             **resumir_resultado_modelo(
@@ -537,8 +567,38 @@ def rodar_econometria(payload: dict[str, object]) -> dict[str, object]:
             "formula_descricao": (
                 "ln_informal ~ ln_bf + ln_ocupados + taxa_desocupacao + tendencia + pos_2023"
             ),
+            "teste_f_beta_bf": {
+                "hipotese_nula": "ln_bf = 0",
+                "estatistica_f": float(teste_f_nivel_sem_dummies.fvalue),
+                "p_valor": float(teste_f_nivel_sem_dummies.pvalue),
+            },
         },
     }
+
+
+def obter_metadados_modelos_econometricos() -> list[tuple[str, str, tuple[str, ...], str | None]]:
+    return [
+        ("modelo_simples_nivel_logaritmico", "Modelo Simples em Nível", ("ln_bf",), "teste_f_beta_bf"),
+        (
+            "modelo_principal_variacoes_logaritmicas",
+            "Modelo Principal",
+            ("d_ln_bf", "d_ln_bf_lag1"),
+            "teste_f_beta_bf_contemporaneo_e_defasado",
+        ),
+        (
+            "modelo_principal_variacoes_logaritmicas_sem_dummies",
+            "Modelo Principal Sem Dummies",
+            ("d_ln_bf", "d_ln_bf_lag1"),
+            "teste_f_beta_bf_contemporaneo_e_defasado",
+        ),
+        ("modelo_secundario_nivel_logaritmico", "Modelo Secundário", ("ln_bf",), "teste_f_beta_bf"),
+        (
+            "modelo_secundario_nivel_logaritmico_sem_dummies",
+            "Modelo Secundário Sem Dummies",
+            ("ln_bf",),
+            "teste_f_beta_bf",
+        ),
+    ]
 
 
 def calcular_correlacoes(payload: dict[str, object]) -> list[dict[str, object]]:
@@ -817,6 +877,17 @@ def formatar_numero(valor: float | None, casas: int = 4) -> str:
     return f"{valor:.{casas}f}".replace(".", ",")
 
 
+def contar_linhas_texto(valor: object) -> int:
+    texto = str(valor) if valor is not None else ""
+    return max(1, texto.count("\n") + 1)
+
+
+def formatar_rotulo_teste_f(hipotese_nula: object) -> str:
+    if hipotese_nula is None:
+        return "n/d"
+    return str(hipotese_nula).replace(" e ", "; ")
+
+
 def salvar_graficos_correlacao(correlacao: dict[str, object], pasta_graficos: Path) -> list[Path]:
     dados = pd.DataFrame(correlacao["dados_pareados_trimestre_unico"])
     if dados.empty:
@@ -1070,15 +1141,108 @@ def salvar_graficos_testes_econometricos(econometria: dict[str, object], pasta_g
     return arquivos
 
 
+def salvar_grafico_resumo_testes_bf(econometria: dict[str, object], pasta_graficos: Path) -> Path | None:
+    linhas_tabela: list[list[str]] = []
+
+    for chave_modelo, rotulo_modelo, variaveis_bf, chave_teste_f in obter_metadados_modelos_econometricos():
+        modelo = econometria.get(chave_modelo, {})
+        if not modelo:
+            continue
+
+        parametros = {item["variavel"]: item for item in modelo.get("parametros", [])}
+        resumo_t = []
+        for variavel_bf in variaveis_bf:
+            parametro = parametros.get(variavel_bf)
+            if not parametro:
+                continue
+            resumo_t.append(
+                f"{variavel_bf}: t={formatar_numero(parametro.get('estatistica_t'))} | "
+                f"p={formatar_p_valor(parametro.get('p_valor'))}"
+            )
+
+        teste_f = modelo.get(chave_teste_f) if chave_teste_f else None
+        if teste_f:
+            resumo_f = (
+                f"{formatar_rotulo_teste_f(teste_f.get('hipotese_nula', 'n/d'))}\n"
+                f"F={formatar_numero(teste_f.get('estatistica_f'))} | "
+                f"p={formatar_p_valor(teste_f.get('p_valor'))}"
+            )
+        else:
+            resumo_f = "n/d"
+
+        linhas_tabela.append(
+            [
+                rotulo_modelo,
+                modelo.get("variavel_dependente", "n/d"),
+                "\n".join(resumo_t) if resumo_t else "n/d",
+                resumo_f,
+            ]
+        )
+
+    if not linhas_tabela:
+        return None
+
+    linhas_por_registro = [max(contar_linhas_texto(celula) for celula in linha) for linha in linhas_tabela]
+    altura = max(8.4, 3.0 + sum(0.40 + linhas * 0.26 for linhas in linhas_por_registro))
+    fig, ax = plt.subplots(figsize=(18, altura), dpi=180)
+    fig.patch.set_facecolor("white")
+    ax.axis("off")
+    adicionar_cabecalho_econometria(
+        fig,
+        "Resumo dos Testes: Bolsa Família",
+        "Tabela consolidada de testes t e F para os coeficientes do Bolsa Família em todos os modelos",
+        (
+            f"Biblioteca: {econometria.get('biblioteca', 'n/d')}\n"
+            "Teste t: significância individual dos coeficientes ligados ao Bolsa Família\n"
+            "Teste F: significância da hipótese nula indicada em cada modelo"
+        ),
+    )
+
+    tabela = ax.table(
+        cellText=linhas_tabela,
+        colLabels=["Modelo", "Dependente", "Teste t", "Teste F"],
+        colWidths=[0.23, 0.16, 0.305, 0.305],
+        cellLoc="left",
+        colLoc="left",
+        bbox=[0.035, 0.045, 0.93, 0.80],
+    )
+    tabela.auto_set_font_size(False)
+    tabela.set_fontsize(10)
+    tabela.scale(1, 1.10)
+
+    for (linha, coluna), celula in tabela.get_celld().items():
+        celula.set_edgecolor("#d9e2ec")
+        celula.PAD = 0.08
+        if linha == 0:
+            celula.set_facecolor("#dceefb")
+            celula.set_text_props(weight="bold", color="#102a43")
+        else:
+            celula.set_facecolor("#fbfbfc" if linha % 2 else "#f4f7fb")
+            celula.set_text_props(color="#243b53")
+        celula.get_text().set_va("center")
+        celula.get_text().set_ha("left")
+        celula.get_text().set_wrap(False)
+
+    altura_cabecalho = 0.085
+    for coluna in range(4):
+        tabela[(0, coluna)].set_height(altura_cabecalho)
+
+    for indice_linha, linhas_texto in enumerate(linhas_por_registro, start=1):
+        altura_linha = 0.075 + max(0, linhas_texto - 1) * 0.030
+        for coluna in range(4):
+            tabela[(indice_linha, coluna)].set_height(altura_linha)
+
+    fig.subplots_adjust(top=0.92, left=0.03, right=0.97, bottom=0.03)
+    arquivo = pasta_graficos / "resumo_testes_bolsa_familia_modelos.png"
+    fig.savefig(arquivo, bbox_inches="tight", pad_inches=0.18)
+    plt.close(fig)
+    return arquivo
+
+
 def salvar_graficos_econometria(econometria: dict[str, object], pasta_graficos: Path) -> list[Path]:
     arquivos: list[Path] = []
 
-    for chave_modelo, titulo in (
-        ("modelo_principal_variacoes_logaritmicas", "Econometria: Modelo Principal"),
-        ("modelo_principal_variacoes_logaritmicas_sem_dummies", "Econometria: Modelo Principal Sem Dummies"),
-        ("modelo_secundario_nivel_logaritmico", "Econometria: Modelo Secundário"),
-        ("modelo_secundario_nivel_logaritmico_sem_dummies", "Econometria: Modelo Secundário Sem Dummies"),
-    ):
+    for chave_modelo, rotulo_modelo, _, _ in obter_metadados_modelos_econometricos():
         modelo = econometria.get(chave_modelo, {})
         dados = pd.DataFrame(modelo.get("valores_ajustados", []))
         if dados.empty:
@@ -1096,7 +1260,7 @@ def salvar_graficos_econometria(econometria: dict[str, object], pasta_graficos: 
         fig.patch.set_facecolor("white")
         adicionar_cabecalho_econometria(
             fig,
-            titulo,
+            f"Econometria: {rotulo_modelo}",
             modelo["formula_descricao"],
             resumo,
         )
@@ -1151,6 +1315,9 @@ def gerar_graficos_econometria(payload: dict[str, object], pasta_saida: Path) ->
     pasta_graficos.mkdir(parents=True, exist_ok=True)
     arquivos = salvar_graficos_econometria(dict(payload.get("econometria", {})), pasta_graficos)
     arquivos.extend(salvar_graficos_testes_econometricos(dict(payload.get("econometria", {})), pasta_graficos))
+    arquivo_resumo = salvar_grafico_resumo_testes_bf(dict(payload.get("econometria", {})), pasta_graficos)
+    if arquivo_resumo is not None:
+        arquivos.append(arquivo_resumo)
     return arquivos
 
 
