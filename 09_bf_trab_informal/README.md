@@ -8,6 +8,9 @@
 
 Aplicação em Python para a atividade 09 de análise de trabalho informal e Bolsa Família, extraindo séries da planilha `DadosEconometria.xlsx`, consolidando os dados em JSON, calculando correlações e co-movimento, estimando modelos econométricos e gerando gráficos em `data/output/`.
 
+### Documentação da atividade
+Para uma descrição direta do objetivo do exercício e dos principais resultados em PT-BR e English, veja [docs/objetivo_resultados.md](/home/ezequieldev/Documentos/Activities/09_bf_trab_informal/docs/objetivo_resultados.md).
+
 ### Contexto do exercício
 O exercício combina séries mensais e trimestrais para investigar a relação entre beneficiários do Bolsa Família e indicadores do mercado de trabalho, com foco em informalidade, ocupação e desocupação.
 
@@ -121,6 +124,9 @@ Todos os modelos usam:
 ## EN
 
 Python app for activity 09 on informal labor and Bolsa Familia analysis, extracting series from `DadosEconometria.xlsx`, consolidating the data into JSON, computing correlations and co-movement, estimating econometric models, and generating charts in `data/output/`.
+
+### Activity documentation
+For a concise PT-BR and English description of the exercise goal and main results, see [docs/objetivo_resultados.md](/home/ezequieldev/Documentos/Activities/09_bf_trab_informal/docs/objetivo_resultados.md).
 
 ### Exercise context
 The exercise combines monthly and quarterly series to investigate the relationship between Bolsa Familia beneficiaries and labor-market indicators, focusing on informality, employment, and unemployment.
