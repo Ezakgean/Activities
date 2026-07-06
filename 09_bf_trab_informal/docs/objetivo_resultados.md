@@ -81,14 +81,19 @@ O exercício foi dividido em três camadas:
 
 Geração de gráficos das séries ao longo do tempo para observar tendência, nível e co-movimento.
 
-#### 2. Correlações
+#### 2. Correlações e covariâncias
 
-Foram calculadas correlações de Pearson:
+Foram calculadas:
+
+- correlações de Pearson;
+- covariâncias amostrais;
+
+em duas formas:
 
 - em nível;
 - em variação trimestral.
 
-As correlações foram avaliadas para dois alvos:
+As medidas descritivas foram avaliadas para dois alvos:
 
 - taxa de informalidade;
 - quantidade de pessoas informais.
@@ -154,21 +159,39 @@ A redução nas observações dos modelos em variação ocorre porque:
 
 ### Resultados descritivos
 
-#### Correlação entre Bolsa Família e taxa de informalidade
+#### Relação entre Bolsa Família e taxa de informalidade
 
 - Correlação em nível: `-0,4907`
 - Correlação em variação: `-0,3195`
+- Covariância em nível: `-2.699.359,7734`
+- Covariância em variação: `-219.658,8513`
 
 Interpretação:
 quando a informalidade é medida como taxa, a associação observada é negativa. Em termos descritivos, períodos com mais beneficiários do programa não coincidem com aumento proporcional da taxa de informalidade.
 
-#### Correlação entre Bolsa Família e número de pessoas informais
+Leitura da covariância:
+as covariâncias negativas reforçam o mesmo sentido identificado pela correlação. Como a covariância preserva a escala original das variáveis, ela indica direção conjunta negativa, mas sua magnitude deve ser interpretada com cautela, pois depende diretamente das unidades de medida de cada série.
+
+#### Relação entre Bolsa Família e número de pessoas informais
 
 - Correlação em nível: `0,5176`
 - Correlação em variação: `-0,3447`
+- Covariância em nível: `5.456.245.188,5870`
+- Covariância em variação: `-453.598.200,5291`
 
 Interpretação:
 quando a informalidade é medida em quantidade absoluta, a associação em nível é positiva. Ainda assim, essa relação perde força e muda de sinal quando se observam variações trimestrais. Isso sugere que a correlação positiva em nível pode estar refletindo tendência comum ou crescimento simultâneo do mercado de trabalho, e não necessariamente um efeito direto do programa.
+
+Leitura da covariância:
+a covariância em nível é positiva, o que é coerente com o movimento conjunto observado nas séries absolutas. Já a covariância em variação é negativa, indicando que aumentos trimestrais no número de beneficiários não caminham, em média, com aumentos trimestrais na quantidade de trabalhadores informais.
+
+#### Diferença entre correlação e covariância
+
+A correlação mede direção e intensidade da associação em escala padronizada, variando entre `-1` e `1`. Já a covariância mede o co-movimento nas unidades originais das variáveis. Por isso:
+
+- a correlação é mais apropriada para comparar intensidade entre pares de séries diferentes;
+- a covariância é útil para confirmar o sentido do co-movimento sem padronização;
+- a magnitude da covariância não deve ser comparada diretamente entre variáveis com escalas muito distintas.
 
 ### Resultados econométricos
 
@@ -374,14 +397,19 @@ The exercise is organized into three layers:
 
 Charts of the series over time to inspect levels, trends, and co-movement.
 
-#### 2. Correlations
+#### 2. Correlations and covariances
 
-Pearson correlations were computed:
+The analysis computed:
+
+- Pearson correlations;
+- sample covariances;
+
+in two forms:
 
 - in levels;
 - in quarterly changes.
 
-The correlations were evaluated for two targets:
+These descriptive measures were evaluated for two targets:
 
 - the informality rate;
 - the number of informal workers.
@@ -447,21 +475,39 @@ The smaller sample in change models comes from:
 
 ### Descriptive results
 
-#### Correlation between Bolsa Familia and the informality rate
+#### Relationship between Bolsa Familia and the informality rate
 
 - Level correlation: `-0.4907`
 - Change correlation: `-0.3195`
+- Level covariance: `-2,699,359.7734`
+- Change covariance: `-219,658.8513`
 
 Interpretation:
 when informality is measured as a rate, the observed association is negative. Descriptively, periods with more program beneficiaries do not coincide with a proportional increase in the informality rate.
 
-#### Correlation between Bolsa Familia and the number of informal workers
+Covariance reading:
+the negative covariances reinforce the same direction shown by the correlation. Since covariance preserves the original scale of the variables, it indicates negative joint movement, but its magnitude must be interpreted carefully because it depends directly on the measurement units of each series.
+
+#### Relationship between Bolsa Familia and the number of informal workers
 
 - Level correlation: `0.5176`
 - Change correlation: `-0.3447`
+- Level covariance: `5,456,245,188.5870`
+- Change covariance: `-453,598,200.5291`
 
 Interpretation:
 when informality is measured in absolute numbers, the level association is positive. Even so, that relationship weakens and changes sign when quarterly changes are analyzed. This suggests that the positive level correlation may reflect a common trend or simultaneous expansion of the labor market rather than a direct program effect.
+
+Covariance reading:
+the level covariance is positive, which is consistent with the joint movement seen in the absolute series. The change covariance is negative, indicating that quarterly increases in the number of beneficiaries do not move, on average, with quarterly increases in the number of informal workers.
+
+#### Difference between correlation and covariance
+
+Correlation measures direction and intensity on a standardized scale, ranging from `-1` to `1`. Covariance measures joint movement in the original units of the variables. Therefore:
+
+- correlation is more appropriate for comparing strength across different pairs of series;
+- covariance is useful for confirming the direction of co-movement without standardization;
+- covariance magnitudes should not be directly compared across variables with very different scales.
 
 ### Econometric results
 
