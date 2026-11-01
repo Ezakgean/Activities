@@ -1,0 +1,175 @@
+{
+  "ano": 2015,
+  "coletado_em": "2026-09-05T14:50:35.988789+00:00",
+  "fonte": "https://www.tesourotransparente.gov.br/ckan/dataset/despesas-e-transferencias-totais",
+  "versao_extrator": 2,
+  "arquivo_origem": "despesas_2015.xlsx",
+  "sha256": "a006aaece17f1a212a0bdcefc8e66105039454b4d8c470dde49c4a4ae7833f4e",
+  "unidade": "BRL corrente",
+  "metodologia": "Pagamentos da União em R$ correntes, incluindo restos a pagar pagos, transferências e despesas financeiras da base. Não é o total consolidado de União, estados e municípios. Investimentos são os pagamentos classificados no grupo de natureza de despesa 4; gasto em saúde ou educação não é sinônimo de investimento. Meses não publicados não são zeros.",
+  "recurso": {
+    "resource_group": "Despesas e Transferências - anos anteriores",
+    "cache_last_updated": null,
+    "package_id": "8675a0a4-31c5-4593-a24d-fb8e17376eca",
+    "webstore_last_updated": null,
+    "id": "a6767172-8749-4470-9949-91825e6ab72a",
+    "size": "30111415",
+    "state": "active",
+    "hash": "",
+    "description": "Base de dados das despesas de 2015, de acordo com a metodologia do Resultado do Tesouro Nacional, sob o critério de valores pagos.",
+    "format": "XLSX",
+    "mimetype_inner": null,
+    "url_type": "upload",
+    "mimetype": null,
+    "cache_url": null,
+    "name": "Despesas e Transferências da União - 2015",
+    "created": "2022-03-23T11:44:03.779820",
+    "url": "https://www.tesourotransparente.gov.br/ckan/dataset/8675a0a4-31c5-4593-a24d-fb8e17376eca/resource/a6767172-8749-4470-9949-91825e6ab72a/download/base-despesas-2015.xlsx",
+    "webstore_url": null,
+    "last_modified": "2024-02-22T20:03:33.032844",
+    "position": 11,
+    "revision_id": "7e653af6-6fda-4a95-9d87-b1616cae30af",
+    "resource_type": null
+  },
+  "validacao": {
+    "linhas_fonte": 158193,
+    "linhas_sem_pagamento_informado": 0,
+    "linhas_com_pagamento": 158193,
+    "aba": "2015",
+    "meses_na_fonte": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "divergencias_componentes": [
+      {
+        "linha": 43731,
+        "periodo": "2015-04",
+        "total_publicado_brl": "4901540.88",
+        "soma_componentes_brl": "4751940.75",
+        "diferenca_brl": "149600.13"
+      },
+      {
+        "linha": 47803,
+        "periodo": "2015-04",
+        "total_publicado_brl": "97364.07",
+        "soma_componentes_brl": "97318.15",
+        "diferenca_brl": "45.92"
+      },
+      {
+        "linha": 48823,
+        "periodo": "2015-04",
+        "total_publicado_brl": "41400.00",
+        "soma_componentes_brl": "0",
+        "diferenca_brl": "41400.00"
+      },
+      {
+        "linha": 59690,
+        "periodo": "2015-05",
+        "total_publicado_brl": "4351622.69",
+        "soma_componentes_brl": "4256592.35",
+        "diferenca_brl": "95030.34"
+      },
+      {
+        "linha": 63596,
+        "periodo": "2015-05",
+        "total_publicado_brl": "122455.94",
+        "soma_componentes_brl": "122323.94",
+        "diferenca_brl": "132.00"
+      },
+      {
+        "linha": 65231,
+        "periodo": "2015-05",
+        "total_publicado_brl": "32100.00",
+        "soma_componentes_brl": "0",
+        "diferenca_brl": "32100.00"
+      },
+      {
+        "linha": 68421,
+        "periodo": "2015-05",
+        "total_publicado_brl": "480.00",
+        "soma_componentes_brl": "0",
+        "diferenca_brl": "480.00"
+      },
+      {
+        "linha": 71474,
+        "periodo": "2015-06",
+        "total_publicado_brl": "4880210.05",
+        "soma_componentes_brl": "5124840.52",
+        "diferenca_brl": "-244630.47"
+      },
+      {
+        "linha": 76619,
+        "periodo": "2015-06",
+        "total_publicado_brl": "47438.52",
+        "soma_componentes_brl": "47616.44",
+        "diferenca_brl": "-177.92"
+      },
+      {
+        "linha": 76877,
+        "periodo": "2015-06",
+        "total_publicado_brl": "38100.00",
+        "soma_componentes_brl": "111600.00",
+        "diferenca_brl": "-73500.00"
+      },
+      {
+        "linha": 80772,
+        "periodo": "2015-06",
+        "total_publicado_brl": "0.00",
+        "soma_componentes_brl": "480.00",
+        "diferenca_brl": "-480.00"
+      },
+      {
+        "linha": 84663,
+        "periodo": "2015-07",
+        "total_publicado_brl": "13351565.92",
+        "soma_componentes_brl": "13353134.75",
+        "diferenca_brl": "-1568.83"
+      },
+      {
+        "linha": 92831,
+        "periodo": "2015-07",
+        "total_publicado_brl": "4621.49",
+        "soma_componentes_brl": "3052.66",
+        "diferenca_brl": "1568.83"
+      },
+      {
+        "linha": 96249,
+        "periodo": "2015-08",
+        "total_publicado_brl": "338570338.03",
+        "soma_componentes_brl": "338570152.00",
+        "diferenca_brl": "186.03"
+      },
+      {
+        "linha": 130965,
+        "periodo": "2015-11",
+        "total_publicado_brl": "500241338.19",
+        "soma_componentes_brl": "500241524.22",
+        "diferenca_brl": "-186.03"
+      }
+    ],
+    "totais_mensais_brl": {
+      "2015-01": "293889971298.43",
+      "2015-02": "122574955810.80",
+      "2015-03": "194194648358.04",
+      "2015-04": "242972527659.82",
+      "2015-05": "208950019771.96",
+      "2015-06": "119151022642.17",
+      "2015-07": "228911669363.81",
+      "2015-08": "132540575177.31",
+      "2015-09": "211004761482.40",
+      "2015-10": "287186828665.66",
+      "2015-11": "146006067517.08",
+      "2015-12": "202924540869.88"
+    }
+  }
+}

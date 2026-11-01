@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Janeiro de 2012",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2012,
+    "mes": 1,
+    "mes_nome": "Janeiro",
+    "inicio": "2012-01-01",
+    "fim": "2012-01-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2012/1",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27239_873728/rmd201201.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_janeiro_2012": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 1801.11,
+    "composicao_percentual": {
+      "prefixada": 34.31,
+      "indice_precos": 29.92,
+      "taxa_flutuante": 31.62,
+      "cambio": 4.15
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 41309.47,
+      "resgates_brl_milhoes": 117470.45
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:33:52.043363+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "0aa4e898681822ee2166613bf891c6562a675381ff7dbc1ad4b6b7803f0245b0"
+  }
+}

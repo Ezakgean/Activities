@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Setembro de 2009",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2009,
+    "mes": 9,
+    "mes_nome": "Setembro",
+    "inicio": "2009-09-01",
+    "fim": "2009-09-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2009/9",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27267_945938/rmd200909.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_setembro_2009": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 1488.93,
+    "composicao_percentual": {
+      "prefixada": 31.1,
+      "indice_precos": 26.5,
+      "selic": 34.34,
+      "cambio": 6.91,
+      "tr": 1.14
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 18929.54,
+      "resgates_brl_milhoes": 46564.14
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:33:56.166561+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes",
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.selic",
+      "composicao_percentual.cambio",
+      "composicao_percentual.tr"
+    ],
+    "sha256_documento": "b607c2fdb30a1db5b7a2634857b657d67a0e23673185f7b4f301c4b76f7c523a"
+  }
+}

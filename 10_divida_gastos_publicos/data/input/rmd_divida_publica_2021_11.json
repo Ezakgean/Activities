@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Novembro de 2021",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2021,
+    "mes": 11,
+    "mes_nome": "Novembro",
+    "inicio": "2021-11-01",
+    "fim": "2021-11-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2021/11",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/42319_1341322/Texto_RMD_Nov_21.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_novembro_2021": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 5498.83,
+    "composicao_percentual": {
+      "prefixada": 28.89,
+      "indice_precos": 29.32,
+      "taxa_flutuante": 36.69,
+      "cambio": 5.1
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 102915.88,
+      "resgates_brl_milhoes": 18279.74
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:31:03.850011+00:00",
+    "metodo": "requests + BeautifulSoup + pdfplumber",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "69b8b3fc07bba679ae71385973c33ab64463712b2ea544fe6fe5c89c57e63ebe"
+  }
+}

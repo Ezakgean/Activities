@@ -1,0 +1,12 @@
+Serie consolidada da divida publica federal
+Observacoes: 309
+Periodo inicial: 2000-11
+Periodo final: 2026-07
+Estoque nominal final: R$ 9.288,78 bi
+Variacao nominal mensal final: 0,22%
+Prazo medio final: None meses
+Vencendo em 12 meses: n/d
+Emissoes finais: R$ 198.148,39 mi
+Resgates finais: R$ 263.287,57 mi
+Serie real nao calculada: forneca data/input/ipca.csv com colunas periodo e ipca_indice.
+Relacao divida/PIB nao calculada: forneca data/input/pib.csv com colunas periodo e pib_nominal_brl_bilhoes.

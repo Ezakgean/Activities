@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Maio de 2009",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2009,
+    "mes": 5,
+    "mes_nome": "Maio",
+    "inicio": "2009-05-01",
+    "fim": "2009-05-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2009/5",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27271_920271/rmd200905.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_maio_2009": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 1388.31,
+    "ofertas_publicas": {},
+    "composicao_percentual": {
+      "prefixada": 28.15,
+      "indice_precos": 26.1,
+      "selic": 36.07,
+      "cambio": 8.26,
+      "tr": 1.42
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-04T20:03:02.080393+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.selic",
+      "composicao_percentual.cambio",
+      "composicao_percentual.tr"
+    ],
+    "sha256_documento": "b2ed81ada894da4c75d4d990dcd042cc9acbc21c9cdd755b11dbe4f2162fef35"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Abril de 2007",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2007,
+    "mes": 4,
+    "mes_nome": "Abril",
+    "inicio": "2007-04-01",
+    "fim": "2007-04-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2007/4",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27296_895672/rmd200704.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_abril_2007": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 1285.94,
+    "ofertas_publicas": {},
+    "composicao_percentual": {}
+  },
+  "scraping": {
+    "extraido_em": "2026-09-04T19:58:26.282589+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [],
+    "sha256_documento": "6794aa1f752b8e01fe626d76d095b171317b1ca10c4c280fb10e545a6ecf1b3d"
+  }
+}

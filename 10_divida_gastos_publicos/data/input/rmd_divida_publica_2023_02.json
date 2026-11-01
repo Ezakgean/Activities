@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Fevereiro de 2023",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2023,
+    "mes": 2,
+    "mes_nome": "Fevereiro",
+    "inicio": "2023-02-01",
+    "fim": "2023-02-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2023/2",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/46552_1456543/Texto_RMD_Fev_23.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_fevereiro_2023": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 5856.03,
+    "composicao_percentual": {
+      "prefixada": 23.74,
+      "indice_precos": 31.29,
+      "taxa_flutuante": 40.64,
+      "cambio": 4.34
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 61419.34,
+      "resgates_brl_milhoes": 28492.77
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:30:23.765435+00:00",
+    "metodo": "requests + BeautifulSoup + pdfplumber",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "f24820c2c35c8f909f2b01c32861f3b678a57a0cbfa155487fbfc3b48e3642bf"
+  }
+}

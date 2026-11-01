@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Julho de 2023",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2023,
+    "mes": 7,
+    "mes_nome": "Julho",
+    "inicio": "2023-07-01",
+    "fim": "2023-07-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2023/7",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/47750_2261157/Texto_RMD_Jul_23.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_julho_2023": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 6142.22,
+    "composicao_percentual": {
+      "prefixada": 24.65,
+      "indice_precos": 30.21,
+      "taxa_flutuante": 41.2,
+      "cambio": 3.93
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 134460.22,
+      "resgates_brl_milhoes": 227081.02
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:30:14.151255+00:00",
+    "metodo": "requests + BeautifulSoup + pdfplumber",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "e1bb1c62270ffd2ac900948a4cda60df00d12006ec94d6212f8871af2010a648"
+  }
+}

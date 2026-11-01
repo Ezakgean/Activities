@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Dezembro de 2007",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2007,
+    "mes": 12,
+    "mes_nome": "Dezembro",
+    "inicio": "2007-12-01",
+    "fim": "2007-12-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2007/12",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27288_909643/rmd200712.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_dezembro_2007": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 1333.75,
+    "composicao_percentual": {},
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 28870.75,
+      "resgates_brl_milhoes": 37976.68
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:33:59.099503+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "46319ef31ac988c28bb006811bf03be0d5011d8ad79b6f6b0dc889942f0ce40f"
+  }
+}

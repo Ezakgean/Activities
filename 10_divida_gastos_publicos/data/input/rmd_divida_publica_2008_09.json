@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Setembro de 2008",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2008,
+    "mes": 9,
+    "mes_nome": "Setembro",
+    "inicio": "2008-09-01",
+    "fim": "2008-09-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2008/9",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27279_937052/rmd200809.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_setembro_2008": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 1335.1,
+    "composicao_percentual": {},
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 16774.35
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:33:57.713244+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "fluxos_dpf.emissoes_brl_milhoes"
+    ],
+    "sha256_documento": "cbc82c261f73f4e249ae55ab66301679171178571623545105c713ddaa3e7c0e"
+  }
+}

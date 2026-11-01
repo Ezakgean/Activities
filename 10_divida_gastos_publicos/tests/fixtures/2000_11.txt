@@ -1,0 +1,27 @@
+TABELA 5
+Composição da DPFi em Poder do Público por Tipo de Rentabilidade
+Em R$ bilhões
+Mês Prefixada Taxa Selic Índice de preços Câmbio TR Outros Total
+Fevereiro 47,29 10,35% 258,75 56,64% 25,64 5,61% 98,57 21,57% 25,86 5,66% 0,76 0,17% 456,86 100,00%
+Março 56,68 12,21% 256,92 55,34% 25,79 5,56% 98,16 21,14% 25,96 5,59% 0,73 0,16% 464,25 100,00%
+Abril 64,68 13,68% 253,50 53,60% 26,21 5,54% 101,51 21,46% 26,34 5,57% 0,71 0,15% 472,95 100,00%
+Maio 61,27 12,58% 267,32 54,88% 26,72 5,48% 104,56 21,47% 26,56 5,45% 0,68 0,14% 487,10 100,00%
+Junho 65,44 13,31% 268,90 54,68% 26,72 5,43% 103,65 21,08% 26,44 5,38% 0,66 0,13% 491,81 100,00%
+Julho 68,62 13,86% 269,09 54,34% 27,77 5,61% 102,75 20,75% 26,38 5,33% 0,61 0,12% 495,21 100,00%
+Agosto 72,56 14,69% 262,57 53,15% 28,50 5,77% 104,92 21,24% 24,87 5,03% 0,58 0,12% 494,00 100,00%
+Setembro 77,43 15,40% 264,76 52,67% 28,93 5,76% 106,01 21,09% 24,97 4,97% 0,55 0,11% 502,65 100,00%
+Outubro 79,59 15,70% 263,54 51,98% 29,59 5,84% 109,87 21,67% 24,00 4,73% 0,42 0,08% 507,01 100,00%
+Novembro 74,54 14,70% 264,38 52,15% 29,85 5,89% 113,77 22,44% 24,01 4,74% 0,39 0,08% 506,93 100,00%
+Obs.: Valores apurados com base na posição de carteira avaliada pelo preço da curva de rentabilidade intrínseca dos títulos.
+Aumento no prazo médio do estoque da
+2.2 Prazo médio dívida, em decorrência da colocação das
+LFT de 4 anos.
+O prazo médio do estoque da dívida pública foi de 29,78 meses, o maior do ano. Este incremento
+PRAZO MÉDIO
+decorreu, principalmente, das emissões de LFT de 4 anos, cujo aumento na participação sobre o 40,00
+30,00
+total das emissões compensou a redução no prazo de emissão das NBCE. 20,00
+10,00
+0,00
+Jun Jul Ago Set Out Nov
+EMISSÃO ESTOQUE

@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Maio de 2007",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2007,
+    "mes": 5,
+    "mes_nome": "Maio",
+    "inicio": "2007-05-01",
+    "fim": "2007-05-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2007/5",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27295_1641293/rmd200705.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_maio_2007": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 1299.29,
+    "composicao_percentual": {},
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 52468.57,
+      "resgates_brl_milhoes": 46181.38
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:34:02.666378+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "2f49e3cace41e0b3d4fe771b41c04ef08920f7f49650c4df4dbd043cee431735"
+  }
+}

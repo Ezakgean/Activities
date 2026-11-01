@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Abril de 2002",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2002,
+    "mes": 4,
+    "mes_nome": "Abril",
+    "inicio": "2002-04-01",
+    "fim": "2002-04-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2002/4",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27356_897532/rmd200204.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_abril_2002": {
+    "ofertas_publicas": {
+      "resgates_brl_milhoes": 25279.0,
+      "emissoes_brl_milhoes": 19821.0,
+      "impacto_liquidez_brl_milhoes": 5457.0
+    },
+    "composicao_percentual": {
+      "prefixada": 9.77,
+      "selic": 51.16,
+      "indice_precos": 8.9,
+      "cambio": 27.75,
+      "tr": 2.39,
+      "outros": 0.03
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:34:13.860828+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "ofertas_publicas.resgates_brl_milhoes",
+      "ofertas_publicas.emissoes_brl_milhoes",
+      "ofertas_publicas.impacto_liquidez_brl_milhoes",
+      "composicao_percentual.prefixada",
+      "composicao_percentual.selic",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.cambio",
+      "composicao_percentual.tr",
+      "composicao_percentual.outros"
+    ],
+    "sha256_documento": "992c6534e6ba8faff064805bfe64a8e52fa97ef65513dd2e1c89c6adb07f378e"
+  }
+}

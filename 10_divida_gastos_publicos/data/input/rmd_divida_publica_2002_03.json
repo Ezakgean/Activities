@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Marco de 2002",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2002,
+    "mes": 3,
+    "mes_nome": "Marco",
+    "inicio": "2002-03-01",
+    "fim": "2002-03-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2002/3",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27357_943467/rmd200203.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_marco_2002": {
+    "ofertas_publicas": {
+      "resgates_brl_milhoes": 23229.0,
+      "emissoes_brl_milhoes": 13155.0,
+      "impacto_liquidez_brl_milhoes": 10075.0
+    },
+    "composicao_percentual": {
+      "prefixada": 9.07,
+      "selic": 51.17,
+      "indice_precos": 8.64,
+      "cambio": 28.68,
+      "tr": 2.41,
+      "outros": 0.03
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:34:14.731855+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "ofertas_publicas.resgates_brl_milhoes",
+      "ofertas_publicas.emissoes_brl_milhoes",
+      "ofertas_publicas.impacto_liquidez_brl_milhoes",
+      "composicao_percentual.prefixada",
+      "composicao_percentual.selic",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.cambio",
+      "composicao_percentual.tr",
+      "composicao_percentual.outros"
+    ],
+    "sha256_documento": "86effb46ff605a96ea1fc80d767c1dca6a18a619724912076fab9129caec4ac3"
+  }
+}

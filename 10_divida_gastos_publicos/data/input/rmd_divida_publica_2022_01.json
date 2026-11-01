@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Janeiro de 2022",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2022,
+    "mes": 1,
+    "mes_nome": "Janeiro",
+    "inicio": "2022-01-01",
+    "fim": "2022-01-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2022/1",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/42799_1356202/Texto_RMD_Jan_22_Nova Capa.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_janeiro_2022": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 5616.22
+  },
+  "scraping": {
+    "extraido_em": "2026-09-04T20:28:04.268892+00:00",
+    "metodo": "requests + BeautifulSoup + pdfplumber",
+    "campos_atualizados": [
+      "dpfi_estoque_poder_publico_brl_bilhoes"
+    ],
+    "sha256_documento": "38751389ca15913d1cb0209a0e0e85016d1bf8549c3d5f29b3ddfd7593b67859"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Dezembro de 2014",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2014,
+    "mes": 12,
+    "mes_nome": "Dezembro",
+    "inicio": "2014-12-01",
+    "fim": "2014-12-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2014/12",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27204_909467/rmd201412.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_dezembro_2014": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 2295.9,
+    "composicao_percentual": {
+      "prefixada": 41.58,
+      "indice_precos": 34.91,
+      "taxa_flutuante": 18.66,
+      "cambio": 4.85
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 68206.54,
+      "resgates_brl_milhoes": 6921.65
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:33:43.044918+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "9f29b384192def220fddcc52ef1f404b6d4a3d31d8917f2fb3e353e2ca58b1c1"
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Agosto de 2001",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2001,
+    "mes": 8,
+    "mes_nome": "Agosto",
+    "inicio": "2001-08-01",
+    "fim": "2001-08-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2001/8",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27364_852457/rmd200108.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_agosto_2001": {
+    "ofertas_publicas": {
+      "resgates_brl_milhoes": 26604.0,
+      "emissoes_brl_milhoes": 18967.0,
+      "impacto_liquidez_brl_milhoes": 7637.0
+    },
+    "composicao_percentual": {
+      "prefixada": 9.59,
+      "selic": 51.01,
+      "indice_precos": 6.82,
+      "cambio": 28.83,
+      "tr": 3.73,
+      "outros": 0.03
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:34:16.367606+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "ofertas_publicas.resgates_brl_milhoes",
+      "ofertas_publicas.emissoes_brl_milhoes",
+      "ofertas_publicas.impacto_liquidez_brl_milhoes",
+      "composicao_percentual.prefixada",
+      "composicao_percentual.selic",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.cambio",
+      "composicao_percentual.tr",
+      "composicao_percentual.outros"
+    ],
+    "sha256_documento": "4fc242e33e889f256c68172d6f98ea2804e80ff6938ff765801f3fe5a57ecdc1"
+  }
+}

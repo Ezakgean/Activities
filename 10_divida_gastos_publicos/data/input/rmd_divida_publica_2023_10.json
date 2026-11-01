@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Outubro de 2023",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2023,
+    "mes": 10,
+    "mes_nome": "Outubro",
+    "inicio": "2023-10-01",
+    "fim": "2023-10-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2023/10",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/48366_1622059/Texto_RMD_Out_23.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_outubro_2023": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 6171.99,
+    "composicao_percentual": {
+      "prefixada": 25.98,
+      "indice_precos": 30.65,
+      "taxa_flutuante": 39.19,
+      "cambio": 4.18
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 72707.73,
+      "resgates_brl_milhoes": 27239.02
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:30:06.270946+00:00",
+    "metodo": "requests + BeautifulSoup + pdfplumber",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "84876b47a8ca0af3ffd3c301fadefd89d42c440b18ab8469ceb23db3220fc546"
+  }
+}

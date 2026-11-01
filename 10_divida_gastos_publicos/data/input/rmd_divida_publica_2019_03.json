@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Marco de 2019",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2019,
+    "mes": 3,
+    "mes_nome": "Marco",
+    "inicio": "2019-03-01",
+    "fim": "2019-03-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2019/3",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/29714_936326/Texto_RMD_Mar_19.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_marco_2019": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 3917.95,
+    "composicao_percentual": {
+      "prefixada": 32.01,
+      "indice_precos": 28.01,
+      "taxa_flutuante": 35.86,
+      "cambio": 4.11
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 77679.23,
+      "resgates_brl_milhoes": 68975.27
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:32:33.514183+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "a5dfeceff4c358472bc46f5444bbdd0ef61e1188d7b40e594255fd18d160372d"
+  }
+}

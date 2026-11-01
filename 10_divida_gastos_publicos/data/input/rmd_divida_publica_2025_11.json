@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Novembro de 2025",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2025,
+    "mes": 11,
+    "mes_nome": "Novembro",
+    "inicio": "2025-11-01",
+    "fim": "2025-11-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2025/11",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/53541_1791350/Texto_RMD_Nov_25.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_novembro_2025": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 8480.34,
+    "composicao_percentual": {
+      "prefixada": 22.07,
+      "indice_precos": 26.1,
+      "taxa_flutuante": 48.14,
+      "cambio": 3.7
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 181484.15,
+      "resgates_brl_milhoes": 27777.91
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:29:00.678099+00:00",
+    "metodo": "requests + BeautifulSoup + pdfplumber",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "ef62f072ec3e7f5d5e4deae83d19971549c66a98f38d0d8baa4971b65162be37"
+  }
+}

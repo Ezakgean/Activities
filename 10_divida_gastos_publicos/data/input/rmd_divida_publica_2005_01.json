@@ -1,0 +1,54 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Janeiro de 2005",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2005,
+    "mes": 1,
+    "mes_nome": "Janeiro",
+    "inicio": "2005-01-01",
+    "fim": "2005-01-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2005/1",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27323_873904/rmd200501.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_janeiro_2005": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 826.6,
+    "ofertas_publicas": {
+      "resgates_brl_milhoes": 52927.0,
+      "emissoes_brl_milhoes": 56449.0
+    },
+    "composicao_percentual": {
+      "prefixada": 18.71,
+      "selic": 59.46,
+      "indice_precos": 14.56,
+      "cambio": 4.58,
+      "tr": 2.69,
+      "outros": 0.0
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:34:08.155595+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "ofertas_publicas.resgates_brl_milhoes",
+      "ofertas_publicas.emissoes_brl_milhoes",
+      "composicao_percentual.prefixada",
+      "composicao_percentual.selic",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.cambio",
+      "composicao_percentual.tr",
+      "composicao_percentual.outros"
+    ],
+    "sha256_documento": "af4915d314860a47d5b735b792db3e33bcb4c63f33c63a309b6c8a6923aaa888"
+  }
+}

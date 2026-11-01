@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Julho de 2004",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2004,
+    "mes": 7,
+    "mes_nome": "Julho",
+    "inicio": "2004-07-01",
+    "fim": "2004-07-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2004/7",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27329_871257/rmd200407.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_julho_2004": {
+    "ofertas_publicas": {
+      "resgates_brl_milhoes": 34040.0,
+      "emissoes_brl_milhoes": 27427.0
+    },
+    "composicao_percentual": {
+      "prefixada": 15.13,
+      "selic": 59.57,
+      "indice_precos": 15.12,
+      "cambio": 8.32,
+      "tr": 1.86,
+      "outros": 0.0
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:34:09.008184+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "ofertas_publicas.resgates_brl_milhoes",
+      "ofertas_publicas.emissoes_brl_milhoes",
+      "composicao_percentual.prefixada",
+      "composicao_percentual.selic",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.cambio",
+      "composicao_percentual.tr",
+      "composicao_percentual.outros"
+    ],
+    "sha256_documento": "a7c9dfa13e3d63e23d8787ba8e6f456e5332f62becc97c2593d8749aa43e2966"
+  }
+}

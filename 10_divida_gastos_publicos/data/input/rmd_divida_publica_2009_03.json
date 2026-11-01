@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Marco de 2009",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2009,
+    "mes": 3,
+    "mes_nome": "Marco",
+    "inicio": "2009-03-01",
+    "fim": "2009-03-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2009/3",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27273_929177/rmd200903.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_marco_2009": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 1398.24,
+    "composicao_percentual": {
+      "prefixada": 28.03,
+      "indice_precos": 27.3,
+      "selic": 33.71,
+      "cambio": 9.54,
+      "tr": 1.42
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 34725.83
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:33:56.907557+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.selic",
+      "composicao_percentual.cambio",
+      "composicao_percentual.tr"
+    ],
+    "sha256_documento": "76c0f38d8c05d86915588968cc0bbc7ea400b11ee5c03413e2ab92d30387a51a"
+  }
+}

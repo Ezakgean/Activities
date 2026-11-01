@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Setembro de 2010",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2010,
+    "mes": 9,
+    "mes_nome": "Setembro",
+    "inicio": "2010-09-01",
+    "fim": "2010-09-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2010/9",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27255_1702023/rmd201009.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_setembro_2010": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 1626.17,
+    "composicao_percentual": {
+      "prefixada": 36.07,
+      "indice_precos": 26.53,
+      "selic": 30.91,
+      "cambio": 5.57,
+      "tr": 0.92
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 104757.83,
+      "resgates_brl_milhoes": 108270.67
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:33:54.509925+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.selic",
+      "composicao_percentual.cambio",
+      "composicao_percentual.tr",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "bd732e4c4e08879b9b71230b0361b9fc9d0dc57127839968e8ad8bd09aa7cdbe"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Janeiro de 2018",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2018,
+    "mes": 1,
+    "mes_nome": "Janeiro",
+    "inicio": "2018-01-01",
+    "fim": "2018-01-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2018/1",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27167_880754/rmd201801.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_janeiro_2018": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 3528.31,
+    "composicao_percentual": {
+      "prefixada": 33.8,
+      "indice_precos": 30.17,
+      "taxa_flutuante": 32.43,
+      "cambio": 3.6
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 56813.84,
+      "resgates_brl_milhoes": 109311.59
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:32:50.489731+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "561fb229abbfae12c882e627a19f285bf6797f1572dcb8003151f4552aa83a31"
+  }
+}

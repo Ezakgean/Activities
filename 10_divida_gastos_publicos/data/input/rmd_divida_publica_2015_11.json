@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Novembro de 2015",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2015,
+    "mes": 11,
+    "mes_nome": "Novembro",
+    "inicio": "2015-11-01",
+    "fim": "2015-11-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2015/11",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27193_864727/rmd201511.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_novembro_2015": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 2716.92,
+    "composicao_percentual": {
+      "prefixada": 39.23,
+      "indice_precos": 32.76,
+      "taxa_flutuante": 22.65,
+      "cambio": 5.36
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 54821.74,
+      "resgates_brl_milhoes": 12369.5
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:33:30.449557+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "1889037c5e990b362bffd5f6851a0dc41c9803a250ad93f6de5bba7b407657bc"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Outubro de 2020",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2020,
+    "mes": 10,
+    "mes_nome": "Outubro",
+    "inicio": "2020-10-01",
+    "fim": "2020-10-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2020/10",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/35407_1136308/Texto_RMD_Out_20.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_outubro_2020": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 4638.55,
+    "composicao_percentual": {
+      "prefixada": 32.8,
+      "indice_precos": 25.16,
+      "taxa_flutuante": 36.3,
+      "cambio": 5.74
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 173261.76,
+      "resgates_brl_milhoes": 97306.15
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:32:14.325249+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "4340df882b0b6b915357a1f80d9196bb1672ddf3bf89e11ea7213d664706ef5f"
+  }
+}

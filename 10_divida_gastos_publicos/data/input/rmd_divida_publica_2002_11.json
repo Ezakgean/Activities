@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Novembro de 2002",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2002,
+    "mes": 11,
+    "mes_nome": "Novembro",
+    "inicio": "2002-11-01",
+    "fim": "2002-11-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2002/11",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27349_871991/rmd200211.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_novembro_2002": {
+    "ofertas_publicas": {
+      "resgates_brl_milhoes": 35463.0,
+      "emissoes_brl_milhoes": 34549.0
+    },
+    "composicao_percentual": {
+      "prefixada": 4.41,
+      "selic": 57.67,
+      "indice_precos": 12.26,
+      "cambio": 23.65,
+      "tr": 1.99,
+      "outros": 0.02
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:34:12.971872+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "ofertas_publicas.resgates_brl_milhoes",
+      "ofertas_publicas.emissoes_brl_milhoes",
+      "composicao_percentual.prefixada",
+      "composicao_percentual.selic",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.cambio",
+      "composicao_percentual.tr",
+      "composicao_percentual.outros"
+    ],
+    "sha256_documento": "fd8f6303bbef8296aeffc02fdd219ad42cdbaee755ab67532c97ca8a44088174"
+  }
+}

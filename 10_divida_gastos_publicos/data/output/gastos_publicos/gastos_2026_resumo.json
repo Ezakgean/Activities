@@ -1,0 +1,61 @@
+{
+  "ano": 2026,
+  "coletado_em": "2026-10-22T13:35:10.128676+00:00",
+  "fonte": "https://www.tesourotransparente.gov.br/ckan/dataset/despesas-e-transferencias-totais",
+  "versao_extrator": 2,
+  "arquivo_origem": "despesas_2026.xlsx",
+  "sha256": "986cafb6901e6b8bae15aba245096065b4fcfb36c4afad98c17f8164cafe7199",
+  "unidade": "BRL corrente",
+  "metodologia": "Pagamentos da União em R$ correntes, incluindo restos a pagar pagos, transferências e despesas financeiras da base. Não é o total consolidado de União, estados e municípios. Investimentos são os pagamentos classificados no grupo de natureza de despesa 4; gasto em saúde ou educação não é sinônimo de investimento. Meses não publicados não são zeros.",
+  "recurso": {
+    "resource_group": "",
+    "cache_last_updated": null,
+    "package_id": "8675a0a4-31c5-4593-a24d-fb8e17376eca",
+    "webstore_last_updated": null,
+    "id": "a3e4e64b-3378-4d9c-9ee2-f70e69614e53",
+    "size": "23113153",
+    "state": "active",
+    "hash": "",
+    "description": "Base de dados das despesas de 2026 de acordo com a metodologia do Resultado do Tesouro Nacional e classificação consistente com os limites de gastos previstos na LC nº 200/2023, sob o critério de valores pagos.",
+    "format": "XLSX",
+    "mimetype_inner": null,
+    "url_type": "upload",
+    "mimetype": null,
+    "cache_url": null,
+    "name": "Despesas e Transferências da União - 2026",
+    "created": "2026-02-25T11:39:01.024902",
+    "url": "https://www.tesourotransparente.gov.br/ckan/dataset/8675a0a4-31c5-4593-a24d-fb8e17376eca/resource/a3e4e64b-3378-4d9c-9ee2-f70e69614e53/download/limite-gastos-lc200ago26.xlsx",
+    "webstore_url": null,
+    "last_modified": "2026-09-29T13:22:12.431555",
+    "position": 46,
+    "revision_id": "1712ef8a-dc55-4c2d-a48b-d81a7afdaa36",
+    "resource_type": null
+  },
+  "validacao": {
+    "linhas_fonte": 101117,
+    "linhas_sem_pagamento_informado": 21555,
+    "linhas_com_pagamento": 79562,
+    "aba": "2026",
+    "meses_na_fonte": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "divergencias_componentes": [],
+    "totais_mensais_brl": {
+      "2026-01": "573283182882.04",
+      "2026-02": "311087784856.61",
+      "2026-03": "775079130854.53",
+      "2026-04": "484218768805.41",
+      "2026-05": "401242599023.04",
+      "2026-06": "380413346076.61",
+      "2026-07": "650246696764.32",
+      "2026-08": "654671679289.37"
+    }
+  }
+}

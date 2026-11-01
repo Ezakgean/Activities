@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Dezembro de 2008",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2008,
+    "mes": 12,
+    "mes_nome": "Dezembro",
+    "inicio": "2008-12-01",
+    "fim": "2008-12-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2008/12",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27276_957136/rmd200812.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_dezembro_2008": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 1397.34,
+    "composicao_percentual": {
+      "prefixada": 29.91,
+      "indice_precos": 26.56,
+      "selic": 32.43,
+      "cambio": 9.68,
+      "tr": 1.43
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 41973.08,
+      "resgates_brl_milhoes": 34250.66
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:33:57.362456+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes",
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.selic",
+      "composicao_percentual.cambio",
+      "composicao_percentual.tr"
+    ],
+    "sha256_documento": "d5b723af591d6637fd701a9718156f3a484414699c8f8ddccd96fb3879aa1d00"
+  }
+}

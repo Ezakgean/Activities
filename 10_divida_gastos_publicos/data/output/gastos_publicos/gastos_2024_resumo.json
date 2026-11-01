@@ -1,0 +1,98 @@
+{
+  "ano": 2024,
+  "coletado_em": "2026-09-05T14:50:34.565259+00:00",
+  "fonte": "https://www.tesourotransparente.gov.br/ckan/dataset/despesas-e-transferencias-totais",
+  "versao_extrator": 2,
+  "arquivo_origem": "despesas_2024.xlsx",
+  "sha256": "79147001fa457f8fb7c756d487a0a46654196b246c7a67c7645a8825c7e59c41",
+  "unidade": "BRL corrente",
+  "metodologia": "Pagamentos da União em R$ correntes, incluindo restos a pagar pagos, transferências e despesas financeiras da base. Não é o total consolidado de União, estados e municípios. Investimentos são os pagamentos classificados no grupo de natureza de despesa 4; gasto em saúde ou educação não é sinônimo de investimento. Meses não publicados não são zeros.",
+  "recurso": {
+    "resource_group": "",
+    "cache_last_updated": null,
+    "package_id": "8675a0a4-31c5-4593-a24d-fb8e17376eca",
+    "webstore_last_updated": null,
+    "id": "f0ed603a-a3b2-4ed3-8c22-f62c57e146aa",
+    "size": "29607403",
+    "state": "active",
+    "hash": "",
+    "description": "Base de dados das despesas de 2024 de acordo com a metodologia do Resultado do Tesouro Nacional e classificação consistente com os limites de gastos previstos na LC nº 200/2023, sob o critério de valores pagos.",
+    "format": "XLSX",
+    "mimetype_inner": null,
+    "url_type": "upload",
+    "mimetype": null,
+    "cache_url": null,
+    "name": "Despesas e Transferências da União - 2024",
+    "created": "2024-02-26T22:50:19.571774",
+    "url": "https://www.tesourotransparente.gov.br/ckan/dataset/8675a0a4-31c5-4593-a24d-fb8e17376eca/resource/f0ed603a-a3b2-4ed3-8c22-f62c57e146aa/download/limite-gastos-lc200dez24.xlsx",
+    "webstore_url": null,
+    "last_modified": "2025-12-30T18:37:00.061497",
+    "position": 2,
+    "revision_id": "53dd5c2e-1d8f-4a38-a628-7e651e5b9c79",
+    "resource_type": null
+  },
+  "validacao": {
+    "linhas_fonte": 141526,
+    "linhas_sem_pagamento_informado": 25077,
+    "linhas_com_pagamento": 116449,
+    "aba": "base",
+    "meses_na_fonte": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "divergencias_componentes": [
+      {
+        "linha": 8993,
+        "periodo": "2024-01",
+        "total_publicado_brl": "178114828.66",
+        "soma_componentes_brl": "122459669.83",
+        "diferenca_brl": "55655158.83"
+      },
+      {
+        "linha": 21649,
+        "periodo": "2024-02",
+        "total_publicado_brl": "205753927.42",
+        "soma_componentes_brl": "154223541.90",
+        "diferenca_brl": "51530385.52"
+      },
+      {
+        "linha": 25100,
+        "periodo": "2024-02",
+        "total_publicado_brl": "-2107725208.38",
+        "soma_componentes_brl": "-1983317517.12",
+        "diferenca_brl": "-124407691.26"
+      },
+      {
+        "linha": 72798,
+        "periodo": "2024-06",
+        "total_publicado_brl": "-1232600575.02",
+        "soma_componentes_brl": "-1227583017.29",
+        "diferenca_brl": "-5017557.73"
+      }
+    ],
+    "totais_mensais_brl": {
+      "2024-01": "658170650882.46",
+      "2024-02": "312044114714.87",
+      "2024-03": "441108509953.23",
+      "2024-04": "394260479746.46",
+      "2024-05": "321036298328.24",
+      "2024-06": "274328294152.36",
+      "2024-07": "461220866475.51",
+      "2024-08": "565235116340.08",
+      "2024-09": "500142056989.29",
+      "2024-10": "339002415175.47",
+      "2024-11": "269451263315.87",
+      "2024-12": "304228461164.14"
+    }
+  }
+}

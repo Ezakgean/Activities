@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Agosto de 2004",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2004,
+    "mes": 8,
+    "mes_nome": "Agosto",
+    "inicio": "2004-08-01",
+    "fim": "2004-08-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2004/8",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27328_848913/rmd200408.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_agosto_2004": {
+    "ofertas_publicas": {
+      "resgates_brl_milhoes": 21362.0,
+      "emissoes_brl_milhoes": 18871.0
+    },
+    "composicao_percentual": {
+      "prefixada": 16.66,
+      "selic": 58.49,
+      "indice_precos": 15.36,
+      "cambio": 7.59,
+      "tr": 1.9,
+      "outros": 0.0
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:34:08.931855+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "ofertas_publicas.resgates_brl_milhoes",
+      "ofertas_publicas.emissoes_brl_milhoes",
+      "composicao_percentual.prefixada",
+      "composicao_percentual.selic",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.cambio",
+      "composicao_percentual.tr",
+      "composicao_percentual.outros"
+    ],
+    "sha256_documento": "f78270aebbdac5c50b2826a8085d0167ddd82a8af511e2a2e20df978dd9799d0"
+  }
+}

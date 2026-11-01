@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Dezembro de 2000",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2000,
+    "mes": 12,
+    "mes_nome": "Dezembro",
+    "inicio": "2000-12-01",
+    "fim": "2000-12-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2000/12",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27372_923933/rmd200012.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_dezembro_2000": {
+    "ofertas_publicas": {
+      "resgates_brl_milhoes": 18226.0,
+      "emissoes_brl_milhoes": 16396.0,
+      "impacto_liquidez_brl_milhoes": 1829.0
+    },
+    "composicao_percentual": {
+      "prefixada": 14.93,
+      "selic": 52.14,
+      "indice_precos": 5.92,
+      "cambio": 22.23,
+      "tr": 4.7,
+      "outros": 0.07
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:34:18.128321+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "ofertas_publicas.resgates_brl_milhoes",
+      "ofertas_publicas.emissoes_brl_milhoes",
+      "ofertas_publicas.impacto_liquidez_brl_milhoes",
+      "composicao_percentual.prefixada",
+      "composicao_percentual.selic",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.cambio",
+      "composicao_percentual.tr",
+      "composicao_percentual.outros"
+    ],
+    "sha256_documento": "0b65712014e1c4f3d26cd65923ef03994a63ce818b269cb2a4007617c6012ea8"
+  }
+}

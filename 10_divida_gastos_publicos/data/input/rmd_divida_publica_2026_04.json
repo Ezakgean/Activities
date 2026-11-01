@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Abril de 2026",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2026,
+    "mes": 4,
+    "mes_nome": "Abril",
+    "inicio": "2026-04-01",
+    "fim": "2026-04-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2026/4",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/54749_1721277/Texto_RMD_Abr_26.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_abril_2026": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 8798.26,
+    "composicao_percentual": {
+      "prefixada": 20.85,
+      "indice_precos": 26.76,
+      "taxa_flutuante": 48.59,
+      "cambio": 3.8
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 229960.99,
+      "resgates_brl_milhoes": 146007.21
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:28:43.995155+00:00",
+    "metodo": "requests + BeautifulSoup + pdfplumber",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "aebe9a153eefec978b9985d3004c95e331c0ada9d568f8a47596fbe4844143cf"
+  }
+}

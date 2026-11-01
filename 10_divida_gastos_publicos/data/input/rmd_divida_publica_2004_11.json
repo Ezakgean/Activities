@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Novembro de 2004",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2004,
+    "mes": 11,
+    "mes_nome": "Novembro",
+    "inicio": "2004-11-01",
+    "fim": "2004-11-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2004/11",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27325_1636962/rmd200411.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_novembro_2004": {
+    "ofertas_publicas": {
+      "resgates_brl_milhoes": 32852.0,
+      "emissoes_brl_milhoes": 34292.0
+    },
+    "composicao_percentual": {
+      "prefixada": 18.71,
+      "selic": 58.36,
+      "indice_precos": 15.26,
+      "cambio": 5.8,
+      "tr": 1.86,
+      "outros": 0.0
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:34:08.654116+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "ofertas_publicas.resgates_brl_milhoes",
+      "ofertas_publicas.emissoes_brl_milhoes",
+      "composicao_percentual.prefixada",
+      "composicao_percentual.selic",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.cambio",
+      "composicao_percentual.tr",
+      "composicao_percentual.outros"
+    ],
+    "sha256_documento": "832cde033137aa740736edfcafdf1ad938e2a6a1e944dfa001454c6c41990a3c"
+  }
+}

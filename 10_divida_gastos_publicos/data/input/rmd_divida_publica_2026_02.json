@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Fevereiro de 2026",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2026,
+    "mes": 2,
+    "mes_nome": "Fevereiro",
+    "inicio": "2026-02-01",
+    "fim": "2026-02-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2026/2",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/54190_2460911/Texto_RMD_Fev_26.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_fevereiro_2026": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 8840.75,
+    "composicao_percentual": {
+      "prefixada": 21.33,
+      "indice_precos": 25.85,
+      "taxa_flutuante": 49.1,
+      "cambio": 3.71
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 166803.52,
+      "resgates_brl_milhoes": 41051.72
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:28:43.210101+00:00",
+    "metodo": "requests + BeautifulSoup + pdfplumber",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "3e228f7610c17935f0629407524141bd8e4adc4dec450c2d3aeaf0ea58f48702"
+  }
+}

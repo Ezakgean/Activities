@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Dezembro de 2022",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2022,
+    "mes": 12,
+    "mes_nome": "Dezembro",
+    "inicio": "2022-12-01",
+    "fim": "2022-12-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2022/12",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/46033_1448767/Texto_RMD_Dez_22.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_dezembro_2022": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 5951.43,
+    "composicao_percentual": {
+      "prefixada": 27.01,
+      "indice_precos": 30.26,
+      "taxa_flutuante": 38.25,
+      "cambio": 4.48
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 31792.07,
+      "resgates_brl_milhoes": 5539.4
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:30:34.488919+00:00",
+    "metodo": "requests + BeautifulSoup + pdfplumber",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "29e41d13d4fcc9f92ceaad4b72a2d818c94e084bb65760e05b838ebe137c65f9"
+  }
+}

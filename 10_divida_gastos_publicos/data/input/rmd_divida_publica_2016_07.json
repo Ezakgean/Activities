@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Julho de 2016",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2016,
+    "mes": 7,
+    "mes_nome": "Julho",
+    "inicio": "2016-07-01",
+    "fim": "2016-07-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2016/7",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27185_1632508/rmd201607.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_julho_2016": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 2956.51,
+    "composicao_percentual": {
+      "prefixada": 35.23,
+      "indice_precos": 34.25,
+      "taxa_flutuante": 26.16,
+      "cambio": 4.36
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 68684.49,
+      "resgates_brl_milhoes": 100257.56
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:33:21.224455+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "faef8405089a36e2bc1249db057902fb7e235f19e6b3a4a0d50ae599da350f98"
+  }
+}

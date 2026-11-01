@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Novembro de 2009",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2009,
+    "mes": 11,
+    "mes_nome": "Novembro",
+    "inicio": "2009-11-01",
+    "fim": "2009-11-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2009/11",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27265_1635102/rmd200911.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_novembro_2009": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 1491.84,
+    "composicao_percentual": {
+      "prefixada": 30.96,
+      "indice_precos": 26.28,
+      "selic": 34.83,
+      "cambio": 6.79,
+      "tr": 1.13
+    },
+    "fluxos_dpf": {}
+  },
+  "scraping": {
+    "extraido_em": "2026-09-04T20:04:15.502402+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.selic",
+      "composicao_percentual.cambio",
+      "composicao_percentual.tr"
+    ],
+    "sha256_documento": "21ac45f339276b86173bf43561165c4d339b76c69000f8b504ce76f5d0ab7520"
+  }
+}

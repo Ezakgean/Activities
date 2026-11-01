@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Outubro de 2024",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2024,
+    "mes": 10,
+    "mes_nome": "Outubro",
+    "inicio": "2024-10-01",
+    "fim": "2024-10-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2024/10",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/50862_1663256/Texto_RMD_Out_24.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_outubro_2024": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 7072.93,
+    "composicao_percentual": {
+      "prefixada": 22.19,
+      "indice_precos": 27.31,
+      "taxa_flutuante": 45.91,
+      "cambio": 4.58
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 109798.3,
+      "resgates_brl_milhoes": 68272.42
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:29:32.962036+00:00",
+    "metodo": "requests + BeautifulSoup + pdfplumber",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "11781d1b9d65f4c1280b5d377657a5f41f83f772d3b3f887943eea1ff0b87966"
+  }
+}

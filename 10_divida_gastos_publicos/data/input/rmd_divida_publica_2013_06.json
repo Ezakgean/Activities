@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Junho de 2013",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2013,
+    "mes": 6,
+    "mes_nome": "Junho",
+    "inicio": "2013-06-01",
+    "fim": "2013-06-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2013/6",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27222_930416/rmd201306.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_junho_2013": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 1985.58,
+    "composicao_percentual": {
+      "prefixada": 40.01,
+      "indice_precos": 34.07,
+      "taxa_flutuante": 21.44,
+      "cambio": 4.48
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 61470.32,
+      "resgates_brl_milhoes": 29732.67
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:33:49.506085+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "9caafcb8341d8234a2c51e078cdb6b5b0dc2153da62f7b99df29fa493333ba5b"
+  }
+}

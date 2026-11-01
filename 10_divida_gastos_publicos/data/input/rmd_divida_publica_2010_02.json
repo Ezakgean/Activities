@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Fevereiro de 2010",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2010,
+    "mes": 2,
+    "mes_nome": "Fevereiro",
+    "inicio": "2010-02-01",
+    "fim": "2010-02-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2010/2",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27262_869686/rmd201002.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_fevereiro_2010": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 1494.97,
+    "composicao_percentual": {},
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 39703.24,
+      "resgates_brl_milhoes": 11615.29
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:33:55.635487+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "e38ab2b4625a4867a325c4e6cd2269d28e7b8e656eaad0d8d4beef836563ee3b"
+  }
+}

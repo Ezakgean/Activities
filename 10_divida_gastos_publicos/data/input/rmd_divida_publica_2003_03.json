@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Marco de 2003",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2003,
+    "mes": 3,
+    "mes_nome": "Marco",
+    "inicio": "2003-03-01",
+    "fim": "2003-03-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2003/3",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27345_1699552/rmd200303.doc"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_marco_2003": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 649.7,
+    "ofertas_publicas": {
+      "resgates_brl_milhoes": 25487.0,
+      "emissoes_brl_milhoes": 31545.0
+    },
+    "composicao_percentual": {}
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:34:11.309230+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "ofertas_publicas.resgates_brl_milhoes",
+      "ofertas_publicas.emissoes_brl_milhoes"
+    ],
+    "sha256_documento": "c9ddaea6ea319e85621fb380e6e5787c3a5ad39eafc0046dfa5175c7e8b3deef"
+  }
+}

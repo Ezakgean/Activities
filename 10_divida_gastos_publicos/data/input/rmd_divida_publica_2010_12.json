@@ -1,0 +1,52 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Dezembro de 2010",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2010,
+    "mes": 12,
+    "mes_nome": "Dezembro",
+    "inicio": "2010-12-01",
+    "fim": "2010-12-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2010/12",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27252_920213/rmd201012.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_dezembro_2010": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 1694.04,
+    "composicao_percentual": {
+      "prefixada": 36.63,
+      "indice_precos": 26.64,
+      "selic": 30.8,
+      "cambio": 5.14,
+      "tr": 0.79
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 49835.9,
+      "resgates_brl_milhoes": 38796.71
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:33:54.088531+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.selic",
+      "composicao_percentual.cambio",
+      "composicao_percentual.tr",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "c34d9f7332731db7438fdb3ac2b7210c43b3977f89818d903bc7704cf6d2d9c7"
+  }
+}

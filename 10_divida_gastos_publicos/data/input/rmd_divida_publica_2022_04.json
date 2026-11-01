@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Abril de 2022",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2022,
+    "mes": 4,
+    "mes_nome": "Abril",
+    "inicio": "2022-04-01",
+    "fim": "2022-04-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2022/4",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/43910_2142117/Texto_RMD_Abr_22.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_abril_2022": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 5589.95,
+    "composicao_percentual": {
+      "prefixada": 26.96,
+      "indice_precos": 32.03,
+      "taxa_flutuante": 36.66,
+      "cambio": 4.35
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 88690.78,
+      "resgates_brl_milhoes": 129336.56
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:30:50.480838+00:00",
+    "metodo": "requests + BeautifulSoup + pdfplumber",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "ca8d116e9c0d1421fe28c4764907514037b4fcc1d5e59766e50603f9570b7b53"
+  }
+}

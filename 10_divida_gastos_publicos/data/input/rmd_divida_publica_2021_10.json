@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Outubro de 2021",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2021,
+    "mes": 10,
+    "mes_nome": "Outubro",
+    "inicio": "2021-10-01",
+    "fim": "2021-10-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2021/10",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/42076_1353966/Texto_RMD_Out_21.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_outubro_2021": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 5373.11,
+    "ofertas_publicas": {},
+    "composicao_percentual": {}
+  },
+  "scraping": {
+    "extraido_em": "2026-09-04T20:27:36.172105+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [],
+    "sha256_documento": "d3b16c0a8d6124a35b578f1ba5404850cd85e1384f82ff293c5d688777b890a7"
+  }
+}

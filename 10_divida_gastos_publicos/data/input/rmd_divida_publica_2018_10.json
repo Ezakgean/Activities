@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Outubro de 2018",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2018,
+    "mes": 10,
+    "mes_nome": "Outubro",
+    "inicio": "2018-10-01",
+    "fim": "2018-10-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2018/10",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/28736_940312/Texto_RMD_Out_18.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_outubro_2018": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 3763.04,
+    "composicao_percentual": {
+      "prefixada": 32.51,
+      "indice_precos": 28.31,
+      "taxa_flutuante": 35.27,
+      "cambio": 3.91
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 57007.59,
+      "resgates_brl_milhoes": 90263.05
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:32:38.722730+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "37f4a4f9ffd6c4b8892c34cc24bf7336e848bf61a93e44d49cb84008d7f7c9e8"
+  }
+}

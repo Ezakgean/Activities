@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Novembro de 2013",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2013,
+    "mes": 11,
+    "mes_nome": "Novembro",
+    "inicio": "2013-11-01",
+    "fim": "2013-11-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2013/11",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27217_877157/rmd201311.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_novembro_2013": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 2069.44,
+    "composicao_percentual": {
+      "prefixada": 41.32,
+      "indice_precos": 34.43,
+      "taxa_flutuante": 19.66,
+      "cambio": 4.59
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 37063.05,
+      "resgates_brl_milhoes": 14333.92
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:33:48.467251+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "56247eab202c164eb026d42b82c7d3a40428c10e824380a2c734ba824b2eba5f"
+  }
+}

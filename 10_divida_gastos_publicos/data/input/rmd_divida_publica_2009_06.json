@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Junho de 2009",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2009,
+    "mes": 6,
+    "mes_nome": "Junho",
+    "inicio": "2009-06-01",
+    "fim": "2009-06-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2009/6",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27270_1688361/rmd200906.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_junho_2009": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 1434.6,
+    "ofertas_publicas": {},
+    "composicao_percentual": {}
+  },
+  "scraping": {
+    "extraido_em": "2026-09-04T20:03:13.384594+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [],
+    "sha256_documento": "aae9427d0f229fa2516d904bd5d3d6b82b6f17bccd339537ec7b063c6062e335"
+  }
+}

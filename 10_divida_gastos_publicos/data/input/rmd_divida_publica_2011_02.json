@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Fevereiro de 2011",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2011,
+    "mes": 2,
+    "mes_nome": "Fevereiro",
+    "inicio": "2011-02-01",
+    "fim": "2011-02-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2011/2",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27250_1625771/rmd201102.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_fevereiro_2011": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 1671.78,
+    "composicao_percentual": {
+      "prefixada": 33.63,
+      "indice_precos": 28.05,
+      "taxa_flutuante": 33.33,
+      "cambio": 4.99
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 38979.41,
+      "resgates_brl_milhoes": 12488.1
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:33:54.062319+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "95e870d87ed6de8f0ea40d77ad58f2cb901fb07a8ecd80dc9cc73be59d053c49"
+  }
+}

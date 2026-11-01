@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Junho de 2021",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2021,
+    "mes": 6,
+    "mes_nome": "Junho",
+    "inicio": "2021-06-01",
+    "fim": "2021-06-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2021/6",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/40384_1256077/Texto_RMD_Jun_21.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_junho_2021": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 5329.94,
+    "composicao_percentual": {
+      "prefixada": 33.33,
+      "indice_precos": 27.13,
+      "taxa_flutuante": 35.07,
+      "cambio": 4.46
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 142143.53,
+      "resgates_brl_milhoes": 4014.48
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:31:54.353348+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "16b2798ca5de6202ea5418ae65251fbc86ba4b3629b37a68ba4004729d32cd9f"
+  }
+}

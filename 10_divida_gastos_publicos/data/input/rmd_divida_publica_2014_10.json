@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Outubro de 2014",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2014,
+    "mes": 10,
+    "mes_nome": "Outubro",
+    "inicio": "2014-10-01",
+    "fim": "2014-10-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2014/10",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27206_904015/rmd201410.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_outubro_2014": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 2155.37,
+    "composicao_percentual": {
+      "prefixada": 40.16,
+      "indice_precos": 36.04,
+      "taxa_flutuante": 19.04,
+      "cambio": 4.77
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 35739.29,
+      "resgates_brl_milhoes": 84428.58
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:33:43.921317+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "4624cab5fa42d4fc4717316c9e84a9a902debe1631ef470e77352b7b83554ebd"
+  }
+}

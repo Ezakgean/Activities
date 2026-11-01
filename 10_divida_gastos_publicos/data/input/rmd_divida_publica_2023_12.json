@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Dezembro de 2023",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2023,
+    "mes": 12,
+    "mes_nome": "Dezembro",
+    "inicio": "2023-12-01",
+    "fim": "2023-12-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2023/12",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/48782_1536692/Texto_RMD_Dez_23.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_dezembro_2023": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 6520.33,
+    "composicao_percentual": {
+      "prefixada": 26.53,
+      "indice_precos": 29.76,
+      "taxa_flutuante": 39.66,
+      "cambio": 4.05
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 145160.38,
+      "resgates_brl_milhoes": 3871.82
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:30:02.693012+00:00",
+    "metodo": "requests + BeautifulSoup + pdfplumber",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "c1cdeef0e8325d464f1007e03fa9755ea466b743dbda59f4d57fe7e334a8e052"
+  }
+}

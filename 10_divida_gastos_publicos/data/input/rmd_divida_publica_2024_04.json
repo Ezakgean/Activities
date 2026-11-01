@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Abril de 2024",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2024,
+    "mes": 4,
+    "mes_nome": "Abril",
+    "inicio": "2024-04-01",
+    "fim": "2024-04-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2024/4",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/49713_1624817/Texto_RMD_Abr_24.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_abril_2024": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 6703.95,
+    "composicao_percentual": {
+      "prefixada": 22.68,
+      "indice_precos": 30.04,
+      "taxa_flutuante": 43.11,
+      "cambio": 4.16
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 133819.2,
+      "resgates_brl_milhoes": 130344.67
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:29:48.714003+00:00",
+    "metodo": "requests + BeautifulSoup + pdfplumber",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "04d0cb326ae06dc1bdf0630e410442910f663be7ec8810d0973cd34e80059e58"
+  }
+}

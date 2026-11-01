@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Agosto de 2013",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2013,
+    "mes": 8,
+    "mes_nome": "Agosto",
+    "inicio": "2013-08-01",
+    "fim": "2013-08-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2013/8",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27220_1613708/rmd201308.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_agosto_2013": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 1991.67,
+    "composicao_percentual": {
+      "prefixada": 38.21,
+      "indice_precos": 34.37,
+      "taxa_flutuante": 22.66,
+      "cambio": 4.75
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 40330.2,
+      "resgates_brl_milhoes": 23051.78
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:33:49.181450+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "f9813e65d48b0113152ef11e87b95f7d9e02b5f8a0ed14ecf73980a847cf880d"
+  }
+}

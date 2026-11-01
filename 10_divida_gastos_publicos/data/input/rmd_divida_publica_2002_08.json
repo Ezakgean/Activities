@@ -1,0 +1,55 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Agosto de 2002",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2002,
+    "mes": 8,
+    "mes_nome": "Agosto",
+    "inicio": "2002-08-01",
+    "fim": "2002-08-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2002/8",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27352_861343/rmd200208.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_agosto_2002": {
+    "ofertas_publicas": {
+      "resgates_brl_milhoes": 64769.0,
+      "emissoes_brl_milhoes": 29342.0,
+      "impacto_liquidez_brl_milhoes": 35427.0
+    },
+    "composicao_percentual": {
+      "prefixada": 7.73,
+      "selic": 55.78,
+      "indice_precos": 9.87,
+      "cambio": 24.58,
+      "tr": 1.99,
+      "outros": 0.04
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:34:12.328153+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "ofertas_publicas.resgates_brl_milhoes",
+      "ofertas_publicas.emissoes_brl_milhoes",
+      "ofertas_publicas.impacto_liquidez_brl_milhoes",
+      "composicao_percentual.prefixada",
+      "composicao_percentual.selic",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.cambio",
+      "composicao_percentual.tr",
+      "composicao_percentual.outros"
+    ],
+    "sha256_documento": "4778221358304e3035a40a23a7c204a005f3c7e7441f101ff1ed14c4a76e6c50"
+  }
+}

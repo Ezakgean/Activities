@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Fevereiro de 2014",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2014,
+    "mes": 2,
+    "mes_nome": "Fevereiro",
+    "inicio": "2014-02-01",
+    "fim": "2014-02-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2014/2",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27214_858940/rmd201402.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_fevereiro_2014": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 2067.28,
+    "composicao_percentual": {
+      "prefixada": 39.07,
+      "indice_precos": 35.91,
+      "taxa_flutuante": 20.64,
+      "cambio": 4.38
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 27385.68,
+      "resgates_brl_milhoes": 20916.21
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:33:48.037943+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "1f4babc097b4920705d83577277f44300afb7d8c48026d285c60bb67afc8aa4a"
+  }
+}

@@ -1,0 +1,2485 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Novembro de 2000",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2000,
+    "mes": 11,
+    "mes_nome": "Novembro",
+    "inicio": "2000-11-01",
+    "fim": "2000-11-30"
+  },
+  "publicacao": {
+    "data_publicacao": "2000-12-25",
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "escopo_documento": "Dívida Pública Federal Interna (DPFi) em poder do público, emissões, resgates e operações de mercado aberto/secundário",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2000/11",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27373_870307/rmd200011.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título naquela célula da publicação."
+  },
+  "resumo_novembro_2000": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 506.93,
+    "dpfi_estoque_outubro_2000_brl_bilhoes": 507.01,
+    "dpfi_variacao_mensal_brl_bilhoes_aproximada": -0.08,
+    "prazo_medio_estoque_meses": 29.78,
+    "titulos_vencendo_em_12_meses_brl_bilhoes": 217.97,
+    "titulos_vencendo_em_12_meses_percentual_total": 43.0,
+    "ofertas_publicas": {
+      "resgates_brl_milhoes": 26339,
+      "emissoes_brl_milhoes": 17475,
+      "impacto_liquidez_brl_milhoes": 8864
+    },
+    "emissoes_diretas_brl_milhoes": 464.17,
+    "mercado_secundario_volume_diario_medio_brl_bilhoes": 6.26,
+    "operacoes_compromissadas_sem_bc_volume_diario_medio_brl_bilhoes": 95.5
+  },
+  "resgates_emissoes_ofertas_publicas": {
+    "unidade": "R$ milhões",
+    "semanas": [
+      {
+        "id": 1,
+        "periodo": "01/11/2000 a 03/11/2000"
+      },
+      {
+        "id": 2,
+        "periodo": "06/11/2000 a 10/11/2000"
+      },
+      {
+        "id": 3,
+        "periodo": "13/11/2000 a 17/11/2000"
+      },
+      {
+        "id": 4,
+        "periodo": "20/11/2000 a 24/11/2000"
+      },
+      {
+        "id": 5,
+        "periodo": "27/11/2000 a 30/11/2000"
+      }
+    ],
+    "resgates": {
+      "total": {
+        "semanas": [
+          9008,
+          2771,
+          3868,
+          1291,
+          9402
+        ],
+        "total": 26339
+      },
+      "banco_central": {
+        "total": {
+          "semanas": [
+            0,
+            834,
+            698,
+            0,
+            1075
+          ],
+          "total": 2607
+        },
+        "LBC": {
+          "semanas": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "total": 0
+        },
+        "NBCE": {
+          "semanas": [
+            0,
+            834,
+            698,
+            0,
+            1075
+          ],
+          "total": 2607
+        },
+        "NBCF": {
+          "semanas": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "total": 0
+        }
+      },
+      "tesouro_nacional": {
+        "total": {
+          "semanas": [
+            9008,
+            1937,
+            3170,
+            1291,
+            8327
+          ],
+          "total": 23732
+        },
+        "LFT": {
+          "semanas": [
+            1179,
+            1389,
+            1769,
+            1178,
+            2890
+          ],
+          "total": 8404
+        },
+        "LTN": {
+          "semanas": [
+            5658,
+            0,
+            0,
+            0,
+            5244
+          ],
+          "total": 10902
+        },
+        "LTN_leilao_compra": {
+          "semanas": [
+            0,
+            415,
+            0,
+            0,
+            0
+          ],
+          "total": 415
+        },
+        "NTN_C": {
+          "semanas": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "total": 0
+        },
+        "NTN_D": {
+          "semanas": [
+            1830,
+            0,
+            903,
+            0,
+            0
+          ],
+          "total": 2733
+        },
+        "outros": {
+          "semanas": [
+            341,
+            133,
+            498,
+            113,
+            193
+          ],
+          "total": 1278
+        }
+      }
+    },
+    "emissoes": {
+      "total": {
+        "semanas": [
+          7025,
+          2629,
+          1430,
+          1425,
+          4966
+        ],
+        "total": 17475
+      },
+      "banco_central": {
+        "total": {
+          "semanas": [
+            2424,
+            839,
+            903,
+            0,
+            1082
+          ],
+          "total": 5248
+        },
+        "NBCE": {
+          "semanas": [
+            2424,
+            839,
+            903,
+            0,
+            1082
+          ],
+          "total": 5248
+        }
+      },
+      "tesouro_nacional": {
+        "total": {
+          "semanas": [
+            4601,
+            1790,
+            528,
+            1425,
+            3884
+          ],
+          "total": 12228
+        },
+        "CDP": {
+          "semanas": [
+            0,
+            0,
+            0,
+            14,
+            0
+          ],
+          "total": 14
+        },
+        "LFT": {
+          "semanas": [
+            2577,
+            919,
+            528,
+            529,
+            2122
+          ],
+          "total": 6674
+        },
+        "NTN_C": {
+          "semanas": [
+            275,
+            0,
+            0,
+            0,
+            0
+          ],
+          "total": 275
+        },
+        "LTN_6_meses": {
+          "semanas": [
+            911,
+            455,
+            0,
+            459,
+            918
+          ],
+          "total": 2743
+        },
+        "LTN_12_meses": {
+          "semanas": [
+            838,
+            417,
+            0,
+            423,
+            843
+          ],
+          "total": 2521
+        },
+        "LTN_24_meses": {
+          "semanas": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "total": 0
+        }
+      }
+    },
+    "impacto_liquidez": {
+      "total": {
+        "semanas": [
+          1983,
+          142,
+          2438,
+          -134,
+          4436
+        ],
+        "total": 8864
+      },
+      "banco_central": {
+        "semanas": [
+          -2424,
+          -5,
+          -205,
+          0,
+          -8
+        ],
+        "total": -2641
+      },
+      "tesouro_nacional": {
+        "semanas": [
+          4407,
+          146,
+          2642,
+          -134,
+          4443
+        ],
+        "total": 11505
+      },
+      "nota": "Valores positivos significam aumento na liquidez do sistema."
+    }
+  },
+  "prazo_titulos_ofertados_leilao": {
+    "unidade_percentual": "%",
+    "LTN": {
+      "prazos_meses": [
+        6,
+        12,
+        24
+      ],
+      "serie": [
+        {
+          "mes": "Junho",
+          "6": 88.06,
+          "12": 11.94,
+          "24": 0.0
+        },
+        {
+          "mes": "Julho",
+          "6": 61.89,
+          "12": 38.11,
+          "24": 0.0
+        },
+        {
+          "mes": "Agosto",
+          "6": 52.05,
+          "12": 47.95,
+          "24": 0.0
+        },
+        {
+          "mes": "Setembro",
+          "6": 49.63,
+          "12": 45.88,
+          "24": 4.49
+        },
+        {
+          "mes": "Outubro",
+          "6": 47.44,
+          "12": 52.56,
+          "24": 0.0
+        },
+        {
+          "mes": "Novembro",
+          "6": 52.11,
+          "12": 47.89,
+          "24": 0.0
+        }
+      ]
+    },
+    "LFT": {
+      "prazos_meses": [
+        24,
+        36,
+        48
+      ],
+      "serie": [
+        {
+          "mes": "Junho",
+          "24": 0.0,
+          "36": 100.0,
+          "48": 0.0
+        },
+        {
+          "mes": "Julho",
+          "24": 0.0,
+          "36": 100.0,
+          "48": 0.0
+        },
+        {
+          "mes": "Agosto",
+          "24": 0.0,
+          "36": 100.0,
+          "48": 0.0
+        },
+        {
+          "mes": "Setembro",
+          "24": 0.0,
+          "36": 100.0,
+          "48": 0.0
+        },
+        {
+          "mes": "Outubro",
+          "24": 0.0,
+          "36": 85.67,
+          "48": 14.33
+        },
+        {
+          "mes": "Novembro",
+          "24": 0.0,
+          "36": 0.0,
+          "48": 100.0
+        }
+      ],
+      "nota_junho": "Não considera o leilão da carteira do Banco Central."
+    },
+    "NBCE": {
+      "prazos_meses": [
+        24,
+        36,
+        48,
+        60
+      ],
+      "serie": [
+        {
+          "mes": "Junho",
+          "24": 100.0,
+          "36": 0.0,
+          "48": 0.0,
+          "60": 0.0
+        },
+        {
+          "mes": "Julho",
+          "24": 0.0,
+          "36": 100.0,
+          "48": 0.0,
+          "60": 0.0
+        },
+        {
+          "mes": "Agosto",
+          "24": 0.0,
+          "36": 12.22,
+          "48": 87.78,
+          "60": 0.0
+        },
+        {
+          "mes": "Setembro",
+          "24": 0.0,
+          "36": 0.0,
+          "48": 100.0,
+          "60": 0.0
+        },
+        {
+          "mes": "Outubro",
+          "24": 0.0,
+          "36": 26.27,
+          "48": 17.31,
+          "60": 56.43
+        },
+        {
+          "mes": "Novembro",
+          "24": 100.0,
+          "36": 0.0,
+          "48": 0.0,
+          "60": 0.0
+        }
+      ]
+    }
+  },
+  "emissoes_diretas": {
+    "unidade": "R$ milhões",
+    "registros": [
+      {
+        "titulo": "Créditos Securitizados e Certificados",
+        "emissao": "diversas",
+        "vencimento": "diversos",
+        "valor_financeiro": 79.89
+      },
+      {
+        "titulo": "NTN-A1",
+        "emissao": "2000-11-15",
+        "vencimento": "2013-09-15",
+        "valor_financeiro": 254.53
+      },
+      {
+        "titulo": "NTN-D",
+        "emissao": "2000-11-01",
+        "vencimento": "2001-11-01",
+        "valor_financeiro": 1.21
+      },
+      {
+        "titulo": "NTN-I",
+        "emissao": "2000-10-15",
+        "vencimento": "diversos",
+        "valor_financeiro": 90.37
+      },
+      {
+        "titulo": "TDA",
+        "emissao": "2000-11-01",
+        "vencimento": "diversos",
+        "valor_financeiro": 38.17
+      }
+    ],
+    "total": 464.17,
+    "destaques": [
+      {
+        "descricao": "Créditos Securitizados e Certificados",
+        "valor_brl_milhoes": 79.89,
+        "detalhe": "Inclui R$ 50,00 milhões em CFT-E1 destinados ao FIES."
+      },
+      {
+        "descricao": "NTN-A1 em operação de troca por BIB",
+        "valor_brl_milhoes": 254.53
+      },
+      {
+        "descricao": "NTN-I para equalização de taxas de juros no PROEX",
+        "valor_brl_milhoes": 90.37
+      }
+    ]
+  },
+  "perfil_adquirentes_ofertas_publicas": {
+    "unidade": "%",
+    "colunas": [
+      "NBCE",
+      "NTN-C",
+      "LFT",
+      "LTN_6_meses",
+      "LTN_12_meses",
+      "LTN_total",
+      "TOTAL"
+    ],
+    "registros": [
+      {
+        "categoria": "Banco Comercial Nacional",
+        "NBCE": 40.9,
+        "NTN-C": 17.7,
+        "LFT": 68.4,
+        "LTN_6_meses": 57.1,
+        "LTN_12_meses": 47.9,
+        "LTN_total": 52.7,
+        "TOTAL": 54.6
+      },
+      {
+        "categoria": "Banco Comercial Estrangeiro",
+        "NBCE": 48.8,
+        "NTN-C": 16.6,
+        "LFT": 6.9,
+        "LTN_6_meses": 16.4,
+        "LTN_12_meses": 38.3,
+        "LTN_total": 26.9,
+        "TOTAL": 25.7
+      },
+      {
+        "categoria": "Banco de Investimento Nacional",
+        "NBCE": 1.3,
+        "NTN-C": 0.0,
+        "LFT": 0.5,
+        "LTN_6_meses": 2.2,
+        "LTN_12_meses": 0.0,
+        "LTN_total": 1.1,
+        "TOTAL": 0.9
+      },
+      {
+        "categoria": "Banco de Investimento Estrangeiro",
+        "NBCE": 0.7,
+        "NTN-C": 0.0,
+        "LFT": 0.8,
+        "LTN_6_meses": 16.6,
+        "LTN_12_meses": 6.1,
+        "LTN_total": 11.6,
+        "TOTAL": 4.0
+      },
+      {
+        "categoria": "Corretora/Distribuidora Nacional",
+        "NBCE": 2.8,
+        "NTN-C": 18.1,
+        "LFT": 6.9,
+        "LTN_6_meses": 3.7,
+        "LTN_12_meses": 6.4,
+        "LTN_total": 5.0,
+        "TOTAL": 5.3
+      },
+      {
+        "categoria": "Corretora/Distribuidora Estrangeira",
+        "NBCE": 5.5,
+        "NTN-C": 47.6,
+        "LFT": 16.5,
+        "LTN_6_meses": 4.0,
+        "LTN_12_meses": 1.3,
+        "LTN_total": 2.7,
+        "TOTAL": 9.5
+      },
+      {
+        "categoria": "Subtotal Instituições Nacionais",
+        "NBCE": 45.1,
+        "NTN-C": 35.8,
+        "LFT": 75.8,
+        "LTN_6_meses": 63.0,
+        "LTN_12_meses": 54.3,
+        "LTN_total": 58.8,
+        "TOTAL": 60.8
+      },
+      {
+        "categoria": "Subtotal Instituições Estrangeiras",
+        "NBCE": 54.9,
+        "NTN-C": 64.2,
+        "LFT": 24.2,
+        "LTN_6_meses": 37.0,
+        "LTN_12_meses": 45.7,
+        "LTN_total": 41.2,
+        "TOTAL": 39.2
+      }
+    ],
+    "observacao": "Ofertas públicas de títulos federais registradas no SELIC com liquidação financeira no mês."
+  },
+  "dpfi_composicao_por_modalidade": {
+    "unidade": "R$ bilhões",
+    "serie_historica": [
+      {
+        "mes": "Fevereiro",
+        "tesouro": {
+          "negociaveis_competitivos": [
+            262.97,
+            57.56
+          ],
+          "negociaveis_nao_competitivos": [
+            116.64,
+            25.53
+          ],
+          "inegociaveis": [
+            14.91,
+            3.26
+          ]
+        },
+        "banco_central": {
+          "negociaveis_competitivos": [
+            62.13,
+            13.6
+          ],
+          "negociaveis_nao_competitivos": [
+            0.21,
+            0.05
+          ]
+        },
+        "total": {
+          "negociaveis_competitivos": [
+            325.1,
+            71.16
+          ],
+          "negociaveis_nao_competitivos": [
+            116.85,
+            25.58
+          ],
+          "inegociaveis": [
+            14.91,
+            3.26
+          ],
+          "geral": 456.86
+        }
+      },
+      {
+        "mes": "Março",
+        "tesouro": {
+          "negociaveis_competitivos": [
+            271.95,
+            58.58
+          ],
+          "negociaveis_nao_competitivos": [
+            114.47,
+            24.66
+          ],
+          "inegociaveis": [
+            15.0,
+            3.23
+          ]
+        },
+        "banco_central": {
+          "negociaveis_competitivos": [
+            62.73,
+            13.51
+          ],
+          "negociaveis_nao_competitivos": [
+            0.1,
+            0.02
+          ]
+        },
+        "total": {
+          "negociaveis_competitivos": [
+            334.68,
+            72.09
+          ],
+          "negociaveis_nao_competitivos": [
+            114.57,
+            24.68
+          ],
+          "inegociaveis": [
+            15.0,
+            3.23
+          ],
+          "geral": 464.25
+        }
+      },
+      {
+        "mes": "Abril",
+        "tesouro": {
+          "negociaveis_competitivos": [
+            277.81,
+            58.74
+          ],
+          "negociaveis_nao_competitivos": [
+            113.65,
+            24.03
+          ],
+          "inegociaveis": [
+            15.07,
+            3.19
+          ]
+        },
+        "banco_central": {
+          "negociaveis_competitivos": [
+            66.41,
+            14.04
+          ],
+          "negociaveis_nao_competitivos": [
+            0.02,
+            0.0
+          ]
+        },
+        "total": {
+          "negociaveis_competitivos": [
+            344.21,
+            72.78
+          ],
+          "negociaveis_nao_competitivos": [
+            113.67,
+            24.03
+          ],
+          "inegociaveis": [
+            15.07,
+            3.19
+          ],
+          "geral": 472.95
+        }
+      },
+      {
+        "mes": "Maio",
+        "tesouro": {
+          "negociaveis_competitivos": [
+            276.55,
+            56.77
+          ],
+          "negociaveis_nao_competitivos": [
+            126.71,
+            26.01
+          ],
+          "inegociaveis": [
+            15.44,
+            3.17
+          ]
+        },
+        "banco_central": {
+          "negociaveis_competitivos": [
+            68.39,
+            14.04
+          ],
+          "negociaveis_nao_competitivos": [
+            0.02,
+            0.0
+          ]
+        },
+        "total": {
+          "negociaveis_competitivos": [
+            344.94,
+            70.81
+          ],
+          "negociaveis_nao_competitivos": [
+            126.72,
+            26.02
+          ],
+          "inegociaveis": [
+            15.44,
+            3.17
+          ],
+          "geral": 487.1
+        }
+      },
+      {
+        "mes": "Junho",
+        "tesouro": {
+          "negociaveis_competitivos": [
+            281.11,
+            57.16
+          ],
+          "negociaveis_nao_competitivos": [
+            125.1,
+            25.44
+          ],
+          "inegociaveis": [
+            16.67,
+            3.39
+          ]
+        },
+        "banco_central": {
+          "negociaveis_competitivos": [
+            68.93,
+            14.02
+          ],
+          "negociaveis_nao_competitivos": [
+            0.0,
+            0.0
+          ]
+        },
+        "total": {
+          "negociaveis_competitivos": [
+            350.04,
+            71.17
+          ],
+          "negociaveis_nao_competitivos": [
+            125.1,
+            25.44
+          ],
+          "inegociaveis": [
+            16.67,
+            3.39
+          ],
+          "geral": 491.81
+        }
+      },
+      {
+        "mes": "Julho",
+        "tesouro": {
+          "negociaveis_competitivos": [
+            284.54,
+            57.46
+          ],
+          "negociaveis_nao_competitivos": [
+            123.99,
+            25.04
+          ],
+          "inegociaveis": [
+            16.92,
+            3.42
+          ]
+        },
+        "banco_central": {
+          "negociaveis_competitivos": [
+            69.77,
+            14.09
+          ],
+          "negociaveis_nao_competitivos": [
+            0.0,
+            0.0
+          ]
+        },
+        "total": {
+          "negociaveis_competitivos": [
+            354.31,
+            71.55
+          ],
+          "negociaveis_nao_competitivos": [
+            123.99,
+            25.04
+          ],
+          "inegociaveis": [
+            16.92,
+            3.42
+          ],
+          "geral": 495.21
+        }
+      },
+      {
+        "mes": "Agosto",
+        "tesouro": {
+          "negociaveis_competitivos": [
+            281.51,
+            56.99
+          ],
+          "negociaveis_nao_competitivos": [
+            126.18,
+            25.54
+          ],
+          "inegociaveis": [
+            14.75,
+            2.99
+          ]
+        },
+        "banco_central": {
+          "negociaveis_competitivos": [
+            71.56,
+            14.49
+          ],
+          "negociaveis_nao_competitivos": [
+            0.0,
+            0.0
+          ]
+        },
+        "total": {
+          "negociaveis_competitivos": [
+            353.07,
+            71.47
+          ],
+          "negociaveis_nao_competitivos": [
+            126.18,
+            25.54
+          ],
+          "inegociaveis": [
+            14.75,
+            2.99
+          ],
+          "geral": 494.0
+        }
+      },
+      {
+        "mes": "Setembro",
+        "tesouro": {
+          "negociaveis_competitivos": [
+            288.18,
+            57.33
+          ],
+          "negociaveis_nao_competitivos": [
+            126.38,
+            25.14
+          ],
+          "inegociaveis": [
+            14.8,
+            2.94
+          ]
+        },
+        "banco_central": {
+          "negociaveis_competitivos": [
+            73.29,
+            14.58
+          ],
+          "negociaveis_nao_competitivos": [
+            0.0,
+            0.0
+          ]
+        },
+        "total": {
+          "negociaveis_competitivos": [
+            361.47,
+            71.91
+          ],
+          "negociaveis_nao_competitivos": [
+            126.38,
+            25.14
+          ],
+          "inegociaveis": [
+            14.8,
+            2.94
+          ],
+          "geral": 502.65
+        }
+      },
+      {
+        "mes": "Outubro",
+        "tesouro": {
+          "negociaveis_competitivos": [
+            289.79,
+            57.16
+          ],
+          "negociaveis_nao_competitivos": [
+            125.04,
+            24.66
+          ],
+          "inegociaveis": [
+            14.87,
+            2.93
+          ]
+        },
+        "banco_central": {
+          "negociaveis_competitivos": [
+            77.3,
+            15.25
+          ],
+          "negociaveis_nao_competitivos": [
+            0.0,
+            0.0
+          ]
+        },
+        "total": {
+          "negociaveis_competitivos": [
+            367.09,
+            72.4
+          ],
+          "negociaveis_nao_competitivos": [
+            125.04,
+            24.66
+          ],
+          "inegociaveis": [
+            14.87,
+            2.93
+          ],
+          "geral": 507.01
+        }
+      },
+      {
+        "mes": "Novembro",
+        "tesouro": {
+          "negociaveis_competitivos": [
+            283.78,
+            55.98
+          ],
+          "negociaveis_nao_competitivos": [
+            125.61,
+            24.78
+          ],
+          "inegociaveis": [
+            14.99,
+            2.96
+          ]
+        },
+        "banco_central": {
+          "negociaveis_competitivos": [
+            82.54,
+            16.28
+          ],
+          "negociaveis_nao_competitivos": [
+            0.0,
+            0.0
+          ]
+        },
+        "total": {
+          "negociaveis_competitivos": [
+            366.33,
+            72.26
+          ],
+          "negociaveis_nao_competitivos": [
+            125.61,
+            24.78
+          ],
+          "inegociaveis": [
+            14.99,
+            2.96
+          ],
+          "geral": 506.93
+        }
+      }
+    ],
+    "nota": "Cada par [valor, percentual] representa R$ bilhões e participação no total da DPFi."
+  },
+  "dpfi_composicao_por_rentabilidade": {
+    "unidade_valor": "R$ bilhões",
+    "unidade_percentual": "%",
+    "serie_historica": [
+      {
+        "mes": "Fevereiro",
+        "prefixada": [
+          47.29,
+          10.35
+        ],
+        "selic": [
+          258.75,
+          56.64
+        ],
+        "indice_precos": [
+          25.64,
+          5.61
+        ],
+        "cambio": [
+          98.57,
+          21.57
+        ],
+        "TR": [
+          25.86,
+          5.66
+        ],
+        "outros": [
+          0.76,
+          0.17
+        ],
+        "total": 456.86
+      },
+      {
+        "mes": "Março",
+        "prefixada": [
+          56.68,
+          12.21
+        ],
+        "selic": [
+          256.92,
+          55.34
+        ],
+        "indice_precos": [
+          25.79,
+          5.56
+        ],
+        "cambio": [
+          98.16,
+          21.14
+        ],
+        "TR": [
+          25.96,
+          5.59
+        ],
+        "outros": [
+          0.73,
+          0.16
+        ],
+        "total": 464.25
+      },
+      {
+        "mes": "Abril",
+        "prefixada": [
+          64.68,
+          13.68
+        ],
+        "selic": [
+          253.5,
+          53.6
+        ],
+        "indice_precos": [
+          26.21,
+          5.54
+        ],
+        "cambio": [
+          101.51,
+          21.46
+        ],
+        "TR": [
+          26.34,
+          5.57
+        ],
+        "outros": [
+          0.71,
+          0.15
+        ],
+        "total": 472.95
+      },
+      {
+        "mes": "Maio",
+        "prefixada": [
+          61.27,
+          12.58
+        ],
+        "selic": [
+          267.32,
+          54.88
+        ],
+        "indice_precos": [
+          26.72,
+          5.48
+        ],
+        "cambio": [
+          104.56,
+          21.47
+        ],
+        "TR": [
+          26.56,
+          5.45
+        ],
+        "outros": [
+          0.68,
+          0.14
+        ],
+        "total": 487.1
+      },
+      {
+        "mes": "Junho",
+        "prefixada": [
+          65.44,
+          13.31
+        ],
+        "selic": [
+          268.9,
+          54.68
+        ],
+        "indice_precos": [
+          26.72,
+          5.43
+        ],
+        "cambio": [
+          103.65,
+          21.08
+        ],
+        "TR": [
+          26.44,
+          5.38
+        ],
+        "outros": [
+          0.66,
+          0.13
+        ],
+        "total": 491.81
+      },
+      {
+        "mes": "Julho",
+        "prefixada": [
+          68.62,
+          13.86
+        ],
+        "selic": [
+          269.09,
+          54.34
+        ],
+        "indice_precos": [
+          27.77,
+          5.61
+        ],
+        "cambio": [
+          102.75,
+          20.75
+        ],
+        "TR": [
+          26.38,
+          5.33
+        ],
+        "outros": [
+          0.61,
+          0.12
+        ],
+        "total": 495.21
+      },
+      {
+        "mes": "Agosto",
+        "prefixada": [
+          72.56,
+          14.69
+        ],
+        "selic": [
+          262.57,
+          53.15
+        ],
+        "indice_precos": [
+          28.5,
+          5.77
+        ],
+        "cambio": [
+          104.92,
+          21.24
+        ],
+        "TR": [
+          24.87,
+          5.03
+        ],
+        "outros": [
+          0.58,
+          0.12
+        ],
+        "total": 494.0
+      },
+      {
+        "mes": "Setembro",
+        "prefixada": [
+          77.43,
+          15.4
+        ],
+        "selic": [
+          264.76,
+          52.67
+        ],
+        "indice_precos": [
+          28.93,
+          5.76
+        ],
+        "cambio": [
+          106.01,
+          21.09
+        ],
+        "TR": [
+          24.97,
+          4.97
+        ],
+        "outros": [
+          0.55,
+          0.11
+        ],
+        "total": 502.65
+      },
+      {
+        "mes": "Outubro",
+        "prefixada": [
+          79.59,
+          15.7
+        ],
+        "selic": [
+          263.54,
+          51.98
+        ],
+        "indice_precos": [
+          29.59,
+          5.84
+        ],
+        "cambio": [
+          109.87,
+          21.67
+        ],
+        "TR": [
+          24.0,
+          4.73
+        ],
+        "outros": [
+          0.42,
+          0.08
+        ],
+        "total": 507.01
+      },
+      {
+        "mes": "Novembro",
+        "prefixada": [
+          74.54,
+          14.7
+        ],
+        "selic": [
+          264.38,
+          52.15
+        ],
+        "indice_precos": [
+          29.85,
+          5.89
+        ],
+        "cambio": [
+          113.77,
+          22.44
+        ],
+        "TR": [
+          24.01,
+          4.74
+        ],
+        "outros": [
+          0.39,
+          0.08
+        ],
+        "total": 506.93
+      }
+    ]
+  },
+  "prazo_medio_dpfi_por_modalidade": {
+    "unidade": "meses",
+    "serie_historica": [
+      {
+        "mes": "Fevereiro",
+        "tesouro_competitivos": 8.35,
+        "tesouro_nao_competitivos": 65.89,
+        "tesouro_inegociaveis": 95.19,
+        "bc_competitivos": 13.57,
+        "bc_nao_competitivos": 1.14,
+        "total_competitivos": 9.35,
+        "total_nao_competitivos": 65.77,
+        "total_inegociaveis": 95.19,
+        "total": 26.58
+      },
+      {
+        "mes": "Março",
+        "tesouro_competitivos": 9.74,
+        "tesouro_nao_competitivos": 66.26,
+        "tesouro_inegociaveis": 94.97,
+        "bc_competitivos": 14.11,
+        "bc_nao_competitivos": 0.79,
+        "total_competitivos": 10.56,
+        "total_nao_competitivos": 66.21,
+        "total_inegociaveis": 94.97,
+        "total": 27.02
+      },
+      {
+        "mes": "Abril",
+        "tesouro_competitivos": 10.91,
+        "tesouro_nao_competitivos": 65.98,
+        "tesouro_inegociaveis": 94.56,
+        "bc_competitivos": 14.42,
+        "bc_nao_competitivos": 1.63,
+        "total_competitivos": 11.59,
+        "total_nao_competitivos": 65.97,
+        "total_inegociaveis": 94.56,
+        "total": 27.3
+      },
+      {
+        "mes": "Maio",
+        "tesouro_competitivos": 12.15,
+        "tesouro_nao_competitivos": 65.04,
+        "tesouro_inegociaveis": 93.74,
+        "bc_competitivos": 15.5,
+        "bc_nao_competitivos": 0.53,
+        "total_competitivos": 12.82,
+        "total_nao_competitivos": 65.03,
+        "total_inegociaveis": 93.74,
+        "total": 28.97
+      },
+      {
+        "mes": "Junho",
+        "tesouro_competitivos": 12.71,
+        "tesouro_nao_competitivos": 64.9,
+        "tesouro_inegociaveis": 90.66,
+        "bc_competitivos": 14.96,
+        "bc_nao_competitivos": 0.0,
+        "total_competitivos": 13.15,
+        "total_nao_competitivos": 64.9,
+        "total_inegociaveis": 90.66,
+        "total": 28.94
+      },
+      {
+        "mes": "Julho",
+        "tesouro_competitivos": 12.94,
+        "tesouro_nao_competitivos": 65.15,
+        "tesouro_inegociaveis": 93.62,
+        "bc_competitivos": 14.7,
+        "bc_nao_competitivos": 0.0,
+        "total_competitivos": 13.29,
+        "total_nao_competitivos": 65.15,
+        "total_inegociaveis": 93.62,
+        "total": 29.02
+      },
+      {
+        "mes": "Agosto",
+        "tesouro_competitivos": 13.99,
+        "tesouro_nao_competitivos": 62.4,
+        "tesouro_inegociaveis": 101.55,
+        "bc_competitivos": 16.27,
+        "bc_nao_competitivos": 0.0,
+        "total_competitivos": 14.45,
+        "total_nao_competitivos": 62.4,
+        "total_inegociaveis": 101.55,
+        "total": 29.3
+      },
+      {
+        "mes": "Setembro",
+        "tesouro_competitivos": 13.73,
+        "tesouro_nao_competitivos": 62.41,
+        "tesouro_inegociaveis": 100.65,
+        "bc_competitivos": 17.13,
+        "bc_nao_competitivos": 0.0,
+        "total_competitivos": 14.42,
+        "total_nao_competitivos": 62.41,
+        "total_inegociaveis": 100.65,
+        "total": 29.02
+      },
+      {
+        "mes": "Outubro",
+        "tesouro_competitivos": 14.19,
+        "tesouro_nao_competitivos": 63.22,
+        "tesouro_inegociaveis": 99.83,
+        "bc_competitivos": 17.67,
+        "bc_nao_competitivos": 0.0,
+        "total_competitivos": 14.92,
+        "total_nao_competitivos": 63.22,
+        "total_inegociaveis": 99.83,
+        "total": 29.32
+      },
+      {
+        "mes": "Novembro",
+        "tesouro_competitivos": 15.05,
+        "tesouro_nao_competitivos": 62.9,
+        "tesouro_inegociaveis": 98.65,
+        "bc_competitivos": 17.49,
+        "bc_nao_competitivos": 0.0,
+        "total_competitivos": 15.6,
+        "total_nao_competitivos": 62.9,
+        "total_inegociaveis": 98.65,
+        "total": 29.78
+      }
+    ]
+  },
+  "prazo_medio_dpfi_por_rentabilidade": {
+    "unidade": "meses",
+    "serie_historica": [
+      {
+        "mes": "Fevereiro",
+        "prefixada": 4.37,
+        "selic": 19.39,
+        "indice_precos": 67.65,
+        "cambio": 24.9,
+        "TR": 105.17,
+        "outros": 12.24,
+        "total": 26.58
+      },
+      {
+        "mes": "Março",
+        "prefixada": 5.79,
+        "selic": 20.7,
+        "indice_precos": 61.42,
+        "cambio": 25.06,
+        "TR": 109.52,
+        "outros": 11.76,
+        "total": 27.02
+      },
+      {
+        "mes": "Abril",
+        "prefixada": 6.38,
+        "selic": 21.58,
+        "indice_precos": 60.12,
+        "cambio": 25.22,
+        "TR": 109.6,
+        "outros": 11.34,
+        "total": 27.3
+      },
+      {
+        "mes": "Maio",
+        "prefixada": 5.94,
+        "selic": 24.25,
+        "indice_precos": 60.33,
+        "cambio": 26.39,
+        "TR": 108.56,
+        "outros": 10.78,
+        "total": 28.97
+      },
+      {
+        "mes": "Junho",
+        "prefixada": 5.05,
+        "selic": 25.07,
+        "indice_precos": 60.02,
+        "cambio": 25.83,
+        "TR": 108.66,
+        "outros": 10.31,
+        "total": 28.94
+      },
+      {
+        "mes": "Julho",
+        "prefixada": 4.96,
+        "selic": 25.61,
+        "indice_precos": 60.84,
+        "cambio": 25.54,
+        "TR": 106.77,
+        "outros": 10.17,
+        "total": 29.02
+      },
+      {
+        "mes": "Agosto",
+        "prefixada": 5.53,
+        "selic": 26.79,
+        "indice_precos": 61.44,
+        "cambio": 26.52,
+        "TR": 100.46,
+        "outros": 9.71,
+        "total": 29.3
+      },
+      {
+        "mes": "Setembro",
+        "prefixada": 5.31,
+        "selic": 26.54,
+        "indice_precos": 61.1,
+        "cambio": 27.2,
+        "TR": 99.96,
+        "outros": 9.33,
+        "total": 29.02
+      },
+      {
+        "mes": "Outubro",
+        "prefixada": 5.48,
+        "selic": 27.04,
+        "indice_precos": 59.62,
+        "cambio": 27.8,
+        "TR": 103.36,
+        "outros": 11.04,
+        "total": 29.32
+      },
+      {
+        "mes": "Novembro",
+        "prefixada": 5.56,
+        "selic": 27.51,
+        "indice_precos": 58.94,
+        "cambio": 27.94,
+        "TR": 102.66,
+        "outros": 10.97,
+        "total": 29.78
+      }
+    ]
+  },
+  "prazo_medio_emissoes_ofertas_publicas": {
+    "unidade": "meses",
+    "serie_historica": [
+      {
+        "mes": "Fevereiro",
+        "LTN": 8.23,
+        "LFT": 18.57,
+        "NBCE": 36.76,
+        "NTN-C": 53.91,
+        "total": 17.69
+      },
+      {
+        "mes": "Março",
+        "LTN": 9.2,
+        "LFT": 24.44,
+        "NBCE": 41.93,
+        "NTN-C": 49.93,
+        "total": 19.67
+      },
+      {
+        "mes": "Abril",
+        "LTN": 9.82,
+        "LFT": 36.7,
+        "NBCE": 48.37,
+        "NTN-C": 43.08,
+        "total": 24.98
+      },
+      {
+        "mes": "Maio",
+        "LTN": 9.59,
+        "LFT": 37.14,
+        "NBCE": 26.94,
+        "NTN-C": null,
+        "total": 31.53
+      },
+      {
+        "mes": "Junho",
+        "LTN": 6.98,
+        "LFT": 37.59,
+        "NBCE": 25.84,
+        "NTN-C": null,
+        "total": 29.25
+      },
+      {
+        "mes": "Julho",
+        "LTN": 8.48,
+        "LFT": 37.85,
+        "NBCE": 36.97,
+        "NTN-C": 60.8,
+        "total": 24.78
+      },
+      {
+        "mes": "Agosto",
+        "LTN": 9.4,
+        "LFT": 37.98,
+        "NBCE": 45.25,
+        "NTN-C": 59.83,
+        "total": 24.79
+      },
+      {
+        "mes": "Setembro",
+        "LTN": 10.34,
+        "LFT": 37.5,
+        "NBCE": 47.23,
+        "NTN-C": 58.8,
+        "total": 26.08
+      },
+      {
+        "mes": "Outubro",
+        "LTN": 11.14,
+        "LFT": 39.3,
+        "NBCE": 52.03,
+        "NTN-C": 57.8,
+        "total": 28.53
+      },
+      {
+        "mes": "Novembro",
+        "LTN": 9.67,
+        "LFT": 48.47,
+        "NBCE": 24.83,
+        "NTN-C": 56.77,
+        "total": 29.8
+      }
+    ]
+  },
+  "vencimentos_em_12_meses_por_rentabilidade": {
+    "unidade_valor": "R$ bilhões",
+    "unidade_percentual": "%",
+    "nota_percentual": "Participação em relação ao total dos títulos a vencer com o mesmo tipo de rentabilidade.",
+    "serie_historica": [
+      {
+        "mes": "Fevereiro",
+        "prefixada": [
+          47.29,
+          100.0
+        ],
+        "selic": [
+          138.74,
+          53.62
+        ],
+        "indice_precos": [
+          0.36,
+          1.41
+        ],
+        "cambio": [
+          47.4,
+          48.09
+        ],
+        "TR": [
+          0.97,
+          3.74
+        ],
+        "outros": [
+          0.1,
+          12.7
+        ],
+        "total": [
+          234.85,
+          51.4
+        ]
+      },
+      {
+        "mes": "Março",
+        "prefixada": [
+          51.22,
+          90.37
+        ],
+        "selic": [
+          115.33,
+          44.89
+        ],
+        "indice_precos": [
+          0.36,
+          1.41
+        ],
+        "cambio": [
+          47.41,
+          48.3
+        ],
+        "TR": [
+          0.98,
+          3.76
+        ],
+        "outros": [
+          0.1,
+          13.22
+        ],
+        "total": [
+          215.4,
+          46.4
+        ]
+      },
+      {
+        "mes": "Abril",
+        "prefixada": [
+          62.18,
+          96.13
+        ],
+        "selic": [
+          99.51,
+          39.25
+        ],
+        "indice_precos": [
+          0.46,
+          1.75
+        ],
+        "cambio": [
+          48.99,
+          48.26
+        ],
+        "TR": [
+          0.99,
+          3.75
+        ],
+        "outros": [
+          0.1,
+          13.79
+        ],
+        "total": [
+          212.22,
+          44.87
+        ]
+      },
+      {
+        "mes": "Maio",
+        "prefixada": [
+          61.27,
+          100.0
+        ],
+        "selic": [
+          104.26,
+          39.0
+        ],
+        "indice_precos": [
+          0.43,
+          1.62
+        ],
+        "cambio": [
+          45.33,
+          43.35
+        ],
+        "TR": [
+          1.0,
+          3.75
+        ],
+        "outros": [
+          0.48,
+          70.81
+        ],
+        "total": [
+          212.77,
+          43.68
+        ]
+      },
+      {
+        "mes": "Junho",
+        "prefixada": [
+          65.44,
+          100.0
+        ],
+        "selic": [
+          108.36,
+          40.3
+        ],
+        "indice_precos": [
+          1.59,
+          5.95
+        ],
+        "cambio": [
+          48.11,
+          46.41
+        ],
+        "TR": [
+          1.01,
+          3.82
+        ],
+        "outros": [
+          0.46,
+          69.37
+        ],
+        "total": [
+          224.95,
+          45.74
+        ]
+      },
+      {
+        "mes": "Julho",
+        "prefixada": [
+          66.08,
+          96.3
+        ],
+        "selic": [
+          120.07,
+          44.62
+        ],
+        "indice_precos": [
+          1.61,
+          5.8
+        ],
+        "cambio": [
+          48.6,
+          47.3
+        ],
+        "TR": [
+          1.02,
+          3.86
+        ],
+        "outros": [
+          0.43,
+          69.95
+        ],
+        "total": [
+          237.81,
+          48.02
+        ]
+      },
+      {
+        "mes": "Agosto",
+        "prefixada": [
+          69.61,
+          95.93
+        ],
+        "selic": [
+          112.99,
+          43.03
+        ],
+        "indice_precos": [
+          1.66,
+          5.81
+        ],
+        "cambio": [
+          48.69,
+          46.41
+        ],
+        "TR": [
+          1.03,
+          4.14
+        ],
+        "outros": [
+          0.4,
+          68.31
+        ],
+        "total": [
+          234.36,
+          47.44
+        ]
+      },
+      {
+        "mes": "Setembro",
+        "prefixada": [
+          70.22,
+          90.69
+        ],
+        "selic": [
+          114.91,
+          43.4
+        ],
+        "indice_precos": [
+          1.67,
+          5.78
+        ],
+        "cambio": [
+          49.03,
+          46.25
+        ],
+        "TR": [
+          1.04,
+          4.16
+        ],
+        "outros": [
+          0.37,
+          66.38
+        ],
+        "total": [
+          237.24,
+          47.2
+        ]
+      },
+      {
+        "mes": "Outubro",
+        "prefixada": [
+          74.15,
+          93.17
+        ],
+        "selic": [
+          106.06,
+          40.25
+        ],
+        "indice_precos": [
+          1.68,
+          5.66
+        ],
+        "cambio": [
+          49.87,
+          45.39
+        ],
+        "TR": [
+          0.76,
+          3.17
+        ],
+        "outros": [
+          0.3,
+          71.82
+        ],
+        "total": [
+          232.82,
+          45.92
+        ]
+      },
+      {
+        "mes": "Novembro",
+        "prefixada": [
+          66.5,
+          89.21
+        ],
+        "selic": [
+          99.2,
+          37.52
+        ],
+        "indice_precos": [
+          1.52,
+          5.09
+        ],
+        "cambio": [
+          49.72,
+          43.7
+        ],
+        "TR": [
+          0.77,
+          3.2
+        ],
+        "outros": [
+          0.27,
+          69.25
+        ],
+        "total": [
+          217.97,
+          43.0
+        ]
+      }
+    ]
+  },
+  "mercado_aberto_banco_central": {
+    "operacoes_doadoras_recursos": {
+      "quantidade_atuacoes": 2,
+      "taxa_media_anual_percentual": 16.6,
+      "prazo_dias_uteis": 3,
+      "operacoes": [
+        {
+          "data": "2000-11-07",
+          "volume_brl_bilhoes": 0.9
+        },
+        {
+          "data": "2000-11-14",
+          "volume_brl_bilhoes": 0.7
+        }
+      ]
+    },
+    "venda_compromissada_LTN_livre_movimentacao": {
+      "prazo_dias_uteis": 63,
+      "volume_total_brl_bilhoes": 2.3
+    }
+  },
+  "mercado_secundario_volume_negociado_por_titulo": {
+    "unidade_volume": "R$ bilhões - média diária no mês",
+    "unidade_percentual": "%",
+    "serie_historica": [
+      {
+        "mes": "Janeiro",
+        "LFT_grupo": [
+          2.22,
+          40.6,
+          null
+        ],
+        "LTN": [
+          1.67,
+          30.5,
+          null
+        ],
+        "NBCE_grupo": [
+          0.78,
+          14.4,
+          null
+        ],
+        "outros": [
+          0.79,
+          14.5,
+          null
+        ],
+        "total": [
+          5.46,
+          100.0,
+          null
+        ]
+      },
+      {
+        "mes": "Fevereiro",
+        "LFT_grupo": [
+          2.42,
+          31.0,
+          9.2
+        ],
+        "LTN": [
+          3.64,
+          46.6,
+          118.1
+        ],
+        "NBCE_grupo": [
+          1.15,
+          14.7,
+          46.2
+        ],
+        "outros": [
+          0.6,
+          7.7,
+          -23.7
+        ],
+        "total": [
+          7.81,
+          100.0,
+          43.3
+        ]
+      },
+      {
+        "mes": "Março",
+        "LFT_grupo": [
+          3.95,
+          40.1,
+          63.2
+        ],
+        "LTN": [
+          4.44,
+          45.0,
+          22.0
+        ],
+        "NBCE_grupo": [
+          1.0,
+          10.1,
+          -12.8
+        ],
+        "outros": [
+          0.47,
+          4.8,
+          -21.4
+        ],
+        "total": [
+          9.86,
+          100.0,
+          26.3
+        ]
+      },
+      {
+        "mes": "Abril",
+        "LFT_grupo": [
+          4.58,
+          52.4,
+          15.8
+        ],
+        "LTN": [
+          3.25,
+          37.3,
+          -26.6
+        ],
+        "NBCE_grupo": [
+          0.64,
+          7.3,
+          -36.1
+        ],
+        "outros": [
+          0.27,
+          3.0,
+          -43.9
+        ],
+        "total": [
+          8.74,
+          100.0,
+          -11.4
+        ]
+      },
+      {
+        "mes": "Maio",
+        "LFT_grupo": [
+          6.53,
+          61.2,
+          42.7
+        ],
+        "LTN": [
+          2.95,
+          27.6,
+          -9.3
+        ],
+        "NBCE_grupo": [
+          0.92,
+          8.6,
+          43.3
+        ],
+        "outros": [
+          0.28,
+          2.6,
+          4.7
+        ],
+        "total": [
+          10.67,
+          100.0,
+          22.2
+        ]
+      },
+      {
+        "mes": "Junho",
+        "LFT_grupo": [
+          8.86,
+          61.9,
+          35.7
+        ],
+        "LTN": [
+          4.23,
+          29.5,
+          43.2
+        ],
+        "NBCE_grupo": [
+          1.11,
+          7.8,
+          21.1
+        ],
+        "outros": [
+          0.12,
+          0.8,
+          -58.2
+        ],
+        "total": [
+          14.31,
+          100.0,
+          34.1
+        ]
+      },
+      {
+        "mes": "Julho",
+        "LFT_grupo": [
+          2.72,
+          34.2,
+          -69.3
+        ],
+        "LTN": [
+          4.18,
+          52.5,
+          -1.1
+        ],
+        "NBCE_grupo": [
+          1.01,
+          12.7,
+          -8.8
+        ],
+        "outros": [
+          0.05,
+          0.6,
+          -57.8
+        ],
+        "total": [
+          7.96,
+          100.0,
+          -44.4
+        ]
+      },
+      {
+        "mes": "Agosto",
+        "LFT_grupo": [
+          3.57,
+          43.0,
+          31.3
+        ],
+        "LTN": [
+          3.76,
+          45.3,
+          -10.1
+        ],
+        "NBCE_grupo": [
+          0.93,
+          11.2,
+          -8.5
+        ],
+        "outros": [
+          0.05,
+          0.5,
+          -7.4
+        ],
+        "total": [
+          8.3,
+          100.0,
+          4.3
+        ]
+      },
+      {
+        "mes": "Setembro",
+        "LFT_grupo": [
+          2.54,
+          39.3,
+          -29.0
+        ],
+        "LTN": [
+          2.94,
+          45.5,
+          -21.6
+        ],
+        "NBCE_grupo": [
+          0.91,
+          14.1,
+          -1.2
+        ],
+        "outros": [
+          0.07,
+          1.0,
+          46.9
+        ],
+        "total": [
+          6.46,
+          100.0,
+          -22.1
+        ]
+      },
+      {
+        "mes": "Outubro",
+        "LFT_grupo": [
+          2.27,
+          33.0,
+          -10.6
+        ],
+        "LTN": [
+          3.6,
+          52.4,
+          22.2
+        ],
+        "NBCE_grupo": [
+          0.95,
+          13.8,
+          3.5
+        ],
+        "outros": [
+          0.05,
+          0.8,
+          -19.5
+        ],
+        "total": [
+          6.87,
+          100.0,
+          6.2
+        ]
+      },
+      {
+        "mes": "Novembro",
+        "LFT_grupo": [
+          2.63,
+          42.1,
+          16.0
+        ],
+        "LTN": [
+          2.68,
+          42.8,
+          -25.5
+        ],
+        "NBCE_grupo": [
+          0.87,
+          13.9,
+          -7.8
+        ],
+        "outros": [
+          0.07,
+          1.2,
+          35.1
+        ],
+        "total": [
+          6.26,
+          100.0,
+          -8.9
+        ]
+      }
+    ],
+    "nota_arrays": "[volume, participação percentual, variação percentual contra o mês anterior]"
+  },
+  "vencimentos_mais_negociados_mercado_secundario": {
+    "unidade_volume": "R$ milhões - média diária",
+    "unidade_operacoes": "quantidade média diária",
+    "prefixada": [
+      {
+        "titulo": "LTN",
+        "vencimento": "2001-06-06",
+        "volume_financeiro": 1395.7,
+        "qtd_operacoes": 104.5
+      },
+      {
+        "titulo": "LTN",
+        "vencimento": "2001-12-05",
+        "volume_financeiro": 500.7,
+        "qtd_operacoes": 34.5
+      },
+      {
+        "titulo": "LTN",
+        "vencimento": "2001-05-02",
+        "volume_financeiro": 192.1,
+        "qtd_operacoes": 14.6
+      },
+      {
+        "titulo": "LTN",
+        "vencimento": "2001-02-28",
+        "volume_financeiro": 191.2,
+        "qtd_operacoes": 15.8
+      },
+      {
+        "titulo": "LTN",
+        "vencimento": "2001-08-01",
+        "volume_financeiro": 159.0,
+        "qtd_operacoes": 14.8
+      }
+    ],
+    "selic": [
+      {
+        "titulo": "LFT",
+        "vencimento": "2004-10-20",
+        "volume_financeiro": 303.9,
+        "qtd_operacoes": 16.9
+      },
+      {
+        "titulo": "LFT",
+        "vencimento": "2000-11-29",
+        "volume_financeiro": 115.5,
+        "qtd_operacoes": 43.3
+      },
+      {
+        "titulo": "LFT",
+        "vencimento": "2004-12-15",
+        "volume_financeiro": 103.1,
+        "qtd_operacoes": 4.5
+      },
+      {
+        "titulo": "LFT",
+        "vencimento": "2000-12-13",
+        "volume_financeiro": 100.5,
+        "qtd_operacoes": 29.5
+      },
+      {
+        "titulo": "LFT",
+        "vencimento": "2001-06-27",
+        "volume_financeiro": 98.1,
+        "qtd_operacoes": 13.6
+      }
+    ],
+    "indice_precos": [
+      {
+        "titulo": "NTN-C",
+        "vencimento": "2005-07-01",
+        "volume_financeiro": 58.0,
+        "qtd_operacoes": 7.3
+      },
+      {
+        "titulo": "NTN-C",
+        "vencimento": "2002-12-01",
+        "volume_financeiro": 4.5,
+        "qtd_operacoes": 2.2
+      },
+      {
+        "titulo": "NTN-C",
+        "vencimento": "2006-12-01",
+        "volume_financeiro": 0.1,
+        "qtd_operacoes": 0.1
+      }
+    ],
+    "cambio": [
+      {
+        "titulo": "NBCE",
+        "vencimento": "2002-11-14",
+        "volume_financeiro": 118.7,
+        "qtd_operacoes": 5.5
+      },
+      {
+        "titulo": "NBCE",
+        "vencimento": "2004-03-18",
+        "volume_financeiro": 80.7,
+        "qtd_operacoes": 3.4
+      },
+      {
+        "titulo": "NBCE",
+        "vencimento": "2002-12-12",
+        "volume_financeiro": 66.5,
+        "qtd_operacoes": 2.5
+      },
+      {
+        "titulo": "NBCE",
+        "vencimento": "2002-05-16",
+        "volume_financeiro": 52.0,
+        "qtd_operacoes": 2.7
+      },
+      {
+        "titulo": "NBCE",
+        "vencimento": "2002-06-13",
+        "volume_financeiro": 49.2,
+        "qtd_operacoes": 1.2
+      }
+    ]
+  },
+  "mercado_a_termo": {
+    "unidade_volume": "R$ milhões - total no mês",
+    "registros": [
+      {
+        "titulo": "LTN",
+        "vencimento": "2001-06-06",
+        "volume_financeiro": 2784.7,
+        "participacao_percentual": 51.33,
+        "qtd_operacoes": 203
+      },
+      {
+        "titulo": "LTN",
+        "vencimento": "2001-12-05",
+        "volume_financeiro": 2296.0,
+        "participacao_percentual": 42.32,
+        "qtd_operacoes": 165
+      },
+      {
+        "titulo": "LTN",
+        "vencimento": "2001-08-01",
+        "volume_financeiro": 210.4,
+        "participacao_percentual": 3.88,
+        "qtd_operacoes": 7
+      },
+      {
+        "titulo": "NBCE",
+        "vencimento": "2002-12-12",
+        "volume_financeiro": 95.3,
+        "participacao_percentual": 1.76,
+        "qtd_operacoes": 2
+      },
+      {
+        "titulo": "LTN",
+        "vencimento": "2001-02-28",
+        "volume_financeiro": 38.5,
+        "participacao_percentual": 0.71,
+        "qtd_operacoes": 3
+      }
+    ],
+    "total": {
+      "volume_financeiro": 5424.8,
+      "participacao_percentual": 100.0,
+      "qtd_operacoes": 380
+    }
+  },
+  "operacoes_compromissadas": {
+    "volume_diario_medio_sem_banco_central_brl_bilhoes": {
+      "outubro_2000": 86.6,
+      "novembro_2000": 95.5
+    },
+    "livre_movimentacao_volume_diario_medio_brl_milhoes": {
+      "outubro_2000": 15,
+      "novembro_2000": 30
+    }
+  },
+  "notas_metodologicas": [
+    "Valores de estoque da DPFi foram apurados com base na posição de carteira avaliada pelo preço da curva de rentabilidade intrínseca dos títulos.",
+    "Na Tabela 1, 'Outros' em resgates do Tesouro Nacional inclui DPMFi não competitiva e créditos securitizados, inclusive utilizados na liquidação de NTN-C.",
+    "Na Tabela 1, emissão corresponde ao valor financeiro arrecadado.",
+    "No mercado secundário, foram consideradas operações definitivas registradas no SELIC conforme a publicação."
+  ]
+}

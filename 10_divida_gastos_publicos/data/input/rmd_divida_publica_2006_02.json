@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Fevereiro de 2006",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2006,
+    "mes": 2,
+    "mes_nome": "Fevereiro",
+    "inicio": "2006-02-01",
+    "fim": "2006-02-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2006/2",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27310_1627631/rmd200602.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_fevereiro_2006": {
+    "ofertas_publicas": {
+      "resgates_brl_milhoes": 40.0
+    },
+    "composicao_percentual": {
+      "prefixada": 27.88,
+      "selic": 47.2,
+      "indice_precos": 20.46,
+      "cambio": 2.39,
+      "tr": 2.07,
+      "outros": 0.0
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:34:07.306795+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "ofertas_publicas.resgates_brl_milhoes",
+      "composicao_percentual.prefixada",
+      "composicao_percentual.selic",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.cambio",
+      "composicao_percentual.tr",
+      "composicao_percentual.outros"
+    ],
+    "sha256_documento": "4cda2662223e67b5061ed3273ce6cf92263cde3f618a8574c5fdcc26824d1381"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Julho de 2009",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2009,
+    "mes": 7,
+    "mes_nome": "Julho",
+    "inicio": "2009-07-01",
+    "fim": "2009-07-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2009/7",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27269_869397/rmd200907.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_julho_2009": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 1457.09,
+    "composicao_percentual": {},
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 63735.2,
+      "resgates_brl_milhoes": 49631.98
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:33:56.492688+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "c2aeace1b7bb00ea6055343d386e0e1c4f46ea0ffbe0bf21005e742ea796ccdb"
+  }
+}

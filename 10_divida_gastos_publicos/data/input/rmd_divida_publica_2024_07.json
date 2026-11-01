@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Julho de 2024",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2024,
+    "mes": 7,
+    "mes_nome": "Julho",
+    "inicio": "2024-07-01",
+    "fim": "2024-07-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2024/7",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/50320_2329808/Texto_RMD_Jul_24.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_julho_2024": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 7139.68,
+    "composicao_percentual": {
+      "prefixada": 21.33,
+      "indice_precos": 29.28,
+      "taxa_flutuante": 44.95,
+      "cambio": 4.44
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 139597.79,
+      "resgates_brl_milhoes": 131943.2
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:29:40.683914+00:00",
+    "metodo": "requests + BeautifulSoup + pdfplumber",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "c5ca8e928ffc206993ee609b5cf7c66eb31d33569b1eed2138dd6b458cbbc34c"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Junho de 2008",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2008,
+    "mes": 6,
+    "mes_nome": "Junho",
+    "inicio": "2008-06-01",
+    "fim": "2008-06-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2008/6",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27282_932276/rmd200806.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_junho_2008": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 1343.4,
+    "ofertas_publicas": {},
+    "composicao_percentual": {}
+  },
+  "scraping": {
+    "extraido_em": "2026-09-04T20:00:50.326157+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [],
+    "sha256_documento": "38437f6abd89d7dc1b22abeaf5daf804564d55376293f9f9f59adb0fddb949ee"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Junho de 2005",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2005,
+    "mes": 6,
+    "mes_nome": "Junho",
+    "inicio": "2005-06-01",
+    "fim": "2005-06-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2005/6",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27318_921706/rmd200506.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_junho_2005": {
+    "ofertas_publicas": {
+      "resgates_brl_milhoes": 25449.0,
+      "emissoes_brl_milhoes": 29747.0
+    },
+    "composicao_percentual": {
+      "prefixada": 22.95,
+      "selic": 57.13,
+      "indice_precos": 13.88,
+      "cambio": 3.55,
+      "tr": 2.49,
+      "outros": 0.0
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:34:07.579406+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "ofertas_publicas.resgates_brl_milhoes",
+      "ofertas_publicas.emissoes_brl_milhoes",
+      "composicao_percentual.prefixada",
+      "composicao_percentual.selic",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.cambio",
+      "composicao_percentual.tr",
+      "composicao_percentual.outros"
+    ],
+    "sha256_documento": "f86966010485cb4c0864d93339f9692afffeadc6f472a7b936cfd2e16e61ad51"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Agosto de 2025",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2025,
+    "mes": 8,
+    "mes_nome": "Agosto",
+    "inicio": "2025-08-01",
+    "fim": "2025-08-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2025/8",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/52999_1672402/Texto_RMD_Ago_25.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_agosto_2025": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 8144.99,
+    "composicao_percentual": {
+      "prefixada": 20.95,
+      "indice_precos": 26.1,
+      "taxa_flutuante": 49.29,
+      "cambio": 3.67
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 175692.23,
+      "resgates_brl_milhoes": 39052.78
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:28:59.802851+00:00",
+    "metodo": "requests + BeautifulSoup + pdfplumber",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "4cd55a3c414592c9d604dd4d4a48d6df9286517618ca47314eee6cf139d3827c"
+  }
+}

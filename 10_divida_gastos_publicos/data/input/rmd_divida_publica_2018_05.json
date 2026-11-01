@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Maio de 2018",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2018,
+    "mes": 5,
+    "mes_nome": "Maio",
+    "inicio": "2018-05-01",
+    "fim": "2018-05-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2018/5",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27163_869058/rmd201805.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_maio_2018": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 3716.71,
+    "composicao_percentual": {
+      "prefixada": 34.67,
+      "indice_precos": 29.32,
+      "taxa_flutuante": 32.0,
+      "cambio": 4.01
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 35335.56,
+      "resgates_brl_milhoes": 15487.49
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:32:44.555336+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "835f7011aad23884c8b7d89d79065a76ef09701df5b1681dbacfec793c0e86fa"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Agosto de 2016",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2016,
+    "mes": 8,
+    "mes_nome": "Agosto",
+    "inicio": "2016-08-01",
+    "fim": "2016-08-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2016/8",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27184_846877/rmd201608.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_agosto_2016": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 2955.19,
+    "composicao_percentual": {
+      "prefixada": 36.85,
+      "indice_precos": 31.82,
+      "taxa_flutuante": 26.94,
+      "cambio": 4.39
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 66380.0,
+      "resgates_brl_milhoes": 99552.36
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:33:25.721532+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "01be8ccecbfccd7051dc7ed843172f4a48b17f7c222d45b8e42f862ec1c9319c"
+  }
+}

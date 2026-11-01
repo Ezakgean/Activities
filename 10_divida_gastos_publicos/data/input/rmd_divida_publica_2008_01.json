@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Janeiro de 2008",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2008,
+    "mes": 1,
+    "mes_nome": "Janeiro",
+    "inicio": "2008-01-01",
+    "fim": "2008-01-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2008/1",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27287_884474/rmd200801.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_janeiro_2008": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 1311.34,
+    "composicao_percentual": {},
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 28661.55,
+      "resgates_brl_milhoes": 64871.7
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:34:00.932856+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "c12111a744f51b3d6adcb4d17dae99b30dd33264847b9aa0cc367abdf5010129"
+  }
+}

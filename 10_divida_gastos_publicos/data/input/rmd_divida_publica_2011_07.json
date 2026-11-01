@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Julho de 2011",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2011,
+    "mes": 7,
+    "mes_nome": "Julho",
+    "inicio": "2011-07-01",
+    "fim": "2011-07-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2011/7",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27245_1634368/rmd201107.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_julho_2011": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 1734.45,
+    "composicao_percentual": {
+      "prefixada": 34.49,
+      "indice_precos": 28.77,
+      "taxa_flutuante": 32.61,
+      "cambio": 4.13
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 41908.56,
+      "resgates_brl_milhoes": 127985.58
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:33:53.083308+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "205366f24bfd1f99ef0904efd023d28df32da18d57241b8c4748a7cef273ea8a"
+  }
+}

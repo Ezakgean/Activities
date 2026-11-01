@@ -10,7 +10,7 @@ Repositório com atividades e projetos pessoais em tecnologia, dados e economia.
 
 ### Organização
 - Os projetos ficam na raiz, com prefixo numérico para manter a ordem.
-- `01_` e `02_` têm `requirements.txt` próprios.
+- `01_`, `02_` e `10_` têm `requirements.txt` próprios.
 - `03_`, `04_`, `05_`, `07_` e `09_` compartilham o `requirements.txt` da raiz.
 
 ### Projetos
@@ -21,6 +21,8 @@ Repositório com atividades e projetos pessoais em tecnologia, dados e economia.
 - `05_salario_x_escolaridade`: análise salarial por escolaridade com regressões por estado, dashboard executivo e relatório em PDF.
 - `07_mineracao_emocao`: classificação de emoções em frases em português, com dashboard, matriz de confusão, tabelas e PDF.
 - `09_bf_trab_informal`: extração de séries do Excel, correlações, gráficos de co-movimento e modelos econométricos sobre informalidade e Bolsa Família.
+
+- `10_divida_gastos_publicos`: coleta e análise da dívida pública (RMD) e dos gastos da União por categoria, com séries históricas e painéis gráficos.
 
 ### Instalação das dependências compartilhadas
 ```bash
@@ -42,6 +44,8 @@ Observações:
 - `07_mineracao_emocao`: `cd 07_mineracao_emocao && python3 -m app`
 - `09_bf_trab_informal`: `cd 09_bf_trab_informal && python3 bf_trab_informal.py`
 
+- `10_divida_gastos_publicos`: `cd 10_divida_gastos_publicos && python3 divida_publica.py`
+
 ### Estrutura do repositório
 - `src/`: ativos compartilhados do repositório, como a logo usada na interface.
 - `requirements.txt`: dependências comuns dos módulos `03_`, `04_`, `05_`, `07_` e `09_`.
@@ -55,7 +59,7 @@ Repository with personal activities and projects in technology, data, and econom
 
 ### Organization
 - Projects live at the repository root and use numeric prefixes to preserve order.
-- `01_` and `02_` keep their own `requirements.txt`.
+- `01_`, `02_`, and `10_` keep their own `requirements.txt`.
 - `03_`, `04_`, `05_`, `07_`, and `09_` share the root `requirements.txt`.
 
 ### Projects
@@ -66,6 +70,8 @@ Repository with personal activities and projects in technology, data, and econom
 - `05_salario_x_escolaridade`: salary-by-schooling analysis with state-level regressions, executive dashboard, and PDF report.
 - `07_mineracao_emocao`: emotion classification for Portuguese sentences, with dashboard, confusion matrix, exported tables, and PDF.
 - `09_bf_trab_informal`: Excel-series extraction, correlation analysis, co-movement charts, and econometric models about informality and Bolsa Familia.
+
+- `10_divida_gastos_publicos`: collection and analysis of Brazilian public debt (RMD) and federal spending by category, with historical series and dashboards.
 
 ### Shared dependency setup
 ```bash
@@ -86,6 +92,8 @@ Notes:
 - `05_salario_x_escolaridade`: `cd 05_salario_x_escolaridade && python3 -m app`
 - `07_mineracao_emocao`: `cd 07_mineracao_emocao && python3 -m app`
 - `09_bf_trab_informal`: `cd 09_bf_trab_informal && python3 bf_trab_informal.py`
+
+- `10_divida_gastos_publicos`: `cd 10_divida_gastos_publicos && python3 divida_publica.py`
 
 ### Repository structure
 - `src/`: shared repository assets, such as the logo used by the GUIs.

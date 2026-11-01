@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Fevereiro de 2022",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2022,
+    "mes": 2,
+    "mes_nome": "Fevereiro",
+    "inicio": "2022-02-01",
+    "fim": "2022-02-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2022/2",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/43139_1366628/Texto_RMD_Fev_22.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_fevereiro_2022": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 5730.33
+  },
+  "scraping": {
+    "extraido_em": "2026-09-04T20:28:15.290080+00:00",
+    "metodo": "requests + BeautifulSoup + pdfplumber",
+    "campos_atualizados": [
+      "dpfi_estoque_poder_publico_brl_bilhoes"
+    ],
+    "sha256_documento": "98dfc50063c028bb233c91f28ca3a7b3d87832ae7584697cd8c9858a71eb82e6"
+  }
+}

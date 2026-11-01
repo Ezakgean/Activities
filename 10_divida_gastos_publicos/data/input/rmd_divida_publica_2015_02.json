@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "dataset": "Relatorio Mensal da Divida - Fevereiro de 2015",
+  "sigla": "RMD",
+  "periodo_referencia": {
+    "ano": 2015,
+    "mes": 2,
+    "mes_nome": "Fevereiro",
+    "inicio": "2015-02-01",
+    "fim": "2015-02-01"
+  },
+  "publicacao": {
+    "orgao": "Tesouro Nacional",
+    "portal": "Tesouro Transparente",
+    "fonte_pagina": "https://www.tesourotransparente.gov.br/publicacoes/relatorio-mensal-da-divida-rmd/2015/2",
+    "fonte_pdf": "https://cdn.tesouro.gov.br/sistemas-internos/apex/producao/sistemas/thot/arquivos/publicacoes/27202_867826/rmd201502.pdf"
+  },
+  "convencoes": {
+    "moeda": "BRL",
+    "valores_financeiros": "Valores numéricos convertidos para ponto decimal no JSON.",
+    "percentuais": "Percentuais armazenados como valores de 0 a 100.",
+    "nulos": "null indica ausência de valor/título na publicação."
+  },
+  "resumo_fevereiro_2015": {
+    "dpfi_estoque_poder_publico_brl_bilhoes": 2329.62,
+    "composicao_percentual": {
+      "prefixada": 39.71,
+      "indice_precos": 35.25,
+      "taxa_flutuante": 20.01,
+      "cambio": 5.02
+    },
+    "fluxos_dpf": {
+      "emissoes_brl_milhoes": 66373.32,
+      "resgates_brl_milhoes": 17252.05
+    }
+  },
+  "scraping": {
+    "extraido_em": "2026-09-05T01:33:43.988697+00:00",
+    "metodo": "requests + pdftotext/pdfplumber/catdoc",
+    "campos_atualizados": [
+      "composicao_percentual.prefixada",
+      "composicao_percentual.indice_precos",
+      "composicao_percentual.taxa_flutuante",
+      "composicao_percentual.cambio",
+      "fluxos_dpf.emissoes_brl_milhoes",
+      "fluxos_dpf.resgates_brl_milhoes"
+    ],
+    "sha256_documento": "22e37ca1265a21b9a4b3caf8a844e05ef8509f6c4208f2535e7ec1854869d7d0"
+  }
+}
