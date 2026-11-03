@@ -1,0 +1,345 @@
+M1
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          informalidade   R-squared:                       0.027
+Model:                            OLS   Adj. R-squared:                  0.001
+Method:                 Least Squares   F-statistic:                    0.9487
+Date:                Sun, 01 Nov 2026   Prob (F-statistic):              0.336
+Time:                        19:19:50   Log-Likelihood:                -58.425
+No. Observations:                  40   AIC:                             120.8
+Df Residuals:                      38   BIC:                             124.2
+Df Model:                           1                                         
+Covariance Type:                  HAC                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     39.1378      0.429     91.213      0.000      38.269      40.006
+ipca           0.1822      0.187      0.974      0.336      -0.196       0.561
+==============================================================================
+Omnibus:                        1.797   Durbin-Watson:                   0.398
+Prob(Omnibus):                  0.407   Jarque-Bera (JB):                1.304
+Skew:                          -0.206   Prob(JB):                        0.521
+Kurtosis:                       2.217   Cond. No.                         3.39
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 4 lags and with small sample correction
+
+M2
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          informalidade   R-squared:                       0.083
+Model:                            OLS   Adj. R-squared:                  0.059
+Method:                 Least Squares   F-statistic:                     1.333
+Date:                Sun, 01 Nov 2026   Prob (F-statistic):              0.256
+Time:                        19:19:50   Log-Likelihood:                -57.227
+No. Observations:                  40   AIC:                             118.5
+Df Residuals:                      38   BIC:                             121.8
+Df Model:                           1                                         
+Covariance Type:                  HAC                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+Intercept        42.1341      2.407     17.508      0.000      37.262      47.006
+endividamento    -0.0635      0.055     -1.154      0.256      -0.175       0.048
+==============================================================================
+Omnibus:                        2.468   Durbin-Watson:                   0.465
+Prob(Omnibus):                  0.291   Jarque-Bera (JB):                1.682
+Skew:                          -0.495   Prob(JB):                        0.431
+Kurtosis:                       3.173   Cond. No.                         400.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 4 lags and with small sample correction
+
+M3
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          informalidade   R-squared:                       0.129
+Model:                            OLS   Adj. R-squared:                  0.082
+Method:                 Least Squares   F-statistic:                     1.666
+Date:                Sun, 01 Nov 2026   Prob (F-statistic):              0.203
+Time:                        19:19:50   Log-Likelihood:                -56.201
+No. Observations:                  40   AIC:                             118.4
+Df Residuals:                      37   BIC:                             123.5
+Df Model:                           2                                         
+Covariance Type:                  HAC                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+Intercept        42.1745      2.398     17.586      0.000      37.315      47.034
+ipca              0.2424      0.195      1.242      0.222      -0.153       0.638
+endividamento    -0.0714      0.053     -1.336      0.190      -0.180       0.037
+==============================================================================
+Omnibus:                        1.500   Durbin-Watson:                   0.479
+Prob(Omnibus):                  0.472   Jarque-Bera (JB):                1.442
+Skew:                          -0.418   Prob(JB):                        0.486
+Kurtosis:                       2.592   Cond. No.                         401.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 4 lags and with small sample correction
+
+M4
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          informalidade   R-squared:                       0.146
+Model:                            OLS   Adj. R-squared:                  0.075
+Method:                 Least Squares   F-statistic:                     1.011
+Date:                Sun, 01 Nov 2026   Prob (F-statistic):              0.399
+Time:                        19:19:50   Log-Likelihood:                -55.806
+No. Observations:                  40   AIC:                             119.6
+Df Residuals:                      36   BIC:                             126.4
+Df Model:                           3                                         
+Covariance Type:                  HAC                                         
+=================================================================================
+                    coef    std err          t      P>|t|      [0.025      0.975]
+---------------------------------------------------------------------------------
+Intercept        42.3437      2.469     17.148      0.000      37.336      47.352
+ipca              0.2866      0.229      1.252      0.219      -0.178       0.751
+endividamento    -0.0749      0.056     -1.347      0.186      -0.188       0.038
+pandemia         -0.3608      0.712     -0.506      0.616      -1.806       1.084
+==============================================================================
+Omnibus:                        1.605   Durbin-Watson:                   0.508
+Prob(Omnibus):                  0.448   Jarque-Bera (JB):                1.303
+Skew:                          -0.252   Prob(JB):                        0.521
+Kurtosis:                       2.274   Cond. No.                         405.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 4 lags and with small sample correction
+
+D1
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:        d_informalidade   R-squared:                       0.050
+Model:                            OLS   Adj. R-squared:                  0.024
+Method:                 Least Squares   F-statistic:                    0.8466
+Date:                Sun, 01 Nov 2026   Prob (F-statistic):              0.363
+Time:                        19:19:50   Log-Likelihood:                -39.354
+No. Observations:                  39   AIC:                             82.71
+Df Residuals:                      37   BIC:                             86.04
+Df Model:                           1                                         
+Covariance Type:                  HAC                                         
+==============================================================================
+                 coef    std err          t      P>|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+Intercept     -0.0109      0.106     -0.103      0.918      -0.225       0.203
+d_ipca         0.1358      0.148      0.920      0.363      -0.163       0.435
+==============================================================================
+Omnibus:                       31.689   Durbin-Watson:                   1.822
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               95.810
+Skew:                          -1.854   Prob(JB):                     1.57e-21
+Kurtosis:                       9.724   Cond. No.                         1.13
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 4 lags and with small sample correction
+
+D2
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:        d_informalidade   R-squared:                       0.101
+Model:                            OLS   Adj. R-squared:                  0.076
+Method:                 Least Squares   F-statistic:                     2.688
+Date:                Sun, 01 Nov 2026   Prob (F-statistic):              0.110
+Time:                        19:19:50   Log-Likelihood:                -38.279
+No. Observations:                  39   AIC:                             80.56
+Df Residuals:                      37   BIC:                             83.89
+Df Model:                           1                                         
+Covariance Type:                  HAC                                         
+===================================================================================
+                      coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+Intercept          -0.0843      0.134     -0.630      0.533      -0.356       0.187
+d_endividamento     0.2632      0.161      1.640      0.110      -0.062       0.588
+==============================================================================
+Omnibus:                       18.910   Durbin-Watson:                   1.841
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               48.592
+Skew:                          -0.991   Prob(JB):                     2.81e-11
+Kurtosis:                       8.097   Cond. No.                         1.41
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 4 lags and with small sample correction
+
+D3
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:        d_informalidade   R-squared:                       0.129
+Model:                            OLS   Adj. R-squared:                  0.081
+Method:                 Least Squares   F-statistic:                     1.378
+Date:                Sun, 01 Nov 2026   Prob (F-statistic):              0.265
+Time:                        19:19:50   Log-Likelihood:                -37.641
+No. Observations:                  39   AIC:                             81.28
+Df Residuals:                      36   BIC:                             86.27
+Df Model:                           2                                         
+Covariance Type:                  HAC                                         
+===================================================================================
+                      coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+Intercept          -0.0726      0.131     -0.552      0.584      -0.339       0.194
+d_ipca              0.1055      0.129      0.821      0.417      -0.155       0.366
+d_endividamento     0.2383      0.144      1.653      0.107      -0.054       0.531
+==============================================================================
+Omnibus:                       19.142   Durbin-Watson:                   1.882
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               41.141
+Skew:                          -1.116   Prob(JB):                     1.17e-09
+Kurtosis:                       7.510   Cond. No.                         1.53
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 4 lags and with small sample correction
+
+D4
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:        d_informalidade   R-squared:                       0.131
+Model:                            OLS   Adj. R-squared:                  0.056
+Method:                 Least Squares   F-statistic:                     1.025
+Date:                Sun, 01 Nov 2026   Prob (F-statistic):              0.393
+Time:                        19:19:50   Log-Likelihood:                -37.616
+No. Observations:                  39   AIC:                             83.23
+Df Residuals:                      35   BIC:                             89.89
+Df Model:                           3                                         
+Covariance Type:                  HAC                                         
+===================================================================================
+                      coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+Intercept          -0.0723      0.132     -0.548      0.587      -0.340       0.196
+d_ipca              0.1026      0.124      0.828      0.413      -0.149       0.354
+d_endividamento     0.2366      0.142      1.661      0.106      -0.053       0.526
+d_pandemia         -0.1016      0.566     -0.179      0.859      -1.250       1.047
+==============================================================================
+Omnibus:                       19.317   Durbin-Watson:                   1.913
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               42.124
+Skew:                          -1.120   Prob(JB):                     7.13e-10
+Kurtosis:                       7.572   Cond. No.                         5.08
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 4 lags and with small sample correction
+
+R1
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:        d_informalidade   R-squared:                       0.155
+Model:                            OLS   Adj. R-squared:                 -0.042
+Method:                 Least Squares   F-statistic:                     4.808
+Date:                Sun, 01 Nov 2026   Prob (F-statistic):            0.00101
+Time:                        19:19:50   Log-Likelihood:                -36.407
+No. Observations:                  38   AIC:                             88.81
+Df Residuals:                      30   BIC:                             101.9
+Df Model:                           7                                         
+Covariance Type:                  HAC                                         
+=========================================================================================
+                            coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------------
+Intercept                -0.4454      0.260     -1.711      0.097      -0.977       0.086
+C(trimestre_num)[T.2]     0.1046      0.345      0.303      0.764      -0.600       0.809
+C(trimestre_num)[T.3]     0.4846      0.313      1.551      0.131      -0.154       1.123
+C(trimestre_num)[T.4]     0.4127      0.234      1.761      0.088      -0.066       0.891
+d_informalidade_lag1      0.1420      0.165      0.859      0.397      -0.196       0.480
+ipca_lag1                 0.1527      0.173      0.885      0.383      -0.200       0.505
+d_endividamento_lag1     -0.2487      0.134     -1.860      0.073      -0.522       0.024
+pandemia                  0.1316      0.468      0.281      0.780      -0.824       1.087
+==============================================================================
+Omnibus:                       29.694   Durbin-Watson:                   1.878
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):               96.052
+Skew:                          -1.674   Prob(JB):                     1.39e-21
+Kurtosis:                      10.033   Cond. No.                         9.06
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 4 lags and with small sample correction
+
+R2
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          informalidade   R-squared:                       0.218
+Model:                            OLS   Adj. R-squared:                  0.047
+Method:                 Least Squares   F-statistic:                     1.090
+Date:                Sun, 01 Nov 2026   Prob (F-statistic):              0.392
+Time:                        19:19:50   Log-Likelihood:                -54.051
+No. Observations:                  40   AIC:                             124.1
+Df Residuals:                      32   BIC:                             137.6
+Df Model:                           7                                         
+Covariance Type:                  HAC                                         
+=========================================================================================
+                            coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------------
+Intercept                38.4029      4.800      8.001      0.000      28.626      48.180
+C(trimestre_num)[T.2]     0.0939      0.292      0.322      0.750      -0.501       0.689
+C(trimestre_num)[T.3]     0.4323      0.292      1.483      0.148      -0.161       1.026
+C(trimestre_num)[T.4]     0.3666      0.226      1.624      0.114      -0.093       0.826
+ipca                      0.2420      0.155      1.561      0.128      -0.074       0.558
+endividamento             0.0333      0.133      0.251      0.804      -0.237       0.304
+pandemia                 -0.2433      0.646     -0.377      0.709      -1.559       1.073
+tendencia                -0.0496      0.065     -0.769      0.448      -0.181       0.082
+==============================================================================
+Omnibus:                        2.473   Durbin-Watson:                   0.452
+Prob(Omnibus):                  0.290   Jarque-Bera (JB):                2.313
+Skew:                          -0.537   Prob(JB):                        0.315
+Kurtosis:                       2.517   Cond. No.                         940.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 4 lags and with small sample correction
+
+R3
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          informalidade   R-squared:                       0.154
+Model:                            OLS   Adj. R-squared:                  0.084
+Method:                 Least Squares   F-statistic:                    0.9853
+Date:                Sun, 01 Nov 2026   Prob (F-statistic):              0.411
+Time:                        19:19:50   Log-Likelihood:                -55.620
+No. Observations:                  40   AIC:                             119.2
+Df Residuals:                      36   BIC:                             126.0
+Df Model:                           3                                         
+Covariance Type:                  HAC                                         
+===================================================================================
+                      coef    std err          t      P>|t|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+Intercept          42.3398      2.449     17.287      0.000      37.373      47.307
+ipca                0.3088      0.252      1.228      0.228      -0.201       0.819
+endividamento      -0.0753      0.056     -1.353      0.185      -0.188       0.038
+pandemia_nucleo    -0.4690      0.870     -0.539      0.593      -2.234       1.296
+==============================================================================
+Omnibus:                        1.515   Durbin-Watson:                   0.474
+Prob(Omnibus):                  0.469   Jarque-Bera (JB):                1.159
+Skew:                          -0.177   Prob(JB):                        0.560
+Kurtosis:                       2.245   Cond. No.                         403.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 4 lags and with small sample correction
+
+R4
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:          informalidade   R-squared:                       0.131
+Model:                            OLS   Adj. R-squared:                  0.058
+Method:                 Least Squares   F-statistic:                     1.172
+Date:                Sun, 01 Nov 2026   Prob (F-statistic):              0.334
+Time:                        19:19:50   Log-Likelihood:                -56.168
+No. Observations:                  40   AIC:                             120.3
+Df Residuals:                      36   BIC:                             127.1
+Df Model:                           3                                         
+Covariance Type:                  HAC                                         
+==================================================================================
+                     coef    std err          t      P>|t|      [0.025      0.975]
+----------------------------------------------------------------------------------
+Intercept         42.2676      2.569     16.452      0.000      37.057      47.478
+ipca               0.2314      0.224      1.034      0.308      -0.223       0.685
+endividamento     -0.0740      0.058     -1.277      0.210      -0.192       0.044
+pandemia_ampla     0.0919      0.717      0.128      0.899      -1.362       1.546
+==============================================================================
+Omnibus:                        1.720   Durbin-Watson:                   0.482
+Prob(Omnibus):                  0.423   Jarque-Bera (JB):                1.516
+Skew:                          -0.460   Prob(JB):                        0.469
+Kurtosis:                       2.750   Cond. No.                         414.
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity and autocorrelation robust (HAC) using 4 lags and with small sample correction

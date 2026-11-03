@@ -1,0 +1,35 @@
+﻿variavel,deterministico,n,adf_estatistica,adf_p,adf_lags,kpss_estatistica,kpss_p_tabelado,kpss_lags,kpss_aviso
+informalidade,c,40,-2.2040509943225586,0.20477846640937886,1,0.3062336505587619,0.1,4,"The test statistic is outside of the range of p-values available in the
+look-up table. The actual p-value is greater than the p-value returned.
+"
+informalidade,ct,40,-2.864000388006805,0.1744311520023113,1,0.12122757296748725,0.09587486487502361,4,
+ipca,c,40,-2.4547236011892015,0.12688266699063766,2,0.09783594966450118,0.1,4,"The test statistic is outside of the range of p-values available in the
+look-up table. The actual p-value is greater than the p-value returned.
+"
+ipca,ct,40,-2.4703220505622765,0.3429554933224376,2,0.09109417281352285,0.1,4,"The test statistic is outside of the range of p-values available in the
+look-up table. The actual p-value is greater than the p-value returned.
+"
+endividamento,c,40,-0.5926020041858725,0.8726449236329936,4,0.7884660210903376,0.01,4,"The test statistic is outside of the range of p-values available in the
+look-up table. The actual p-value is smaller than the p-value returned.
+"
+endividamento,ct,40,-2.1943134118259855,0.4930516340484444,4,0.09956455513605987,0.1,4,"The test statistic is outside of the range of p-values available in the
+look-up table. The actual p-value is greater than the p-value returned.
+"
+d_informalidade,c,39,-5.361223579115517,4.083850225235537e-06,0,0.17921188251453835,0.1,4,"The test statistic is outside of the range of p-values available in the
+look-up table. The actual p-value is greater than the p-value returned.
+"
+d_informalidade,ct,39,-5.424023121546458,3.250455262579516e-05,0,0.050920780975512045,0.1,4,"The test statistic is outside of the range of p-values available in the
+look-up table. The actual p-value is greater than the p-value returned.
+"
+d_ipca,c,39,-8.430527426988059,1.8755246555044192e-13,1,0.08860997219100214,0.1,4,"The test statistic is outside of the range of p-values available in the
+look-up table. The actual p-value is greater than the p-value returned.
+"
+d_ipca,ct,39,-8.300601621340828,1.4440843281982807e-11,1,0.08543414934115028,0.1,4,"The test statistic is outside of the range of p-values available in the
+look-up table. The actual p-value is greater than the p-value returned.
+"
+d_endividamento,c,39,-3.281296562967467,0.015735501746325598,3,0.11617110991919477,0.1,4,"The test statistic is outside of the range of p-values available in the
+look-up table. The actual p-value is greater than the p-value returned.
+"
+d_endividamento,ct,39,-3.2245040151429065,0.07962862162592071,3,0.1029743587403578,0.1,4,"The test statistic is outside of the range of p-values available in the
+look-up table. The actual p-value is greater than the p-value returned.
+"

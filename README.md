@@ -23,6 +23,7 @@ Repositório com atividades e projetos pessoais em tecnologia, dados e economia.
 - `09_bf_trab_informal`: extração de séries do Excel, correlações, gráficos de co-movimento e modelos econométricos sobre informalidade e Bolsa Família.
 
 - `10_divida_gastos_publicos`: coleta e análise da dívida pública (RMD) e dos gastos da União por categoria, com séries históricas e painéis gráficos.
+- `11_informalidade_inflacao_endividamento`: quatro modelos de associação entre informalidade, IPCA e endividamento familiar (2016–2025), com dummy de pandemia, diagnósticos e relatório reproduzível.
 
 ### Instalação das dependências compartilhadas
 ```bash
@@ -45,6 +46,7 @@ Observações:
 - `09_bf_trab_informal`: `cd 09_bf_trab_informal && python3 bf_trab_informal.py`
 
 - `10_divida_gastos_publicos`: `cd 10_divida_gastos_publicos && python3 divida_publica.py`
+- `11_informalidade_inflacao_endividamento`: `cd 11_informalidade_inflacao_endividamento && python3 informalidade.py` (dependências em `requirements.txt` próprio).
 
 ### Estrutura do repositório
 - `src/`: ativos compartilhados do repositório, como a logo usada na interface.
@@ -72,6 +74,7 @@ Repository with personal activities and projects in technology, data, and econom
 - `09_bf_trab_informal`: Excel-series extraction, correlation analysis, co-movement charts, and econometric models about informality and Bolsa Familia.
 
 - `10_divida_gastos_publicos`: collection and analysis of Brazilian public debt (RMD) and federal spending by category, with historical series and dashboards.
+- `11_informalidade_inflacao_endividamento`: four models of informality, inflation and household debt (2016–2025), including a pandemic dummy, diagnostics and a reproducible report.
 
 ### Shared dependency setup
 ```bash
@@ -94,6 +97,7 @@ Notes:
 - `09_bf_trab_informal`: `cd 09_bf_trab_informal && python3 bf_trab_informal.py`
 
 - `10_divida_gastos_publicos`: `cd 10_divida_gastos_publicos && python3 divida_publica.py`
+- `11_informalidade_inflacao_endividamento`: `cd 11_informalidade_inflacao_endividamento && python3 informalidade.py` (with its own `requirements.txt`).
 
 ### Repository structure
 - `src/`: shared repository assets, such as the logo used by the GUIs.

@@ -1,0 +1,86 @@
+{
+  "sha256": "f92741baed463a6475f82c39e9576bb12b2017edb057479e6ac474f1b37ba2d0",
+  "observacoes": 40,
+  "inicio": "2016T1",
+  "fim": "2025T4",
+  "erro_maximo_agregacao": {
+    "ipca": 7.105427357601002e-15,
+    "endividamento": 0.0
+  },
+  "metadados_planilha": [
+    {
+      "Aspecto": "Recorte",
+      "Descrição / fonte": "Brasil; 2016T1 a 2025T4; frequência trimestral; N = 40."
+    },
+    {
+      "Aspecto": "Variável dependente",
+      "Descrição / fonte": "Informalidade (% das pessoas ocupadas, 14 anos ou mais); PNAD Contínua, IBGE, SIDRA tabela 8529."
+    },
+    {
+      "Aspecto": "IPCA",
+      "Descrição / fonte": "Variação mensal (%) do IPCA, IBGE, tabela 1737 (Tabela 2 do arquivo). Agregado por composição: [(1+m1/100)(1+m2/100)(1+m3/100)-1]×100."
+    },
+    {
+      "Aspecto": "Endividamento",
+      "Descrição / fonte": "Endividamento das famílias com Sistema Financeiro Nacional em relação à renda acumulada dos últimos 12 meses, SGS 29037; média aritmética dos três meses do trimestre."
+    },
+    {
+      "Aspecto": "Limitações",
+      "Descrição / fonte": "IPCA mede inflação, não rendimento real nem poder de compra diretamente. Ideal complementar com rendimento real e desemprego."
+    },
+    {
+      "Aspecto": "Cuidados econométricos",
+      "Descrição / fonte": "Investigar tendência, estacionariedade, autocorrelação, defasagens, pandemia, endogeneidade e variáveis de controle."
+    },
+    {
+      "Aspecto": "Fonte informalidade",
+      "Descrição / fonte": "https://sidra.ibge.gov.br/tabela/8529"
+    },
+    {
+      "Aspecto": "Fonte IPCA",
+      "Descrição / fonte": "https://sidra.ibge.gov.br/tabela/1737"
+    },
+    {
+      "Aspecto": "Fonte endividamento",
+      "Descrição / fonte": "https://dadosabertos.bcb.gov.br/dataset/29037-endividamento-das-familias-com-o-sistema-financeiro-nacional-em-relacao-a-renda-acumulada-dos"
+    },
+    {
+      "Aspecto": "Arquivos usados",
+      "Descrição / fonte": "tabela8529.xlsx; tabela1737.xlsx; bcdata.sgs.29037.csv; bcdata.sgs.29037 (1).csv"
+    },
+    {
+      "Aspecto": "Período disponível no arquivo",
+      "Descrição / fonte": "Informalidade até 2026T2; IPCA até setembro/2026; endividamento até dezembro/2025."
+    }
+  ],
+  "validacao": "Estrutura e agregações internas conferidas; séries não auditadas contra as fontes externas.",
+  "python": "3.12.3",
+  "pacotes": {
+    "pandas": "3.0.0",
+    "numpy": "2.4.2",
+    "statsmodels": "0.14.6",
+    "scipy": "1.17.1",
+    "matplotlib": "3.10.8",
+    "openpyxl": "3.1.5"
+  },
+  "configuracao": {
+    "hac_lags": 4,
+    "kernel": "bartlett",
+    "use_correction": true,
+    "use_t": true,
+    "modelos": {
+      "M1": "informalidade ~ ipca",
+      "M2": "informalidade ~ endividamento",
+      "M3": "informalidade ~ ipca + endividamento",
+      "M4": "informalidade ~ ipca + endividamento + pandemia",
+      "D1": "d_informalidade ~ d_ipca",
+      "D2": "d_informalidade ~ d_endividamento",
+      "D3": "d_informalidade ~ d_ipca + d_endividamento",
+      "D4": "d_informalidade ~ d_ipca + d_endividamento + d_pandemia",
+      "R1": "d_informalidade ~ d_informalidade_lag1 + ipca_lag1 + d_endividamento_lag1 + pandemia + C(trimestre_num)",
+      "R2": "informalidade ~ ipca + endividamento + pandemia + tendencia + C(trimestre_num)",
+      "R3": "informalidade ~ ipca + endividamento + pandemia_nucleo",
+      "R4": "informalidade ~ ipca + endividamento + pandemia_ampla"
+    }
+  }
+}
