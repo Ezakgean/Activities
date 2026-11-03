@@ -1,0 +1,13 @@
+﻿modelo,n,numero_regressores,posto_matriz_com_intercepto,colunas_com_intercepto,dependencia_linear_exata,numero_condicao_padronizado,avaliacao_condicao,vif_maximo
+M1,40,1,2,2,False,1.0,Baixa (< 10),1.0
+M2,40,1,2,2,False,1.0,Baixa (< 10),1.0
+M3,40,2,3,3,False,1.1825559180121477,Baixa (< 10),1.0283804467899424
+M4,40,3,4,4,False,1.4098971285188813,Baixa (< 10),1.1204645098368806
+D1,39,1,2,2,False,1.0,Baixa (< 10),1.0
+D2,39,1,2,2,False,1.0,Baixa (< 10),1.0
+D3,39,2,3,3,False,1.1912763452937087,Baixa (< 10),1.0309479440902907
+D4,39,3,4,4,False,1.2560060226392455,Baixa (< 10),1.0509603220078843
+R1,38,7,8,8,False,2.6016528080625423,Baixa (< 10),1.9300457893896192
+R2,40,7,8,8,False,5.040167300653742,Baixa (< 10),6.7152146590753325
+R3,40,3,4,4,False,1.496566107598843,Baixa (< 10),1.1702996597436093
+R4,40,3,4,4,False,1.5313988204233164,Baixa (< 10),1.1853203884725392

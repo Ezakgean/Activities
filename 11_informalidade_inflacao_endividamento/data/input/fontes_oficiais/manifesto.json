@@ -1,0 +1,37 @@
+[
+  {
+    "fonte": "informalidade_trimestral",
+    "url": "https://apisidra.ibge.gov.br/values/t/8529/n1/1/v/12466/p/201601-202504",
+    "consulta": "2026-11-03T15:03:07.545900-03:00",
+    "sha256": "3311b1f831604f3a2f11855cc17cd943579ca9d40d3198661e2bfb448dca00ec",
+    "status": "Obtida"
+  },
+  {
+    "fonte": "ipca_mensal",
+    "url": "https://apisidra.ibge.gov.br/values/t/1737/n1/1/v/63/p/201601-202512",
+    "consulta": "2026-11-03T15:03:07.544985-03:00",
+    "sha256": "414eccffc54e7ade937beac1837e3640629238323a6f01ddd9b7d1ab2b5f178c",
+    "status": "Obtida"
+  },
+  {
+    "fonte": "endividamento_mensal",
+    "url": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.29037/dados?formato=json&dataInicial=01/01/2016&dataFinal=31/12/2025",
+    "consulta": "2026-11-03T15:03:07.545559-03:00",
+    "sha256": "5fdde643d85fe23a36dc71f45a2aa2b5f51468b5b58d1abbb365124ac697fbda",
+    "status": "Obtida"
+  },
+  {
+    "fonte": "ibge_8529_metadados",
+    "url": "https://servicodados.ibge.gov.br/api/v3/agregados/8529/metadados",
+    "consulta": "2026-11-03T15:03:07.546199-03:00",
+    "sha256": "2df5cabb641018fa370287553213b5338c665c676eb122790b904f8542c7d00b",
+    "status": "Obtida"
+  },
+  {
+    "fonte": "ibge_1737_metadados",
+    "url": "https://servicodados.ibge.gov.br/api/v3/agregados/1737/metadados",
+    "consulta": "2026-11-03T15:03:07.546548-03:00",
+    "sha256": "2a221ed9673f6b5780cfae1446c3b52b7b063f8004a7a9872578a8ebb7e86892",
+    "status": "Obtida"
+  }
+]

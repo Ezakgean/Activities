@@ -1,0 +1,73 @@
+﻿modelo,tipo,termos,h0,f_hac,gl_numerador,gl_denominador,f_critico_5pct,p_valor,decisao_5pct
+M1,individual,Intercept,Intercept = 0,8319.794962476357,1.0,38.0,4.098171730880841,4.039030716965862e-46,Rejeitar H0
+M1,individual,ipca,ipca = 0,0.9487131654676666,1.0,38.0,4.098171730880841,0.33620695101531134,Não rejeitar H0
+M1,global,ipca,ipca = 0,0.9487131654676666,1.0,38.0,4.098171730880841,0.33620695101531134,Não rejeitar H0
+M1,economicas,ipca,ipca = 0,0.9487131654676666,1.0,38.0,4.098171730880841,0.33620695101531134,Não rejeitar H0
+M2,individual,Intercept,Intercept = 0,281.06503110998295,1.0,38.0,4.098171730880841,3.779675896009935e-19,Rejeitar H0
+M2,individual,endividamento,endividamento = 0,0.9772875302615647,1.0,38.0,4.098171730880841,0.329122624652433,Não rejeitar H0
+M2,global,endividamento,endividamento = 0,0.9772875302615647,1.0,38.0,4.098171730880841,0.329122624652433,Não rejeitar H0
+M2,economicas,endividamento,endividamento = 0,0.9772875302615647,1.0,38.0,4.098171730880841,0.329122624652433,Não rejeitar H0
+M3,individual,Intercept,Intercept = 0,292.5049007632539,1.0,37.0,4.105455897235969,3.720991231713154e-19,Rejeitar H0
+M3,individual,ipca,ipca = 0,1.5829438718475903,1.0,37.0,4.105455897235969,0.2162191827491224,Não rejeitar H0
+M3,individual,endividamento,endividamento = 0,1.4441459600711517,1.0,37.0,4.105455897235969,0.237105162496998,Não rejeitar H0
+M3,global,ipca + endividamento,ipca = 0; endividamento = 0,1.4643401549192685,2.0,37.0,3.2519238463872053,0.2443206641458623,Não rejeitar H0
+M3,economicas,ipca + endividamento,ipca = 0; endividamento = 0,1.4643401549192685,2.0,37.0,3.2519238463872053,0.2443206641458623,Não rejeitar H0
+M4,individual,Intercept,Intercept = 0,280.11396976770334,1.0,36.0,4.113165276812891,1.4515400594617507e-18,Rejeitar H0
+M4,individual,ipca,ipca = 0,1.5617091563120318,1.0,36.0,4.113165276812891,0.2194788600684466,Não rejeitar H0
+M4,individual,endividamento,endividamento = 0,1.4548340890995433,1.0,36.0,4.113165276812891,0.2356211715198755,Não rejeitar H0
+M4,individual,pandemia,pandemia = 0,0.21348205509091273,1.0,36.0,4.113165276812891,0.6468320273789548,Não rejeitar H0
+M4,global,ipca + endividamento + pandemia,ipca = 0; endividamento = 0; pandemia = 0,0.8900921227184813,3.0,36.0,2.866265550940181,0.4555577512289274,Não rejeitar H0
+M4,economicas,ipca + endividamento,ipca = 0; endividamento = 0,1.2967719037015426,2.0,36.0,3.259446306144108,0.2858782744147418,Não rejeitar H0
+D1,individual,Intercept,Intercept = 0,0.010649276955143722,1.0,37.0,4.105455897235969,0.9183652533924554,Não rejeitar H0
+D1,individual,d_ipca,d_ipca = 0,0.8465542641444304,1.0,37.0,4.105455897235969,0.3634890304726786,Não rejeitar H0
+D1,global,d_ipca,d_ipca = 0,0.8465542641444304,1.0,37.0,4.105455897235969,0.3634890304726786,Não rejeitar H0
+D1,economicas,d_ipca,d_ipca = 0,0.8465542641444304,1.0,37.0,4.105455897235969,0.3634890304726786,Não rejeitar H0
+D2,individual,Intercept,Intercept = 0,0.7848238321431759,1.0,37.0,4.105455897235969,0.3813916258899201,Não rejeitar H0
+D2,individual,d_endividamento,d_endividamento = 0,4.498274750722408,1.0,37.0,4.105455897235969,0.040693576715982914,Rejeitar H0
+D2,global,d_endividamento,d_endividamento = 0,4.498274750722408,1.0,37.0,4.105455897235969,0.040693576715982914,Rejeitar H0
+D2,economicas,d_endividamento,d_endividamento = 0,4.498274750722408,1.0,37.0,4.105455897235969,0.040693576715982914,Rejeitar H0
+D3,individual,Intercept,Intercept = 0,0.7226909143368586,1.0,36.0,4.113165276812891,0.40088132378562485,Não rejeitar H0
+D3,individual,d_ipca,d_ipca = 0,0.4325879892302372,1.0,36.0,4.113165276812891,0.514905620028455,Não rejeitar H0
+D3,individual,d_endividamento,d_endividamento = 0,4.961671278116145,1.0,36.0,4.113165276812891,0.03225613201432718,Rejeitar H0
+D3,global,d_ipca + d_endividamento,d_ipca = 0; d_endividamento = 0,2.9742904281896685,2.0,36.0,3.259446306144108,0.06375791405540088,Não rejeitar H0
+D3,economicas,d_ipca + d_endividamento,d_ipca = 0; d_endividamento = 0,2.9742904281896685,2.0,36.0,3.259446306144108,0.06375791405540088,Não rejeitar H0
+D4,individual,Intercept,Intercept = 0,0.7261706701885127,1.0,35.0,4.1213382003448995,0.3999208443758186,Não rejeitar H0
+D4,individual,d_ipca,d_ipca = 0,0.39595957274296734,1.0,35.0,4.1213382003448995,0.5332693565753812,Não rejeitar H0
+D4,individual,d_endividamento,d_endividamento = 0,4.655828932070447,1.0,35.0,4.1213382003448995,0.03789335471125136,Rejeitar H0
+D4,individual,d_pandemia,d_pandemia = 0,0.15860045491177588,1.0,35.0,4.1213382003448995,0.6928673511886051,Não rejeitar H0
+D4,global,d_ipca + d_endividamento + d_pandemia,d_ipca = 0; d_endividamento = 0; d_pandemia = 0,2.3307414861768425,3.0,35.0,2.8741874835008527,0.09111743711107517,Não rejeitar H0
+D4,economicas,d_ipca + d_endividamento,d_ipca = 0; d_endividamento = 0,2.506435346097502,2.0,35.0,3.267423524742498,0.0960939045675686,Não rejeitar H0
+R1,individual,Intercept,Intercept = 0,2.8318366482911173,1.0,30.0,4.170876785766691,0.10279347971890529,Não rejeitar H0
+R1,individual,C(trimestre_num)[T.2],C(trimestre_num)[T.2] = 0,0.11234319103048657,1.0,30.0,4.170876785766691,0.7398245785211777,Não rejeitar H0
+R1,individual,C(trimestre_num)[T.3],C(trimestre_num)[T.3] = 0,2.4367812220234515,1.0,30.0,4.170876785766691,0.12900763670648493,Não rejeitar H0
+R1,individual,C(trimestre_num)[T.4],C(trimestre_num)[T.4] = 0,3.12493728848912,1.0,30.0,4.170876785766691,0.0872737584968709,Não rejeitar H0
+R1,individual,d_informalidade_lag1,d_informalidade_lag1 = 0,4.429452408440749,1.0,30.0,4.170876785766691,0.043807526283049326,Rejeitar H0
+R1,individual,ipca_lag1,ipca_lag1 = 0,0.8484347234470366,1.0,30.0,4.170876785766691,0.3643438239722595,Não rejeitar H0
+R1,individual,d_endividamento_lag1,d_endividamento_lag1 = 0,3.2229513955826645,1.0,30.0,4.170876785766691,0.08269356632598002,Não rejeitar H0
+R1,individual,pandemia,pandemia = 0,0.21214404417701727,1.0,30.0,4.170876785766691,0.6484135608270102,Não rejeitar H0
+R1,global,C(trimestre_num)[T.2] + C(trimestre_num)[T.3] + C(trimestre_num)[T.4] + d_informalidade_lag1 + ipca_lag1 + d_endividamento_lag1 + pandemia,C(trimestre_num)[T.2] = 0; C(trimestre_num)[T.3] = 0; C(trimestre_num)[T.4] = 0; d_informalidade_lag1 = 0; ipca_lag1 = 0; d_endividamento_lag1 = 0; pandemia = 0,4.032219192404392,7.0,30.0,2.334343964844779,0.0031930397147778263,Rejeitar H0
+R1,economicas,ipca_lag1 + d_endividamento_lag1,ipca_lag1 = 0; d_endividamento_lag1 = 0,2.422695329270007,2.0,30.0,3.3158295010135213,0.10583730025210177,Não rejeitar H0
+R1,sazonalidade,C(trimestre_num)[T.2] + C(trimestre_num)[T.3] + C(trimestre_num)[T.4],C(trimestre_num)[T.2] = 0; C(trimestre_num)[T.3] = 0; C(trimestre_num)[T.4] = 0,2.6451004519781782,3.0,30.0,2.9222771906450373,0.06714823415685792,Não rejeitar H0
+R2,individual,Intercept,Intercept = 0,66.69321670389856,1.0,32.0,4.1490974456995495,2.5057623281528892e-09,Rejeitar H0
+R2,individual,C(trimestre_num)[T.2],C(trimestre_num)[T.2] = 0,0.07235428683525234,1.0,32.0,4.1490974456995495,0.7896660436114521,Não rejeitar H0
+R2,individual,C(trimestre_num)[T.3],C(trimestre_num)[T.3] = 0,2.108125494003751,1.0,32.0,4.1490974456995495,0.1562535497771431,Não rejeitar H0
+R2,individual,C(trimestre_num)[T.4],C(trimestre_num)[T.4] = 0,2.5651742803047655,1.0,32.0,4.1490974456995495,0.11906768193184306,Não rejeitar H0
+R2,individual,ipca,ipca = 0,1.935918433355838,1.0,32.0,4.1490974456995495,0.17371054498177024,Não rejeitar H0
+R2,individual,endividamento,endividamento = 0,0.36067329298362627,1.0,32.0,4.1490974456995495,0.5523626520256932,Não rejeitar H0
+R2,individual,pandemia,pandemia = 0,0.11183865824512196,1.0,32.0,4.1490974456995495,0.7402425359893406,Não rejeitar H0
+R2,individual,tendencia,tendencia = 0,1.0966570771913235,1.0,32.0,4.1490974456995495,0.3028466991372133,Não rejeitar H0
+R2,global,C(trimestre_num)[T.2] + C(trimestre_num)[T.3] + C(trimestre_num)[T.4] + ipca + endividamento + pandemia + tendencia,C(trimestre_num)[T.2] = 0; C(trimestre_num)[T.3] = 0; C(trimestre_num)[T.4] = 0; ipca = 0; endividamento = 0; pandemia = 0; tendencia = 0,1.1072183622646141,7.0,32.0,2.3127411866337546,0.3825058063504191,Não rejeitar H0
+R2,economicas,ipca + endividamento,ipca = 0; endividamento = 0,0.9679722218183116,2.0,32.0,3.2945368164911413,0.3906974800155216,Não rejeitar H0
+R2,sazonalidade,C(trimestre_num)[T.2] + C(trimestre_num)[T.3] + C(trimestre_num)[T.4],C(trimestre_num)[T.2] = 0; C(trimestre_num)[T.3] = 0; C(trimestre_num)[T.4] = 0,1.1441680154862788,3.0,32.0,2.9011195838408366,0.3461895278110389,Não rejeitar H0
+R3,individual,Intercept,Intercept = 0,283.81704681294997,1.0,36.0,4.113165276812891,1.1762034255422554e-18,Rejeitar H0
+R3,individual,ipca,ipca = 0,1.4912227741307047,1.0,36.0,4.113165276812891,0.2299642990616901,Não rejeitar H0
+R3,individual,endividamento,endividamento = 0,1.4616423986821907,1.0,36.0,4.113165276812891,0.23454967515234185,Não rejeitar H0
+R3,individual,pandemia_nucleo,pandemia_nucleo = 0,0.24985373117923498,1.0,36.0,4.113165276812891,0.6202197617129916,Não rejeitar H0
+R3,global,ipca + endividamento + pandemia_nucleo,ipca = 0; endividamento = 0; pandemia_nucleo = 0,0.8675398242196778,3.0,36.0,2.866265550940181,0.46683160161674986,Não rejeitar H0
+R3,economicas,ipca + endividamento,ipca = 0; endividamento = 0,1.2377994742513196,2.0,36.0,3.259446306144108,0.30207028693725546,Não rejeitar H0
+R4,individual,Intercept,Intercept = 0,252.14670305701284,1.0,36.0,4.113165276812891,7.736332199935508e-18,Rejeitar H0
+R4,individual,ipca,ipca = 0,1.145874471170172,1.0,36.0,4.113165276812891,0.29153910133420935,Não rejeitar H0
+R4,individual,endividamento,endividamento = 0,1.2842497307573577,1.0,36.0,4.113165276812891,0.264601339705966,Não rejeitar H0
+R4,individual,pandemia_ampla,pandemia_ampla = 0,0.011770198364504136,1.0,36.0,4.113165276812891,0.9142090302595604,Não rejeitar H0
+R4,global,ipca + endividamento + pandemia_ampla,ipca = 0; endividamento = 0; pandemia_ampla = 0,1.0128225540464313,3.0,36.0,2.866265550940181,0.3983327436732125,Não rejeitar H0
+R4,economicas,ipca + endividamento,ipca = 0; endividamento = 0,1.4940016634979845,2.0,36.0,3.259446306144108,0.23806037515759393,Não rejeitar H0

@@ -8,7 +8,7 @@ import openpyxl
 import pandas as pd
 from scipy import stats
 
-from app.analise import ARQUIVO, ler_base, preparar, estimar
+from app.analise import ARQUIVO, ler_base, preparar, estimar, testes_significancia, MODELOS, diagnosticar_multicolinearidade, multicolinearidade
 
 
 class Integridade(unittest.TestCase):
@@ -63,6 +63,63 @@ class Integridade(unittest.TestCase):
         d4 = ajustes['D4'].model.data.frame.dropna(subset=['d_informalidade','d_ipca','d_endividamento','d_pandemia'])
         self.assertEqual(d4.loc[d4.trimestre.eq('2020T1'), 'd_pandemia'].item(), 1)
         self.assertEqual(d4.loc[d4.trimestre.eq('2022T1'), 'd_pandemia'].item(), -1)
+
+    def test_testes_t_f_cobrem_todos_os_coeficientes_e_modelos(self):
+        d, _ = ler_base(ARQUIVO)
+        ajustes, coefs, _, _, _ = estimar(d)
+        tt, tf = testes_significancia(ajustes, coefs)
+        self.assertEqual(set(tt.modelo), set(MODELOS))
+        self.assertEqual(len(tt), sum(len(r.params) for r in ajustes.values()))
+        individuais = tf[tf.tipo.eq('individual')].rename(columns={'termos': 'termo'})
+        comparacao = tt.merge(individuais, on=['modelo', 'termo'], validate='one_to_one')
+        self.assertEqual(len(comparacao), len(tt))
+        np.testing.assert_allclose(comparacao.f_hac, comparacao.t_hac ** 2, rtol=1e-10)
+        np.testing.assert_allclose(comparacao.p_valor, comparacao.p_bilateral, atol=1e-12)
+        for modelo, r in ajustes.items():
+            global_ = tf[tf.modelo.eq(modelo) & tf.tipo.eq('global')].iloc[0]
+            self.assertEqual(global_.gl_numerador, len(r.params) - 1)
+            self.assertEqual(global_.gl_denominador, r.df_resid)
+            nomes = r.model.exog_names
+            indices = [j for j, n in enumerate(nomes) if n != 'Intercept']
+            beta = r.params[indices]
+            cov = r.cov_params()[np.ix_(indices, indices)]
+            esperado = beta @ np.linalg.solve(cov, beta) / len(indices)
+            self.assertAlmostEqual(global_.f_hac, esperado, places=7)
+            self.assertAlmostEqual(global_.p_valor, stats.f.sf(esperado, len(indices), r.df_resid))
+        self.assertEqual(set(tf[tf.tipo.eq('sazonalidade')].modelo), {'R1', 'R2'})
+
+    def test_multicolinearidade_independencia_e_dependencia_exata(self):
+        x = np.array([-1., -1., 1., 1.])
+        y = np.array([-1., 1., -1., 1.])
+        linhas, resumo = diagnosticar_multicolinearidade(
+            np.column_stack([np.ones(4), x, y]), ['Intercept', 'x', 'y'])
+        np.testing.assert_allclose([l['vif'] for l in linhas], [1, 1])
+        self.assertAlmostEqual(resumo['numero_condicao_padronizado'], 1)
+        self.assertFalse(resumo['dependencia_linear_exata'])
+        linhas, resumo = diagnosticar_multicolinearidade(
+            np.column_stack([np.ones(4), x, 2*x]), ['Intercept', 'x', 'duplicada'])
+        self.assertTrue(resumo['dependencia_linear_exata'])
+        self.assertTrue(np.isinf(resumo['numero_condicao_padronizado']))
+        self.assertTrue(all(np.isinf(l['vif']) for l in linhas))
+        self.assertTrue(all(l['tolerancia'] == 0 for l in linhas))
+
+    def test_multicolinearidade_base_real_e_invariancia_de_escala(self):
+        d, _ = ler_base(ARQUIVO)
+        ajustes, _, _, diag, _ = estimar(d)
+        variaveis, modelos = multicolinearidade(ajustes)
+        self.assertEqual(set(modelos.modelo), set(MODELOS))
+        self.assertEqual(len(variaveis), sum(len(r.params)-1 for r in ajustes.values()))
+        comparacao = variaveis.merge(diag, on=['modelo', 'termo'], validate='one_to_one')
+        np.testing.assert_allclose(comparacao.vif_x, comparacao.vif_y)
+        np.testing.assert_allclose(variaveis.tolerancia * variaveis.vif, 1)
+        self.assertFalse(modelos.dependencia_linear_exata.any())
+        r = ajustes['R2']
+        x = r.model.exog.copy()
+        _, original = diagnosticar_multicolinearidade(x, r.model.exog_names)
+        x[:, 1] = x[:, 1] * 1000 + 500
+        _, escalado = diagnosticar_multicolinearidade(x, r.model.exog_names)
+        self.assertAlmostEqual(original['numero_condicao_padronizado'],
+                               escalado['numero_condicao_padronizado'])
 
 
 if __name__ == '__main__':

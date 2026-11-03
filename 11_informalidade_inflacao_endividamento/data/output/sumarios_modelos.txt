@@ -4,8 +4,8 @@ M1
 Dep. Variable:          informalidade   R-squared:                       0.027
 Model:                            OLS   Adj. R-squared:                  0.001
 Method:                 Least Squares   F-statistic:                    0.9487
-Date:                Sun, 01 Nov 2026   Prob (F-statistic):              0.336
-Time:                        19:19:50   Log-Likelihood:                -58.425
+Date:                Tue, 03 Nov 2026   Prob (F-statistic):              0.336
+Time:                        15:09:53   Log-Likelihood:                -58.425
 No. Observations:                  40   AIC:                             120.8
 Df Residuals:                      38   BIC:                             124.2
 Df Model:                           1                                         
@@ -31,8 +31,8 @@ M2
 Dep. Variable:          informalidade   R-squared:                       0.083
 Model:                            OLS   Adj. R-squared:                  0.059
 Method:                 Least Squares   F-statistic:                     1.333
-Date:                Sun, 01 Nov 2026   Prob (F-statistic):              0.256
-Time:                        19:19:50   Log-Likelihood:                -57.227
+Date:                Tue, 03 Nov 2026   Prob (F-statistic):              0.256
+Time:                        15:09:53   Log-Likelihood:                -57.227
 No. Observations:                  40   AIC:                             118.5
 Df Residuals:                      38   BIC:                             121.8
 Df Model:                           1                                         
@@ -58,8 +58,8 @@ M3
 Dep. Variable:          informalidade   R-squared:                       0.129
 Model:                            OLS   Adj. R-squared:                  0.082
 Method:                 Least Squares   F-statistic:                     1.666
-Date:                Sun, 01 Nov 2026   Prob (F-statistic):              0.203
-Time:                        19:19:50   Log-Likelihood:                -56.201
+Date:                Tue, 03 Nov 2026   Prob (F-statistic):              0.203
+Time:                        15:09:53   Log-Likelihood:                -56.201
 No. Observations:                  40   AIC:                             118.4
 Df Residuals:                      37   BIC:                             123.5
 Df Model:                           2                                         
@@ -86,8 +86,8 @@ M4
 Dep. Variable:          informalidade   R-squared:                       0.146
 Model:                            OLS   Adj. R-squared:                  0.075
 Method:                 Least Squares   F-statistic:                     1.011
-Date:                Sun, 01 Nov 2026   Prob (F-statistic):              0.399
-Time:                        19:19:50   Log-Likelihood:                -55.806
+Date:                Tue, 03 Nov 2026   Prob (F-statistic):              0.399
+Time:                        15:09:53   Log-Likelihood:                -55.806
 No. Observations:                  40   AIC:                             119.6
 Df Residuals:                      36   BIC:                             126.4
 Df Model:                           3                                         
@@ -115,8 +115,8 @@ D1
 Dep. Variable:        d_informalidade   R-squared:                       0.050
 Model:                            OLS   Adj. R-squared:                  0.024
 Method:                 Least Squares   F-statistic:                    0.8466
-Date:                Sun, 01 Nov 2026   Prob (F-statistic):              0.363
-Time:                        19:19:50   Log-Likelihood:                -39.354
+Date:                Tue, 03 Nov 2026   Prob (F-statistic):              0.363
+Time:                        15:09:53   Log-Likelihood:                -39.354
 No. Observations:                  39   AIC:                             82.71
 Df Residuals:                      37   BIC:                             86.04
 Df Model:                           1                                         
@@ -142,8 +142,8 @@ D2
 Dep. Variable:        d_informalidade   R-squared:                       0.101
 Model:                            OLS   Adj. R-squared:                  0.076
 Method:                 Least Squares   F-statistic:                     2.688
-Date:                Sun, 01 Nov 2026   Prob (F-statistic):              0.110
-Time:                        19:19:50   Log-Likelihood:                -38.279
+Date:                Tue, 03 Nov 2026   Prob (F-statistic):              0.110
+Time:                        15:09:53   Log-Likelihood:                -38.279
 No. Observations:                  39   AIC:                             80.56
 Df Residuals:                      37   BIC:                             83.89
 Df Model:                           1                                         
@@ -169,8 +169,8 @@ D3
 Dep. Variable:        d_informalidade   R-squared:                       0.129
 Model:                            OLS   Adj. R-squared:                  0.081
 Method:                 Least Squares   F-statistic:                     1.378
-Date:                Sun, 01 Nov 2026   Prob (F-statistic):              0.265
-Time:                        19:19:50   Log-Likelihood:                -37.641
+Date:                Tue, 03 Nov 2026   Prob (F-statistic):              0.265
+Time:                        15:09:53   Log-Likelihood:                -37.641
 No. Observations:                  39   AIC:                             81.28
 Df Residuals:                      36   BIC:                             86.27
 Df Model:                           2                                         
@@ -197,8 +197,8 @@ D4
 Dep. Variable:        d_informalidade   R-squared:                       0.131
 Model:                            OLS   Adj. R-squared:                  0.056
 Method:                 Least Squares   F-statistic:                     1.025
-Date:                Sun, 01 Nov 2026   Prob (F-statistic):              0.393
-Time:                        19:19:50   Log-Likelihood:                -37.616
+Date:                Tue, 03 Nov 2026   Prob (F-statistic):              0.393
+Time:                        15:09:53   Log-Likelihood:                -37.616
 No. Observations:                  39   AIC:                             83.23
 Df Residuals:                      35   BIC:                             89.89
 Df Model:                           3                                         
@@ -226,8 +226,8 @@ R1
 Dep. Variable:        d_informalidade   R-squared:                       0.155
 Model:                            OLS   Adj. R-squared:                 -0.042
 Method:                 Least Squares   F-statistic:                     4.808
-Date:                Sun, 01 Nov 2026   Prob (F-statistic):            0.00101
-Time:                        19:19:50   Log-Likelihood:                -36.407
+Date:                Tue, 03 Nov 2026   Prob (F-statistic):            0.00101
+Time:                        15:09:53   Log-Likelihood:                -36.407
 No. Observations:                  38   AIC:                             88.81
 Df Residuals:                      30   BIC:                             101.9
 Df Model:                           7                                         
@@ -259,8 +259,8 @@ R2
 Dep. Variable:          informalidade   R-squared:                       0.218
 Model:                            OLS   Adj. R-squared:                  0.047
 Method:                 Least Squares   F-statistic:                     1.090
-Date:                Sun, 01 Nov 2026   Prob (F-statistic):              0.392
-Time:                        19:19:50   Log-Likelihood:                -54.051
+Date:                Tue, 03 Nov 2026   Prob (F-statistic):              0.392
+Time:                        15:09:53   Log-Likelihood:                -54.051
 No. Observations:                  40   AIC:                             124.1
 Df Residuals:                      32   BIC:                             137.6
 Df Model:                           7                                         
@@ -292,8 +292,8 @@ R3
 Dep. Variable:          informalidade   R-squared:                       0.154
 Model:                            OLS   Adj. R-squared:                  0.084
 Method:                 Least Squares   F-statistic:                    0.9853
-Date:                Sun, 01 Nov 2026   Prob (F-statistic):              0.411
-Time:                        19:19:50   Log-Likelihood:                -55.620
+Date:                Tue, 03 Nov 2026   Prob (F-statistic):              0.411
+Time:                        15:09:53   Log-Likelihood:                -55.620
 No. Observations:                  40   AIC:                             119.2
 Df Residuals:                      36   BIC:                             126.0
 Df Model:                           3                                         
@@ -321,8 +321,8 @@ R4
 Dep. Variable:          informalidade   R-squared:                       0.131
 Model:                            OLS   Adj. R-squared:                  0.058
 Method:                 Least Squares   F-statistic:                     1.172
-Date:                Sun, 01 Nov 2026   Prob (F-statistic):              0.334
-Time:                        19:19:50   Log-Likelihood:                -56.168
+Date:                Tue, 03 Nov 2026   Prob (F-statistic):              0.334
+Time:                        15:09:53   Log-Likelihood:                -56.168
 No. Observations:                  40   AIC:                             120.3
 Df Residuals:                      36   BIC:                             127.1
 Df Model:                           3                                         
